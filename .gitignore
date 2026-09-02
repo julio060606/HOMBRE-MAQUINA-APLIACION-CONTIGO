@@ -1,0 +1,93 @@
+# ==============================================================================
+# .gitignore - CONTIGO Ecosistema de Teleasistencia Médica
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Archivos del Sistema Operativo
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------------------
+# Entornos de Desarrollo (IDEs & Editores)
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.iws
+*.iml
+*.ipr
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# Frontend (Node.js / React / Vite)
+# ------------------------------------------------------------------------------
+frontend/node_modules/
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Variables de entorno sensibles (mantener .env.example en git)
+frontend/.env.local
+frontend/.env.*.local
+*.env.local
+
+# ------------------------------------------------------------------------------
+# Backend (Java / Spring Boot / Maven)
+# ------------------------------------------------------------------------------
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+.mvn/wrapper/maven-wrapper.jar
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Logs de ejecución
+backend/logs/
+logs/
+*.log
+
+# ------------------------------------------------------------------------------
+# Móvil (Flutter / Android / iOS)
+# ------------------------------------------------------------------------------
+movil/.dart_tool/
+movil/.flutter-plugins
+movil/.flutter-plugins-dependencies
+movil/.packages
+movil/.pub-cache/
+movil/.pub/
+movil/build/
+movil/android/.gradle/
+movil/android/local.properties
+movil/ios/.generated/
+movil/ios/Pods/
+movil/ios/Podfile.lock
+
+# ------------------------------------------------------------------------------
+# Herramientas de IA y Asistentes
+# ------------------------------------------------------------------------------
+.gemini/
+.antigravity/

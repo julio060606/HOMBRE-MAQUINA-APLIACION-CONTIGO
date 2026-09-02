@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Base de Datos PostgreSQL con soporte de schemas
+  postgres-contigo:
+    image: postgres:15-alpine
+    container_name: contigo-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: contigo_db
+      POSTGRES_USER: contigo_admin
+      POSTGRES_PASSWORD: contigo_secure_password_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - contigo-network
+
+  # Redis para almacenamiento de sesiones, PINs y Rate Limiting
+  redis-contigo:
+    image: redis:7-alpine
+    container_name: contigo-redis
+    restart: always
+    command: redis-server --requirepass contigo_redis_password_2026
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - contigo-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  contigo-network:
+    driver: bridge
