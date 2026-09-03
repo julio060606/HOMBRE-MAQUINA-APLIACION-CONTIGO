@@ -20,12 +20,12 @@ export const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-slate-200 min-h-[calc(100vh-4rem)] flex flex-col justify-between p-4 select-none font-sans">
+    <aside className="w-64 bg-white border-r border-slate-200/70 min-h-[calc(100vh-4rem)] flex flex-col justify-between p-4 select-none font-sans">
       <div>
         <div className="text-[10px] font-heading font-semibold text-slate-400 uppercase tracking-widest px-3 mb-3">
           Módulos Clínicos
         </div>
-        <nav className="space-y-1">
+        <nav className="space-y-1.5">
           {navItems.map(item => {
             const Icon = item.icon;
             return (
@@ -34,10 +34,10 @@ export const Sidebar: React.FC = () => {
                 to={item.to}
                 data-testid={item.testId}
                 className={({ isActive }) =>
-                  `flex items-center space-x-3 px-3.5 py-2.5 text-xs font-heading uppercase tracking-wider transition-all ${
+                  `flex items-center space-x-3 px-4 py-3 text-xs font-heading uppercase tracking-wider rounded-2xl transition-all duration-200 ${
                     isActive
-                      ? 'bg-forest-700 text-white font-semibold shadow-sm'
-                      : 'text-slate-600 hover:bg-slate-100 font-medium'
+                      ? 'bg-forest-700 text-white font-semibold shadow-xs'
+                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium'
                   }`
                 }
               >
@@ -50,7 +50,7 @@ export const Sidebar: React.FC = () => {
       </div>
 
       {/* Sincronización Móvil Card */}
-      <div className="bg-slate-50 border border-slate-200 p-4 mt-6">
+      <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 border border-slate-200/70 rounded-2xl p-4 mt-6">
         <div className="flex items-center space-x-2 text-slate-900 font-heading font-semibold text-xs mb-1 uppercase tracking-wider">
           <Smartphone className="w-4 h-4 text-forest-700" />
           <span>Sincronización Activa</span>
