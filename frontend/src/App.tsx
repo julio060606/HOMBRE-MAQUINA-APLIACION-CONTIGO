@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { contigoTheme } from './app/theme';
 import { AuthProvider } from './context/AuthContext';
 import { PatientProvider } from './context/PatientContext';
+import { ToastProvider } from './context/ToastContext';
 import { AppRoutes } from './routes/AppRoutes';
 
 const ScrollToTop: React.FC = () => {
@@ -43,7 +44,9 @@ export const App: React.FC = () => {
           <ScrollToTop />
           <AuthProvider>
             <PatientProvider>
-              <AppRoutes />
+              <ToastProvider>
+                <AppRoutes />
+              </ToastProvider>
             </PatientProvider>
           </AuthProvider>
         </BrowserRouter>

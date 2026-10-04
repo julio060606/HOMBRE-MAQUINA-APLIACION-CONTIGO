@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePatient } from '../../context/PatientContext';
-import { medicationService, vitalsService, alertService } from '../../services/apiClient';
+import { useToast } from '../../context/ToastContext';
+import { medicationService, vitalsService, alertService, syncEvents } from '../../services/apiClient';
 import { PillIntake, BloodPressureLog, AlertEvent } from '../../types';
 import { 
   Heart, 
@@ -22,14 +23,14 @@ import { Link } from 'react-router-dom';
 
 export const DashboardPage: React.FC = () => {
   const { activePatient } = usePatient();
+  const toast = useToast();
   const [intakes, setIntakes] = useState<PillIntake[]>([]);
   const [latestVitals, setLatestVitals] = useState<BloodPressureLog | null>(null);
   const [alerts, setAlerts] = useState<AlertEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const loadDashboardData = () => {
     if (!activePatient) return;
-    setIsLoading(true);
     Promise.all([
       medicationService.getTodayIntakes(activePatient.id),
       vitalsService.getBloodPressureLogs(activePatient.id),
@@ -40,6 +41,14 @@ export const DashboardPage: React.FC = () => {
       setAlerts(alertsData);
       setIsLoading(false);
     });
+  };
+
+  useEffect(() => {
+    loadDashboardData();
+    const unsub = syncEvents.subscribe(() => {
+      loadDashboardData();
+    });
+    return unsub;
   }, [activePatient]);
 
   if (!activePatient) {
@@ -58,10 +67,36 @@ export const DashboardPage: React.FC = () => {
 
   const takenCount = intakes.filter(i => i.status === 'TAKEN').length;
   const adherencePercent = intakes.length > 0 ? Math.round((takenCount / intakes.length) * 100) : 100;
+  const hasCriticalSosAlert = alerts.some(a => a.severity === 'CRITICAL' && a.title.includes('SOS'));
 
   return (
     <div className="space-y-6 font-sans antialiased">
       
+      {/* Alerta Crítica SOS Si Existe */}
+      {hasCriticalSosAlert && (
+        <div className="bg-rose-50 border-l-4 border-rose-600 p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-rose-950 shadow-md animate-pulse">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-rose-600 text-white flex items-center justify-center flex-shrink-0">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-heading font-bold text-sm text-rose-950">¡ALERTA DE AUXILIO SOS RECIBIDA!</h4>
+              <p className="text-xs text-rose-800 font-light mt-0.5">
+                El paciente {activePatient.fullName} ha activado el botón de auxilio inmediato desde su dispositivo móvil.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <a 
+              href={`tel:${activePatient.emergencyPhone}`} 
+              className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-heading font-semibold shadow-xs transition-colors"
+            >
+              Llamar al {activePatient.emergencyPhone}
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Top Banner: Resumen Humano, Ligero y Acogedor */}
       <div className="relative overflow-hidden bg-gradient-to-r from-white via-white to-emerald-50/40 rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] transition-all">
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
@@ -319,10 +354,18 @@ export const DashboardPage: React.FC = () => {
                         <span>Tomada</span>
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-xs font-heading font-medium border border-amber-200 shadow-xs">
+                      <button
+                        onClick={async () => {
+                          await medicationService.confirmIntake(intake.id, 'MANUAL_PATIENT');
+                          toast.success('Dosis Confirmada', `Se marcó ${intake.medicationName} (${intake.dosage}) como tomada.`);
+                        }}
+                        data-testid={`btn-mark-taken-${intake.id}`}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 hover:bg-emerald-50 text-amber-800 hover:text-forest-700 text-xs font-heading font-semibold border border-amber-200 hover:border-emerald-300 shadow-xs transition-all active:scale-95"
+                        title="Confirmar toma de este medicamento"
+                      >
                         <Clock className="w-3.5 h-3.5 text-amber-600" />
-                        <span>Pendiente</span>
-                      </span>
+                        <span>Marcar Tomada</span>
+                      </button>
                     )}
                   </div>
                 </div>

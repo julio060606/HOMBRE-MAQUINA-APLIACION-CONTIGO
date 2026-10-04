@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePatient } from '../../context/PatientContext';
-import { settingsService } from '../../services/apiClient';
+import { settingsService, resetDemoData } from '../../services/apiClient';
+import { useToast } from '../../context/ToastContext';
 import { ClinicalSettings } from '../../types';
 import { 
   Sliders, 
@@ -9,11 +10,13 @@ import {
   Smartphone, 
   Download, 
   Save, 
-  CheckCircle2
+  CheckCircle2,
+  RotateCcw
 } from 'lucide-react';
 
 export const SettingsPage: React.FC = () => {
   const { activePatient } = usePatient();
+  const toast = useToast();
   const [settings, setSettings] = useState<ClinicalSettings | null>(null);
   const [isSaved, setIsSaved] = useState(false);
 
@@ -28,7 +31,15 @@ export const SettingsPage: React.FC = () => {
     e.preventDefault();
     await settingsService.updateSettings(settings);
     setIsSaved(true);
+    toast.success('Configuración Sincronizada', 'Los umbrales clínicos y reglas de alarma se guardaron correctamente.');
     setTimeout(() => setIsSaved(false), 2000);
+  };
+
+  const handleResetData = () => {
+    if (window.confirm('¿Desea restablecer todos los datos simulados de prueba (medicamentos, tomas y presiones)?')) {
+      resetDemoData();
+      toast.info('Datos Restablecidos', 'Se restablecieron los datos de demostración a su estado inicial.');
+    }
   };
 
   const handleExportBackup = () => {
@@ -43,6 +54,7 @@ export const SettingsPage: React.FC = () => {
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
+    toast.success('Copia de Seguridad Creada', 'Archivo de respaldo JSON exportado con éxito.');
   };
 
   return (
@@ -253,12 +265,22 @@ export const SettingsPage: React.FC = () => {
           </button>
         </div>
 
-        {/* Botón Guardar Cambios */}
-        <div className="flex justify-end pt-2">
+        {/* Botones de Acción */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <button
+            type="button"
+            onClick={handleResetData}
+            className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-rose-600 p-2 rounded-xl hover:bg-rose-50 transition-colors"
+            title="Restablece medicamentos, tomas y presiones al estado inicial de fábrica"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Restablecer Datos de Demostración</span>
+          </button>
+
           <button
             type="submit"
             data-testid="btn-save-settings"
-            className="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs uppercase tracking-wider px-8 py-3.5 rounded-2xl shadow-sm hover:shadow transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs uppercase tracking-wider px-8 py-3.5 rounded-2xl shadow-sm hover:shadow transition-all duration-200 active:scale-98"
           >
             <Save className="w-4 h-4" />
             <span>Guardar Ajustes y Sincronizar</span>
