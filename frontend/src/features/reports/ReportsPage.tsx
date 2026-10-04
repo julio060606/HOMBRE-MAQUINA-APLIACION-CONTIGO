@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { usePatient } from '../../context/PatientContext';
+import { useToast } from '../../context/ToastContext';
 import { 
   FileText, 
   Download, 
   Printer, 
   Award,
-  Sparkles
+  Sparkles,
+  Loader2,
+  CheckCircle2
 } from 'lucide-react';
 
 export const ReportsPage: React.FC = () => {
   const { activePatient } = usePatient();
+  const toast = useToast();
   const [period, setPeriod] = useState<'7' | '30' | '90'>('30');
   const [includeVitals, setIncludeVitals] = useState(true);
   const [includeMedications, setIncludeMedications] = useState(true);
@@ -19,6 +23,7 @@ export const ReportsPage: React.FC = () => {
   if (!activePatient) return null;
 
   const handlePrint = () => {
+    toast.info('Modo Impresión', 'Abriendo vista de impresión para informe clínico...');
     window.print();
   };
 
@@ -26,8 +31,11 @@ export const ReportsPage: React.FC = () => {
     setIsExporting(true);
     setTimeout(() => {
       setIsExporting(false);
-      alert(`Reporte generado: Informe_Clinico_${activePatient.fullName.replace(/\s+/g, '_')}_${period}dias.pdf descargado con éxito.`);
-    }, 1000);
+      toast.success(
+        'Informe Clínico Descargado',
+        `Documento oficial "Informe_Clinico_${activePatient.fullName.replace(/\s+/g, '_')}_${period}dias.pdf" generado con firma y sello médico.`
+      );
+    }, 1200);
   };
 
   return (

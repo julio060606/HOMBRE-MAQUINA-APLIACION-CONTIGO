@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { usePatient } from '../../context/PatientContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import {
   ExternalLink,
   ChevronDown
 } from 'lucide-react';
+import { MobilePatientSimulatorModal } from '../simulator/MobilePatientSimulatorModal';
 
 interface NavbarProps {
   onOpenLinkModal?: () => void;
@@ -17,6 +18,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenLinkModal }) => {
   const { user, logout } = useAuth();
   const { activePatient, patients, setActivePatient } = usePatient();
+  const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -75,20 +77,32 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLinkModal }) => {
         </div>
 
         {/* Acciones del Usuario & Estado Móvil */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3 sm:space-x-4">
           
+          {/* Botón de Demostración del Móvil del Paciente */}
+          <button
+            onClick={() => setIsSimulatorOpen(true)}
+            data-testid="btn-open-mobile-simulator"
+            className="flex items-center gap-1.5 sm:gap-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-forest-700 font-heading font-semibold text-xs px-3 py-1.5 rounded-xl shadow-xs transition-all animate-pulse hover:animate-none"
+            title="Abrir simulador del celular del paciente para probar la sincronización en vivo"
+          >
+            <Smartphone className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+            <span className="hidden md:inline">Simular Móvil Paciente</span>
+            <span className="md:hidden">Móvil</span>
+          </button>
+
           <Link
             to="/clinic"
             target="_blank"
             rel="noopener noreferrer"
             title="Ver sitio web del Centro Médico Aliado"
-            className="hidden md:flex items-center gap-1.5 text-xs font-heading font-medium text-slate-600 hover:text-forest-700 uppercase tracking-wider transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-50"
+            className="hidden lg:flex items-center gap-1.5 text-xs font-heading font-medium text-slate-600 hover:text-forest-700 uppercase tracking-wider transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-50"
           >
             <span>Centro Médico</span>
             <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
           </Link>
 
-          <span className="text-slate-200 font-light text-base select-none">|</span>
+          <span className="text-slate-200 font-light text-base select-none hidden sm:inline">|</span>
 
           <div className="flex items-center space-x-3 text-xs">
             <div className="flex items-center gap-2.5">
@@ -116,6 +130,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLinkModal }) => {
         </div>
 
       </div>
+
+      {/* Modal Simulador del Móvil del Paciente */}
+      <MobilePatientSimulatorModal 
+        isOpen={isSimulatorOpen} 
+        onClose={() => setIsSimulatorOpen(false)} 
+      />
     </header>
   );
 };
