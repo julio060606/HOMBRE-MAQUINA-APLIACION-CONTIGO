@@ -64,110 +64,134 @@ export const VitalsPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 font-sans">
+    <div className="space-y-6 font-sans antialiased">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
         <div>
-          <h1 className="text-2xl font-heading font-light text-slate-950 tracking-tight">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+            <span className="text-xs font-heading font-medium text-rose-700 uppercase tracking-wider">
+              Monitoreo Cardiovascular
+            </span>
+          </div>
+          <h1 className="text-2xl font-heading font-semibold text-slate-900 tracking-tight">
             Registros y Tendencias de Presión Arterial
           </h1>
           <p className="text-xs text-slate-500 font-light mt-1">
-            Histórico biométrico de {activePatient.fullName}. Monitoreo continuo de presión sistólica, diastólica y pulso.
+            Histórico biométrico de <strong className="font-medium text-slate-700">{activePatient.fullName}</strong>. Monitoreo continuo de presión sistólica, diastólica y pulso.
           </p>
         </div>
 
         <button
           onClick={() => setIsModalOpen(true)}
           data-testid="btn-add-manual-vitals"
-          className="bg-forest-700 hover:bg-forest-800 text-white text-xs font-heading font-medium uppercase tracking-wider px-6 py-3 shadow-sm transition-all flex items-center justify-center gap-2"
+          className="inline-flex items-center justify-center gap-2 bg-forest-700 hover:bg-forest-800 text-white text-xs font-heading font-semibold uppercase tracking-wider px-5 py-3 rounded-2xl shadow-sm hover:shadow transition-all duration-200 flex-shrink-0"
         >
           <Plus className="w-4 h-4" />
-          <span>Registrar Medición Manual</span>
+          <span>Registrar Medición</span>
         </button>
       </div>
 
-      {/* Gráfico Interactivo de Presión Arterial (0 curvatura) */}
-      <div className="bg-white p-6 border border-slate-200 shadow-sm">
-        <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+      {/* Gráfico Interactivo de Presión Arterial */}
+      <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
           <div>
-            <h3 className="font-heading font-medium text-base text-slate-950 flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-forest-700" />
-              Evolución de Presión Arterial (Sistólica / Diastólica)
+            <h3 className="font-heading font-semibold text-base sm:text-lg text-slate-900 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-forest-700" />
+              <span>Evolución de Presión Arterial</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light">Líneas de referencia indican el estándar médico normotenso (120/80 mmHg).</p>
+            <p className="text-xs text-slate-400 font-light mt-0.5">
+              Líneas punteadas indican el umbral clínico óptimo (120/80 mmHg).
+            </p>
           </div>
-          <div className="flex items-center gap-4 text-xs font-heading font-semibold uppercase tracking-wider">
-            <span className="flex items-center gap-1.5 text-rose-600">
-              <span className="w-2.5 h-2.5 bg-rose-600 inline-block"></span> Sistólica
+          
+          <div className="flex items-center gap-3 text-xs font-heading font-semibold">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-100 shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+              <span>Sistólica</span>
             </span>
-            <span className="flex items-center gap-1.5 text-blue-600">
-              <span className="w-2.5 h-2.5 bg-blue-600 inline-block"></span> Diastólica
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 border border-blue-100 shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+              <span>Diastólica</span>
             </span>
           </div>
         </div>
 
-        <div className="h-72 w-full mt-4">
+        <div className="h-72 w-full mt-2">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748b', fontFamily: 'Inter' }} />
-              <YAxis domain={[50, 160]} tick={{ fontSize: 11, fill: '#64748b', fontFamily: 'Inter' }} />
+              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+              <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#64748b', fontFamily: 'Inter' }} axisLine={{ stroke: '#e2e8f0' }} tickLine={false} />
+              <YAxis domain={[50, 160]} tick={{ fontSize: 11, fill: '#64748b', fontFamily: 'Inter' }} axisLine={false} tickLine={false} />
               <Tooltip 
-                contentStyle={{ border: '1px solid #cbd5e1', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', fontFamily: 'Plus Jakarta Sans', fontSize: 12 }} 
+                contentStyle={{ 
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #f1f5f9', 
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 20px -2px rgba(0,0,0,0.06)', 
+                  fontFamily: 'Plus Jakarta Sans', 
+                  fontSize: 12 
+                }} 
               />
-              <ReferenceLine y={120} stroke="#16a34a" strokeDasharray="3 3" label={{ value: '120 Óptimo', fill: '#16a34a', fontSize: 10, fontFamily: 'Plus Jakarta Sans' }} />
-              <ReferenceLine y={80} stroke="#2563eb" strokeDasharray="3 3" label={{ value: '80 Óptimo', fill: '#2563eb', fontSize: 10, fontFamily: 'Plus Jakarta Sans' }} />
-              <Line type="monotone" dataKey="sistolica" stroke="#e11d48" strokeWidth={2.5} dot={{ r: 3 }} activeDot={{ r: 5 }} />
-              <Line type="monotone" dataKey="diastolica" stroke="#2563eb" strokeWidth={2.5} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+              <ReferenceLine y={120} stroke="#10b981" strokeDasharray="4 4" label={{ value: '120 Óptimo', fill: '#10b981', fontSize: 10, fontFamily: 'Plus Jakarta Sans' }} />
+              <ReferenceLine y={80} stroke="#3b82f6" strokeDasharray="4 4" label={{ value: '80 Óptimo', fill: '#3b82f6', fontSize: 10, fontFamily: 'Plus Jakarta Sans' }} />
+              <Line type="monotone" dataKey="sistolica" stroke="#e11d48" strokeWidth={3} dot={{ r: 4, fill: '#e11d48', strokeWidth: 2, stroke: '#ffffff' }} activeDot={{ r: 6 }} />
+              <Line type="monotone" dataKey="diastolica" stroke="#2563eb" strokeWidth={3} dot={{ r: 4, fill: '#2563eb', strokeWidth: 2, stroke: '#ffffff' }} activeDot={{ r: 6 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      {/* Tabla de Registros Detallados (0 curvatura) */}
-      <div className="bg-white p-6 border border-slate-200 shadow-sm">
-        <h3 className="font-heading font-medium text-base text-slate-950 mb-4 pb-3 border-b border-slate-100">
-          Histórico Cronológico de Mediciones
-        </h3>
+      {/* Tabla de Registros Detallados */}
+      <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
+        <div className="mb-6 pb-4 border-b border-slate-100">
+          <h3 className="font-heading font-semibold text-base sm:text-lg text-slate-900">
+            Histórico Cronológico de Mediciones
+          </h3>
+          <p className="text-xs text-slate-400 font-light mt-0.5">
+            Registro secuencial de valores de presión arterial y frecuencia cardíaca
+          </p>
+        </div>
         
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto rounded-2xl border border-slate-100">
           <table className="w-full text-left border-collapse text-xs">
             <thead>
-              <tr className="border-b border-slate-200 text-[10px] font-heading font-semibold text-slate-400 uppercase tracking-widest bg-slate-50">
-                <th className="py-3 px-4">Fecha y Hora</th>
-                <th className="py-3 px-4">Presión (mmHg)</th>
-                <th className="py-3 px-4">Pulso (bpm)</th>
-                <th className="py-3 px-4">Canal de Registro</th>
-                <th className="py-3 px-4">Estado Clínico</th>
-                <th className="py-3 px-4">Observaciones</th>
+              <tr className="border-b border-slate-100 text-[10px] font-heading font-semibold text-slate-400 uppercase tracking-widest bg-slate-50/70">
+                <th className="py-3.5 px-4">Fecha y Hora</th>
+                <th className="py-3.5 px-4">Presión (mmHg)</th>
+                <th className="py-3.5 px-4">Pulso</th>
+                <th className="py-3.5 px-4">Canal</th>
+                <th className="py-3.5 px-4">Estado</th>
+                <th className="py-3.5 px-4">Observaciones</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               {logs.map(log => (
-                <tr key={log.id} className="hover:bg-slate-50 transition">
-                  <td className="py-3 px-4 font-mono text-slate-600">
+                <tr key={log.id} className="hover:bg-slate-50/70 transition-colors">
+                  <td className="py-3.5 px-4 font-mono text-slate-600">
                     {new Date(log.recordedAt).toLocaleString('es-PE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}
                   </td>
-                  <td className="py-3 px-4 font-heading font-semibold text-slate-950 text-sm">
-                    {log.systolic} / {log.diastolic}
+                  <td className="py-3.5 px-4">
+                    <span className="font-heading font-bold text-slate-900 text-sm">{log.systolic}/{log.diastolic}</span>
+                    <span className="text-[10px] text-slate-400 ml-1">mmHg</span>
                   </td>
-                  <td className="py-3 px-4 text-slate-700 font-medium">
+                  <td className="py-3.5 px-4 text-slate-700 font-medium">
                     {log.pulse || 72} bpm
                   </td>
-                  <td className="py-3 px-4 text-slate-500 font-light">
+                  <td className="py-3.5 px-4 text-slate-500 font-light">
                     {log.recordedVia === 'VOICE_PATIENT' ? '🎤 Voz Móvil' : '💻 Teclado Cuidador'}
                   </td>
-                  <td className="py-3 px-4">
-                    <span className={`inline-flex items-center gap-1 text-[9px] font-heading font-semibold uppercase tracking-wider px-2 py-0.5 ${
+                  <td className="py-3.5 px-4">
+                    <span className={`inline-flex items-center gap-1.5 text-[10px] font-heading font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                       log.status === 'NORMAL' 
-                        ? 'bg-emerald-100 text-forest-900 border border-emerald-300' 
-                        : 'bg-amber-100 text-amber-900 border border-amber-300'
+                        ? 'bg-emerald-50 text-forest-800 border border-emerald-200/60' 
+                        : 'bg-amber-50 text-amber-800 border border-amber-200/60'
                     }`}>
                       {log.status === 'NORMAL' ? 'Normal' : 'Elevada'}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-slate-500 font-light italic">
+                  <td className="py-3.5 px-4 text-slate-500 font-light italic">
                     {log.notes || '—'}
                   </td>
                 </tr>
@@ -179,24 +203,29 @@ export const VitalsPage: React.FC = () => {
 
       {/* Modal de Registro Manual */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          <div className="bg-white max-w-md w-full p-6 shadow-xl border border-slate-300 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+          <div className="bg-white max-w-md w-full p-6 sm:p-7 rounded-3xl shadow-2xl border border-slate-100 relative animate-in fade-in zoom-in-95 duration-150">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 hover:bg-slate-100"
+              className="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-slate-100 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="mb-5 pb-3 border-b border-slate-100">
-              <h3 className="text-lg font-heading font-medium text-slate-950">Registrar Signos Vitales</h3>
-              <p className="text-xs text-slate-500 font-light">Ingresa la medición tomada con tensiómetro de brazo o muñeca.</p>
+            <div className="mb-6 pb-4 border-b border-slate-100">
+              <div className="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-3">
+                <Heart className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-heading font-semibold text-slate-900">Registrar Signos Vitales</h3>
+              <p className="text-xs text-slate-500 font-light mt-0.5">
+                Ingresa la medición obtenida con el tensiómetro digital.
+              </p>
             </div>
 
             <form onSubmit={handleAddLog} className="space-y-4">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                     Sistólica (Alta)
                   </label>
                   <input
@@ -207,11 +236,11 @@ export const VitalsPage: React.FC = () => {
                     value={systolic}
                     onChange={e => setSystolic(Number(e.target.value))}
                     data-testid="input-systolic"
-                    className="w-full px-4 py-2.5 border border-slate-300 text-base font-heading font-bold text-center focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-lg font-heading font-bold text-center focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                     Diastólica (Baja)
                   </label>
                   <input
@@ -222,14 +251,14 @@ export const VitalsPage: React.FC = () => {
                     value={diastolic}
                     onChange={e => setDiastolic(Number(e.target.value))}
                     data-testid="input-diastolic"
-                    className="w-full px-4 py-2.5 border border-slate-300 text-base font-heading font-bold text-center focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-lg font-heading font-bold text-center focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                  Pulso (BPM)
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Pulso Cardíaco (BPM)
                 </label>
                 <input
                   type="number"
@@ -238,20 +267,20 @@ export const VitalsPage: React.FC = () => {
                   value={pulse}
                   onChange={e => setPulse(Number(e.target.value))}
                   data-testid="input-pulse"
-                  className="w-full px-4 py-2.5 border border-slate-300 text-sm font-heading font-semibold text-center focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-heading font-semibold text-center focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                  Notas / Observaciones
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Notas / Contexto
                 </label>
                 <input
                   type="text"
                   value={notes}
                   onChange={e => setNotes(e.target.value)}
-                  placeholder="Ej: Medición post-almuerzo"
-                  className="w-full px-4 py-2.5 border border-slate-300 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  placeholder="Ej: Reposo previo de 10 min, sentado"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
@@ -259,7 +288,7 @@ export const VitalsPage: React.FC = () => {
                 <button
                   type="submit"
                   data-testid="btn-save-vitals"
-                  className="w-full bg-forest-700 hover:bg-forest-800 text-white font-heading font-medium text-xs uppercase tracking-wider py-3.5 transition shadow-sm"
+                  className="w-full bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs uppercase tracking-wider py-3.5 rounded-2xl transition-all shadow-sm hover:shadow"
                 >
                   Guardar Medición
                 </button>

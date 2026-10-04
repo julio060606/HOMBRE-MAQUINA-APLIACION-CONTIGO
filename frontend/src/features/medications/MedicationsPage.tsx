@@ -62,72 +62,85 @@ export const MedicationsPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 font-sans">
+    <div className="space-y-6 font-sans antialiased">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
         <div>
-          <h1 className="text-2xl font-heading font-light text-slate-950 tracking-tight">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="text-xs font-heading font-medium text-forest-700 uppercase tracking-wider">
+              Gestión Farmacológica Activa
+            </span>
+          </div>
+          <h1 className="text-2xl font-heading font-semibold text-slate-900 tracking-tight">
             Pastillero y Programación de Recetas
           </h1>
           <p className="text-xs text-slate-500 font-light mt-1">
-            Fármacos activos para {activePatient.fullName}. Sincronización en tiempo real con el teléfono del paciente.
+            Fármacos activos para <strong className="font-medium text-slate-700">{activePatient.fullName}</strong>. Sincronización instantánea con su dispositivo móvil.
           </p>
         </div>
 
         <button
           onClick={() => setIsModalOpen(true)}
           data-testid="btn-add-medication-modal"
-          className="bg-forest-700 hover:bg-forest-800 text-white text-xs font-heading font-medium uppercase tracking-wider px-6 py-3 shadow-sm transition-all flex items-center justify-center gap-2"
+          className="inline-flex items-center justify-center gap-2 bg-forest-700 hover:bg-forest-800 text-white text-xs font-heading font-semibold uppercase tracking-wider px-5 py-3 rounded-2xl shadow-sm hover:shadow transition-all duration-200 flex-shrink-0"
         >
           <Plus className="w-4 h-4" />
           <span>Agregar Medicamento</span>
         </button>
       </div>
 
-      {/* Grid de Tarjetas de Medicamentos (0 curvatura) */}
+      {/* Grid de Tarjetas de Medicamentos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {medications.map(med => (
           <div 
             key={med.id} 
             data-testid={`card-medication-${med.id}`}
-            className={`bg-white p-5 border shadow-sm flex flex-col justify-between transition-all ${
-              med.isActive ? 'border-slate-200' : 'border-slate-200 opacity-60 bg-slate-50/50'
+            className={`bg-white rounded-3xl p-6 border shadow-[0_2px_12px_rgba(0,0,0,0.025)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between ${
+              med.isActive ? 'border-slate-100/90' : 'border-slate-200/60 opacity-70 bg-slate-50/40'
             }`}
           >
             <div>
               {/* Foto de la Pastilla + Estado */}
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <div className="w-20 h-20 bg-slate-100 overflow-hidden border border-slate-200 flex-shrink-0 flex items-center justify-center">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-20 h-20 rounded-2xl bg-slate-50 overflow-hidden border border-slate-100 flex-shrink-0 flex items-center justify-center shadow-xs">
                   {med.imageUrl ? (
-                    <img src={med.imageUrl} alt={med.name} className="w-full h-full object-cover" />
+                    <img src={med.imageUrl} alt={med.name} className="w-full h-full object-cover rounded-2xl" />
                   ) : (
-                    <ImageIcon className="w-8 h-8 text-slate-400" />
+                    <ImageIcon className="w-8 h-8 text-slate-300" />
                   )}
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-heading font-semibold text-sm text-slate-950">{med.name}</h3>
-                    <span className={`text-[9px] font-heading font-semibold px-2 py-0.5 uppercase tracking-wider ${
-                      med.isActive ? 'bg-emerald-100 text-forest-900 border border-emerald-300' : 'bg-slate-200 text-slate-600'
+                
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-heading font-semibold text-base text-slate-900 truncate">{med.name}</h3>
+                    <span className={`text-[10px] font-heading font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider flex-shrink-0 ${
+                      med.isActive 
+                        ? 'bg-emerald-50 text-forest-800 border border-emerald-200/60' 
+                        : 'bg-slate-100 text-slate-500'
                     }`}>
                       {med.isActive ? 'ACTIVO' : 'PAUSADO'}
                     </span>
                   </div>
-                  <div className="text-xs font-heading font-medium text-forest-700 mt-0.5">{med.dosage}</div>
-                  <p className="text-xs text-slate-500 font-light mt-1 line-clamp-2 leading-relaxed">
-                    {med.instructions || 'Sin observaciones médicas.'}
+                  
+                  <div className="text-xs font-heading font-semibold text-forest-700 mt-0.5">{med.dosage}</div>
+                  
+                  <p className="text-xs text-slate-500 font-light mt-1.5 line-clamp-2 leading-relaxed">
+                    {med.instructions || 'Sin observaciones médicas registradas.'}
                   </p>
                 </div>
               </div>
 
               {/* Horarios y Frecuencia */}
-              <div className="bg-slate-50 p-3.5 space-y-2 text-xs text-slate-700 border border-slate-100">
+              <div className="bg-slate-50/70 rounded-2xl p-4 space-y-2.5 text-xs text-slate-700 border border-slate-100/80">
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1.5 text-slate-500 font-light">
                     <Clock className="w-3.5 h-3.5 text-forest-700" /> Horario(s):
                   </span>
-                  <strong className="font-heading font-semibold text-slate-900">{med.times.join(', ')}</strong>
+                  <strong className="font-heading font-semibold text-slate-900 bg-white px-2.5 py-0.5 rounded-md border border-slate-100 shadow-xs">
+                    {med.times.join(', ')}
+                  </strong>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1.5 text-slate-500 font-light">
@@ -141,18 +154,22 @@ export const MedicationsPage: React.FC = () => {
             </div>
 
             {/* Acciones */}
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-[11px] text-slate-400 font-light">
+                {med.durationDays ? `${med.durationDays} días prescritos` : 'Tratamiento continuo'}
+              </span>
+
               <button
                 onClick={() => handleToggle(med.id)}
                 data-testid={`btn-toggle-med-${med.id}`}
-                className={`text-xs font-heading font-medium uppercase tracking-wider py-1.5 px-3.5 transition flex items-center gap-1.5 ${
+                className={`text-xs font-heading font-medium tracking-wide py-2 px-3.5 rounded-xl transition-all flex items-center gap-1.5 shadow-xs ${
                   med.isActive 
-                    ? 'text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-300' 
-                    : 'text-forest-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300'
+                    ? 'text-amber-800 bg-amber-50 hover:bg-amber-100/80 border border-amber-200/60' 
+                    : 'text-forest-800 bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200/60'
                 }`}
               >
                 <Power className="w-3.5 h-3.5" />
-                <span>{med.isActive ? 'Pausar Tratamiento' : 'Reanudar'}</span>
+                <span>{med.isActive ? 'Pausar' : 'Reanudar'}</span>
               </button>
             </div>
           </div>
@@ -161,23 +178,28 @@ export const MedicationsPage: React.FC = () => {
 
       {/* Modal de Alta de Medicamento */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          <div className="bg-white max-w-lg w-full p-6 shadow-xl border border-slate-300 relative max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+          <div className="bg-white max-w-lg w-full p-6 sm:p-7 rounded-3xl shadow-2xl border border-slate-100 relative max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1 hover:bg-slate-100"
+              className="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-slate-100 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="mb-5 pb-3 border-b border-slate-100">
-              <h3 className="text-lg font-heading font-medium text-slate-950">Recetar Nuevo Medicamento</h3>
-              <p className="text-xs text-slate-500 font-light">Completa los datos del fármaco para programar las alarmas del paciente.</p>
+            <div className="mb-6 pb-4 border-b border-slate-100">
+              <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-forest-700 flex items-center justify-center mb-3">
+                <Pill className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-heading font-semibold text-slate-900">Recetar Nuevo Medicamento</h3>
+              <p className="text-xs text-slate-500 font-light mt-0.5">
+                Ingresa los datos del fármaco para programar las alertas asistidas del paciente.
+              </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                   Nombre del Medicamento
                 </label>
                 <input
@@ -185,15 +207,15 @@ export const MedicationsPage: React.FC = () => {
                   required
                   value={name}
                   onChange={e => setName(e.target.value)}
-                  placeholder="Ej: Losartán, Enalapril, Vitamina C"
+                  placeholder="Ej: Losartán Potásico, Atorvastatina"
                   data-testid="input-med-name"
-                  className="w-full px-4 py-2.5 border border-slate-300 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                     Dosis
                   </label>
                   <input
@@ -203,11 +225,11 @@ export const MedicationsPage: React.FC = () => {
                     onChange={e => setDosage(e.target.value)}
                     placeholder="Ej: 50 mg, 1 tableta"
                     data-testid="input-med-dosage"
-                    className="w-full px-4 py-2.5 border border-slate-300 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                     Hora de Toma
                   </label>
                   <input
@@ -216,48 +238,48 @@ export const MedicationsPage: React.FC = () => {
                     value={times}
                     onChange={e => setTimes(e.target.value)}
                     data-testid="input-med-time"
-                    className="w-full px-4 py-2.5 border border-slate-300 text-xs font-mono focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-mono focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                  Duración (Días)
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Duración del Tratamiento (Días)
                 </label>
                 <input
                   type="number"
                   value={durationDays}
                   onChange={e => setDurationDays(Number(e.target.value))}
                   placeholder="30"
-                  className="w-full px-4 py-2.5 border border-slate-300 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
                   Indicaciones Médicas
                 </label>
                 <input
                   type="text"
                   value={instructions}
                   onChange={e => setInstructions(e.target.value)}
-                  placeholder="Ej: Tomar con alimentos después del almuerzo"
+                  placeholder="Ej: Tomar con alimentos después del desayuno"
                   data-testid="input-med-instructions"
-                  className="w-full px-4 py-2.5 border border-slate-300 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                  Fotografía de Referencia (URL de Imagen)
+                <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Fotografía de Referencia (URL del Comprimido)
                 </label>
                 <input
                   type="url"
                   value={imageUrl}
                   onChange={e => setImageUrl(e.target.value)}
                   placeholder="https://..."
-                  className="w-full px-4 py-2 border border-slate-300 text-xs text-slate-600 focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
                 />
               </div>
 
@@ -265,7 +287,7 @@ export const MedicationsPage: React.FC = () => {
                 <button
                   type="submit"
                   data-testid="btn-save-medication"
-                  className="w-full bg-forest-700 hover:bg-forest-800 text-white font-heading font-medium text-xs uppercase tracking-wider py-3.5 transition shadow-sm"
+                  className="w-full bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs uppercase tracking-wider py-3.5 rounded-2xl transition-all shadow-sm hover:shadow"
                 >
                   Guardar y Sincronizar con el Móvil
                 </button>

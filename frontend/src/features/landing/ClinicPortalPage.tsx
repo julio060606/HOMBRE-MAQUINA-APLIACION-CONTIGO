@@ -656,7 +656,10 @@ export const ClinicPortalPage: React.FC = () => {
               {/* Botón hacia la landing oficial de Contigo */}
               <div className="pt-4">
                 <Link
-                  to="/landing"
+                  to="/landing#hero"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                  }}
                   data-testid="btn-go-to-contigo-landing-main"
                   className="inline-flex items-center gap-3 bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 shadow-soft-lg transition-all group"
                 >

@@ -46,126 +46,141 @@ export const SettingsPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 font-sans">
+    <div className="space-y-6 font-sans antialiased">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
         <div>
-          <h1 className="text-2xl font-heading font-light text-slate-950 tracking-tight">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="w-2.5 h-2.5 rounded-full bg-forest-600 animate-pulse"></span>
+            <span className="text-xs font-heading font-medium text-forest-700 uppercase tracking-wider">
+              Control Clínico y Telemetría
+            </span>
+          </div>
+          <h1 className="text-2xl font-heading font-semibold text-slate-900 tracking-tight">
             Ajustes Clínicos y Configuración del Paciente
           </h1>
           <p className="text-xs text-slate-500 font-light mt-1">
-            Configuración de umbrales médicos, alertas de omisión y control remoto de accesibilidad.
+            Configuración de umbrales médicos, alertas de omisión y control remoto de accesibilidad para <strong className="font-medium text-slate-700">{activePatient.fullName}</strong>.
           </p>
         </div>
 
         {isSaved && (
-          <div className="bg-emerald-100 text-forest-900 text-xs font-heading font-semibold uppercase tracking-wider px-4 py-2 flex items-center gap-1.5 border border-emerald-300 shadow-sm animate-in fade-in duration-200">
-            <CheckCircle2 className="w-4 h-4 text-forest-700" /> Configuración Guardada y Sincronizada
+          <div className="bg-emerald-50 text-forest-800 text-xs font-heading font-semibold uppercase tracking-wider px-4 py-2.5 rounded-2xl flex items-center gap-2 border border-emerald-200/80 shadow-xs animate-in fade-in duration-200">
+            <CheckCircle2 className="w-4 h-4 text-forest-700" />
+            <span>Configuración Sincronizada</span>
           </div>
         )}
       </div>
 
       <form onSubmit={handleSave} className="space-y-6">
         
-        {/* Bloque 1: Umbrales Clínicos (0 curvatura) */}
-        <div className="bg-white p-6 border border-slate-200 shadow-sm">
-          <div className="flex items-center gap-2.5 mb-2 pb-3 border-b border-slate-100">
-            <div className="w-8 h-8 bg-rose-50 text-rose-600 flex items-center justify-center">
-              <Shield className="w-4 h-4" />
+        {/* Bloque 1: Umbrales Clínicos de Presión */}
+        <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
+          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+            <div className="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
+              <Shield className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-medium text-base text-slate-950">Rangos de Presión Indicados por el Médico</h3>
-              <p className="text-xs text-slate-500 font-light">El sistema disparará alertas si la medición del paciente supera estos valores.</p>
+              <h3 className="font-heading font-semibold text-base text-slate-900">Rangos de Presión Indicados por el Médico</h3>
+              <p className="text-xs text-slate-400 font-light mt-0.5">El sistema disparará alertas si la medición del paciente supera estos valores pautados.</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-            <div>
-              <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                Sistólica Máxima Normal (mmHg)
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100/80">
+              <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                Sistólica Máx. (mmHg)
               </label>
               <input
                 type="number"
                 value={settings.systolicMaxNormal}
                 onChange={e => setSettings({ ...settings, systolicMaxNormal: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 border border-slate-300 text-sm font-heading font-semibold text-slate-950 focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-heading font-bold text-slate-900 bg-white focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
               />
             </div>
 
-            <div>
-              <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                Sistólica Mínima Normal (mmHg)
+            <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100/80">
+              <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                Sistólica Mín. (mmHg)
               </label>
               <input
                 type="number"
                 value={settings.systolicMinNormal}
                 onChange={e => setSettings({ ...settings, systolicMinNormal: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 border border-slate-300 text-sm font-heading font-semibold text-slate-950 focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-heading font-bold text-slate-900 bg-white focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
               />
             </div>
 
-            <div>
-              <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                Diastólica Máxima Normal (mmHg)
+            <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100/80">
+              <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                Diastólica Máx. (mmHg)
               </label>
               <input
                 type="number"
                 value={settings.diastolicMaxNormal}
                 onChange={e => setSettings({ ...settings, diastolicMaxNormal: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 border border-slate-300 text-sm font-heading font-semibold text-slate-950 focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-heading font-bold text-slate-900 bg-white focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
               />
             </div>
 
-            <div>
-              <label className="block text-[11px] font-heading font-medium text-slate-700 uppercase tracking-wider mb-1">
-                Diastólica Mínima Normal (mmHg)
+            <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-100/80">
+              <label className="block text-[11px] font-heading font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                Diastólica Mín. (mmHg)
               </label>
               <input
                 type="number"
                 value={settings.diastolicMinNormal}
                 onChange={e => setSettings({ ...settings, diastolicMinNormal: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 border border-slate-300 text-sm font-heading font-semibold text-slate-950 focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-heading font-bold text-slate-900 bg-white focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all"
               />
             </div>
           </div>
         </div>
 
-        {/* Bloque 2: Reglas de Alertas y Notificaciones (0 curvatura) */}
-        <div className="bg-white p-6 border border-slate-200 shadow-sm">
-          <div className="flex items-center gap-2.5 mb-2 pb-3 border-b border-slate-100">
-            <div className="w-8 h-8 bg-amber-50 text-amber-600 flex items-center justify-center">
-              <Bell className="w-4 h-4" />
+        {/* Bloque 2: Reglas de Alertas y Notificaciones */}
+        <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
+          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+            <div className="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
+              <Bell className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-medium text-base text-slate-950">Notificaciones y Alertas al Cuidador</h3>
-              <p className="text-xs text-slate-500 font-light">Configura cuándo y cómo recibir avisos en el navegador o celular.</p>
+              <h3 className="font-heading font-semibold text-base text-slate-900">Notificaciones y Alertas al Cuidador</h3>
+              <p className="text-xs text-slate-400 font-light mt-0.5">Configura cuándo y cómo recibir avisos en el navegador o dispositivo móvil.</p>
             </div>
           </div>
 
-          <div className="space-y-3 mt-4 text-xs font-light">
-            <label className="flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200 cursor-pointer hover:bg-slate-100 transition">
-              <div>
-                <span className="font-heading font-medium text-slate-950 text-xs uppercase tracking-wider block">Aviso inmediato por Signos Vitales Críticos</span>
-                <span className="text-slate-500">Emitir alerta sonora en el dashboard si la presión sale de los rangos médicos.</span>
+          <div className="space-y-3 text-xs">
+            <label className="flex items-center justify-between p-4 rounded-2xl bg-slate-50/70 border border-slate-100/80 cursor-pointer hover:bg-slate-50 transition-colors">
+              <div className="pr-4">
+                <span className="font-heading font-semibold text-slate-900 text-xs uppercase tracking-wider block">
+                  Aviso Inmediato por Signos Vitales Críticos
+                </span>
+                <span className="text-slate-500 font-light mt-0.5 block">
+                  Emitir alerta prioritaria en el dashboard si la presión sale de los rangos médicos seguros.
+                </span>
               </div>
               <input
                 type="checkbox"
                 checked={settings.notifyOnOutOfRange}
                 onChange={e => setSettings({ ...settings, notifyOnOutOfRange: e.target.checked })}
-                className="w-4 h-4 text-forest-700 focus:ring-forest-700 cursor-pointer"
+                className="w-5 h-5 rounded text-forest-700 focus:ring-forest-700/20 cursor-pointer flex-shrink-0"
               />
             </label>
 
-            <div className="p-3.5 bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="p-4 rounded-2xl bg-slate-50/70 border border-slate-100/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <span className="font-heading font-medium text-slate-950 text-xs uppercase tracking-wider block">Alerta por Omisión de Medicamento</span>
-                <span className="text-slate-500">Tiempo de tolerancia antes de notificar al cuidador si el paciente no confirma la toma.</span>
+                <span className="font-heading font-semibold text-slate-900 text-xs uppercase tracking-wider block">
+                  Alerta por Omisión de Medicamento
+                </span>
+                <span className="text-slate-500 font-light mt-0.5 block">
+                  Tiempo de tolerancia antes de notificar al cuidador si el paciente no confirma la toma.
+                </span>
               </div>
               <select
                 value={settings.notifyMissedDoseMinutes}
                 onChange={e => setSettings({ ...settings, notifyMissedDoseMinutes: Number(e.target.value) })}
-                className="px-3.5 py-2 border border-slate-300 font-heading font-semibold text-slate-900 text-xs focus:ring-1 focus:ring-forest-700 focus:border-forest-700 focus:outline-none"
+                className="px-4 py-2.5 rounded-xl border border-slate-200 font-heading font-semibold text-slate-900 text-xs bg-white focus:ring-2 focus:ring-forest-700/20 focus:border-forest-700 focus:outline-none transition-all flex-shrink-0"
               >
                 <option value={15}>15 minutos después</option>
                 <option value={30}>30 minutos después</option>
@@ -175,57 +190,65 @@ export const SettingsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Bloque 3: Control Remoto de Accesibilidad Móvil (0 curvatura) */}
-        <div className="bg-white p-6 border border-slate-200 shadow-sm">
-          <div className="flex items-center gap-2.5 mb-2 pb-3 border-b border-slate-100">
-            <div className="w-8 h-8 bg-emerald-50 text-forest-700 flex items-center justify-center">
-              <Smartphone className="w-4 h-4" />
+        {/* Bloque 3: Control Remoto de Accesibilidad Móvil */}
+        <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)]">
+          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-forest-700 flex items-center justify-center">
+              <Smartphone className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-medium text-base text-slate-950">Control Remoto de Accesibilidad del Móvil</h3>
-              <p className="text-xs text-slate-500 font-light">Configura la experiencia visual y auditiva en el celular del paciente desde aquí.</p>
+              <h3 className="font-heading font-semibold text-base text-slate-900">Control Remoto de Accesibilidad Móvil</h3>
+              <p className="text-xs text-slate-400 font-light mt-0.5">Configura la experiencia visual y auditiva en el celular del paciente de forma remota.</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-xs font-light">
-            <div className="p-4 bg-emerald-50/60 border border-emerald-200 flex items-center justify-between">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div className="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-200/60 flex items-center justify-between gap-3">
               <div>
-                <strong className="text-forest-950 font-heading font-semibold block text-xs uppercase tracking-wider">Modo Fácil (Ultra Accesible)</strong>
-                <span className="text-forest-900/80 text-[11px]">Agranda botones y simplifica los textos en el celular.</span>
+                <strong className="text-forest-950 font-heading font-semibold block text-xs uppercase tracking-wider">
+                  Modo Fácil (Ultra Accesible)
+                </strong>
+                <span className="text-forest-900/80 text-[11px] font-light mt-0.5 block">
+                  Agranda botones a 64px+ y simplifica textos en el dispositivo del paciente.
+                </span>
               </div>
               <input
                 type="checkbox"
                 defaultChecked={activePatient.easyModeEnabled}
-                className="w-4 h-4 text-forest-700 focus:ring-forest-700 cursor-pointer"
+                className="w-5 h-5 rounded text-forest-700 focus:ring-forest-700/20 cursor-pointer flex-shrink-0"
               />
             </div>
 
-            <div className="p-4 bg-emerald-50/60 border border-emerald-200 flex items-center justify-between">
+            <div className="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-200/60 flex items-center justify-between gap-3">
               <div>
-                <strong className="text-forest-950 font-heading font-semibold block text-xs uppercase tracking-wider">Lectura por Voz Automática</strong>
-                <span className="text-forest-900/80 text-[11px]">El celular lee en voz alta cada pantalla al abrirse.</span>
+                <strong className="text-forest-950 font-heading font-semibold block text-xs uppercase tracking-wider">
+                  Lectura por Voz Automática (TTS)
+                </strong>
+                <span className="text-forest-900/80 text-[11px] font-light mt-0.5 block">
+                  El celular lee en voz alta cada pantalla al abrirse para el adulto mayor.
+                </span>
               </div>
               <input
                 type="checkbox"
                 defaultChecked={activePatient.voiceGuideEnabled}
-                className="w-4 h-4 text-forest-700 focus:ring-forest-700 cursor-pointer"
+                className="w-5 h-5 rounded text-forest-700 focus:ring-forest-700/20 cursor-pointer flex-shrink-0"
               />
             </div>
           </div>
         </div>
 
         {/* Bloque 4: Respaldo y Exportación de Datos */}
-        <div className="bg-white p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h3 className="font-heading font-medium text-base text-slate-950">Copia de Seguridad y Exportación Cifrada</h3>
-            <p className="text-xs text-slate-500 font-light">Descarga un respaldo con todos los datos clínicos del paciente en formato JSON.</p>
+            <h3 className="font-heading font-semibold text-base text-slate-900">Copia de Seguridad y Exportación Cifrada</h3>
+            <p className="text-xs text-slate-400 font-light mt-0.5">Descarga un respaldo local con todos los datos clínicos del paciente en formato JSON estandarizado.</p>
           </div>
           <button
             type="button"
             onClick={handleExportBackup}
-            className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-heading font-medium uppercase tracking-wider px-5 py-3 transition flex items-center gap-2"
+            className="inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-800 text-xs font-heading font-medium uppercase tracking-wider px-5 py-3 rounded-2xl border border-slate-200/80 shadow-xs transition-all flex-shrink-0"
           >
-            <Download className="w-4 h-4" />
+            <Download className="w-4 h-4 text-slate-500" />
             <span>Descargar Copia (.JSON)</span>
           </button>
         </div>
@@ -235,7 +258,7 @@ export const SettingsPage: React.FC = () => {
           <button
             type="submit"
             data-testid="btn-save-settings"
-            className="bg-forest-700 hover:bg-forest-800 text-white font-heading font-medium text-xs uppercase tracking-wider px-8 py-3.5 shadow-sm transition-all flex items-center gap-2"
+            className="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-white font-heading font-semibold text-xs uppercase tracking-wider px-8 py-3.5 rounded-2xl shadow-sm hover:shadow transition-all duration-200"
           >
             <Save className="w-4 h-4" />
             <span>Guardar Ajustes y Sincronizar</span>

@@ -9,7 +9,7 @@ interface LinkPatientModalProps {
 }
 
 export const LinkPatientModal: React.FC<LinkPatientModalProps> = ({ isOpen, onClose }) => {
-  const { setActivePatient, refreshPatients } = usePatient();
+  const { setActivePatient, reloadPatients, linkNewPatient } = usePatient();
   const [pin, setPin] = useState('');
   const [relationship, setRelationship] = useState('Hijo / Hija');
   const [error, setError] = useState('');
@@ -27,9 +27,7 @@ export const LinkPatientModal: React.FC<LinkPatientModalProps> = ({ isOpen, onCl
     setIsLoading(true);
 
     try {
-      const patient = await patientService.linkPatientByCode(pin, relationship);
-      await refreshPatients();
-      setActivePatient(patient);
+      await linkNewPatient(pin);
       onClose();
     } catch (err: any) {
       setError(err.message || 'Código de vinculación inválido o expirado.');

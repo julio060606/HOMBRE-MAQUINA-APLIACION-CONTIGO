@@ -10,7 +10,11 @@ import {
   ChevronDown
 } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onOpenLinkModal?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenLinkModal }) => {
   const { user, logout } = useAuth();
   const { activePatient, patients, setActivePatient } = usePatient();
   const navigate = useNavigate();
@@ -27,10 +31,10 @@ export const Navbar: React.FC = () => {
         {/* Logo & Marca Contigo */}
         <div className="flex items-center space-x-6">
           <Link to="/dashboard" className="flex items-center space-x-3 group">
-            <div className="w-9 h-9 bg-forest-700 flex items-center justify-center text-white shadow-sm transition-all group-hover:bg-forest-800">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter">
+            <div className="w-9 h-9 bg-forest-700 rounded-xl flex items-center justify-center text-white shadow-xs transition-all group-hover:bg-forest-800">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v20M2 12h20" />
-                <rect x="5" y="5" width="14" height="14" strokeWidth="1.5" />
+                <rect x="5" y="5" width="14" height="14" rx="3" strokeWidth="1.5" />
               </svg>
             </div>
             <div className="flex flex-col">
@@ -43,11 +47,11 @@ export const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          <span className="text-slate-300 font-light text-base hidden sm:inline select-none">|</span>
+          <span className="text-slate-200 font-light text-base hidden sm:inline select-none">|</span>
 
           {/* Selector de Paciente Activo */}
           {activePatient && (
-            <div className="flex items-center space-x-2 bg-slate-50 border border-slate-200 px-3 py-1.5 text-xs">
+            <div className="flex items-center space-x-2 bg-slate-50/80 border border-slate-200/70 rounded-xl px-3 py-1.5 text-xs shadow-xs">
               <span className="text-[10px] font-heading font-semibold uppercase tracking-wider text-slate-400">
                 Paciente:
               </span>
@@ -78,22 +82,22 @@ export const Navbar: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Ver sitio web del Centro Médico Aliado"
-            className="hidden md:flex items-center gap-1.5 text-xs font-heading font-medium text-slate-600 hover:text-blue-900 uppercase tracking-wider transition-colors"
+            className="hidden md:flex items-center gap-1.5 text-xs font-heading font-medium text-slate-600 hover:text-forest-700 uppercase tracking-wider transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-50"
           >
             <span>Centro Médico</span>
-            <ExternalLink className="w-3 h-3 text-blue-800" />
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
           </Link>
 
-          <span className="text-slate-300 font-light text-base select-none">|</span>
+          <span className="text-slate-200 font-light text-base select-none">|</span>
 
           <div className="flex items-center space-x-3 text-xs">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-slate-100 border border-slate-300 flex items-center justify-center text-slate-700 font-heading font-semibold text-xs">
-                {user?.fullName?.charAt(0) || 'C'}
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-200/80 flex items-center justify-center text-forest-700 font-heading font-semibold text-xs shadow-xs">
+                {user?.name?.charAt(0) || 'C'}
               </div>
               <div className="hidden sm:block text-left">
                 <div className="font-heading font-medium text-slate-900 text-xs leading-none">
-                  {user?.fullName || 'Gerson Ramos'}
+                  {user?.name || 'Gerson Ramos'}
                 </div>
                 <div className="text-[10px] text-slate-400 font-light mt-0.5">Cuidador Principal</div>
               </div>
@@ -103,7 +107,7 @@ export const Navbar: React.FC = () => {
               onClick={handleLogout}
               data-testid="btn-logout"
               title="Cerrar sesión"
-              className="p-2 text-slate-400 hover:text-rose-700 hover:bg-slate-100 transition"
+              className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all duration-200"
             >
               <LogOut className="w-4 h-4" />
             </button>

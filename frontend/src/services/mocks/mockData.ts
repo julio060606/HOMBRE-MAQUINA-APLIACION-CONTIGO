@@ -41,7 +41,7 @@ export const MOCK_MEDICATIONS: Medication[] = [
     name: 'Losartán',
     dosage: '50 mg',
     formFactor: 'TABLET',
-    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&auto=format&fit=crop&q=60',
+    imageUrl: '/images/losartan_pill.jpg',
     times: ['08:00', '20:00'],
     frequencyType: 'DAILY',
     durationDays: 90,
