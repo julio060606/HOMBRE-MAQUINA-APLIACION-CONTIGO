@@ -10,6 +10,7 @@ import { MedicationsPage } from '../features/medications/MedicationsPage';
 import { VitalsPage } from '../features/vitals/VitalsPage';
 import { ReportsPage } from '../features/reports/ReportsPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
+import { PatientSimulatorPage } from '../features/simulator/PatientSimulatorPage';
 import { useAuth } from '../context/AuthContext';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -45,6 +46,7 @@ export const AppRoutes: React.FC = () => {
         <Route path="/vitals" element={<VitalsPage />} />
         <Route path="/reports" element={<ReportsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/patient-simulator" element={<PatientSimulatorPage />} />
       </Route>
 
       {/* Fallback */}

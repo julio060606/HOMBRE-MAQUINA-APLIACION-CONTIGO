@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { usePatient } from '../../context/PatientContext';
 import { useToast } from '../../context/ToastContext';
 import { medicationService, vitalsService, alertService, syncEvents } from '../../services/apiClient';
+import { speechService, soundEffects } from '../../services/speechService';
 import { PillIntake } from '../../types';
 import { 
   X, 
@@ -47,22 +48,19 @@ export const MobilePatientSimulatorModal: React.FC<Props> = ({ isOpen, onClose }
   // Próxima dosis pendiente para mostrar en la pantalla asistiva
   const pendingIntake = intakes.find(i => i.status === 'PENDING') || intakes[0];
 
-  const speakText = (text: string) => {
+  const speakText = (text: string, playChime = false) => {
     setLastSpoken(text);
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'es-PE';
-      utterance.rate = 0.9; // Hablar pausado para anciano
-      window.speechSynthesis.speak(utterance);
-    }
+    speechService.speak(text, { playChimeBefore: playChime });
   };
 
   const handleTakePill = async () => {
     if (!pendingIntake) return;
     
     setIsSuccessAnimated(true);
-    speakText(`Muy bien, ${activePatient.fullName.split(' ')[0]}. Tu toma de ${pendingIntake.medicationName} ha sido confirmada y enviada a tu familiar.`);
+    speakText(
+      `Muy bien, ${activePatient.fullName.split(' ')[0]}. Tu toma de ${pendingIntake.medicationName} ha sido confirmada y enviada a tu familiar.`,
+      true
+    );
     
     await medicationService.confirmIntake(pendingIntake.id, 'MANUAL_PATIENT');
     
@@ -78,7 +76,11 @@ export const MobilePatientSimulatorModal: React.FC<Props> = ({ isOpen, onClose }
 
   const handleSos = async () => {
     setIsSosSent(true);
-    speakText(`Alerta de auxilio activada. Avisando a tu familiar y al centro médico.`);
+    soundEffects.playSosAlertSound();
+    
+    setTimeout(() => {
+      speakText(`Alerta de auxilio activada. Avisando a tu familiar y al centro médico.`);
+    }, 700);
     
     await alertService.triggerSosAlert(activePatient.id, 'Alerta disparada desde el botón SOS del móvil.');
     
