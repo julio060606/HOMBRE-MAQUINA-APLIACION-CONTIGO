@@ -1,0 +1,49 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: contigo-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/contigo_db}
+    username: ${SPRING_DATASOURCE_USERNAME:contigo_admin}
+    password: ${SPRING_DATASOURCE_PASSWORD:contigo_secure_password_2026}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.postgresql.Driver}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          time_zone: America/Lima
+  flyway:
+    enabled: true
+    schemas:
+      - auth
+      - clinical
+      - telemetry
+      - reports_audit
+    default-schema: auth
+    locations: classpath:db/migration
+
+contigo:
+  jwt:
+    secret: ${JWT_SECRET:c2FuLXBhYmxvLWNvbnRpZ28tc2VjdXJlLWp3dC1rZXktZXhhbXBsZS0yMDI2LXN1cGVyLXNlY3JldA==}
+    expiration-ms: 86400000 # 24 horas
+    refresh-expiration-ms: 604800000 # 7 días
+  clinical-provider:
+    mode: ${CLINICAL_PROVIDER_MODE:simulated} # simulated | external
+    external-endpoint: ${CLINICAL_API_ENDPOINT:}
+    api-key: ${CLINICAL_API_KEY:}
+    timeout-ms: 5000
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

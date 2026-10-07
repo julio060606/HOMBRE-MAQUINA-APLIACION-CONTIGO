@@ -1,36 +1,55 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { User } from '../types';
-import { MOCK_USER } from '../services/mocks/mockData';
-
-interface AuthContextType {
-  user: User | null;
-  isAuthenticated: boolean;
-  login: (email: string, pass: string) => Promise<void>;
-  logout: () => void;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+import { clearDemoUser, readDemoUser, selectDemoUser } from '../services/demo/session';
+import { AuthContext } from './AuthState';
+import { ENV } from '../config/env';
+import { getStoredApiUser, loginWithApi, logoutApi } from '../services/http/authApi';
+export { useAuth } from './AuthState';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(MOCK_USER); // Autenticado por defecto para agilizar desarrollo
+  const [user, setUser] = useState<User | null>(() => {
+    if (ENV.USE_MOCKS) {
+      return readDemoUser();
+    }
+    return getStoredApiUser();
+  });
+  const client = useQueryClient();
 
-  const login = async (email: string, _pass: string) => {
-    setUser({ ...MOCK_USER, email });
+  const enterDemo = (id: string) => {
+    if (!ENV.USE_MOCKS) {
+      throw new Error('El modo demostración está deshabilitado en modo API.');
+    }
+    const value = selectDemoUser(id);
+    void client.cancelQueries();
+    client.clear();
+    setUser(value);
+    return value;
+  };
+
+  const login = async (email: string, password: string) => {
+    void client.cancelQueries();
+    client.clear();
+    const loggedIn = await loginWithApi(email, password);
+    setUser(loggedIn);
+    return loggedIn;
   };
 
   const logout = () => {
+    if (ENV.USE_MOCKS) {
+      clearDemoUser();
+    } else {
+      void logoutApi();
+    }
+    void client.cancelQueries();
+    client.clear();
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated: !!user, enterDemo, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) throw new Error('useAuth must be used within an AuthProvider');
-  return context;
-};

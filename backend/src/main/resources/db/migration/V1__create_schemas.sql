@@ -1,0 +1,5 @@
+-- V1__create_schemas.sql
+CREATE SCHEMA IF NOT EXISTS auth;
+CREATE SCHEMA IF NOT EXISTS clinical;
+CREATE SCHEMA IF NOT EXISTS telemetry;
+CREATE SCHEMA IF NOT EXISTS reports_audit;

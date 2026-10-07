@@ -8,6 +8,9 @@ import { AuthProvider } from './context/AuthContext';
 import { PatientProvider } from './context/PatientContext';
 import { ToastProvider } from './context/ToastContext';
 import { AppRoutes } from './routes/AppRoutes';
+import { useDemoSynchronization } from './hooks/usePatientView';
+import { AppErrorBoundary } from './components/ui/AppErrorBoundary';
+const Synchronization = () => { useDemoSynchronization(); return null; };
 
 const ScrollToTop: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -37,13 +40,14 @@ const queryClient = new QueryClient({
 
 export const App: React.FC = () => {
   return (
-    <QueryClientProvider client={queryClient}>
+    <AppErrorBoundary><QueryClientProvider client={queryClient}>
       <ThemeProvider theme={contigoTheme}>
         <CssBaseline />
         <BrowserRouter>
           <ScrollToTop />
           <AuthProvider>
             <PatientProvider>
+              <Synchronization />
               <ToastProvider>
                 <AppRoutes />
               </ToastProvider>
@@ -51,6 +55,6 @@ export const App: React.FC = () => {
           </AuthProvider>
         </BrowserRouter>
       </ThemeProvider>
-    </QueryClientProvider>
+    </QueryClientProvider></AppErrorBoundary>
   );
 };

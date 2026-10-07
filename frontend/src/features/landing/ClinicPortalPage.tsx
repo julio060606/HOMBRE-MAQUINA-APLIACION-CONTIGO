@@ -4,8 +4,6 @@ import {
   User, 
   Calendar, 
   ArrowRight, 
-  ShieldCheck, 
-  Award, 
   Phone, 
   Clock, 
   Smartphone, 
@@ -14,7 +12,6 @@ import {
   Stethoscope, 
   Activity, 
   CheckCircle2, 
-  ChevronRight,
   ChevronUp,
   ChevronDown,
   Quote,
@@ -68,7 +65,7 @@ export const ClinicPortalPage: React.FC = () => {
       details: 'Nuestro equipo aborda síndromes de fragilidad, demencias, polifarmacia y rehabilitación motriz con protocolos avalados internacionalmente.',
       image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&auto=format&fit=crop&q=80',
       staffCount: 14,
-      headDoctor: 'Dr. Alejandro Morales · CMP 34512',
+      headDoctor: 'Dr. Alejandro Morales · profesional ilustrativo',
     },
     {
       id: 1,
@@ -77,7 +74,7 @@ export const ClinicPortalPage: React.FC = () => {
       details: 'Equipados con ecocardiografía 4D, ergometría computarizada y sala de cateterismo cardíaco 24/7.',
       image: 'https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&auto=format&fit=crop&q=80',
       staffCount: 18,
-      headDoctor: 'Dra. Patricia Valdivia · CMP 41209',
+      headDoctor: 'Dra. Patricia Valdivia · profesional ilustrativo',
     },
     {
       id: 2,
@@ -86,7 +83,7 @@ export const ClinicPortalPage: React.FC = () => {
       details: 'Unidad de memoria especializada en Alzheimer, Parkinson y rehabilitación neuropsicológica personalizada.',
       image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&auto=format&fit=crop&q=80',
       staffCount: 9,
-      headDoctor: 'Dr. Fernando Castro · CMP 29871',
+      headDoctor: 'Dr. Fernando Castro · profesional ilustrativo',
     },
     {
       id: 3,
@@ -95,7 +92,7 @@ export const ClinicPortalPage: React.FC = () => {
       details: 'Coordinación clínica entre distintas especialidades para tratamientos farmacológicos equilibrados y seguros.',
       image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=80',
       staffCount: 22,
-      headDoctor: 'Dra. Cecilia Ugarte · CMP 38714',
+      headDoctor: 'Dra. Cecilia Ugarte · profesional ilustrativo',
     },
   ];
 
@@ -135,6 +132,7 @@ export const ClinicPortalPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-950">
       
+      <div className="bg-amber-50 text-amber-950 p-3 text-center text-sm" role="status">Portal institucional ilustrativo del proyecto académico. Los profesionales, servicios y datos mostrados son de demostración.</div>
       {/* 1. NAVBAR - Zero Curvature, Sample Vector Logo, Clean Divider */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -630,22 +628,22 @@ export const ClinicPortalPage: React.FC = () => {
               </h2>
 
               <p className="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-                Supervisa las pastillas, signos vitales y emergencias de tus padres en tiempo real desde tu celular o navegador web, integrado de forma directa con nuestro centro médico.
+                Prueba el seguimiento de recetas, citas y mediciones desde la app del paciente y el dashboard del cuidador. Esta versión utiliza un proveedor clínico sintético; la integración real está pendiente.
               </p>
 
               {/* Especificaciones breves con texto oscuro de alto contraste */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-800 font-normal">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-forest-700 flex-shrink-0 mt-0.5" />
-                  <span className="leading-snug">Pastillero interactivo con foto real de los fármacos.</span>
+                  <span className="leading-snug">Consulta recetas clínicas, horarios y existencias estimadas.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-forest-700 flex-shrink-0 mt-0.5" />
-                  <span className="leading-snug">Registro de presión arterial asistido por voz.</span>
+                  <span className="leading-snug">Registro manual de presión, pulso y peso; lectura por voz opcional.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-forest-700 flex-shrink-0 mt-0.5" />
-                  <span className="leading-snug">Botón de auxilio inmediato y alertas por omisión.</span>
+                  <span className="leading-snug">Petición de ayuda de prueba y avisos de dosis sin confirmar.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-forest-700 flex-shrink-0 mt-0.5" />
@@ -817,7 +815,7 @@ export const ClinicPortalPage: React.FC = () => {
           </div>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-light">
-            <p>© 2026 Centro Médico S.A. Todos los derechos reservados. Registrado ante SUSALUD.</p>
+            <p>© 2026 Centro Médico S.A. Todos los derechos reservados. Portal ilustrativo para evaluación académica.</p>
             <div className="flex items-center space-x-6 text-slate-400">
               <a href="#facebook" onClick={e => e.preventDefault()} className="hover:text-white transition">Facebook</a>
               <a href="#instagram" onClick={e => e.preventDefault()} className="hover:text-white transition">Instagram</a>

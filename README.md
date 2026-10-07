@@ -1,154 +1,85 @@
-# 🏥 CONTIGO · Plataforma de Teleasistencia Médica para Adultos Mayores y Cuidadores
+# CONTIGO
 
-> **Curso:** Interacción Hombre-Máquina (IHM) · UTP 2026  
-> **Proyecto:** Sistema Dual de Cuidado Asistivo y Monitoreo Geriátrico  
-> **Estándar:** WCAG 2.1 AAA · Diseño Centrado en el Usuario (UCD)
+Proyecto de seguimiento para paciente y cuidador. La clínica es la fuente de recetas, dosis, horarios, citas y ficha clínica. El paciente declara sus tomas y registra mediciones en casa. El cuidador consulta el seguimiento y gestiona reposiciones o conteos físicos de medicamentos; no prescribe ni responde por el paciente.
 
----
+El sistema cuenta con dos modalidades operativas claramente diferenciadas:
+1. **Modo Demostración (`VITE_USE_MOCKS=true`)**: datos sintéticos persistentes en IndexedDB, ideal para recorridos locales y evaluación en el laboratorio compartido (`/demo/patient-lab`).
+2. **Modo API Backend (`VITE_USE_MOCKS=false`)**: backend productivo en Spring Boot 3.3.4 (Java 21) conectado a PostgreSQL, con autenticación JWT, rotación/revocación de tokens, control de concurrencia y eventos transaccionales SSE (`/api/v1/events/stream`).
 
-## 📖 1. Visión General del Proyecto
+> [!NOTE]
+> La conexión con sistemas hospitalarios externos requiere credenciales institucionales y acuerdos de autorización. El transporte técnico REST está implementado en `AuthorizedExternalClinicalProvider`, pero no se simula conexión en vivo ni se certifican integraciones sin acceso real verificado.
 
-**CONTIGO** es un ecosistema de teleasistencia médica diseñado para resolver la brecha de usabilidad en el cuidado del adulto mayor con enfermedades crónicas (hipertensión, polifarmacia) y apoyar la supervisión activa de sus familiares y cuidadores.
+## Ejecución del proyecto
 
-### 🌟 Arquitectura Triádica de Diseño (3 Capas)
+### 1. Backend (Spring Boot + PostgreSQL)
 
-Para sustentar con rigor ante el curso de IHM, el proyecto divide su experiencia en 3 capas especializadas según el perfil de usuario y contexto de uso:
+Requiere Java 21 y Docker (o PostgreSQL local).
 
-```mermaid
-flowchart TD
-    subgraph Capa1["Capa 1: Sitio Institucional & Landing"]
-        A1["Estilo: Arquitectónico / Editorial"]
-        A2["Objetivo: Captación, Prestigio y Confianza"]
-        A3["0 Curvatura, tipografía light, banners de pantalla completa"]
-    end
+```bash
+# Iniciar contenedor PostgreSQL
+docker compose up -d
 
-    subgraph Capa2["Capa 2: Aplicación Web Cuidador (Dashboard)"]
-        B1["Estilo: SaaS Clínico de Alta Productividad"]
-        B2["Objetivo: Supervisión 24/7, Registro con Teclado, Reportes PDF"]
-        B3["Paneles densos, gráficos biométricos, timeline de dosis"]
-    end
-
-    subgraph Capa3["Capa 3: App Móvil Paciente (Adulto Mayor)"]
-        C1["Estilo: Accesibilidad Extrema (WCAG AAA)"]
-        C2["Objetivo: Cero error cognitivo, auxilio inmediato"]
-        C3["Botones gigantes (64px+), fotos reales de pastillas, voz TTS"]
-    end
-
-    Capa1 -->|Acceso Web| Capa2
-    Capa2 <-->|Sincronización en Tiempo Real| Capa3
+# Ejecutar migraciones y servidor Spring Boot
+cd backend
+./mvnw spring-boot:run
 ```
 
----
+El backend escucha en `http://localhost:8080`.
 
-## 🗂️ 2. Estructura del Repositorio
+Para ejecutar las pruebas del backend (21 pruebas automatizadas, incluyendo concurrencia, permisos, auditoría e importación):
 
-```text
-HOMBRE-MAQUINA/
-├── docs/                       # 📚 Documentación Maestra y Guía de Agentes
-│   ├── 00-contexto-maestro.md  # Contexto general, arquitectura y estándares
-│   ├── GUIA_AGENTES.md         # Reglas inmutables y prompts para Agentes de IA
-│   ├── 01-arquitectura/        # Especificaciones técnicas y diagramas
-│   ├── 02-base-de-datos/       # Esquemas PostgreSQL (auth, clinical, telemetry, reports)
-│   ├── 04-modulos/             # Requisitos detallados de mod-00 a mod-07
-│   ├── 06-ux-ui/               # Sistema de diseño, tokens, font pairing y pantallas
-│   └── 08-decisiones-arquitectura/ # ADR-001 (Justificación Dual App/Web)
-│
-├── frontend/                   # 💻 Aplicación Web (React + TypeScript + Vite)
-│   ├── src/
-│   │   ├── features/           # Vistas y módulos funcionales:
-│   │   │   ├── landing/        # ClinicPortalPage.tsx y ContigoLandingPage.tsx
-│   │   │   ├── auth/           # LoginPage.tsx y RegisterPage.tsx
-│   │   │   ├── dashboard/      # DashboardPage.tsx (KPIs, timeline, alertas)
-│   │   │   ├── medications/    # MedicationsPage.tsx (Pastillero con foto)
-│   │   │   ├── vitals/         # VitalsPage.tsx (Presión con Recharts)
-│   │   │   ├── reports/        # ReportsPage.tsx (Generador de PDF)
-│   │   │   ├── settings/       # SettingsPage.tsx (Ajustes y umbrales)
-│   │   │   └── onboarding/     # LinkPatientModal.tsx (PIN 6 dígitos)
-│   │   ├── services/           # apiClient.ts + Mocks realistas en memoria
-│   │   ├── context/            # AuthContext y PatientContext
-│   │   └── app/                # theme.ts (MUI) y configuración
-│   └── .env                    # Configuración con VITE_USE_MOCKS=true
-│
-├── backend/                    # ⚙️ Backend (Spring Boot 3 + Java 17/21 - Para fases posteriores)
-├── movil/                      # 📱 App Móvil Paciente (Módulo asistivo)
-├── docker-compose.yml          # PostgreSQL 15 + Redis (Opcional)
-└── README.md                   # Este documento
+```bash
+cd backend
+./mvnw test
 ```
 
----
+### 2. Frontend (React 18 + Vite + TypeScript)
 
-## 🚀 3. Cómo Ejecutar el Proyecto Frontend (Paso a Paso)
+Requiere Node.js 22.12+ o 24 y npm.
 
-El frontend está configurado con **Mocks Inteligentes en Memoria** (`VITE_USE_MOCKS=true`), por lo que **no necesitas tener encendido el backend ni bases de datos** para probar todas las funcionalidades interactivas (pastillero, agregar pastillas, registrar presión, generar PDF y vincular paciente).
+```bash
+cd frontend
+npm ci
+npm run dev -- --host 127.0.0.1 --port 3001
+```
 
-### Requisitos Previos
-* **Node.js:** v18.0.0 o superior ([Descargar Node.js](https://nodejs.org/)).
-* **NPM:** v9.0.0 o superior.
+Acceder a `http://127.0.0.1:3001`.
 
-### Instalación y Puesta en Marcha
+Para ejecutar las comprobaciones de calidad del frontend (47 pruebas unitarias/integración, análisis estático y compilación de producción):
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/TU_USUARIO/HOMBRE-MAQUINA.git
-   cd HOMBRE-MAQUINA
-   ```
+```bash
+cd frontend
+npm run test
+npm run lint
+npm run build
+```
 
-2. **Entrar a la carpeta del frontend e instalar dependencias:**
-   ```bash
-   cd frontend
-   npm install
-   ```
+## Flujos principales y roles
 
-3. **Verificar el archivo de entorno (`frontend/.env`):**
-   Asegúrate de que contenga:
-   ```env
-   VITE_API_BASE_URL=http://localhost:8080/api/v1
-   VITE_USE_MOCKS=true
-   ```
+1. **Cuidador**: inicia sesión (ej. `cuidador@contigo.example` / `Contigo2026!`), consulta panel de pacientes vinculados (Dacio Ramos, Rosa Martínez), revisa adherencia, alertas, citas y gestiona existencias (reposiciones y conteos con auditoría). No puede prescribir medicamentos ni responder tomas en nombre del paciente.
+2. **Paciente**: accede a `/patient-app` (ej. `dacio@contigo.example` / `Contigo2026!`), visualiza su próxima dosis, confirma toma («Ya la tomé» / «No la tomé»), registra presiones arteriales reales (sin cifras prefijadas), consulta citas y genera PIN temporal de vinculación.
+3. **Laboratorio de prueba (`/demo/patient-lab`)**: disponible en modo demo para simular el teléfono móvil compartido con anchos de 360, 390 y 430 px.
+4. **Cierre de sesión y revocación**: al hacer logout, el token de acceso queda invalidado en el servicio de revocación del servidor, cerrando de inmediato las conexiones SSE asociadas.
+5. **Reportes PDF**: generación oficial calculada dinámicamente con Apache PDFBox en backend y react-pdf en frontend, con tratamiento riguroso de valores opcionales (un pulso no registrado se muestra como «No registrado», nunca como cero).
 
-4. **Iniciar el servidor de desarrollo:**
-   ```bash
-   npm run dev
-   ```
+## Arquitectura
 
-5. **Abrir en tu navegador:**
-   * 🌐 **Web de la Clínica:** `http://localhost:3000/clinic`
-   * 🚀 **Landing de Contigo:** `http://localhost:3000/landing`
-   * 🔐 **Login del Cuidador:** `http://localhost:3000/login`
-   * 📊 **Dashboard del Cuidador:** `http://localhost:3000/dashboard`
+- `backend/src/main/java/com/sanpablo/contigo`:
+  - `config`: seguridad Spring Security, filtro JWT con revocación por token.
+  - `controller`: endpoints REST de auth, clínica, telemetría, emparejamiento, reportes y SSE.
+  - `domain`: entidades JPA organizadas en esquemas `auth`, `clinical`, `telemetry`, `reports_audit`.
+  - `service`: lógica de negocio con transacciones atómicas, control de bloqueo pesimista contra doble consumo, sincronización clínica versionada y emisión de eventos post-commit.
+- `backend/src/main/resources/db/migration`: migraciones Flyway V1 a V8 (soporte para UUIDs de 36 caracteres y claves compuestas amplias).
+- `frontend/src`:
+  - `components/ui/MedicationImage.tsx`: fotografías de medicamentos reales con marcador honesto de ausencia («Imagen no disponible») sin sustitución indebida de fotos entre medicamentos.
+  - `features/patient-app`: interfaz táctil balanceada con botones de al menos 52 px de altura para toma positiva y negativa.
+  - `services/http/httpService.ts`: cliente HTTP tipado que rechaza fallback silencioso y propaga errores de la API.
+  - `services/apiClient.ts`: suscripción SSE con encabezado `Authorization: Bearer` vía streaming fetch (sin credenciales en URL).
 
----
+## Documentación de referencia
 
-## 🎨 4. Sistema de Diseño y Tokens Oficiales
+- [ADR-002: Fuente clínica y fundamentos de demostración](docs/08-decisiones-arquitectura/ADR-002-fuente-clinica-y-demo.md)
+- [Plan Maestro](docs/09-plan-integracion-clinica/PLAN_MAESTRO.md)
+- [Revisión y resolución de hallazgos R01–R15](docs/09-plan-integracion-clinica/REVISION_CAMBIOS_2026_10_07.md)
+- [Lista de aceptación y entrega](docs/09-plan-integracion-clinica/CHECKLIST_ENTREGA.md)
 
-* **Tipografía Oficial:**
-  * **Headings / Métricas / Botones:** `Plus Jakarta Sans` (`font-heading`).
-  * **Cuerpo / Tablas / Formularios:** `Inter` (`font-sans`).
-* **Paleta Cromática:**
-  * **Verde Salud Principal:** `#136F53` (`forest-700`).
-  * **Verde Oscuro:** `#0E543F` (`forest-800`).
-  * **Azul Institucional Clínica:** `#0F2942` / `#1E3A8A`.
-  * **Cian Tecnológico:** `#0284C7`.
-* **Geometría:** 0 Curvatura (`rounded-none` / bordes rectos nítidos) en toda la web para una estética moderna y arquitectónica.
-
----
-
-## 🤖 5. Protocolo de Desarrollo para Agentes de IA
-
-Si utilizas asistentes de IA (Antigravity, Cursor, Copilot, ChatGPT):
-
-1. **Lectura Obligatoria:** Exige a tu agente que lea siempre primero `docs/00-contexto-maestro.md` y `docs/GUIA_AGENTES.md`.
-2. **Cero Improvisación:**
-   * No cambiar la paleta de colores oficial.
-   * Mantener los identificadores `data-testid` en cada botón e input para pruebas automatizadas.
-   * Respetar la arquitectura de servicios desacoplada en `src/services/apiClient.ts`.
-
----
-
-## 👥 6. Equipo y Roles
-
-* **Curso:** Interacción Hombre-Máquina (IHM)
-* **Universidad:** Universidad Tecnológica del Perú (UTP)
-* **Ciclo:** 2026
-
-*Desarrollado con dedicación para mejorar la calidad de vida de nuestros adultos mayores y sus familias.* ❤️

@@ -1,0 +1,14 @@
+import { PatientView } from '../../services/contracts';
+import { formatDate, withinPeriod } from '../../domain/time';
+import { TrendPlot } from './TrendPlot';
+export function MeasurementCharts({ view, days = 30 }: { view: PatientView; days?: number }) {
+  const now = new Date();
+  const pressures = view.pressures.filter(v => withinPeriod(v.recordedAt, days, now)).sort((a,b) => a.recordedAt.localeCompare(b.recordedAt));
+  const weights = view.weights.filter(v => withinPeriod(v.recordedAt, days, now)).sort((a,b) => a.recordedAt.localeCompare(b.recordedAt));
+  const data = pressures.map(p => ({ ...p, time: Date.parse(p.recordedAt) }));
+  return <div className="space-y-5"><section className="panel"><h2 className="section-title">Tendencia de presión arterial</h2><p className="text-slate-600 text-sm mt-2">Sistólica y diastólica en mmHg · últimos {days} días</p>
+    {!data.length ? <p className="mt-6">No hay lecturas para este periodo.</p> : <TrendPlot data={data} label="Presión en mmHg; valores exactos en la tabla siguiente" series={[{key:'systolic',name:'Sistólica',color:'#9f1239'},{key:'diastolic',name:'Diastólica',color:'#1e40af'}]} />}
+    <div className="overflow-x-auto mt-5"><table className="w-full text-sm"><caption className="sr-only">Lecturas de presión y pulso</caption><thead><tr className="text-left border-b"><th className="p-2">Fecha y hora</th><th className="p-2">Presión mmHg</th><th className="p-2">Pulso bpm</th><th className="p-2">Origen</th></tr></thead><tbody>{[...pressures].reverse().map(p => <tr key={p.id} className="border-b"><td className="p-2">{formatDate(p.recordedAt)}</td><td className="p-2">{p.systolic}/{p.diastolic}</td><td className="p-2">{p.pulse ?? 'No registrado'}</td><td className="p-2">{p.source === 'HOME' ? 'Casa · paciente' : 'Clínica simulada'}</td></tr>)}</tbody></table></div>
+  </section><section className="panel"><h2 className="section-title">Tendencia del pulso</h2><p className="text-sm text-slate-600 mt-2">Latidos por minuto (bpm); valores exactos en la tabla de presión.</p>{data.some(p => p.pulse != null) ? <TrendPlot data={data.filter(p => p.pulse != null)} label="Pulso en latidos por minuto" series={[{key:'pulse',name:'Pulso (bpm)',color:'#136F53'}]} /> : <p className="mt-4">Sin registros de pulso en el período.</p>}</section>
+  <section className="panel"><h2 className="section-title">Peso registrado en casa</h2>{!weights.length ? <p className="mt-4 text-slate-600">Sin registros domésticos en este periodo. El peso clínico se consulta en la ficha.</p> : <><TrendPlot data={weights.map(w => ({...w,time:Date.parse(w.recordedAt)}))} label="Peso doméstico en kg; valores exactos debajo" series={[{key:'weightKg',name:'Peso (kg)',color:'#1e40af'}]} /><ul className="mt-4 space-y-2">{[...weights].reverse().map(w => <li key={w.id}>{formatDate(w.recordedAt)} · <strong>{w.weightKg} kg</strong> · Casa</li>)}</ul></>}</section></div>;
+}

@@ -30,3 +30,27 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+@layer components {
+  .panel { @apply bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm; }
+  .section-title { @apply text-xl font-heading font-bold text-slate-950; }
+  .eyebrow { @apply text-sm font-semibold text-slate-600; }
+  .metric { @apply text-2xl font-heading font-bold text-slate-950 my-3; }
+  .input { @apply w-full rounded-xl border border-slate-300 bg-white text-slate-950 px-3 py-3; }
+  .btn-primary { @apply inline-flex justify-center items-center gap-2 rounded-xl px-5 py-3 bg-forest-700 text-white font-semibold; }
+  .btn-secondary { @apply inline-flex justify-center items-center gap-2 rounded-xl px-4 py-3 bg-white border border-slate-300 text-slate-900 font-semibold; }
+  .btn-sos { @apply inline-flex justify-center rounded-xl px-5 py-4 bg-rose-800 text-white font-bold; }
+  .badge { @apply inline-flex rounded-full px-3 py-1 text-sm font-semibold; }
+  .badge-good { @apply bg-emerald-50 text-emerald-900; }
+  .badge-negative { @apply bg-rose-50 text-rose-900; }
+  .badge-neutral { @apply bg-slate-100 text-slate-800; }
+}
+button:disabled { opacity: .65; cursor: wait; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid #136F53; outline-offset: 3px; }
+.phone-preview { width: 100%; margin: 0 auto; border-radius: 40px; overflow: hidden; }
+.patient-app { background: #f8faf9; color: #172b3b; font-size: 16px; overflow-wrap: anywhere; display: flex; flex-direction: column; height: 680px; min-height: 480px; }
+.patient-app > .patient-body { flex: 1; min-height: 0; overflow-y: auto; }
+.patient-app > header, .patient-app > nav { flex-shrink: 0; }
+.patient-app.large-text { font-size: 18px; }
+.patient-app.high-contrast { filter: contrast(115%); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }

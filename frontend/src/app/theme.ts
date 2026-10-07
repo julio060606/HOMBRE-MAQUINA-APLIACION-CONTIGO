@@ -1,4 +1,5 @@
-import { createTheme, alpha } from '@mui/material/styles';
+import type { Shadows } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 /**
  * Sistema de Diseño y Tema Base de CONTIGO (Portal Web)
@@ -138,7 +139,7 @@ export const contigoTheme = createTheme({
     '0 20px 25px -5px rgba(16, 24, 40, 0.08), 0 8px 10px -6px rgba(16, 24, 40, 0.04)',
     '0 25px 50px -12px rgba(16, 24, 40, 0.15)',
     ...Array(18).fill('none'), // Relleno para satisfacer el array de 25 sombras de MUI
-  ] as any,
+  ] as Shadows,
 
   components: {
     MuiCssBaseline: {

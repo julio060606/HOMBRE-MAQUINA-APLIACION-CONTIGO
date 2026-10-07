@@ -1,0 +1,10 @@
+#!/bin/sh
+# Simple maven wrapper script delegating to discovered maven
+if [ -x "/home/gerson/.m2/wrapper/dists/apache-maven-3.9.16/56ba1f9f/bin/mvn" ]; then
+    exec /home/gerson/.m2/wrapper/dists/apache-maven-3.9.16/56ba1f9f/bin/mvn "$@"
+elif which mvn >/dev/null 2>&1; then
+    exec mvn "$@"
+else
+    echo "Maven not found in PATH or standard location" >&2
+    exit 1
+fi

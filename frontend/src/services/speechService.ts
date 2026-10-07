@@ -97,6 +97,7 @@ export const soundEffects = new SoundEffects();
  * Gestor de Voces en Español (Web Speech API)
  */
 class SpeechService {
+  private pendingSpeech: ReturnType<typeof setTimeout> | null = null;
   private voices: SpeechSynthesisVoice[] = [];
   private selectedVoice: SpeechSynthesisVoice | null = null;
   private listeners: Set<() => void> = new Set();
@@ -236,7 +237,7 @@ class SpeechService {
     }
 
     // Cancelar cualquier locución pendiente previa
-    window.speechSynthesis.cancel();
+    this.stop();
 
     const utterance = new SpeechSynthesisUtterance(text);
     const voice = this.getSelectedVoice();
@@ -257,12 +258,14 @@ class SpeechService {
 
     // Pequeño retardo si hubo campanita para que no se superpongan
     const delay = options?.playChimeBefore ? 350 : 50;
-    setTimeout(() => {
+    this.pendingSpeech = setTimeout(() => {
+      this.pendingSpeech = null;
       window.speechSynthesis.speak(utterance);
     }, delay);
   }
 
   public stop() {
+    if (this.pendingSpeech !== null) { clearTimeout(this.pendingSpeech); this.pendingSpeech = null; }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }

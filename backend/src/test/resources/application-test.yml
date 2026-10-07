@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: contigo-backend-test
+  datasource:
+    url: jdbc:h2:mem:contigo_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: false
+  flyway:
+    enabled: true
+    schemas:
+      - auth
+      - clinical
+      - telemetry
+      - reports_audit
+    default-schema: auth
+    locations: classpath:db/migration
+
+contigo:
+  jwt:
+    secret: c2FuLXBhYmxvLWNvbnRpZ28tc2VjdXJlLWp3dC1rZXktZXhhbXBsZS0yMDI2LXN1cGVyLXNlY3JldA==
+    expiration-ms: 3600000
+    refresh-expiration-ms: 86400000
+  clinical-provider:
+    mode: simulated
