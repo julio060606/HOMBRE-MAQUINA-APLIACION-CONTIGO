@@ -76,10 +76,3 @@ npm run build
   - `services/http/httpService.ts`: cliente HTTP tipado que rechaza fallback silencioso y propaga errores de la API.
   - `services/apiClient.ts`: suscripción SSE con encabezado `Authorization: Bearer` vía streaming fetch (sin credenciales en URL).
 
-## Documentación de referencia
-
-- [ADR-002: Fuente clínica y fundamentos de demostración](docs/08-decisiones-arquitectura/ADR-002-fuente-clinica-y-demo.md)
-- [Plan Maestro](docs/09-plan-integracion-clinica/PLAN_MAESTRO.md)
-- [Revisión y resolución de hallazgos R01–R15](docs/09-plan-integracion-clinica/REVISION_CAMBIOS_2026_10_07.md)
-- [Lista de aceptación y entrega](docs/09-plan-integracion-clinica/CHECKLIST_ENTREGA.md)
-
