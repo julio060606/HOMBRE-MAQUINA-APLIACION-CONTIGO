@@ -10,6 +10,8 @@ import { ToastProvider } from './context/ToastContext';
 import { AppRoutes } from './routes/AppRoutes';
 import { useDemoSynchronization } from './hooks/usePatientView';
 import { AppErrorBoundary } from './components/ui/AppErrorBoundary';
+import { ReadingOptions } from './components/layout/ReadingOptions';
+import { RouteAccessibility } from './components/layout/RouteAccessibility';
 const Synchronization = () => { useDemoSynchronization(); return null; };
 
 const ScrollToTop: React.FC = () => {
@@ -17,11 +19,20 @@ const ScrollToTop: React.FC = () => {
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+      const scrollToSection = () => {
+        const element = document.getElementById(hash.slice(1));
+        if (!element) return false;
+        element.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        return true;
+      };
+      if (scrollToSection()) return;
+      // The target may belong to a route whose lazy module is still loading.
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      const observer = new MutationObserver(() => {
+        if (scrollToSection()) observer.disconnect();
+      });
+      observer.observe(document.getElementById('root')!, { childList: true, subtree: true });
+      return () => observer.disconnect();
     }
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname, hash]);
@@ -45,6 +56,8 @@ export const App: React.FC = () => {
         <CssBaseline />
         <BrowserRouter>
           <ScrollToTop />
+          <RouteAccessibility />
+          <ReadingOptions />
           <AuthProvider>
             <PatientProvider>
               <Synchronization />

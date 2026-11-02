@@ -82,7 +82,7 @@ public class EventPublishingService {
                         .id(event.getEventId())
                         .name(event.getType())
                         .data(event));
-            } catch (IOException e) {
+            } catch (IOException | IllegalStateException e) {
                 log.warn("Fallo al entregar evento SSE a usuario {}: {}", sub.getUserId(), e.getMessage());
                 removeSubscription(event.getPatientId(), sub);
             }

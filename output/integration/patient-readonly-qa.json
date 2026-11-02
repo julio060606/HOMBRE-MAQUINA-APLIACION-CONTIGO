@@ -1,0 +1,129 @@
+{
+  "at": "2026-11-02T22:32:46.009Z",
+  "scope": "Technical read-only patient UI review; synthetic project clinic data, no human participants.",
+  "checks": [
+    {
+      "pass": true,
+      "message": "Patient authenticated through the configured API"
+    },
+    {
+      "pass": true,
+      "message": "Future Losartán 20:00 dose remains pending"
+    },
+    {
+      "pass": true,
+      "message": "Visible diagnosis equals the prescription snapshot received from the central API"
+    },
+    {
+      "pass": true,
+      "message": "Visible prescribing doctor equals the prescription snapshot received from the central API"
+    },
+    {
+      "pass": true,
+      "message": "The central API provides at least two future scheduled appointments"
+    },
+    {
+      "pass": true,
+      "message": "Upcoming appointment rendered from source: Geriatría"
+    },
+    {
+      "pass": true,
+      "message": "Upcoming appointment rendered from source: Cardiología"
+    },
+    {
+      "pass": true,
+      "message": "390px at 100% root text has no document or patient horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "390px at 200% root text has no document or patient horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "320px at 100% root text has no document or patient horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "320px at 200% root text has no document or patient horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "No clinical mutation was attempted"
+    },
+    {
+      "pass": true,
+      "message": "No uncaught browser JavaScript errors"
+    }
+  ],
+  "layouts": [
+    {
+      "width": 390,
+      "rootFontPx": 16,
+      "documentScrollWidth": 390,
+      "patientWidth": 354,
+      "patientScrollWidth": 354,
+      "offenders": [],
+      "requestedScale": "100"
+    },
+    {
+      "width": 390,
+      "rootFontPx": 32,
+      "documentScrollWidth": 390,
+      "patientWidth": 354,
+      "patientScrollWidth": 354,
+      "offenders": [],
+      "requestedScale": "200"
+    },
+    {
+      "width": 320,
+      "rootFontPx": 16,
+      "documentScrollWidth": 320,
+      "patientWidth": 284,
+      "patientScrollWidth": 284,
+      "offenders": [
+        {
+          "tag": "INPUT",
+          "text": "",
+          "class": "input mt-2 min-h-16 text-center text-3xl font-bold tabular-nums ",
+          "right": 319,
+          "bodyRight": 302
+        }
+      ],
+      "requestedScale": "100"
+    },
+    {
+      "width": 320,
+      "rootFontPx": 32,
+      "documentScrollWidth": 320,
+      "patientWidth": 284,
+      "patientScrollWidth": 284,
+      "offenders": [],
+      "requestedScale": "200"
+    }
+  ],
+  "axe": [
+    {
+      "width": 390,
+      "requestedScale": "100",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "requestedScale": "200",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "requestedScale": "100",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "requestedScale": "200",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "mutationsBlocked": [],
+  "status": "PASS"
+}

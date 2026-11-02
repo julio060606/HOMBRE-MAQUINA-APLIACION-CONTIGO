@@ -32,14 +32,14 @@ describe('R14: Balanced touch targets on DoseCard', () => {
     patientId: 'pat_001',
   };
 
-  it('renders both Ya la tomé and No la tomé with balanced touch targets (min-h-[52px])', () => {
+  it('renders both Ya la tomé and No la tomé with balanced touch targets (min-h-[64px])', () => {
     const html = renderToString(<DoseCard dose={dummyDose} actor={dummyActor} />);
 
     expect(html).toContain('Ya la tomé');
     expect(html).toContain('No la tomé');
     expect(html).toContain('dose-taken');
     expect(html).toContain('dose-not-taken');
-    expect(html).toContain('min-h-[52px]');
+    expect(html).toContain('min-h-[64px]');
   });
 });
 

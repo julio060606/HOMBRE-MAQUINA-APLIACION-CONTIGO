@@ -39,6 +39,12 @@ public class Medication {
     @Column(name = "image_url", columnDefinition = "TEXT")
     private String imageUrl;
 
+    @Column(columnDefinition = "TEXT")
+    private String diagnosis;
+
+    @Column(length = 255)
+    private String doctor;
+
     @Column(nullable = false, length = 500)
     private String times; // comma-separated e.g. "08:00,20:00"
 
@@ -111,6 +117,10 @@ public class Medication {
     public void setFormFactor(String formFactor) { this.formFactor = formFactor; }
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public String getDiagnosis() { return diagnosis; }
+    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public String getDoctor() { return doctor; }
+    public void setDoctor(String doctor) { this.doctor = doctor; }
     public String getTimes() { return times; }
     public void setTimes(String times) { this.times = times; }
     public String getFrequencyType() { return frequencyType; }

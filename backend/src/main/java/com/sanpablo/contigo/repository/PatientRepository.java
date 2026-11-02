@@ -11,4 +11,8 @@ import java.util.Optional;
 public interface PatientRepository extends JpaRepository<Patient, String> {
     List<Patient> findByOrganizationId(String organizationId);
     Optional<Patient> findByIdAndOrganizationId(String id, String organizationId);
+
+    @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
+    @org.springframework.data.jpa.repository.Query("SELECT p FROM Patient p WHERE p.id = :id")
+    Optional<Patient> findByIdWithLock(@org.springframework.data.repository.query.Param("id") String id);
 }

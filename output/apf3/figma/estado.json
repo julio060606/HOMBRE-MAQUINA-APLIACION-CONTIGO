@@ -1,0 +1,78 @@
+{
+  "status": "PAQUETE LOCAL GENERADO; NO EJECUTADO NI PUBLICADO EN FIGMA",
+  "generatedAt": "2026-11-02T18:00:50.611Z",
+  "expectedPages": 6,
+  "expectedScreens": 105,
+  "baselineCommit": "4656d72365080d18b267f69d565e4d77a7ae3d56",
+  "baselineCaptureDate": "2026-11-02T17:53:10.322Z",
+  "baselineAssets": [
+    {
+      "name": "Inicio paciente",
+      "file": "output/apf3/evidence/baseline/02-patient-home.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Tratamiento paciente",
+      "file": "output/apf3/evidence/baseline/03-patient-treatment.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Formulario de medición",
+      "file": "output/apf3/evidence/baseline/04-patient-measurement.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Error de medición",
+      "file": "output/apf3/evidence/baseline/05-measurement-error.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Citas del paciente",
+      "file": "output/apf3/evidence/baseline/08-patient-appointments.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Respuesta de toma",
+      "file": "output/apf3/evidence/baseline/12-dose-recorded.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Resumen del cuidador",
+      "file": "output/apf3/evidence/baseline/17-caregiver-dashboard.png",
+      "width": 1280,
+      "height": 1179
+    },
+    {
+      "name": "Tratamiento y existencias",
+      "file": "output/apf3/evidence/baseline/18-caregiver-medications.png",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "name": "Texto ampliado en línea base",
+      "file": "output/apf3/evidence/baseline/16-patient-text-200.png",
+      "width": 640,
+      "height": 1006
+    },
+    {
+      "name": "Estado vacío",
+      "file": "output/apf3/evidence/baseline/23-caregiver-empty.png",
+      "width": 1280,
+      "height": 960
+    }
+  ],
+  "designCase": "Datos sintéticos fijos, no resultados de usuarios. Estado inicial de inventario antes de tomas.",
+  "pending": [
+    "Importar y ejecutar plugin en Figma",
+    "Inspeccionar páginas,componentes y prototipo",
+    "Ejecutar Stark y guardar evidencia",
+    "Compartir solo lectura y verificar en incógnito",
+    "Sesiones con participantes y tecnologías de apoyo"
+  ]
+}

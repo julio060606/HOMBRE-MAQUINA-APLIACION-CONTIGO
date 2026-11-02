@@ -3,6 +3,16 @@ const REFRESH_KEY = 'contigo_api_refresh_token';
 
 let inMemoryToken: string | null = null;
 let inMemoryRefreshToken: string | null = null;
+let sessionRevision = 0;
+let sessionGeneration = 0;
+const tokenListeners = new Set<() => void>();
+export function getAuthSessionRevision(): number { return sessionRevision; }
+export function getAuthSessionGeneration(): number { return sessionGeneration; }
+export function beginAuthSession(): void { sessionGeneration += 1; sessionRevision += 1; }
+export function subscribeAuthToken(listener: () => void): () => void {
+  tokenListeners.add(listener);
+  return () => { tokenListeners.delete(listener); };
+}
 
 function hasWindowSessionStorage(): boolean {
   try {
@@ -15,8 +25,7 @@ function hasWindowSessionStorage(): boolean {
 export function getAuthToken(): string | null {
   if (hasWindowSessionStorage()) {
     try {
-      const val = window.sessionStorage.getItem(TOKEN_KEY);
-      if (val !== null) return val;
+      return window.sessionStorage.getItem(TOKEN_KEY);
     } catch {
       // fallback to memory
     }
@@ -37,13 +46,13 @@ export function setAuthToken(token: string | null): void {
       // fallback to memory
     }
   }
+  tokenListeners.forEach(listener => listener());
 }
 
 export function getRefreshToken(): string | null {
   if (hasWindowSessionStorage()) {
     try {
-      const val = window.sessionStorage.getItem(REFRESH_KEY);
-      if (val !== null) return val;
+      return window.sessionStorage.getItem(REFRESH_KEY);
     } catch {
       // fallback to memory
     }
@@ -52,6 +61,7 @@ export function getRefreshToken(): string | null {
 }
 
 export function setRefreshToken(token: string | null): void {
+  if (getRefreshToken() !== token) sessionRevision += 1;
   inMemoryRefreshToken = token;
   if (hasWindowSessionStorage()) {
     try {
@@ -67,7 +77,9 @@ export function setRefreshToken(token: string | null): void {
 }
 
 export function clearTokens(): void {
-  setAuthToken(null);
+  sessionGeneration += 1;
+  sessionRevision += 1;
   setRefreshToken(null);
+  setAuthToken(null);
 }
 

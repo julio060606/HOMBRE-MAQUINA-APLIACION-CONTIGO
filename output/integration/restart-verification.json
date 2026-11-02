@@ -1,0 +1,26 @@
+{
+  "health": {
+    "storage": "postgresql",
+    "app": "CONTIGO",
+    "status": "UP"
+  },
+  "patient": "Dacio Ramos",
+  "medicines": [
+    {
+      "name": "Losartán",
+      "diagnosis": "I10 · Hipertensión esencial (primaria)",
+      "doctor": "Lucía Valdés (médico ficticio)"
+    },
+    {
+      "name": "Vitamina D3",
+      "diagnosis": "E55.9 · Deficiencia de vitamina D, no especificada",
+      "doctor": "Lucía Valdés (médico ficticio)"
+    }
+  ],
+  "futureAppointments": 2,
+  "persistedHomeReadings": 3,
+  "futureDosePreserved": true,
+  "syncStatus": "SYNCED",
+  "lanHttp": 200,
+  "status": "PASS"
+}

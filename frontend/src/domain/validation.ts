@@ -23,9 +23,9 @@ export const measurementFormInput = z.object({
   const result = value.type === 'pressure'
     ? pressureInput.safeParse({ systolic: number(value.systolic), diastolic: number(value.diastolic),
       pulse: value.pulse.trim() ? number(value.pulse) : undefined, recordedAt: new Date().toISOString() })
-    : weightInput.safeParse({ weightKg: number(value.weight), recordedAt: new Date().toISOString() });
+    : weightInput.safeParse({ weightKg: number(value.weight.replace(',', '.')), recordedAt: new Date().toISOString() });
   if (!result.success) for (const issue of result.error.issues) ctx.addIssue({ code: 'custom',
     path: issue.path[0] === 'weightKg' ? ['weight'] : issue.path,
-    message: issue.code === 'custom' ? issue.message : 'Ingrese un número válido en la unidad indicada.',
+    message: issue.code === 'custom' ? 'El número de abajo debe ser menor que el de arriba. Revisa ambos.' : 'Revisa este número en tu equipo y escríbelo de nuevo.',
   });
 });

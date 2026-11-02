@@ -16,24 +16,24 @@ export function PhoneDeviceFrame({
       style={{ maxWidth: width, width: '100%' }}
     >
       {/* Top Phone Bezel & Status Bar (Image 2) */}
-      <div className="bg-[#f8faf9] pt-2 px-5 pb-1 flex items-center justify-between select-none relative z-20">
+      <div aria-hidden="true" className="bg-[#f8faf9] flex items-center justify-between select-none relative z-20" style={{ padding: '8px 20px 4px', gap: 4, fontSize: 12 }}>
         {/* Time */}
-        <span className="text-slate-900 text-xs font-bold tracking-tight">{time}</span>
+        <span className="text-slate-900 font-bold tracking-tight" style={{ fontSize: 'inherit', whiteSpace: 'nowrap' }}>{time}</span>
 
         {/* Dynamic Island Capsule */}
-        <div className="w-24 sm:w-28 h-6 bg-black rounded-full flex items-center justify-end pr-2.5 shadow-xs">
+        <div className="bg-black rounded-full flex items-center justify-end shadow-xs" style={{ width: 96, height: 24, paddingRight: 10, flexShrink: 1 }}>
           <div className="w-2 h-2 rounded-full bg-[#151515] border border-slate-800" />
         </div>
 
         {/* Right Status Icons: 4G (green), Wi-Fi, battery 100% */}
-        <div className="flex items-center gap-1.5 text-xs">
-          <span className="text-emerald-600 font-extrabold text-[11px] tracking-tight">4G</span>
-          <Wifi className="w-3.5 h-3.5 text-slate-700" />
-          <div className="flex items-center gap-1 font-semibold text-[11px] text-slate-800">
-            <div className="w-5 h-2.5 border border-slate-700 rounded-xs p-0.5 flex items-center">
+        <div className="flex items-center" style={{ gap: 6, flexShrink: 0, fontSize: 11 }}>
+          <span className="text-emerald-800 font-extrabold tracking-tight" style={{ fontSize: 'inherit' }}>4G</span>
+          <Wifi className="text-slate-700" style={{ width: 14, height: 14 }} />
+          <div className="flex items-center font-semibold text-slate-800" style={{ gap: 4, fontSize: 'inherit' }}>
+            <div className="border border-slate-700 rounded-xs flex items-center" style={{ width: 20, height: 10, padding: 2 }}>
               <div className="w-full h-full bg-slate-800 rounded-2xs" />
             </div>
-            <span>100%</span>
+            <span style={{ fontSize: 'inherit', whiteSpace: 'nowrap' }}>100%</span>
           </div>
         </div>
       </div>

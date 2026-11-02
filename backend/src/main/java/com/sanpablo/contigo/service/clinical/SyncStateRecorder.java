@@ -28,7 +28,7 @@ public class SyncStateRecorder {
         syncStateRepository.save(state);
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional
     public void recordSuccess(String patientId, String organizationId, String details) {
         ClinicalSyncState state = syncStateRepository.findByPatientId(patientId).orElseGet(ClinicalSyncState::new);
         state.setPatientId(patientId);

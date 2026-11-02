@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-11-02T21:27:41.341Z",
+  "phase": "before",
+  "screens": [
+    {
+      "name": "clinic",
+      "label": "desktop",
+      "file": "clinic-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "documentWidth": 1440,
+        "headings": [
+          "Estamos contigo para tu cuidado y el de tu familia.",
+          "Atención médica de alta complejidad y calidez humana.",
+          "Especialidades Destacadas",
+          "Lanzamos nuestra App de Teleasistencia: CONTIGO",
+          "Nuestras Sedes de Atención"
+        ],
+        "images": [],
+        "offending": []
+      }
+    },
+    {
+      "name": "clinic",
+      "label": "mobile",
+      "file": "clinic-mobile.png",
+      "geometry": {
+        "width": 390,
+        "documentWidth": 390,
+        "headings": [
+          "Estamos contigo para tu cuidado y el de tu familia.",
+          "Atención médica de alta complejidad y calidez humana.",
+          "Especialidades Destacadas",
+          "Lanzamos nuestra App de Teleasistencia: CONTIGO",
+          "Nuestras Sedes de Atención"
+        ],
+        "images": [],
+        "offending": []
+      }
+    },
+    {
+      "name": "clinic",
+      "label": "narrow",
+      "file": "clinic-narrow.png",
+      "geometry": {
+        "width": 320,
+        "documentWidth": 320,
+        "headings": [
+          "Estamos contigo para tu cuidado y el de tu familia.",
+          "Atención médica de alta complejidad y calidez humana.",
+          "Especialidades Destacadas",
+          "Lanzamos nuestra App de Teleasistencia: CONTIGO",
+          "Nuestras Sedes de Atención"
+        ],
+        "images": [],
+        "offending": []
+      }
+    },
+    {
+      "name": "landing",
+      "label": "desktop",
+      "file": "landing-desktop.png",
+      "geometry": {
+        "width": 1440,
+        "documentWidth": 1440,
+        "headings": [
+          "Cuidar a quienes más quieres nunca fue tan simple.",
+          "Funcionalidades pensadas para la tranquilidad de tu hogar",
+          "Dos interfaces especializadas, un solo objetivo"
+        ],
+        "images": [],
+        "offending": [
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute bottom-1/4 -right-32 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -z-10"
+          }
+        ]
+      }
+    },
+    {
+      "name": "landing",
+      "label": "mobile",
+      "file": "landing-mobile.png",
+      "geometry": {
+        "width": 390,
+        "documentWidth": 390,
+        "headings": [
+          "Cuidar a quienes más quieres nunca fue tan simple.",
+          "Funcionalidades pensadas para la tranquilidad de tu hogar",
+          "Dos interfaces especializadas, un solo objetivo"
+        ],
+        "images": [],
+        "offending": [
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute -top-20 left-1/4 w-[500px] h-[500px] bg-sky-100/20 rounded-full blur-3xl pointer-events-none -z-10"
+          },
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute bottom-1/4 -right-32 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -z-10"
+          },
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute -top-20 -right-20 w-60 h-60 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"
+          }
+        ]
+      }
+    },
+    {
+      "name": "landing",
+      "label": "narrow",
+      "file": "landing-narrow.png",
+      "geometry": {
+        "width": 320,
+        "documentWidth": 320,
+        "headings": [
+          "Cuidar a quienes más quieres nunca fue tan simple.",
+          "Funcionalidades pensadas para la tranquilidad de tu hogar",
+          "Dos interfaces especializadas, un solo objetivo"
+        ],
+        "images": [],
+        "offending": [
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute -top-20 left-1/4 w-[500px] h-[500px] bg-sky-100/20 rounded-full blur-3xl pointer-events-none -z-10"
+          },
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute bottom-1/4 -right-32 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -z-10"
+          },
+          {
+            "tag": "DIV",
+            "text": "",
+            "class": "absolute -top-20 -right-20 w-60 h-60 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

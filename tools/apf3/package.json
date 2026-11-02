@@ -1,0 +1,7 @@
+{
+  "name": "contigo-apf3-audit",
+  "private": true,
+  "type": "module",
+  "scripts": { "audit": "node audit.mjs" },
+  "dependencies": { "playwright": "1.58.2", "axe-core": "4.11.0" }
+}

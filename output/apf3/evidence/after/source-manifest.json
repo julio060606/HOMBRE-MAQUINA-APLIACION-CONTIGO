@@ -1,0 +1,529 @@
+{
+  "timestamp": "2026-11-02T20:28:57.909Z",
+  "baselineCommit": "4656d72365080d18b267f69d565e4d77a7ae3d56",
+  "currentHead": "4656d72365080d18b267f69d565e4d77a7ae3d56",
+  "state": "v3 source is working-tree modifications, not a new commit; hashes and patch identify inspected source",
+  "hashAlgorithm": "SHA-256",
+  "scope": [
+    "frontend/src",
+    "frontend/index.html",
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/vite.config.ts",
+    "frontend/tailwind.config.js",
+    "frontend/tsconfig.json"
+  ],
+  "files": [
+    {
+      "path": "frontend/index.html",
+      "bytes": 899,
+      "sha256": "3c6a373d61e9505823d9d1d5e2a4f7da484caa6f4d5b211dac5ca9e15e6db043",
+      "tracked": true
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 224841,
+      "sha256": "e853dba796d28323284776c8ab9842b9a8b7f094c2a9ff4fde3632f5290548f8",
+      "tracked": true
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1461,
+      "sha256": "3dd025add06d8f4324b4c8115a554ec415a68a2b740a65956a13488be5e955b4",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 2171,
+      "sha256": "bec42a63e45624e70669716aa8f54c4d5d3e418e1fb9ff8055b0f860f7029a5c",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/app/theme.ts",
+      "bytes": 7519,
+      "sha256": "72158a8a37332613ddc6099fdbfa2ea93672608bacd23ad7141a77cd7bac2e31",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/layout/MainLayout.tsx",
+      "bytes": 1206,
+      "sha256": "61c19a5497c8c5ae6298cac87d66232d9ebe4a90b5e09e26f645341437be7376",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/layout/Navbar.tsx",
+      "bytes": 2059,
+      "sha256": "83b223b545bc9bee3290ce9c3b73d80ffbeb5e93acae6cc8ea306878495ac3aa",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/layout/ReadingOptions.tsx",
+      "bytes": 2102,
+      "sha256": "2ad339cbfd9e74523cb546996039bce8961073df5c34a4df7e6ba0060bfab157",
+      "tracked": false
+    },
+    {
+      "path": "frontend/src/components/layout/RouteAccessibility.tsx",
+      "bytes": 1341,
+      "sha256": "59bd00f4673ac997ef3c0037cdb5861217a396cde9aa08b144b7c6e2a04173d5",
+      "tracked": false
+    },
+    {
+      "path": "frontend/src/components/layout/Sidebar.tsx",
+      "bytes": 1354,
+      "sha256": "5b679aef365feb2c347f199c832e16a240356134e8053c76167646217e39ca17",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/simulator/MobilePatientSimulatorModal.tsx",
+      "bytes": 639,
+      "sha256": "e5d7fbdbe91828dfa5acf5fb7e3d2cae13193c6d066d1f9bfbae7a500cb71333",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/simulator/PhoneDeviceFrame.tsx",
+      "bytes": 2015,
+      "sha256": "7360dac3b4f38dfca3ea4661b574e49bc4c97645e04c735aa07bb09fdf942d89",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/ui/AppErrorBoundary.tsx",
+      "bytes": 1516,
+      "sha256": "d039205bf49ef0d1fb18d40fccd7b804af2e2d745fbb82ec6320aa16caa7220a",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/ui/DoseList.tsx",
+      "bytes": 1063,
+      "sha256": "bfbd59100f9765825b1096bdb0089f90901863f0991430a1c949f94b36ff935b",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/ui/MedicationImage.tsx",
+      "bytes": 1551,
+      "sha256": "92dbeb70387e5a9e3f975ac769af58def09ea5d807def337d300a88b6755a531",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/components/ui/PatientData.tsx",
+      "bytes": 1641,
+      "sha256": "911d45a0b4761c4c874c0bd5e9d2b4ebe446847956f0884bc15dce7c0371a781",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/config/env.ts",
+      "bytes": 211,
+      "sha256": "94bafa290a14fcb30d31eaad2522a5af88f032b55477bae5c4c62bcae6337a1d",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/context/AuthContext.tsx",
+      "bytes": 1619,
+      "sha256": "c9ffcdc1a8d8e804ad68b538ac71642c6dc9ef37471909e3aa7dfb2838f7565f",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/context/AuthState.ts",
+      "bytes": 540,
+      "sha256": "67711a31b6bd337e0e2d620c4731c84f6afdd988f36381a39fb12e7838fb4027",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/context/PatientContext.tsx",
+      "bytes": 1841,
+      "sha256": "39faf0e909404d2f1444d620fbfeb67638af93fdf76ff16820ce28a56dbced47",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/context/PatientState.ts",
+      "bytes": 663,
+      "sha256": "def666ebecc6e99eb41268ec8edd368ebd8c57d90f5221cf7770274564f9d0bf",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/context/ToastContext.tsx",
+      "bytes": 4875,
+      "sha256": "9bbf7f1af9d11c607d5658c2f42fb52fce9041df6fc5f653b26b55a9625759d5",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/domain/time.ts",
+      "bytes": 1565,
+      "sha256": "246329cfe034910dee11ea42c7b570c5ef9180e373598b9d8fe375b137ba825d",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/domain/tracking.test.ts",
+      "bytes": 4061,
+      "sha256": "f6fcd53e5c5106a3431b69b1fbbc130875651ad0232b12fa3388af31883f9baf",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/domain/tracking.ts",
+      "bytes": 3287,
+      "sha256": "ffb3e7733ba4e7d14e6597ad5f3d9ea65b21b8ed5f223532d748cda0c8bdfb31",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/domain/validation.ts",
+      "bytes": 2168,
+      "sha256": "1544fea8d548b8b3b8744755b19d41cf597c6de01c96a0174292a0c75942b0aa",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/accessibility/AccessibilityPage.tsx",
+      "bytes": 3734,
+      "sha256": "6123cbac1085697097114805b6ff6db57114f7238754460984e384267759e807",
+      "tracked": false
+    },
+    {
+      "path": "frontend/src/features/appointments/AppointmentList.tsx",
+      "bytes": 1079,
+      "sha256": "5d23be4efb9d8d7fd53aeaaaa3cd548f66edaa83f94a1d518861c346b873ae6a",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/appointments/AppointmentsPage.tsx",
+      "bytes": 1094,
+      "sha256": "c924e4a01a567535ee08ec0053ccd8b09582371fdac58833148d30985e949cb4",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/auth/LoginPage.tsx",
+      "bytes": 13628,
+      "sha256": "936e5271164517d38dfb973e52f418bf40af044cdede39e6a76e6af1cdf93e46",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/auth/RegisterPage.tsx",
+      "bytes": 543,
+      "sha256": "0be804ee6e085af9edffe276e3e6903baa44c5b7605d7f3e88ed7a83fa5f8e43",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/clinical-profile/ClinicalProfilePage.tsx",
+      "bytes": 1475,
+      "sha256": "19e880d894d04f08e6fd9dcab3fdc059c64ef60ade9d19baba6c0d8da25954fa",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/dashboard/DashboardPage.tsx",
+      "bytes": 534,
+      "sha256": "a63d76a93fdb2da4377ebc0dda5d9acba987131f459168c698413b066bd4ac2e",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/dashboard/PatientSummary.tsx",
+      "bytes": 4456,
+      "sha256": "24713da55f933214f08d4d6daabbf3971145092ab62f1fddb5084f526d5bdb23",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/landing/ClinicPortalPage.tsx",
+      "bytes": 46380,
+      "sha256": "2c59f5deb93f9bd26bad5a812005b636a083e0d71811903a497062eab39425ec",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/landing/ContigoLandingPage.tsx",
+      "bytes": 48070,
+      "sha256": "d8d497c5d5effcfdac0ba372659f8ff715c03118a7aa86f0bd9daf01e8a91d83",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/medications/MedicationsPage.tsx",
+      "bytes": 2601,
+      "sha256": "9d926ecb7d9b3017614176bab52bd238e24feb6e9f896670e43bd0786b5e89f1",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/medications/SupplyForm.tsx",
+      "bytes": 4586,
+      "sha256": "71316892b73b7458113b6308d7ffa5638e1ff1973e8b97373a5affd78c92d8ef",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/onboarding/LinkPatientModal.tsx",
+      "bytes": 2346,
+      "sha256": "6eb1776e697c11dc75db9b8342b0c30d59f321cde0c0c63d2f3be7940693beab",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/DoseCard.tsx",
+      "bytes": 8251,
+      "sha256": "97601b546d0e84e775fac2ba46a97727a08e635bff56bfefd244e9a243755ff2",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/MeasurementForm.tsx",
+      "bytes": 7446,
+      "sha256": "47d4bebd59d3c2c6caf5a40be37276cb06212d3d6b173ed7c80ff8837f49c572",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/PairingPanel.tsx",
+      "bytes": 4294,
+      "sha256": "c5d17283893aeeafa243a36ce1c93c2699454f762c2953c3fd78336d0c2b8062",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/PatientAppContent.tsx",
+      "bytes": 9021,
+      "sha256": "58a3786cc44b87883a21d462daf2a13389dbb79257e5219ea7eb1d1c7fd1db73",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/PatientAppPage.tsx",
+      "bytes": 1487,
+      "sha256": "2bbd141a65864e91f1ef747443a581698b1c72b4e3527b8011803e8e4b63c35d",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/PatientHelp.tsx",
+      "bytes": 3309,
+      "sha256": "cc438322729589d8aafa677150ed10768bc6a66d435f97c4d47a6f9800aab22b",
+      "tracked": false
+    },
+    {
+      "path": "frontend/src/features/patient-app/PatientPreferences.tsx",
+      "bytes": 2125,
+      "sha256": "9c1ab7573c631eecd9b68bbe77d1661ed5bd1aee3d7bcf40c190071677252795",
+      "tracked": false
+    },
+    {
+      "path": "frontend/src/features/patient-app/PatientSupplies.tsx",
+      "bytes": 1451,
+      "sha256": "dfb4daf073dd032e55a63711efd8307779bb6743e68a297f1c8341855051a940",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/patient-app/patientApp.test.tsx",
+      "bytes": 5382,
+      "sha256": "22858ec103956326b1c953809818ff2e19a97aa30d92f910d26753599a971301",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/reports/ReportDocument.tsx",
+      "bytes": 7506,
+      "sha256": "12054460046005c73b010ffb4a8e41b48197d583fd1a204d2bf6658c1169fa80",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/reports/ReportsPage.tsx",
+      "bytes": 5417,
+      "sha256": "bff4bd4d1e4e7249307f8938b01333ffa42b9a4795530656b7536b5b0ee8d753",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/reports/report.test.tsx",
+      "bytes": 1601,
+      "sha256": "2c2a71553f2dc957aa6bdc6534c0fcb3678b5eac1845b3dacf18995c72808f10",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/reports/reportModel.ts",
+      "bytes": 1572,
+      "sha256": "ff1897ce671055eda209afc0e87f78f652f3990a5b7e726829f65bcceadc8bb7",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/settings/SettingsPage.tsx",
+      "bytes": 2244,
+      "sha256": "005f64ed3e86183472daca0142c107110486d57e1a57647c5bdfa2f64408fabf",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/simulator/PatientSimulatorPage.tsx",
+      "bytes": 3787,
+      "sha256": "9379d08a71e572ecb062e01bc81994491bd4481d71e1be882fc50c713ecf30d7",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/vitals/MeasurementCharts.tsx",
+      "bytes": 2944,
+      "sha256": "16b84b744e75b7802a2c619466d2a5973cb730924a58750e603e3bede6ba4a00",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/vitals/TrendPlot.tsx",
+      "bytes": 977,
+      "sha256": "09459699a1be4662cd79aee0b6cfe113b1fcf4e8a5e379035168d740bacccd26",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/features/vitals/VitalsPage.tsx",
+      "bytes": 1888,
+      "sha256": "18d7e2ccf0fcb9d5cabafd47139e889a14700e9491f9646d6216ec3502ffbf23",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/hooks/useAction.ts",
+      "bytes": 1179,
+      "sha256": "778b21e86f373a43e2f0e516613c9a730ca6d95feee8de85fc3ce76e48443cda",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/hooks/usePatientView.ts",
+      "bytes": 1508,
+      "sha256": "0a8819156c6fcd27e251975aa1d21f3b84d9c48a0f1bfa04b1aec7fab5bf345e",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 258,
+      "sha256": "51ff8f21ff97acaa477df70a7ebce10eb43425d1ffdaec266ada108a8d695d54",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/routes/AppRoutes.tsx",
+      "bytes": 4117,
+      "sha256": "82aee3e623e22ae339ae32ac4c8a5d2f600b37a3d83b1c588ff27d8009b4c89b",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/apiClient.ts",
+      "bytes": 2545,
+      "sha256": "387edf6dbe1fe8ce4934940656cc4f449be4c80eb8c767821c7370107d83dcec",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/contracts.ts",
+      "bytes": 1915,
+      "sha256": "55d8b6de5ae686197c9e017921b9f74d34563384b33b778d6765d753a0afa347",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/clinicalProvider.test.ts",
+      "bytes": 5953,
+      "sha256": "b282a215a28fe01b0f8061d68ca1b1e479c2c8b4dcca9d9136db49f5c77c43e6",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/clinicalProvider.ts",
+      "bytes": 8906,
+      "sha256": "ddc68a5edf5f51bb97208722142b5db4f543be42193f6b6e4f28271badf7aed7",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/intakes.ts",
+      "bytes": 3029,
+      "sha256": "a3a11cf0d5e754cd70d59c198294b950ac236c7461fdccd6b626f60e20913c81",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/permissions.ts",
+      "bytes": 947,
+      "sha256": "6103790d3ff9ff0957d206fae5e1288e16bd588b93c605e167c0cbe874831585",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/repository.ts",
+      "bytes": 3793,
+      "sha256": "50d708a5d41f373eeaddf6efc56463391b58cd0ef1ff38c10adafce46b8d4e98",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/service.test.ts",
+      "bytes": 11229,
+      "sha256": "e813fe135d9d4ea15d521f455c1b6a85a592bac9830890fd41ccf31d894bf76e",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/service.ts",
+      "bytes": 11735,
+      "sha256": "5a1e736013d8fc54fc240a97a0d27b1781ffcb78e725877385dd8bfbad02555a",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/session.ts",
+      "bytes": 977,
+      "sha256": "98fa3ddb602b9b89bf1b666c69e45ace35ec27b66ab477e545f3373d0be5de4d",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/demo/state.ts",
+      "bytes": 6633,
+      "sha256": "8c4cd693b46a2a32b20371dcff278605955b09a88467bc26ed8e533c5f493701",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/http/authApi.ts",
+      "bytes": 1952,
+      "sha256": "d275f9537d05aa72a4c0149ed5c63070a428a088b1b91b0dd5d3013c62584daf",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/http/httpService.test.ts",
+      "bytes": 5428,
+      "sha256": "a40c2a4991d0c38259475e1eee18a5c043c15d54e5a1fecb48b4f7a0fa7d3499",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/http/httpService.ts",
+      "bytes": 4763,
+      "sha256": "a2e9cb6a78ce7ed1e70588d6c4a1a329ee7a5ee9212bba2fcc6988f3467d1327",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/http/tokenStorage.ts",
+      "bytes": 1755,
+      "sha256": "ffea3e4b18fe2962dd0597073b2ebe7dd2f7a5d9e44f0451d0ecb7e3b737928c",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/services/speechService.ts",
+      "bytes": 8758,
+      "sha256": "5905cf36eb5b83fc2293f2730ed5c1c42c211e8e5d161e37a509afd766759630",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/styles/index.css",
+      "bytes": 8117,
+      "sha256": "75a59c63441547656bc77d66f22f238555a5c9e72226d63fae5e5f2b387d25ac",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/types/clinical.ts",
+      "bytes": 1790,
+      "sha256": "c145184f4ee5e4b4cd7f2d4bc6f849e7935bf25f36fa31e41971ba84e8238206",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/types/index.ts",
+      "bytes": 58,
+      "sha256": "b1e60bb8a5156dd8405316d5bf0021e0af317a8c6fabd7bb607c295974f537fc",
+      "tracked": true
+    },
+    {
+      "path": "frontend/src/types/tracking.ts",
+      "bytes": 2365,
+      "sha256": "05ad88c281658b14ed569d3a703ad16c359a33d22dfa829560bc68a6aba0b61b",
+      "tracked": true
+    },
+    {
+      "path": "frontend/tailwind.config.js",
+      "bytes": 1327,
+      "sha256": "3f62ffbf9636c03db8a99bde1f54eac97aa930c34c6f0a415627081a439b67b2",
+      "tracked": true
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 721,
+      "sha256": "99582dadc19f78ecbb257cbc71ddf0700d0a1d7d94692948a6c4525058ce6e0a",
+      "tracked": true
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 426,
+      "sha256": "08dcd038fd7f101e455b160eeaea5ddf43e9d4c5b9d484566d7fbad87688dfb4",
+      "tracked": true
+    }
+  ],
+  "patch": {
+    "path": "output/apf3/evidence/after/git-diff.patch",
+    "sha256": "b8941d852f0a63c5d000fb675dbf8c216e2af072d7b419d5d991d15f4fb72e5f"
+  },
+  "excluded": [
+    "Environment files, credentials, node_modules, build output, real patient data"
+  ]
+}

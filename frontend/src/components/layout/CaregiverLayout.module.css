@@ -1,0 +1,79 @@
+.shell { --shell-ink: #172e3b; --shell-green: #12654f; --shell-border: #dfe7eb; display: grid; grid-template-columns: 250px minmax(0, 1fr); grid-template-rows: auto 1fr; min-height: calc(100dvh - 44px); background: #f4f7f8; color: var(--shell-ink); }
+.sidebar { grid-column: 1; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: 2rem; padding: 1.65rem 1.1rem 1.3rem; background: #fff; border-right: 1px solid var(--shell-border); min-width: 0; }
+.brand { display: flex; align-items: center; gap: .7rem; padding: 0 .35rem .5rem; color: var(--shell-green); text-decoration: none; }
+.brandMark { display: grid; place-items: center; width: 43px; height: 43px; flex-shrink: 0; background: #e6f2ec; border-radius: 13px; }
+.brand > span:last-child { min-width: 0; }
+.brand strong { display: block; font: 800 1.35rem/1.25 'Plus Jakarta Sans', sans-serif; letter-spacing: -.035em; }
+.brand > span:last-child > span { display: block; color: #627780; font-size: .6875rem; line-height: 1.5; margin-top: .15rem; }
+.navigation { display: grid; gap: 1.75rem; min-width: 0; }
+.navGroup { display: grid; gap: .3rem; }
+.groupTitle { margin: 0 0 .45rem .85rem; font-size: .6875rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: #5e727d; }
+.navLink { position: relative; display: flex; align-items: center; gap: .8rem; min-width: 0; min-height: 48px; padding: .8rem .85rem; border-radius: 10px; font-size: .875rem; font-weight: 500; line-height: 1.5; color: #526771; text-decoration: none; transition: background .15s, color .15s; }
+.navLink > svg { flex-shrink: 0; }
+.navLink > span { min-width: 0; overflow-wrap: anywhere; }
+.navLink:hover { background: #f1f6f4; color: #12654f; }
+.navLink.active { background: #e8f4ee; color: #0c5945; font-weight: 700; }
+.navLink.active::before { content: ''; position: absolute; left: 0; top: 25%; bottom: 25%; width: 3px; background: #1c7861; border-radius: 0 3px 3px 0; }
+.projectNote { display: flex; gap: .65rem; align-items: start; margin-top: auto; padding: 1rem .8rem; border: 1px solid #e5ece9; border-radius: 13px; background: #f7faf8; color: #536b64; }
+.projectNote > svg { flex-shrink: 0; margin-top: .1rem; color: #27745d; }
+.projectNote strong { font-size: .75rem; font-weight: 700; }
+.projectNote p { font-size: .75rem; line-height: 1.6; margin: .3rem 0 0; }
+.topbar { grid-column: 2; grid-row: 1; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid var(--shell-border); min-width: 0; }
+.headerContent { display: flex; align-items: center; gap: 1.35rem; flex-wrap: wrap; min-width: 0; }
+.headerIntro { flex: 1 1 190px; min-width: 0; }
+.headerIntro p { margin: 0; font-size: .9375rem; font-weight: 700; letter-spacing: -.015em; }
+.headerIntro > span { display: block; margin-top: .25rem; color: #58717e; font-size: .75rem; line-height: 1.5; }
+.patientPicker { display: grid; gap: .25rem; flex: 0 1 210px; min-width: 0; max-width: 100%; }
+.patientPicker > span:first-child { font-size: .6875rem; font-weight: 600; color: #657881; }
+.selectWrap { position: relative; display: block; min-width: 0; }
+.selectWrap select { display: block; width: 100%; max-width: 100%; min-height: 44px; appearance: none; padding: .55rem 2.3rem .55rem .75rem; border: 1px solid #82959d; border-radius: 9px; background: #f9fbfc; color: #243e4b; font-size: .875rem; font-weight: 600; cursor: pointer; }
+.selectWrap > svg { position: absolute; top: 50%; right: .7rem; transform: translateY(-50%); pointer-events: none; color: #526c79; }
+.headerActions { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; flex-wrap: wrap; min-width: 0; }
+.linkButton { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; max-width: 100%; padding: .65rem .9rem; border: 1px solid #738f82; border-radius: 9px; background: #fff; color: #12654f; font-size: .8125rem; font-weight: 700; cursor: pointer; }
+.linkButton > svg { flex-shrink: 0; }
+.linkButton > span { min-width: 0; overflow-wrap: anywhere; }
+.linkButton:hover { background: #eff7f3; border-color: #7baa97; }
+.account { display: flex; align-items: center; gap: .6rem; min-width: 0; }
+.avatar { width: 36px; height: 36px; object-fit: cover; border-radius: 50%; border: 2px solid #e9f0ed; flex-shrink: 0; }
+.accountText { display: grid; gap: .1rem; min-width: 0; max-width: 11rem; }
+.accountText strong { font-size: .75rem; line-height: 1.5; font-weight: 600; color: #2f4653; overflow-wrap: anywhere; }
+.accountText span { font-size: .6875rem; color: #637985; }
+.iconButton { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #82959d; border-radius: 10px; background: #fff; color: #526875; cursor: pointer; }
+.iconButton:hover { background: #f0f6f3; color: #12654f; border-color: #7ca38f; }
+.main { grid-column: 2; grid-row: 2; min-width: 0; padding: 2rem; }
+.content { max-width: 1440px; width: 100%; min-width: 0; margin: 0 auto; }
+.mobileBar { display: none; }
+.shell :is(a, button, select):focus-visible { outline: 3px solid #12654f; outline-offset: 3px; box-shadow: 0 0 0 3px #fff; }
+
+@media (max-width: 1279px) {
+  .headerIntro { display: none; }
+  .headerContent { justify-content: space-between; }
+  .topbar, .main { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .headerActions { gap: .65rem; }
+  .accountText { display: none; }
+}
+@media (max-width: 1023px) {
+  .shell { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr; }
+  .topbar { grid-column: 1; grid-row: 1; padding: .8rem 1rem 1rem; }
+  .mobileBar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+  .mobileBrand { display: flex; align-items: center; gap: .5rem; color: #12654f; text-decoration: none; font: 800 1.125rem/1.3 'Plus Jakarta Sans', sans-serif; letter-spacing: -.035em; }
+  .mobileBrand > svg { flex-shrink: 0; }
+  .headerContent { gap: .75rem 1rem; }
+  .patientPicker { flex: 1 1 220px; max-width: 22rem; }
+  .headerActions { flex: 0 1 auto; }
+  .sidebar { display: none; grid-column: 1; grid-row: 2; padding: 1rem; border-right: 0; border-bottom: 1px solid var(--shell-border); gap: 1.4rem; }
+  .sidebar[data-open='true'] { display: flex; }
+  .sidebar .brand { display: none; }
+  .navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+  .projectNote { margin-top: 0; }
+  .main { grid-column: 1; grid-row: 3; padding: 1.5rem 1rem; }
+}
+@media (max-width: 599px) {
+  .headerContent { align-items: stretch; }
+  .patientPicker { flex-basis: 100%; max-width: none; }
+  .headerActions { flex: 1 1 100%; justify-content: flex-start; gap: .65rem; }
+  .headerActions > .account { margin-left: auto; }
+  .linkButton { font-size: .875rem; }
+  .navigation { grid-template-columns: minmax(0, 1fr); }
+  .topbar, .sidebar, .main { padding-left: .875rem; padding-right: .875rem; }
+}

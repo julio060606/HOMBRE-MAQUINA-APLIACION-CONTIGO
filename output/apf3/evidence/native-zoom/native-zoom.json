@@ -1,0 +1,1655 @@
+{
+  "metadata": {
+    "startedAt": "2026-11-02T20:23:05.533Z",
+    "baseUrl": "http://127.0.0.1:3001",
+    "method": "Browser-native chrome.tabs.setZoom(tabId,2) with automatic mode; chrome.tabs.getZoom verifies actual factor. Isolated Chromium persistent profile with localhost-only helper extension.",
+    "cssZoomUsed": false,
+    "deviceScaleFactorOverridden": false,
+    "viewportEmulationUsed": false,
+    "nativeUIKeyboardShortcutUsed": false,
+    "headless": true,
+    "profileKind": "Unique temporary isolated test profile; no user browser profile modified",
+    "browserExecutable": "C:\\Users\\vegac\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe",
+    "sources": [
+      {
+        "title": "Chrome Tabs API setZoom/getZoom/ZoomSettings",
+        "url": "https://developer.chrome.com/docs/extensions/reference/api/tabs"
+      },
+      {
+        "title": "Playwright official extension testing",
+        "url": "https://playwright.dev/docs/chrome-extensions"
+      }
+    ],
+    "limitations": [
+      "Automated technical execution using synthetic demo data, not participant success, times or satisfaction.",
+      "No screen reader is exercised or inferred from browser accessibility tree.",
+      "Native zoom at one desktop window size does not establish complete WCAG 1.4.4 or 1.4.10 conformance."
+    ],
+    "browserVersion": "145.0.7632.6",
+    "tabId": 58751493,
+    "extensionId": "hdinbnafcifillgkpcopnfgikmamcjpc",
+    "browserProduct": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/145.0.7632.6",
+      "revision": "@47e20adcc15fc15f01825aa17e570c8f5492ac0f",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.0.0 Safari/537.36",
+      "jsVersion": "14.5.201.2"
+    },
+    "finishedAt": "2026-11-02T20:23:16.620Z",
+    "manifest.jsonSha256": "06f11e16b2565607f7d9fa42bb01b8b5c79beae5088affabb413ec2b11eb5423",
+    "service-worker.jsSha256": "18c1d8e0a259d4bb69ef5aff759599df6e3e9ac05ea725c53882679f305f57f4",
+    "sourceManifestSha256": "d0d2b2ee12418ec3fa22151d8cffe057f8fef8e2bc981b21c384f164ff7a329b"
+  },
+  "measurements": [
+    {
+      "id": "01-home-native100",
+      "timestamp": "2026-11-02T20:23:11.980Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 1,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:11.785Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 1262,
+        "innerHeight": 864,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 1,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 1262,
+          "height": 864,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 1262,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Inicio"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Hola, Dacio"
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.359375,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ya la tomé",
+            "width": 147,
+            "height": 76,
+            "disabled": false
+          },
+          {
+            "text": "No la tomé",
+            "width": 147,
+            "height": 76,
+            "disabled": false
+          },
+          {
+            "text": "Ingresar lectura de presión o peso",
+            "width": 298,
+            "height": 75.1875,
+            "disabled": false
+          },
+          {
+            "text": "Ver citas",
+            "width": 298,
+            "height": 51.59375,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.65625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.671875,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.65625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.65625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.671875,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.65625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/01-home-native100.png"
+    },
+    {
+      "id": "02-home-native200",
+      "timestamp": "2026-11-02T20:23:12.337Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:12.252Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Inicio"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Hola, Dacio"
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ya la tomé",
+            "width": 322,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "No la tomé",
+            "width": 322,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ingresar lectura de presión o peso",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ver citas",
+            "width": 314,
+            "height": 51.59375,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/02-home-native200.png"
+    },
+    {
+      "id": "03-T1-dose-native200",
+      "timestamp": "2026-11-02T20:23:12.613Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:12.434Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 263
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Inicio"
+          }
+        ],
+        "activeElement": {
+          "tag": "DIV",
+          "text": "Losartán, 08:00: registraste que la tomaste.Si te equivocaste, abre Tratamiento y elige Corregir en esa dosis.Revisar mi respuestaEntendido"
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Revisar mi respuesta",
+            "width": 322,
+            "height": 51.59375,
+            "disabled": false
+          },
+          {
+            "text": "Entendido",
+            "width": 322,
+            "height": 51.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ya la tomé",
+            "width": 322,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "No la tomé",
+            "width": 322,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ingresar lectura de presión o peso",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ver citas",
+            "width": 314,
+            "height": 51.59375,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/03-T1-dose-native200.png"
+    },
+    {
+      "id": "04-T4-error-native200",
+      "timestamp": "2026-11-02T20:23:12.950Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:12.809Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 206
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Medición"
+          }
+        ],
+        "activeElement": {
+          "tag": "INPUT",
+          "text": ""
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Presión diastólica (número de abajo, mmHg)",
+            "width": 266,
+            "height": 51.1875,
+            "disabled": false
+          },
+          {
+            "text": "Revisar mi lectura",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/04-T4-error-native200.png"
+    },
+    {
+      "id": "05-T4-review-native200",
+      "timestamp": "2026-11-02T20:23:13.209Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:13.049Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 168.5
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Medición"
+          }
+        ],
+        "activeElement": {
+          "tag": "H4",
+          "text": "Paso 2 de 2: revisa tu lectura"
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Volver y corregir",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Confirmar y guardar mi lectura",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/05-T4-review-native200.png"
+    },
+    {
+      "id": "06-T4-recovery-native200",
+      "timestamp": "2026-11-02T20:23:13.445Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:13.276Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 142
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Medición"
+          }
+        ],
+        "activeElement": {
+          "tag": "P",
+          "text": "Medición guardada. Tu cuidador ya puede consultarla. Puedes registrar otra lectura abajo."
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Revisar mi lectura",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/06-T4-recovery-native200.png"
+    },
+    {
+      "id": "07-T2-SOS-review-native200",
+      "timestamp": "2026-11-02T20:23:13.704Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:13.510Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 142
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H2",
+            "text": "SOS de demostración"
+          },
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Medición"
+          }
+        ],
+        "activeElement": {
+          "tag": "BUTTON",
+          "text": "Cancelar y volver"
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Cancelar y volver",
+            "width": 340,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Registrar petición de prueba",
+            "width": 340,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Revisar mi lectura",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/07-T2-SOS-review-native200.png"
+    },
+    {
+      "id": "08-T2-SOS-confirm-native200",
+      "timestamp": "2026-11-02T20:23:13.961Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:13.774Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 142
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [
+          {
+            "width": 380,
+            "scrollWidth": 380,
+            "text": "InicioTratamientoMediciónCitasMi saludMi cuidador"
+          }
+        ],
+        "mainHeadings": [
+          {
+            "tag": "H2",
+            "text": "SOS de demostración"
+          },
+          {
+            "tag": "H1",
+            "text": "Hola, Dacio"
+          },
+          {
+            "tag": "H2",
+            "text": "Medición"
+          }
+        ],
+        "activeElement": {
+          "tag": "P",
+          "text": "Petición de prueba registrada. No se contactó a servicios de emergencia."
+        },
+        "controls": [
+          {
+            "text": "Cerrar sesión",
+            "width": 77.3515625,
+            "height": 44,
+            "disabled": false
+          },
+          {
+            "text": "SOS de prueba",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Entendido, volver",
+            "width": 340,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Ajustes",
+            "width": 174,
+            "height": 85.59375,
+            "disabled": false
+          },
+          {
+            "text": "Escuchar",
+            "width": 140.25,
+            "height": 49.59375,
+            "disabled": false
+          },
+          {
+            "text": "Revisar mi lectura",
+            "width": 314,
+            "height": 64,
+            "disabled": false
+          },
+          {
+            "text": "Inicio",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Tratamiento",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Medición",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Citas",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi salud",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          },
+          {
+            "text": "Mi cuidador",
+            "width": 118.6640625,
+            "height": 69.59375,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/08-T2-SOS-confirm-native200.png"
+    },
+    {
+      "id": "09-T3-dashboard-native200",
+      "timestamp": "2026-11-02T20:23:15.423Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/dashboard",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:15.240Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/dashboard",
+        "title": "Seguimiento de Dacio Ramos · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Seguimiento de Dacio Ramos"
+          },
+          {
+            "tag": "H2",
+            "text": "Dacio Ramos"
+          },
+          {
+            "tag": "H2",
+            "text": "Dosis de hoy"
+          },
+          {
+            "tag": "H2",
+            "text": "Avisos de seguimiento"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Seguimiento de Dacio Ramos"
+        },
+        "controls": []
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/09-T3-dashboard-native200.png"
+    },
+    {
+      "id": "10-T3-treatment-stock-native200",
+      "timestamp": "2026-11-02T20:23:15.898Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/medications",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:15.736Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/medications",
+        "title": "Tratamiento y existencias · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Tratamiento y existencias"
+          },
+          {
+            "tag": "H2",
+            "text": "Losartán"
+          },
+          {
+            "tag": "H2",
+            "text": "Vitamina D3"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Tratamiento y existencias"
+        },
+        "controls": []
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/10-T3-treatment-stock-native200.png"
+    },
+    {
+      "id": "11-T3-appointments-native200",
+      "timestamp": "2026-11-02T20:23:16.259Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/appointments",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:16.188Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/appointments",
+        "title": "Citas médicas · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 2,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 631,
+          "height": 432,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 631,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Citas médicas"
+          },
+          {
+            "tag": "H2",
+            "text": "Geriatría"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Citas médicas"
+        },
+        "controls": []
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/11-T3-appointments-native200.png"
+    },
+    {
+      "id": "12-restored-native100",
+      "timestamp": "2026-11-02T20:23:16.615Z",
+      "nativeZoom": {
+        "tabId": 58751493,
+        "url": "http://127.0.0.1:3001/appointments",
+        "zoomFactor": 1,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-02T20:23:16.495Z"
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:3001/appointments",
+        "title": "Citas médicas · CONTIGO",
+        "innerWidth": 1262,
+        "innerHeight": 864,
+        "outerWidth": 1280,
+        "outerHeight": 960,
+        "devicePixelRatio": 1,
+        "screen": {
+          "width": 800,
+          "height": 600,
+          "availWidth": 800,
+          "availHeight": 600,
+          "colorDepth": 24,
+          "pixelDepth": 24
+        },
+        "visualViewport": {
+          "width": 1262,
+          "height": 864,
+          "scale": 1,
+          "pageLeft": 0,
+          "pageTop": 0
+        },
+        "htmlFontSize": "16px",
+        "htmlZoom": "1",
+        "bodyZoom": "1",
+        "documentWidth": 1262,
+        "horizontalDocumentOverflow": false,
+        "patientNavigation": [],
+        "mainHeadings": [
+          {
+            "tag": "H1",
+            "text": "Citas médicas"
+          },
+          {
+            "tag": "H2",
+            "text": "Geriatría"
+          }
+        ],
+        "activeElement": {
+          "tag": "H1",
+          "text": "Citas médicas"
+        },
+        "controls": []
+      },
+      "screenshot": "output/apf3/evidence/native-zoom/12-restored-native100.png"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "kind": "Automated technical reachability at native 200%",
+      "action": "Ya la tomé: Losartán, 08:00",
+      "confirmation": "Losartán, 08:00: registraste que la tomaste.\n\nSi te equivocaste, abre Tratamiento y elige Corregir en esa dosis.\n\nRevisar mi respuestaEntendido",
+      "nativeFactor": 2,
+      "completed": true
+    },
+    {
+      "id": "T4",
+      "kind": "Automated technical reachability at native 200%",
+      "action": "Invalid 80/120 -> real error -> corrected 120/80 -> review -> confirm",
+      "confirmation": "Medición guardada. Tu cuidador ya puede consultarla. Puedes registrar otra lectura abajo.",
+      "nativeFactor": 2,
+      "completed": true
+    },
+    {
+      "id": "T2",
+      "kind": "Automated technical reachability at native 200%",
+      "action": "Persistent SOS from Medición -> explanation -> confirm demo request",
+      "confirmation": "Petición de prueba registrada. No se contactó a servicios de emergencia.",
+      "nativeFactor": 2,
+      "completed": true
+    },
+    {
+      "id": "T3",
+      "kind": "Automated technical reachability at native 200%",
+      "action": "Caregiver reads treatment, stock and appointment in authorized demo",
+      "treatment": "Losartán\nVigente en clínica\n\n50 mg · 08:00 / 20:00\n\nTomar con agua en ayunas.\n\nFoto de referencia\n\nVigencia: 19 oct. 2026 — 17 ene. 2027.\n\nFuente: clínica simulada · actualización 2 nov. 2026, 15:23.\n\nCantidad disponible\n\n29 tabletas\n\nCobertura estimada: 14 días según la pauta fija.\n\nRegistrar reposición o conteo físico",
+      "appointments": "Citas médicas\n\nOrganiza el acompañamiento de Dacio Ramos con las citas registradas por la clínica.\n\nMostrar \nPróximas\nPasadas\nCanceladas\nTodas\nGeriatría\nProgramada\n\n4 nov. 2026, 10:30 · hora de Lima\n\nProfesional de demostración\n\nConsultorio de prueba · sede de demostración\n\nConsultar las indicaciones proporcionadas por la clínica.\n\nOrigen: clínica de demostración. Contigo consulta esta cita; no la reprograma.",
+      "nativeFactor": 2,
+      "completed": true
+    }
+  ],
+  "zoomEvents": [
+    {
+      "timestamp": "2026-11-02T20:23:10.353Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:10.622Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:11.555Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:11.555Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:11.994Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:14.053Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:14.199Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:14.995Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:15.002Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:15.462Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:15.478Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:15.931Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:15.947Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-02T20:23:16.267Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 58751493,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    }
+  ],
+  "result": "Native browser zoom factors 1 and 2 verified by chrome.tabs.getZoom; technical T1-T4 paths executed with zoomFactor=2."
+}

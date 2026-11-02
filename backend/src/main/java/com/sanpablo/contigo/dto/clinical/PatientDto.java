@@ -50,6 +50,7 @@ public class PatientDto {
     public void setMedicalNotes(String medicalNotes) { this.medicalNotes = medicalNotes; }
     public String getRelationship() { return relationship; }
     public void setRelationship(String relationship) { this.relationship = relationship; }
+    @com.fasterxml.jackson.annotation.JsonProperty("isOnline")
     public boolean isOnline() { return isOnline; }
     public void setOnline(boolean online) { isOnline = online; }
     public Instant getLastSyncAt() { return lastSyncAt; }

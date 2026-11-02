@@ -98,3 +98,11 @@ movil/ios/Podfile.lock
 docs/
 documentacion/
 
+# Intermediarios de comprobación del APF3 (conservar evidencias finales)
+/tmp/
+/output/apf3/qa/
+/tools/apf3/.artifact-qa/
+/tools/apf3/__pycache__/
+*.inspect.ndjson
+/.runtime/
+

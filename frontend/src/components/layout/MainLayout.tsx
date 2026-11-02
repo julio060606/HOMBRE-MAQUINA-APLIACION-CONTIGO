@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
-import { ENV } from '../../config/env';
 import { LinkPatientModal } from '../../features/onboarding/LinkPatientModal';
+import styles from './CaregiverLayout.module.css';
 
-export const MainLayout: React.FC = () => {
+export function MainLayout() {
   const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const { pathname } = useLocation();
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { setMenuOpen(false); menuButton.current?.focus(); }
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [menuOpen]);
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] flex flex-col">
-      <div className="px-4 py-2 bg-amber-50 border-b border-amber-200 text-amber-950 text-sm" role="status">{ENV.USE_MOCKS ? "Demostración · datos sintéticos · integración clínica real pendiente" : "Modo API · backend Spring Boot activo · integración clínica externa sujeta a credenciales"}</div>
-      <Navbar onOpenLinkModal={() => setIsLinkModalOpen(true)} />
-      <div className="flex flex-1 flex-col lg:flex-row">
-        <Sidebar />
-        <main className="flex-1 p-4 sm:p-7 max-w-7xl mx-auto w-full min-w-0">
-          <Outlet />
-        </main>
-      </div>
+    <div className={styles.shell}>
+      <Navbar onOpenLinkModal={() => setIsLinkModalOpen(true)} menuOpen={menuOpen}
+        onToggleMenu={() => setMenuOpen(value => !value)} menuButtonRef={menuButton} />
+      <Sidebar open={menuOpen} onNavigate={() => setMenuOpen(false)} />
+      <main id="main-content" tabIndex={-1} className={styles.main}>
+        <div className={styles.content}><Outlet /></div>
+      </main>
       <LinkPatientModal isOpen={isLinkModalOpen} onClose={() => setIsLinkModalOpen(false)} />
     </div>
   );
-};
+}

@@ -3,7 +3,7 @@ import { HeartHandshake, ArrowRight, Lock, Mail, Loader2, Eye, EyeOff, CheckCirc
 import { useAuth } from '../../context/AuthContext';
 import { DEMO_USERS } from '../../services/demo/state';
 import { ENV } from '../../config/env';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { User } from '../../types';
 
 const ACTOR_AVATARS: Record<string, string> = {
@@ -24,6 +24,7 @@ export function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [selectedActorId, setSelectedActorId] = useState('caregiver_demo');
   const [loading, setLoading] = useState(false);
+  const pendingLogin = useRef(false);
 
   const handleSelectActor = (actor: User) => {
     setSelectedActorId(actor.id);
@@ -47,6 +48,8 @@ export function LoginPage() {
   };
 
   const handleApiSubmitWith = async (targetEmail: string, targetPass: string) => {
+    if (pendingLogin.current) return;
+    pendingLogin.current = true;
     setLoading(true);
     setError('');
     try {
@@ -55,12 +58,14 @@ export function LoginPage() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al autenticar en el servidor.');
     } finally {
+      pendingLogin.current = false;
       setLoading(false);
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!ENV.USE_MOCKS) { await handleApiSubmitWith(email, password); return; }
     setError('');
     setLoading(true);
     try {
@@ -105,7 +110,7 @@ export function LoginPage() {
             </Link>
             <div className="mt-8 space-y-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-200 border border-emerald-400/30">
-                <ShieldCheck size={14} /> Red Clínica San Pablo
+                <ShieldCheck size={14} /> Clínica ficticia · Proyecto CONTIGO
               </span>
               <h2 className="text-2xl font-heading font-bold text-white leading-snug">
                 Acompañamiento y cuidado domiciliario
@@ -123,7 +128,7 @@ export function LoginPage() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-emerald-300 shrink-0" />
-              <span>Tomas y mediciones verificadas por el paciente</span>
+              <span>Tomas declaradas y mediciones ingresadas por el paciente</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-emerald-300 shrink-0" />
@@ -140,7 +145,7 @@ export function LoginPage() {
                 <Sparkles size={13} /> Acceso al Sistema
               </span>
               <span className="text-xs text-slate-500">
-                {ENV.USE_MOCKS ? 'Modo Demostración' : 'Modo API Backend'}
+                {ENV.USE_MOCKS ? 'Demostración local' : 'Sesión con datos centrales'}
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900 mt-3">
@@ -165,6 +170,7 @@ export function LoginPage() {
                     key={actor.id}
                     type="button"
                     data-testid={`login-${actor.id}`}
+                    disabled={loading}
                     onClick={() => handleSelectActor(actor)}
                     className={`text-left p-3 rounded-2xl border transition-all flex items-center gap-3 ${
                       isSelected
@@ -202,6 +208,7 @@ export function LoginPage() {
                 <input
                   id="email-input"
                   type="email"
+                  autoComplete="username"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -225,6 +232,7 @@ export function LoginPage() {
                 <input
                   id="password-input"
                   type={showPassword ? 'text' : 'password'}
+                  autoComplete="current-password"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -234,7 +242,8 @@ export function LoginPage() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3.5 top-3.5 text-slate-400 hover:text-slate-600 focus:outline-none"
+                  className="absolute right-1 top-1 min-w-11 min-h-11 flex items-center justify-center text-slate-700 hover:text-slate-900 rounded-lg"
+                  aria-pressed={showPassword}
                   aria-label={showPassword ? 'Ocultar contraseña' : 'Ver contraseña'}
                 >
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -268,6 +277,7 @@ export function LoginPage() {
 
               <button
                 type="button"
+                disabled={loading}
                 onClick={() => directEnter(activeActor)}
                 className="sm:w-auto px-5 py-3.5 border border-slate-300 text-slate-700 rounded-xl font-medium hover:bg-slate-50 transition text-center text-sm"
               >

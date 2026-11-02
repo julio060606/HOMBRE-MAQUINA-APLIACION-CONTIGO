@@ -12,6 +12,8 @@ public class PillIntakeDto {
     private String medicationName;
     private String dosage;
     private String imageUrl;
+    private String diagnosis;
+    private String doctor;
     private String scheduledTime;
     private String scheduledDate;
     private Instant scheduledAt;
@@ -37,6 +39,8 @@ public class PillIntakeDto {
         this.medicationName = intake.getMedicationName();
         this.dosage = intake.getDosage();
         this.imageUrl = intake.getImageUrl();
+        this.diagnosis = intake.getDiagnosis();
+        this.doctor = intake.getDoctor();
         this.scheduledTime = intake.getScheduledTime();
         this.scheduledDate = intake.getScheduledDate();
         this.scheduledAt = intake.getScheduledAt();
@@ -67,6 +71,10 @@ public class PillIntakeDto {
     public void setDosage(String dosage) { this.dosage = dosage; }
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public String getDiagnosis() { return diagnosis; }
+    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public String getDoctor() { return doctor; }
+    public void setDoctor(String doctor) { this.doctor = doctor; }
     public String getScheduledTime() { return scheduledTime; }
     public void setScheduledTime(String scheduledTime) { this.scheduledTime = scheduledTime; }
     public String getScheduledDate() { return scheduledDate; }

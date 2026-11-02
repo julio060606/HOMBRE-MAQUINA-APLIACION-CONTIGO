@@ -7,6 +7,7 @@ export interface PillIntake {
   takenAt?: string; respondedAt?: string; status: DoseStatus; instructions?: string;
   version: number; prescriptionVersion?: number; unitsPerDose?: number; stockUnit?: string;
   actorId?: string; recordedVia?: InputChannel; reason?: string;
+  diagnosis?: string; doctor?: string;
 }
 export interface BloodPressureLog {
   id: string; patientId: string; organizationId: string; systolic: number; diastolic: number;

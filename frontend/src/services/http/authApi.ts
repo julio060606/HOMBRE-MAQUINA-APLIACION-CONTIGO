@@ -1,68 +1,40 @@
-import { ENV } from '../../config/env';
+﻿import { ENV } from '../../config/env';
 import { User } from '../../types';
-import { setAuthToken, setRefreshToken, clearTokens, getRefreshToken } from './tokenStorage';
-
-export interface LoginResponseDto {
-  token: string;
-  refreshToken: string;
-  user: User;
-}
+import { getAuthToken } from './tokenStorage';
+import { ApiError, ApiSessionDto, clearApiSession, fetchAuthenticated, isApiUser, readStoredApiUser, responseError, storeApiSession, storeApiUser } from './apiTransport';
+export type LoginResponseDto = ApiSessionDto;
 
 export async function loginWithApi(email: string, password: string): Promise<User> {
-  const res = await fetch(`${ENV.API_BASE_URL}/auth/login`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password }),
-  });
-
-  if (!res.ok) {
-    const errorData = (await res.json().catch(() => null)) as { message?: string } | null;
-    throw new Error(errorData?.message || `Error de autenticación (${res.status})`);
-  }
-
-  const data = (await res.json()) as LoginResponseDto;
-  setAuthToken(data.token);
-  setRefreshToken(data.refreshToken);
+  let response: Response;
   try {
-    sessionStorage.setItem('contigo_api_user', JSON.stringify(data.user));
-  } catch {
-    // sessionStorage fallback
-  }
-  return data.user;
+    response = await fetch(`${ENV.API_BASE_URL}/auth/login`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.trim(), password }),
+    });
+  } catch { throw new ApiError(0, 'No se pudo conectar al servidor de CONTIGO. Comprueba la conexión y vuelve a intentarlo.'); }
+  if (!response.ok) throw await responseError(response);
+  return storeApiSession(await response.json());
+}
+
+export async function loadApiUser(): Promise<User> {
+  const response = await fetchAuthenticated('/auth/me');
+  if (!response.ok) throw await responseError(response);
+  const user: unknown = await response.json();
+  if (!isApiUser(user)) throw new ApiError(502, 'No se pudo recuperar el perfil de la sesión.');
+  const currentUser = readStoredApiUser();
+  if (!getAuthToken() || (currentUser && currentUser.id !== user.id)) throw new ApiError(401, 'La sesión cambió. Vuelve a iniciar sesión.');
+  storeApiUser(user);
+  return user;
 }
 
 export async function logoutApi(): Promise<void> {
-  const token = sessionStorage.getItem('contigo_api_token');
-  const refreshToken = getRefreshToken();
+  const token = getAuthToken();
+  // Clear this browser immediately; an earlier logout response must not erase a later login.
+  clearApiSession();
+  if (!token) return;
   try {
-    if (token) {
-      await fetch(`${ENV.API_BASE_URL}/auth/logout`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ refreshToken }),
-      });
-    }
-  } catch {
-    // network error on logout can be ignored
-  } finally {
-    clearTokens();
-    try {
-      sessionStorage.removeItem('contigo_api_user');
-    } catch {
-      // sessionStorage fallback
-    }
-  }
+    await fetch(`${ENV.API_BASE_URL}/auth/logout`, { method: 'POST', headers: { Authorization: `Bearer ${token}` } });
+  } catch { /* The local session is closed even when the server is unreachable. */ }
 }
 
-export function getStoredApiUser(): User | null {
-  try {
-    const raw = sessionStorage.getItem('contigo_api_user');
-    if (!raw) return null;
-    return JSON.parse(raw) as User;
-  } catch {
-    return null;
-  }
-}
+export const getStoredApiUser = readStoredApiUser;

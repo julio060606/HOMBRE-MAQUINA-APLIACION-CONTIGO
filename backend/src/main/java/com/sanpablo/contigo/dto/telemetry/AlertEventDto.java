@@ -50,6 +50,7 @@ public class AlertEventDto {
     public void setTimestamp(Instant timestamp) { this.timestamp = timestamp; }
     public String getSeverity() { return severity; }
     public void setSeverity(String severity) { this.severity = severity; }
+    @com.fasterxml.jackson.annotation.JsonProperty("isResolved")
     public boolean isResolved() { return isResolved; }
     public void setResolved(boolean resolved) { isResolved = resolved; }
     public String getNotificationStatus() { return notificationStatus; }

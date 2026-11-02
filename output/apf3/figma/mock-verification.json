@@ -1,0 +1,38 @@
+{
+  "status": "MOCK STRUCTURAL CHECK ONLY; NOT EXECUTED IN FIGMA",
+  "testedAt": "2026-11-02T18:00:50.748Z",
+  "pages": [
+    "00 Leyenda y resumen",
+    "01 Antes (v2.0)",
+    "02 Después (v3.0 objetivo AA)",
+    "03 Kit accesible",
+    "04 Anotaciones de accesibilidad",
+    "05 Variante alto contraste y texto ampliado"
+  ],
+  "screens": 105,
+  "clickableNodes": 925,
+  "embeddedRealCaptures": 10,
+  "componentSets": [
+    {
+      "name": "CONTIGO/Botón accesible",
+      "variants": 12
+    },
+    {
+      "name": "CONTIGO/Campo numérico",
+      "variants": 6
+    }
+  ],
+  "checks": [
+    "Existing content preserved",
+    "All native reaction destinations exist on same page",
+    "Four task starting points",
+    "Mode toggles reach distinct variants",
+    "Font loads occur before text generation",
+    "Embedded PNG signatures valid"
+  ],
+  "limitations": [
+    "Mock does not implement Figma auto-layout or typography rendering",
+    "No real Figma import,execution,visual QA,Stark or publication verified"
+  ],
+  "message": "Diseño generado. No se afirma conformidad ni validación con participantes."
+}

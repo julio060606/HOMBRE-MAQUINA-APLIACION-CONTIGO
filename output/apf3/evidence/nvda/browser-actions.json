@@ -1,0 +1,267 @@
+{
+  "kind": "Technical browser traversal with real portable NVDA; no participants",
+  "browser": "156.0.8078.74",
+  "events": [
+    {
+      "utc": "2026-11-02T20:25:21.817Z",
+      "step": "start",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "focus": {
+        "tag": "H2",
+        "role": null,
+        "name": "Citas",
+        "id": ":r5:"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:23.997Z",
+      "step": "T1-treatment",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H2",
+        "role": null,
+        "name": "Tratamiento",
+        "id": ":r5:"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:26.155Z",
+      "step": "T1-record-taken",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Space",
+      "focus": {
+        "tag": "DIV",
+        "role": "status",
+        "name": "Losartán, 08:00: registraste que la tomaste.\n\nSi te equivocaste, abre Tratamiento y elige Corregir en esa dosis.\n\nRevisar mi respuestaEntendido",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:28.523Z",
+      "step": "T2-from-citas",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H2",
+        "role": null,
+        "name": "Citas",
+        "id": ":r5:"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:30.700Z",
+      "step": "T2-open-sos",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Cancelar y volver",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:31.875Z",
+      "step": "T2-cancel-escape",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "focus": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "SOS de prueba",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:34.017Z",
+      "step": "T2-reopen-sos",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Cancelar y volver",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:36.161Z",
+      "step": "T2-record-sos",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "P",
+        "role": "status",
+        "name": "Petición de prueba registrada. No se contactó a servicios de emergencia.",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:38.413Z",
+      "step": "T2-close",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "SOS de prueba",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:40.561Z",
+      "step": "T4-open-measurement",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H2",
+        "role": null,
+        "name": "Medición",
+        "id": ":r5:"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:42.216Z",
+      "step": "T4-systolic",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "entered": "120",
+      "focus": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "id": ":r19:-systolic"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:43.867Z",
+      "step": "T4-invalid-diastolic",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "entered": "130",
+      "focus": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "id": ":r19:-diastolic"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:46.009Z",
+      "step": "T4-show-error",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "id": ":r19:-diastolic"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:47.640Z",
+      "step": "T4-correct-diastolic",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "entered": "80",
+      "focus": {
+        "tag": "INPUT",
+        "role": null,
+        "name": "",
+        "id": ":r19:-diastolic"
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:49.774Z",
+      "step": "T4-review",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H4",
+        "role": null,
+        "name": "Paso 2 de 2: revisa tu lectura",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:52.017Z",
+      "step": "T4-save",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "activation": "Enter",
+      "focus": {
+        "tag": "P",
+        "role": "status",
+        "name": "Medición guardada. Tu cuidador ya puede consultarla. Puedes registrar otra lectura abajo.",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:54.295Z",
+      "step": "T3-logout-patient",
+      "url": "http://127.0.0.1:3001/login",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H1",
+        "role": null,
+        "name": "Iniciar Sesión",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:56.438Z",
+      "step": "T3-select-caregiver",
+      "url": "http://127.0.0.1:3001/login",
+      "activation": "Enter",
+      "focus": {
+        "tag": "BUTTON",
+        "role": null,
+        "name": "Cuidador\nCuidador",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:25:58.575Z",
+      "step": "T3-enter-caregiver",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H1",
+        "role": null,
+        "name": "Seguimiento de Dacio Ramos",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:26:00.717Z",
+      "step": "T3-treatment-and-stock",
+      "url": "http://127.0.0.1:3001/medications",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H1",
+        "role": null,
+        "name": "Tratamiento y existencias",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:26:03.006Z",
+      "step": "T3-appointments",
+      "url": "http://127.0.0.1:3001/appointments",
+      "activation": "Enter",
+      "focus": {
+        "tag": "H1",
+        "role": null,
+        "name": "Citas médicas",
+        "id": ""
+      }
+    },
+    {
+      "utc": "2026-11-02T20:26:03.101Z",
+      "step": "finished",
+      "url": "http://127.0.0.1:3001/appointments",
+      "focus": {
+        "tag": "H1",
+        "role": null,
+        "name": "Citas médicas",
+        "id": ""
+      }
+    }
+  ]
+}

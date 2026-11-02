@@ -1,0 +1,85 @@
+{
+  "status": "REAL NVDA TECHNICAL TRAVERSAL; NO HUMAN PARTICIPANTS",
+  "date": "2026-11-02",
+  "nvdaVersion": "2026.3",
+  "nvdaBinaryFileVersion": "2026.3.0.58174",
+  "browser": "156.0.8078.74",
+  "origin": "http://127.0.0.1:3001",
+  "firstActionUtc": "2026-11-02T20:25:21.817Z",
+  "lastActionUtc": "2026-11-02T20:26:03.101Z",
+  "actionCount": 22,
+  "speakingRecordCount": 63,
+  "logTimeZone": "Local log clock UTC-05:00; browser action timestamps UTC",
+  "mode": "Native screen reader real automatic synthesizer; inspected real speech sequences from IO log. No acoustic listening judgment.",
+  "inputMethod": "Playwright/CDP programmatic focus and browser keyboard Enter,Space,Escape,Control+A and typing. No NVDA speak calls; no Windows UI automation.",
+  "process": {
+    "createdPid": 34696,
+    "quitCommandPid": 32968,
+    "quitRequestedUtc": "2026-11-02T20:26:10.7444243Z",
+    "exitVerified": true,
+    "otherBrowserClosed": false,
+    "userConfigModified": false
+  },
+  "privacy": "Export contains only reviewed local-demo/NVDA-startup Speaking records and their timestamps. Full log retained in isolated TEMP. No desktop screenshot captured.",
+  "checks": [
+    {
+      "task": "T1",
+      "result": "Observed technical path",
+      "evidence": "01-t1-response.png",
+      "checks": [
+        "Ya la tomé: Losartán, 08:00",
+        "registraste que la tomaste."
+      ],
+      "scope": "Response activated with Space. Correction flow not exercised in this run.",
+      "actualLogContainsAllListedStrings": true
+    },
+    {
+      "task": "T2",
+      "result": "Observed technical path",
+      "evidence": "02-t2-sos-review.png;03-t2-sos-recorded.png",
+      "checks": [
+        "SOS de demostración",
+        "diálogo",
+        "Cancelar y volver",
+        "Petición de prueba registrada. No se contactó a servicios de emergencia."
+      ],
+      "scope": "Dialog name and description announced; Escape returned DOM focus to SOS; real registration confirmation announced. No emergency delivery was tested.",
+      "actualLogContainsAllListedStrings": true
+    },
+    {
+      "task": "T4",
+      "result": "Observed technical path",
+      "evidence": "04-t4-error.png;05-t4-review.png;06-t4-saved.png",
+      "checks": [
+        "entrada inválida",
+        "la sistólica debe ser mayor que la diastólica",
+        "alerta",
+        "Paso 2 de 2: revisa tu lectura",
+        "Medición guardada."
+      ],
+      "scope": "Technical input 120/130 rejected, corrected to120/80, review and confirm then save. Values are synthetic inputs, not participant measurements.",
+      "actualLogContainsAllListedStrings": true
+    },
+    {
+      "task": "T3",
+      "result": "Navigation and heading announcements only",
+      "evidence": "07-t3-treatment.png;08-t3-appointments.png",
+      "checks": [
+        "Tratamiento y existencias",
+        "Citas médicas",
+        "enlace"
+      ],
+      "scope": "NVDA announced caregiver navigation and headings. Full browse-mode reading of medication,stock and appointment values was not exercised; task comprehension is not established.",
+      "actualLogContainsAllListedStrings": true
+    }
+  ],
+  "limitations": [
+    "No recruited participants,consentiments,SUS,SEQ or task-time result generated",
+    "Programmatic focus does not establish discovery or independent navigation by a human",
+    "Native NVDA browse-mode gestures were not tested through OS keyboard hooks",
+    "No acoustic usability or complete WCAG conformance assertion",
+    "T3 only navigation and headings;full value reading remains pending",
+    "Speech Viewer enabled by isolated configuration;no native-window screenshot or direct UI verification captured"
+  ],
+  "originalLogSha256": "B63E6A7286738BA9D1E17B1944ED7A7E3D1EFD0B919620A2B4BC1FB8866F3161"
+}

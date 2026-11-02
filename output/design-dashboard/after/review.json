@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-02T22:51:34.093Z",
+  "phase": "after",
+  "screens": [
+    {
+      "label": "desktop",
+      "geometry": {
+        "width": 1440,
+        "documentWidth": 1440,
+        "offending": []
+      }
+    },
+    {
+      "label": "tablet",
+      "geometry": {
+        "width": 1024,
+        "documentWidth": 1024,
+        "offending": []
+      }
+    },
+    {
+      "label": "mobile",
+      "geometry": {
+        "width": 390,
+        "documentWidth": 390,
+        "offending": []
+      }
+    },
+    {
+      "label": "narrow",
+      "geometry": {
+        "width": 320,
+        "documentWidth": 320,
+        "offending": []
+      }
+    },
+    {
+      "label": "axe-1440",
+      "violations": []
+    },
+    {
+      "label": "axe-390",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

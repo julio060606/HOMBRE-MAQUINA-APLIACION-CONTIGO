@@ -30,6 +30,12 @@ public class PillIntake {
     @Column(name = "image_url", columnDefinition = "TEXT")
     private String imageUrl;
 
+    @Column(columnDefinition = "TEXT")
+    private String diagnosis;
+
+    @Column(length = 255)
+    private String doctor;
+
     @Column(name = "scheduled_time", nullable = false, length = 10)
     private String scheduledTime;
 
@@ -88,6 +94,10 @@ public class PillIntake {
     public void setDosage(String dosage) { this.dosage = dosage; }
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public String getDiagnosis() { return diagnosis; }
+    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public String getDoctor() { return doctor; }
+    public void setDoctor(String doctor) { this.doctor = doctor; }
     public String getScheduledTime() { return scheduledTime; }
     public void setScheduledTime(String scheduledTime) { this.scheduledTime = scheduledTime; }
     public String getScheduledDate() { return scheduledDate; }

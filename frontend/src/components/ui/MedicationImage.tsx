@@ -35,7 +35,7 @@ export function MedicationImage({
         className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
       />
       {badgeText && (
-        <div className="absolute bottom-2.5 right-2.5 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-md flex items-center gap-1 shadow-sm">
+        <div className="absolute bottom-2.5 right-2.5 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md flex items-center gap-1 shadow-sm">
           <span>{badgeText}</span>
         </div>
       )}

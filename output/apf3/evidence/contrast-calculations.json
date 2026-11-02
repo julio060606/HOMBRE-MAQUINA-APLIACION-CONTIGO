@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-11-02T18:06:29.214Z",
+  "method": "WCAG sRGB relative luminance, linearized channels, (Llighter+.05)/(Ldarker+.05). Values support DOM/axe evidence; this is not Stark output.",
+  "limitations": "These pairs do not prove all colors, backgrounds, states or WCAG criteria.",
+  "pairs": [
+    {
+      "phase": "baseline",
+      "element": "texto secundario de inicio",
+      "foreground": "#94a3b8",
+      "background": "#ffffff",
+      "ratio": 2.564,
+      "source": "DOM + axe color-contrast2.56:1; texto pequeño"
+    },
+    {
+      "phase": "baseline",
+      "element": "4G decorativo visible",
+      "foreground": "#059669",
+      "background": "#f8faf9",
+      "ratio": 3.5947,
+      "source": "DOM + axe color-contrast3.59:1"
+    },
+    {
+      "phase": "after",
+      "element": "texto secundario oscurecido",
+      "foreground": "#475569",
+      "background": "#ffffff",
+      "ratio": 7.5777,
+      "source": "CSS actual; revisar superficies concretas"
+    },
+    {
+      "phase": "after",
+      "element": "4G decorativo oscurecido",
+      "foreground": "#065f46",
+      "background": "#f8faf9",
+      "ratio": 7.33,
+      "source": "CSS actual en PhoneDeviceFrame"
+    },
+    {
+      "phase": "baseline",
+      "element": "límite de campo",
+      "foreground": "#cbd5e1",
+      "background": "#ffffff",
+      "ratio": 1.4847,
+      "source": "Computed CSS en supplemental.json"
+    },
+    {
+      "phase": "after",
+      "element": "límite de campo",
+      "foreground": "#64748b",
+      "background": "#ffffff",
+      "ratio": 4.7588,
+      "source": "Computed CSS en supplemental.json"
+    },
+    {
+      "phase": "baseline",
+      "element": "foco primario existente",
+      "foreground": "#136f53",
+      "background": "#ffffff",
+      "ratio": 6.1289,
+      "source": "Computed CSS tras Tab y render; captura34 confirma foco visible"
+    },
+    {
+      "phase": "after",
+      "element": "foco primario uniformado",
+      "foreground": "#0f4c3a",
+      "background": "#ffffff",
+      "ratio": 9.9282,
+      "source": "Computed CSS tras Tab y render; anillo blanco separador"
+    },
+    {
+      "phase": "after",
+      "element": "alto contraste texto",
+      "foreground": "#111111",
+      "background": "#ffffff",
+      "ratio": 18.8831,
+      "source": "Tokens explícitos del modo; captura22"
+    },
+    {
+      "phase": "after",
+      "element": "alto contraste acción",
+      "foreground": "#ffffff",
+      "background": "#06452f",
+      "ratio": 11.0524,
+      "source": "Tokens explícitos del modo; captura22"
+    }
+  ]
+}

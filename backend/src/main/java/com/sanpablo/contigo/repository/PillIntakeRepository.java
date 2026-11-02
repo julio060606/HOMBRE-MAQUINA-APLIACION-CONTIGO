@@ -20,4 +20,8 @@ public interface PillIntakeRepository extends JpaRepository<PillIntake, String> 
     Optional<PillIntake> findByIdAndPatientIdWithLock(@org.springframework.data.repository.query.Param("id") String id, @org.springframework.data.repository.query.Param("patientId") String patientId);
 
     List<PillIntake> findByMedicationIdAndStatus(String medicationId, String status);
+
+    @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
+    @org.springframework.data.jpa.repository.Query("SELECT p FROM PillIntake p WHERE p.medicationId = :medicationId AND p.status = 'PENDING' AND p.scheduledAt > :now")
+    List<PillIntake> findPendingFutureByMedicationWithLock(@org.springframework.data.repository.query.Param("medicationId") String medicationId, @org.springframework.data.repository.query.Param("now") Instant now);
 }

@@ -38,6 +38,7 @@ public class IntakeService {
     private final AuthorizationService authorizationService;
     private final EventPublishingService eventPublishingService;
     private final ObjectMapper objectMapper;
+    private final com.sanpablo.contigo.service.clinical.ClinicalSyncService clinicalSyncService;
 
     public IntakeService(PillIntakeRepository intakeRepository,
                          IntakeCorrectionRepository correctionRepository,
@@ -47,7 +48,8 @@ public class IntakeService {
                          IdempotencyRecordRepository idempotencyRepository,
                          AuthorizationService authorizationService,
                          EventPublishingService eventPublishingService,
-                         ObjectMapper objectMapper) {
+                         ObjectMapper objectMapper,
+                         com.sanpablo.contigo.service.clinical.ClinicalSyncService clinicalSyncService) {
         this.intakeRepository = intakeRepository;
         this.correctionRepository = correctionRepository;
         this.movementRepository = movementRepository;
@@ -57,10 +59,12 @@ public class IntakeService {
         this.authorizationService = authorizationService;
         this.eventPublishingService = eventPublishingService;
         this.objectMapper = objectMapper;
+        this.clinicalSyncService = clinicalSyncService;
     }
 
     public List<PillIntakeDto> getDoses(User actor, String patientId, String from, String to) {
         authorizationService.authorizePatientAccess(actor, patientId);
+        clinicalSyncService.ensureDosesForToday(patientId);
         List<PillIntake> list;
         if (from != null && to != null) {
             list = intakeRepository.findByPatientIdAndScheduledAtBetween(patientId, Instant.parse(from), Instant.parse(to));

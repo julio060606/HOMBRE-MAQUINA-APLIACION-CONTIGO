@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { User } from '../types';
 import { clearDemoUser, readDemoUser, selectDemoUser } from '../services/demo/session';
 import { AuthContext } from './AuthState';
 import { ENV } from '../config/env';
-import { getStoredApiUser, loginWithApi, logoutApi } from '../services/http/authApi';
+import { getStoredApiUser, loadApiUser, loginWithApi, logoutApi } from '../services/http/authApi';
+import { getAuthToken, getRefreshToken, subscribeAuthToken } from '../services/http/tokenStorage';
 export { useAuth } from './AuthState';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -15,6 +16,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return getStoredApiUser();
   });
   const client = useQueryClient();
+  useEffect(() => {
+    if (ENV.USE_MOCKS) return;
+    let active = true;
+    const unsubscribe = subscribeAuthToken(() => {
+      if (!getAuthToken() && active) { setUser(null); void client.cancelQueries(); client.clear(); }
+    });
+    if (getAuthToken() || getRefreshToken()) {
+      void loadApiUser().then(value => { if (active && getAuthToken() && getStoredApiUser()?.id === value.id) setUser(value); }).catch(() => {
+        // Network errors remain visible on data requests. An invalid JWT clears the session in transport.
+      });
+    }
+    return () => { active = false; unsubscribe(); };
+  }, [client]);
 
   const enterDemo = (id: string) => {
     if (!ENV.USE_MOCKS) {

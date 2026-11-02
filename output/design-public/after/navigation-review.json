@@ -1,0 +1,63 @@
+[
+  {
+    "name": "clinic",
+    "mobileMenu": "open, Escape, focus return, close on link passed",
+    "brokenAnchors": [],
+    "accordion": "six specialties and four patient questions open/close passed",
+    "crossRoute": {
+      "hash": "#hero",
+      "top": 112
+    },
+    "login": "passed",
+    "reflow": [
+      {
+        "width": 1440,
+        "documentWidth": 1440,
+        "scale": "32px",
+        "offenders": []
+      },
+      {
+        "width": 390,
+        "documentWidth": 390,
+        "scale": "32px",
+        "offenders": []
+      },
+      {
+        "width": 320,
+        "documentWidth": 320,
+        "scale": "32px",
+        "offenders": []
+      }
+    ],
+    "axeViolations": [],
+    "errors": []
+  },
+  {
+    "name": "landing",
+    "mobileMenu": "open, Escape, focus return, close on link passed",
+    "brokenAnchors": [],
+    "login": "passed",
+    "reflow": [
+      {
+        "width": 1440,
+        "documentWidth": 1440,
+        "scale": "32px",
+        "offenders": []
+      },
+      {
+        "width": 390,
+        "documentWidth": 390,
+        "scale": "32px",
+        "offenders": []
+      },
+      {
+        "width": 320,
+        "documentWidth": 320,
+        "scale": "32px",
+        "offenders": []
+      }
+    ],
+    "axeViolations": [],
+    "errors": []
+  }
+]

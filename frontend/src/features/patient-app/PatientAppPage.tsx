@@ -18,9 +18,9 @@ export function PatientAppPage() {
   }
 
   return (
-    <main className="bg-slate-900/10 min-h-screen py-6 px-4">
-      <div className="max-w-md mx-auto flex justify-between items-center px-3 py-2 mb-3 text-sm bg-white/80 backdrop-blur-md rounded-2xl border border-slate-200">
-        <span className="font-semibold text-slate-800">Contigo · App Paciente</span>
+    <main className="bg-slate-900/10 min-h-screen py-6 px-[8px] sm:px-4">
+      <div className="max-w-md mx-auto flex flex-wrap gap-2 justify-between items-center px-3 py-2 mb-3 text-sm bg-white/80 backdrop-blur-md rounded-2xl border border-slate-200">
+        <span className="font-semibold text-slate-800">Contigo · App Paciente<span className="block text-xs font-normal">Proyecto con datos sintéticos</span></span>
         <button
           className="text-slate-600 hover:text-rose-600 font-medium text-xs underline cursor-pointer"
           onClick={logout}
@@ -29,7 +29,7 @@ export function PatientAppPage() {
         </button>
       </div>
       <PhoneDeviceFrame width={400}>
-        <PatientAppContent key={user.id} actor={user} patientId={user.patientId} standalone />
+        <PatientAppContent key={user.id} actor={user} patientId={user.patientId} />
       </PhoneDeviceFrame>
     </main>
   );

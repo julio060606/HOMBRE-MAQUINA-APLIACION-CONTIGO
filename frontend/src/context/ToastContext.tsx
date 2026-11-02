@@ -36,7 +36,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     
     setToasts(prev => [...prev, newToast]);
 
-    const duration = toast.duration ?? 4500;
+    const duration = toast.duration ?? 0;
     if (duration > 0) {
       setTimeout(() => {
         removeToast(id);
@@ -67,7 +67,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       {/* Toast Container Flotante */}
       <div 
         aria-live="polite" 
-        className="fixed bottom-5 right-5 z-50 flex flex-col space-y-3 max-w-sm w-full pointer-events-none"
+        className="fixed bottom-5 right-3 left-3 sm:left-auto z-50 flex flex-col space-y-3 max-w-sm pointer-events-none"
       >
         {toasts.map(toast => {
           let bgClass = 'bg-white border-slate-200 text-slate-800';
@@ -87,7 +87,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           return (
             <div
               key={toast.id}
-              role="alert"
+              role={toast.type === 'error' ? 'alert' : 'status'}
               className={`pointer-events-auto flex items-start gap-3 p-4 rounded-xl border shadow-lg transition-all animate-in slide-in-from-bottom-5 duration-300 ${bgClass}`}
             >
               <div className="pt-0.5">{icon}</div>

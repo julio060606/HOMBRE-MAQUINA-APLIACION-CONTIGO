@@ -5,6 +5,11 @@ export interface PatientView {
   pressures: BloodPressureLog[]; weights: WeightLog[]; supplies: Supply[];
   movements: StockMovement[]; appointments: Appointment[]; profile: ClinicalProfile | null;
   settings: ClinicalSettings; alerts: AlertEvent[]; audit: AuditEvent[];
+  clinicalSync?: ClinicalSyncState;
+}
+export interface ClinicalSyncState {
+  status: 'SYNCED' | 'FAILED' | 'UNKNOWN';
+  lastSuccessfulSyncAt?: string; lastAttemptAt?: string;
 }
 export interface ResponseInput {
   patientId: string; doseId: string; response: 'TAKEN' | 'NOT_TAKEN';

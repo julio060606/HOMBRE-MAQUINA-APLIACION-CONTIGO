@@ -15,6 +15,8 @@ public class MedicationDto {
     private String dosage;
     private String formFactor;
     private String imageUrl;
+    private String diagnosis;
+    private String doctor;
     private List<String> times;
     private String frequencyType;
     private String specificDays;
@@ -41,6 +43,8 @@ public class MedicationDto {
         this.dosage = medication.getDosage();
         this.formFactor = medication.getFormFactor();
         this.imageUrl = medication.getImageUrl();
+        this.diagnosis = medication.getDiagnosis();
+        this.doctor = medication.getDoctor();
         this.times = medication.getTimesList();
         this.frequencyType = medication.getFrequencyType();
         this.specificDays = medication.getSpecificDays();
@@ -74,6 +78,10 @@ public class MedicationDto {
     public void setFormFactor(String formFactor) { this.formFactor = formFactor; }
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public String getDiagnosis() { return diagnosis; }
+    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public String getDoctor() { return doctor; }
+    public void setDoctor(String doctor) { this.doctor = doctor; }
     public List<String> getTimes() { return times; }
     public void setTimes(List<String> times) { this.times = times; }
     public String getFrequencyType() { return frequencyType; }
@@ -88,6 +96,7 @@ public class MedicationDto {
     public void setEndDate(String endDate) { this.endDate = endDate; }
     public String getInstructions() { return instructions; }
     public void setInstructions(String instructions) { this.instructions = instructions; }
+    @com.fasterxml.jackson.annotation.JsonProperty("isActive")
     public boolean isActive() { return isActive; }
     public void setActive(boolean active) { isActive = active; }
     public String getSource() { return source; }

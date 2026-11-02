@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-11-02T18:07:20.307Z",
+  "baseUrl": "http://127.0.0.1:3001",
+  "variant": "after",
+  "captures": [
+    {
+      "name": "detail-dose",
+      "description": "First pending dose card; synthetic medication fixture",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-dose.png"
+    },
+    {
+      "name": "detail-navigation",
+      "description": "Patient navigation at normal1280CSSpx viewport; phone container remains400px",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-navigation.png"
+    },
+    {
+      "name": "detail-navigation320",
+      "description": "Patient navigation at320CSSpx viewport",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-navigation320.png"
+    },
+    {
+      "name": "detail-measure-error",
+      "description": "Visible patient body after invalid80/120 entry; real error state",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-measure-error.png"
+    },
+    {
+      "name": "detail-error-field",
+      "description": "Actual diastolic label/input/error wrapper, no image editing",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-error-field.png"
+    },
+    {
+      "name": "detail-error-summary",
+      "description": "Actual error summary with links to invalid fields",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-error-summary.png"
+    },
+    {
+      "name": "detail-measure-review",
+      "description": "Actual review step before persistence",
+      "method": "Authentic Playwright locator screenshot of rendered DOM; no compositing",
+      "path": "output/apf3/evidence/after/detail-measure-review.png"
+    }
+  ]
+}

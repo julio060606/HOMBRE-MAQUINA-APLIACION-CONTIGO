@@ -1,0 +1,78 @@
+﻿{
+    "verifiedAt":  "2026-11-02T22:23:26.1995946Z",
+    "database":  "san_pablo_clinic",
+    "schema":  "clinic",
+    "postgresVersion":  "15.19",
+    "result":  "PASS",
+    "fixtureAssertions":  "PASS: exact view contracts, patient isolation, prescriptions, appointments, allergies, profile, financial aggregates and initial audit",
+    "negativeIntegrityTests":  {
+                                   "count":  7,
+                                   "result":  "PASS",
+                                   "temporaryData":  "ROLLBACK"
+                               },
+    "idempotence":  {
+                        "scripts":  [
+                                        "001_schema.sql",
+                                        "002_seed.sql",
+                                        "003_integration_views.sql"
+                                    ],
+                        "all32TableCountsUnchanged":  true,
+                        "auditCountUnchanged":  true
+                    },
+    "tableCounts":  {
+                        "sites":  2,
+                        "doctors":  3,
+                        "insurers":  1,
+                        "invoices":  1,
+                        "patients":  2,
+                        "payments":  2,
+                        "audit_log":  69,
+                        "encounters":  2,
+                        "lab_orders":  2,
+                        "lab_results":  2,
+                        "specialties":  3,
+                        "appointments":  3,
+                        "observations":  2,
+                        "invoice_items":  2,
+                        "organizations":  1,
+                        "prescriptions":  2,
+                        "insurance_plans":  1,
+                        "lab_order_items":  3,
+                        "medical_records":  2,
+                        "service_catalog":  5,
+                        "allergen_catalog":  1,
+                        "lab_test_catalog":  2,
+                        "patient_contacts":  2,
+                        "diagnosis_catalog":  3,
+                        "patient_allergies":  0,
+                        "patient_diagnoses":  3,
+                        "doctor_specialties":  3,
+                        "medication_catalog":  3,
+                        "prescription_items":  3,
+                        "patient_allergy_status":  2,
+                        "prescription_schedules":  4,
+                        "patient_insurance_policies":  2
+                    },
+    "reader":  {
+                   "profileRows":  2,
+                   "appointmentRows":  3,
+                   "prescriptionRows":  3,
+                   "schemaCreateAllowed":  false,
+                   "financialViewReadable":  false,
+                   "baseTablesWithPrivileges":  0,
+                   "viewsWithWritePrivileges":  0
+               },
+    "limitations":  [
+                        "Assertions target the initial synthetic fixture, not arbitrary later clinical edits.",
+                        "Reader is a service account; application authorization and patient filtering remain required.",
+                        "No real clinic integration or clinical efficacy was tested."
+                    ],
+    "sha256":  {
+                   "001_schema.sql":  "ee5608796eca26ae862df14036e14ada6feb4a9c9256fadd9a653a35eacd12a8",
+                   "002_seed.sql":  "51f0752f2baf52ce548a2f0b6b49f8cd9372e287d122ec88e88916174126ac6d",
+                   "003_integration_views.sql":  "30d97a2b0c2edaa361a6fa8a2935b65226a0883bfab30ef36a1c6dfa75f2dcc7",
+                   "004_verify.sql":  "b81e510daf8cf97c6846641607a3a8478f505ef3dbef8d5dd1a1bb2e0280b1e1",
+                   "005_constraint_tests.sql":  "4e179ddc5b5c90a70eeb58f679639dca285915ced924df397bee40b9f430f84b",
+                   "Verify-Clinic.ps1":  "613e02f7e42eefad08b89775ac69ca054cf0c6c83e631ff4695060db07966df2"
+               }
+}

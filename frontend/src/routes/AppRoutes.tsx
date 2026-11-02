@@ -17,6 +17,7 @@ import { useAuth } from '../context/AuthContext';
 import { ENV } from '../config/env';
 import { ReactNode } from 'react';
 const ReportsPage = lazy(() => import('../features/reports/ReportsPage').then(m => ({ default: m.ReportsPage })));
+const AccessibilityPage = lazy(() => import('../features/accessibility/AccessibilityPage').then(m => ({ default: m.AccessibilityPage })));
 function ProtectedRoute({ children, patient = false, demo = false }: { children: ReactNode; patient?: boolean; demo?: boolean }) {
   const { user } = useAuth();
   if (!user) return <Navigate to="/login" replace />;
@@ -26,6 +27,8 @@ function ProtectedRoute({ children, patient = false, demo = false }: { children:
 }
 export function AppRoutes() {
   return <Suspense fallback={<div className="panel m-6" role="status">Cargando módulo…</div>}><Routes>
+    <Route path="/accessibility" element={<AccessibilityPage />} />
+    <Route path="/accesibilidad" element={<Navigate to="/accessibility" replace />} />
     <Route path="/clinic" element={<ClinicPortalPage />} /><Route path="/landing" element={<ContigoLandingPage />} /><Route path="/" element={<Navigate to="/clinic" replace />} />
     <Route path="/login" element={<LoginPage />} /><Route path="/register" element={<RegisterPage />} />
     <Route path="/patient-app/*" element={<ProtectedRoute patient><PatientAppPage /></ProtectedRoute>} />

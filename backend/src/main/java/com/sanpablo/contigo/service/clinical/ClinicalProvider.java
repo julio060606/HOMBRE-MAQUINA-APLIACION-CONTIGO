@@ -19,8 +19,19 @@ public interface ClinicalProvider {
             String instructions,
             boolean isActive,
             BigDecimal unitsPerDose,
-            String stockUnit
-    ) {}
+            String stockUnit,
+            String imageUrl,
+            String diagnosis,
+            String doctor
+    ) {
+        public PrescriptionData(String externalPrescriptionId, int version, String name, String dosage,
+                                String formFactor, List<String> times, String frequencyType, String startDate,
+                                String endDate, String instructions, boolean isActive, BigDecimal unitsPerDose,
+                                String stockUnit) {
+            this(externalPrescriptionId, version, name, dosage, formFactor, times, frequencyType,
+                    startDate, endDate, instructions, isActive, unitsPerDose, stockUnit, null, null, null);
+        }
+    }
 
     record AppointmentData(
             String externalId,
@@ -43,4 +54,12 @@ public interface ClinicalProvider {
     List<AppointmentData> fetchAppointments(String externalPatientId);
     ProfileData fetchProfile(String externalPatientId);
     boolean isLiveConnection();
+
+    record Snapshot(List<PrescriptionData> prescriptions, List<AppointmentData> appointments, ProfileData profile) {}
+
+    default Snapshot fetchSnapshot(String externalPatientId) {
+        return new Snapshot(fetchPrescriptions(externalPatientId), fetchAppointments(externalPatientId), fetchProfile(externalPatientId));
+    }
+
+    default String description() { return isLiveConnection() ? "API clínica externa configurada" : "proveedor simulado"; }
 }

@@ -38,6 +38,12 @@ public class SimulatedClinicalProvider implements ClinicalProvider {
         }
 
         String today = LocalDate.now(ZoneId.of("America/Lima")).toString();
+        if ("demo-pat_002".equals(externalPatientId)) {
+            return List.of(new PrescriptionData("rx-med_003", 1, "Tratamiento de ejemplo", "Consultar indicación clínica", "TABLET",
+                    List.of("09:00"), "DAILY", today, null, "Escenario ficticio independiente para Rosa.", true,
+                    BigDecimal.ONE, "unidades", null, "Diagnóstico del escenario ficticio de Rosa", "Profesional ficticio de Rosa"));
+        }
+        if (!"demo-pat_001".equals(externalPatientId)) return List.of();
         List<PrescriptionData> list = new ArrayList<>();
         list.add(new PrescriptionData(
                 "rx-med_001",
@@ -52,7 +58,7 @@ public class SimulatedClinicalProvider implements ClinicalProvider {
                 "Tomar con abundante agua después de los alimentos.",
                 true,
                 BigDecimal.ONE,
-                "tabletas"
+                "tabletas", "/images/losartan_pill.jpg", "Diagnóstico del escenario ficticio de Dacio", "Profesional ficticio de Dacio"
         ));
         list.add(new PrescriptionData(
                 "rx-med_002",
@@ -67,7 +73,7 @@ public class SimulatedClinicalProvider implements ClinicalProvider {
                 "Tomar al mediodía con almuerzo.",
                 true,
                 BigDecimal.ONE,
-                "tabletas"
+                "tabletas", "/images/vitamina_d3.jpg", "Diagnóstico del escenario ficticio de Dacio", "Profesional ficticio de Dacio"
         ));
         return list;
     }
@@ -78,15 +84,17 @@ public class SimulatedClinicalProvider implements ClinicalProvider {
             return customAppointments.get(externalPatientId);
         }
 
+        if (!List.of("demo-pat_001", "demo-pat_002").contains(externalPatientId)) return List.of();
+        boolean rosa = "demo-pat_002".equals(externalPatientId);
         return List.of(
                 new AppointmentData(
-                        "external-" + externalPatientId,
+                        "external-" + externalPatientId.substring(5),
                         Instant.now().plusSeconds(2 * 86400),
-                        "Geriatría",
-                        "Dr. Manuel Vargas",
-                        "Consultorio 302 · Sede Central San Pablo",
+                        rosa ? "Medicina general" : "Geriatría",
+                        "Profesional del escenario ficticio",
+                        "Consultorio de prueba de la clínica ficticia",
                         "SCHEDULED",
-                        "Traer últimos análisis de laboratorio."
+                        "Cita sintética para comprobar la consulta de información."
                 )
         );
     }
@@ -97,11 +105,13 @@ public class SimulatedClinicalProvider implements ClinicalProvider {
             return customProfiles.get(externalPatientId);
         }
 
+        if (!List.of("demo-pat_001", "demo-pat_002").contains(externalPatientId)) return null;
+        boolean rosa = "demo-pat_002".equals(externalPatientId);
         return new ProfileData(
-                BigDecimal.valueOf(168.0),
-                BigDecimal.valueOf(72.0),
+                BigDecimal.valueOf(rosa ? 159.0 : 168.0),
+                BigDecimal.valueOf(rosa ? 61.0 : 72.0),
                 Instant.now().minusSeconds(7 * 86400),
-                "Evaluación geriátrica periódica en consultorio"
+                "Ficha sintética del proyecto académico"
         );
     }
 

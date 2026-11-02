@@ -1,0 +1,1400 @@
+{
+  "metadata": {
+    "date": "2026-11-02T20:36:47.641Z",
+    "method": "Direct source inspection plus actual rg searches across frontend/src. Screen-specific applicability; not a participant session or blanket criterion conformance assertion.",
+    "scope": [
+      {
+        "id": "01-login",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/login"
+      },
+      {
+        "id": "02-patient-home",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "03-patient-treatment",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "04-patient-measurement",
+        "state": "empty-form",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "05-measurement-error",
+        "state": "invalid-input",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "06-measurement-review",
+        "state": "review",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "07-measurement-saved",
+        "state": "confirmation",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "08-patient-appointments",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "09-patient-health",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "10-patient-caregiver",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "12-dose-recorded",
+        "state": "confirmation",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "13-sos-review",
+        "state": "review",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "14-sos-recorded",
+        "state": "confirmation",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "15-patient-320",
+        "state": "reflow-320-css-px",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "16-patient-text-200",
+        "state": "root-font-200-percent-stress",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "17-caregiver-dashboard",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/dashboard"
+      },
+      {
+        "id": "18-caregiver-medications",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/medications"
+      },
+      {
+        "id": "19-caregiver-appointments",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/appointments"
+      },
+      {
+        "id": "20-caregiver-settings",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/settings"
+      },
+      {
+        "id": "21-caregiver-vitals",
+        "state": "normal",
+        "url": "http://127.0.0.1:3001/vitals"
+      },
+      {
+        "id": "22-patient-high-contrast",
+        "state": "high-contrast-preference",
+        "url": "http://127.0.0.1:3001/patient-app"
+      },
+      {
+        "id": "23-caregiver-empty",
+        "state": "no-linked-patients",
+        "url": "http://127.0.0.1:3001/dashboard"
+      },
+      {
+        "id": "24-caregiver-320",
+        "state": "reflow-320-css-px",
+        "url": "http://127.0.0.1:3001/medications"
+      }
+    ],
+    "sourceHashes": {
+      "frontend/src/features/patient-app/PatientAppContent.tsx": "58a3786cc44b87883a21d462daf2a13389dbb79257e5219ea7eb1d1c7fd1db73",
+      "frontend/src/features/patient-app/PatientHelp.tsx": "cc438322729589d8aafa677150ed10768bc6a66d435f97c4d47a6f9800aab22b",
+      "frontend/src/features/patient-app/PatientPreferences.tsx": "9c1ab7573c631eecd9b68bbe77d1661ed5bd1aee3d7bcf40c190071677252795",
+      "frontend/src/features/patient-app/DoseCard.tsx": "97601b546d0e84e775fac2ba46a97727a08e635bff56bfefd244e9a243755ff2",
+      "frontend/src/features/patient-app/MeasurementForm.tsx": "47d4bebd59d3c2c6caf5a40be37276cb06212d3d6b173ed7c80ff8837f49c572",
+      "frontend/src/features/patient-app/PairingPanel.tsx": "c5d17283893aeeafa243a36ce1c93c2699454f762c2953c3fd78336d0c2b8062",
+      "frontend/src/components/layout/ReadingOptions.tsx": "2ad339cbfd9e74523cb546996039bce8961073df5c34a4df7e6ba0060bfab157",
+      "frontend/src/components/layout/Navbar.tsx": "83b223b545bc9bee3290ce9c3b73d80ffbeb5e93acae6cc8ea306878495ac3aa",
+      "frontend/src/features/onboarding/LinkPatientModal.tsx": "6eb1776e697c11dc75db9b8342b0c30d59f321cde0c0c63d2f3be7940693beab",
+      "frontend/src/components/ui/MedicationImage.tsx": "92dbeb70387e5a9e3f975ac769af58def09ea5d807def337d300a88b6755a531",
+      "frontend/src/features/vitals/TrendPlot.tsx": "09459699a1be4662cd79aee0b6cfe113b1fcf4e8a5e379035168d740bacccd26",
+      "frontend/src/features/vitals/MeasurementCharts.tsx": "16b84b744e75b7802a2c619466d2a5973cb730924a58750e603e3bede6ba4a00",
+      "frontend/src/features/medications/SupplyForm.tsx": "71316892b73b7458113b6308d7ffa5638e1ff1973e8b97373a5affd78c92d8ef",
+      "frontend/src/features/settings/SettingsPage.tsx": "005f64ed3e86183472daca0142c107110486d57e1a57647c5bdfa2f64408fabf",
+      "frontend/src/features/auth/LoginPage.tsx": "936e5271164517d38dfb973e52f418bf40af044cdede39e6a76e6af1cdf93e46",
+      "frontend/src/app/theme.ts": "72158a8a37332613ddc6099fdbfa2ea93672608bacd23ad7141a77cd7bac2e31",
+      "frontend/src/styles/index.css": "75a59c63441547656bc77d66f22f238555a5c9e72226d63fae5e5f2b387d25ac"
+    },
+    "limitations": [
+      "Classification concerns the23current recorded application states.",
+      "Account registration,landing/clinic portal,third-party changes and new widgets need their own applicability review.",
+      "Absence of a pattern plus source inspection supports these narrow non-applicability decisions,not a claim that all WCAG criteria pass."
+    ]
+  },
+  "references": [
+    {
+      "criterion": "1.3.5",
+      "url": "https://www.w3.org/TR/WCAG21/#identify-input-purpose",
+      "additional": "https://www.w3.org/TR/WCAG21/#input-purposes"
+    },
+    {
+      "criterion": "1.4.13",
+      "url": "https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus"
+    },
+    {
+      "criterion": "2.1.4",
+      "url": "https://www.w3.org/TR/WCAG21/#character-key-shortcuts"
+    },
+    {
+      "criterion": "2.5.4",
+      "url": "https://www.w3.org/TR/WCAG21/#motion-actuation"
+    }
+  ],
+  "searches": [
+    {
+      "id": "keyboard-handlers",
+      "pattern": "onKeyDown|onKeyUp|onKeyPress|keydown|keyup|keypress|hotkey|shortcut|accesskey|keyCode|charCode|\\.key\\s*===",
+      "interpretation": "The sole match is StorageEvent.key in demo/repository.ts. It is not a keyboard event. No application-defined single printable character shortcut handler was found.",
+      "command": [
+        "rg",
+        "-n",
+        "-i",
+        "onKeyDown|onKeyUp|onKeyPress|keydown|keyup|keypress|hotkey|shortcut|accesskey|keyCode|charCode|\\.key\\s*===",
+        "frontend/src"
+      ],
+      "exitCode": 0,
+      "matches": [
+        "frontend/src\\services\\demo\\repository.ts:17:  window.addEventListener('storage', event => { if (event.key === 'contigo-demo-change') receive(event.newValue?.startsWith('links:') ? 'links' : 'data'); });"
+      ]
+    },
+    {
+      "id": "motion-actuation",
+      "pattern": "devicemotion|deviceorientation|DeviceMotion|Gyroscope|Accelerometer|Magnetometer|AbsoluteOrientationSensor|RelativeOrientationSensor|rotationRate|accelerationIncludingGravity|requestPermission",
+      "interpretation": "No matches. Responsive layout/orientation media rules do not operate application functions using device movement.",
+      "command": [
+        "rg",
+        "-n",
+        "-i",
+        "devicemotion|deviceorientation|DeviceMotion|Gyroscope|Accelerometer|Magnetometer|AbsoluteOrientationSensor|RelativeOrientationSensor|rotationRate|accelerationIncludingGravity|requestPermission",
+        "frontend/src"
+      ],
+      "exitCode": 1,
+      "matches": []
+    },
+    {
+      "id": "hover-focus-content",
+      "pattern": "Tooltip|Popover|Popper|onMouseEnter|onMouseOver|onMouseMove|onFocus|aria-describedby|title=|role=.tooltip|:hover|group-hover",
+      "interpretation": "In scoped sources: colour/shadow hover styles, MedicationImage scale transform and persistent described-by instructions. TrendPlot has no Tooltip import/element. Dialogs are activated by click. HTML title attributes in ClinicPortalPage and hover transforms on landing pages are outside the23recorded states.",
+      "command": [
+        "rg",
+        "-n",
+        "-i",
+        "Tooltip|Popover|Popper|onMouseEnter|onMouseOver|onMouseMove|onFocus|aria-describedby|title=|role=.tooltip|:hover|group-hover",
+        "frontend/src"
+      ],
+      "exitCode": 0,
+      "matches": [
+        "frontend/src\\styles\\index.css:30:::-webkit-scrollbar-thumb:hover {",
+        "frontend/src\\features\\clinical-profile\\ClinicalProfilePage.tsx:4:  return <PatientData>{view => <><PageHeader title=\"Ficha clínica\" description=\"Información de origen clínico. Los registros en casa conservan su propia procedencia y fecha.\" />",
+        "frontend/src\\app\\theme.ts:167:          '&:hover': {",
+        "frontend/src\\app\\theme.ts:174:          '&:hover': {",
+        "frontend/src\\app\\theme.ts:182:          '&:hover': {",
+        "frontend/src\\app\\theme.ts:199:          '&:hover': {",
+        "frontend/src\\app\\theme.ts:228:            '&:hover fieldset': {",
+        "frontend/src\\components\\ui\\MedicationImage.tsx:35:        className=\"w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300\"",
+        "frontend/src\\features\\appointments\\AppointmentsPage.tsx:6:  return <PatientData>{view => <><PageHeader title=\"Citas médicas\" description={`Organiza el acompañamiento de ${view.patient.fullName} con las citas registradas por la clínica.`} />",
+        "frontend/src\\features\\settings\\SettingsPage.tsx:17:export function SettingsPage() { return <PatientData>{view => <><PageHeader title=\"Preferencias\" description=\"Ajustes por paciente. Los cambios de tratamiento corresponden a la clínica.\" /><Preferences key={view.patient.id} initial={view.settings} /></>}</PatientData>; }",
+        "frontend/src\\features\\vitals\\VitalsPage.tsx:9:    <PageHeader title=\"Gráficas y mediciones\" description=\"Registros fechados y con procedencia. La última lectura se selecciona por fecha, sin valores de respaldo ficticios.\" />",
+        "frontend/src\\features\\dashboard\\DashboardPage.tsx:5:  return <PatientData>{view => <><PageHeader title={`Seguimiento de ${view.patient.fullName}`} description={`Datos clínicos de demostración · última carga de origen: ${formatDate(view.patient.lastSyncAt)}. La integración real con la clínica está pendiente.`} /><PatientSummary view={view} /></>}</PatientData>;",
+        "frontend/src\\features\\simulator\\PatientSimulatorPage.tsx:22:  return <><PageHeader title=\"Laboratorio de la app paciente\" description=\"Prueba una app funcional y consulta el mismo estado como cuidador. Esta vista trabaja exclusivamente con datos sintéticos.\" />",
+        "frontend/src\\features\\medications\\MedicationsPage.tsx:6:  return <PatientData>{view => <><PageHeader title=\"Tratamiento y existencias\" description=\"Recetas de origen clínico. La cantidad disponible es una estimación basada en dispensación, conteos y tomas declaradas.\" />",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:142:            <div className=\"w-10 h-10 bg-blue-900 flex items-center justify-center text-white shadow-sm transition-all group-hover:bg-blue-950\">",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:174:              title=\"Mi Portal Clínico\"",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:270:                      title=\"Anterior\"",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:277:                      title=\"Siguiente\"",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:289:                    className=\"w-full h-full object-cover transition-all duration-700 transform group-hover:scale-105\"",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:367:                  className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" ",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:386:                  className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" ",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:405:                  className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" ",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:424:                  className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" ",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:601:                    className=\"w-full h-full object-cover transition-transform duration-700 group-hover:scale-105\"",
+        "frontend/src\\features\\landing\\ClinicPortalPage.tsx:666:                  <ArrowRight className=\"w-4 h-4 text-white group-hover:translate-x-1.5 transition-transform\" />",
+        "frontend/src\\features\\reports\\ReportDocument.tsx:40:  return <Document title={`Contigo - ${model.patient.fullName}`} author=\"Contigo · demostración\" language=\"es-PE\">",
+        "frontend/src\\features\\patient-app\\DoseCard.tsx:137:            aria-describedby={correctionHintId}",
+        "frontend/src\\features\\medications\\SupplyForm.tsx:38:      <label>Cantidad en {medication.stockUnit}<input ref={quantityField} className=\"input mt-1\" type=\"number\" min=\"0\" max=\"100000\" step=\"any\" required value={quantity} onChange={e => { setQuantity(e.target.value); setError(''); setSaved(false); }} aria-invalid={!!error} aria-describedby={error ? `${id}-error` : undefined} data-testid={`supply-quantity-${medication.id}`} /></label>",
+        "frontend/src\\features\\reports\\ReportsPage.tsx:30:    <PageHeader title=\"Reporte de seguimiento\" description=\"Exporta los registros disponibles del paciente en un PDF informativo.\" />",
+        "frontend/src\\features\\patient-app\\MeasurementForm.tsx:69:        aria-invalid={!!errors[name]} aria-describedby={`${hintId}${errors[name] ? ` ${errorId}` : ''}`} />",
+        "frontend/src\\features\\patient-app\\MeasurementForm.tsx:95:    </div> : <form className=\"grid gap-4\" onSubmit={handleSubmit(value => { setSaved(false); setReview(value); })} noValidate aria-describedby={hintId}>",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:32:            <div className=\"w-10 h-10 bg-forest-700 rounded-2xl flex items-center justify-center text-white shadow-xs transition-all group-hover:bg-forest-800\">",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:153:                  <ArrowRight className=\"w-4 h-4 group-hover:translate-x-1 transition-transform\" />",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:248:                    className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\"",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:306:                    className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\"",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:364:                    className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\"",
+        "frontend/src\\features\\landing\\ContigoLandingPage.tsx:422:                    className=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\"",
+        "frontend/src\\features\\patient-app\\PatientHelp.tsx:31:    <dialog ref={dialog} aria-labelledby={titleId} aria-describedby={descriptionId} className=\"patient-help-dialog rounded-2xl p-5 max-w-sm w-[calc(100%-2rem)] max-h-[85dvh] overflow-y-auto border-2 border-slate-700 bg-white text-slate-950\""
+      ]
+    },
+    {
+      "id": "input-purposes",
+      "pattern": "autoComplete|autocomplete|<input|<select|<textarea",
+      "interpretation": "Login credentials declare username and current-password. Other scoped controls collect readings, quantities/reasons, a linking PIN, relationship, period or display preferences, not a listed personal-input purpose about the user.",
+      "command": [
+        "rg",
+        "-n",
+        "-i",
+        "autoComplete|autocomplete|<input|<select|<textarea",
+        "frontend/src"
+      ],
+      "exitCode": 0,
+      "matches": [
+        "frontend/src\\components\\layout\\ReadingOptions.tsx:25:        <label><input type=\"checkbox\" checked={preferences.contrast} onChange={e => setPreferences({ ...preferences, contrast: e.target.checked })} /> Alto contraste en este dispositivo</label>",
+        "frontend/src\\components\\layout\\ReadingOptions.tsx:26:        <label>Tamaño del texto <select value={preferences.scale} onChange={e => setPreferences({ ...preferences, scale: e.target.value })}>",
+        "frontend/src\\components\\layout\\Navbar.tsx:10:      {user?.role === 'ROLE_CAREGIVER' && activePatient && <label className=\"text-sm\">Paciente <select className=\"input ml-2 max-w-52\" data-testid=\"select-patient-active\" value={activePatient.id} onChange={e => { const p = patients.find(v => v.id === e.target.value); if (p) setActivePatient(p); }}>{patients.map(p => <option key={p.id} value={p.id}>{p.fullName}</option>)}</select></label>}",
+        "frontend/src\\features\\auth\\LoginPage.tsx:202:                <input",
+        "frontend/src\\features\\auth\\LoginPage.tsx:205:                  autoComplete=\"username\"",
+        "frontend/src\\features\\auth\\LoginPage.tsx:226:                <input",
+        "frontend/src\\features\\auth\\LoginPage.tsx:229:                  autoComplete=\"current-password\"",
+        "frontend/src\\features\\appointments\\AppointmentsPage.tsx:7:    <label className=\"block mb-5\">Mostrar <select className=\"input ml-3 max-w-xs\" value={filter} onChange={e => setFilter(e.target.value)} data-testid=\"appointments-filter\"><option value=\"upcoming\">Próximas</option><option value=\"past\">Pasadas</option><option value=\"cancelled\">Canceladas</option><option value=\"all\">Todas</option></select></label>",
+        "frontend/src\\features\\medications\\SupplyForm.tsx:37:      <label>Operación<select className=\"input mt-1\" value={kind} onChange={e => setKind(e.target.value as typeof kind)}><option value=\"RESTOCK\">Agregar cantidad comprada o recibida</option><option value=\"ADJUSTMENT\">Registrar cantidad física disponible</option></select></label>",
+        "frontend/src\\features\\medications\\SupplyForm.tsx:38:      <label>Cantidad en {medication.stockUnit}<input ref={quantityField} className=\"input mt-1\" type=\"number\" min=\"0\" max=\"100000\" step=\"any\" required value={quantity} onChange={e => { setQuantity(e.target.value); setError(''); setSaved(false); }} aria-invalid={!!error} aria-describedby={error ? `${id}-error` : undefined} data-testid={`supply-quantity-${medication.id}`} /></label>",
+        "frontend/src\\features\\medications\\SupplyForm.tsx:39:      <label>Motivo<input className=\"input mt-1\" required minLength={3} maxLength={300} value={reason} onChange={e => setReason(e.target.value)} data-testid={`supply-reason-${medication.id}`} /></label>",
+        "frontend/src\\features\\simulator\\PatientSimulatorPage.tsx:23:    <section className=\"panel flex flex-wrap gap-4 items-center mb-6\"><label>Ancho del teléfono <select className=\"input ml-2 max-w-28\" value={width} onChange={e => setWidth(Number(e.target.value))}>{[360,390,430].map(n => <option key={n} value={n}>{n} px</option>)}</select></label>",
+        "frontend/src\\features\\patient-app\\DoseCard.tsx:131:          <input",
+        "frontend/src\\features\\settings\\SettingsPage.tsx:11:    {(['voiceGuideEnabled','largeText','highContrast'] as const).map((key,i) => <label key={key} className=\"flex items-center gap-3\"><input type=\"checkbox\" checked={settings[key]} onChange={e => setSettings({ ...settings, [key]: e.target.checked })} className=\"w-5 h-5\" />{['Lectura por voz al confirmar','Texto grande en la app paciente','Alto contraste en la app paciente'][i]}</label>)}",
+        "frontend/src\\features\\settings\\SettingsPage.tsx:12:    <label className=\"block\">Minutos antes del aviso «Sin confirmar»<input type=\"number\" className=\"input mt-2 max-w-xs\" min=\"5\" max=\"180\" value={settings.notifyMissedDoseMinutes} onChange={e => setSettings({ ...settings, notifyMissedDoseMinutes: Number(e.target.value) })} /></label>",
+        "frontend/src\\features\\onboarding\\LinkPatientModal.tsx:12:        <label className=\"block mb-5\">PIN de 6 dígitos<input autoFocus required pattern=\"[0-9]{6}\" inputMode=\"numeric\" autoComplete=\"off\" className=\"input mt-2 text-2xl font-mono tracking-widest\" maxLength={6} value={pin} onChange={e => setPin(e.target.value.replace(/\\D/g, ''))} data-testid=\"input-link-pin\" /></label>",
+        "frontend/src\\features\\onboarding\\LinkPatientModal.tsx:13:        <label className=\"block\">Parentesco<select className=\"input mt-2\" value={relationship} onChange={e => setRelationship(e.target.value)} data-testid=\"link-relationship\">{['Hijo / Hija','Cónyuge / Pareja','Nieto / Nieta','Cuidador profesional','Hermano(a)'].map(r => <option key={r}>{r}</option>)}</select></label>",
+        "frontend/src\\features\\vitals\\VitalsPage.tsx:23:    <label className=\"block mb-5\">Periodo <select className=\"input ml-2 max-w-xs\" value={days} onChange={e => setDays(Number(e.target.value))}><option value={7}>Últimos 7 días</option><option value={30}>Últimos 30 días</option><option value={90}>Últimos 90 días</option></select></label>",
+        "frontend/src\\features\\patient-app\\MeasurementForm.tsx:66:      <input id={fieldId} type=\"number\" inputMode={name === 'weight' ? 'decimal' : 'numeric'} className=\"input mt-2 min-h-11\"",
+        "frontend/src\\features\\patient-app\\MeasurementForm.tsx:97:      <select id={`${prefix}-type`} className=\"input min-h-11\" {...register('type', { onChange: () => setSaved(false) })} data-testid=\"measurement-type\">",
+        "frontend/src\\features\\reports\\ReportsPage.tsx:40:      <label className=\"block\">Período<select className=\"input mt-2\" value={days} disabled={busy} onChange={e => { setDays(Number(e.target.value)); setSaved(false); }} data-testid=\"report-period\">{[7,30,90].map(d => <option key={d} value={d}>Últimos {d} días</option>)}</select></label>",
+        "frontend/src\\features\\reports\\ReportsPage.tsx:41:      {(['treatment','measurements','alerts'] as const).map((key, i) => <label key={key} className=\"flex items-center gap-3\"><input className=\"w-5 h-5\" type=\"checkbox\" disabled={busy} checked={options[key]} onChange={e => { setOptions({ ...options, [key]: e.target.checked }); setSaved(false); }} />{['Tratamiento y tomas','Presión, pulso y peso','Avisos'][i]}</label>)}",
+        "frontend/src\\features\\patient-app\\PatientPreferences.tsx:23:        <input type=\"checkbox\" className=\"w-6 h-6 shrink-0\" checked={settings[key]} onChange={event => { setSaved(false); setSettings({ ...settings, [key]: event.target.checked }); }} />"
+      ]
+    }
+  ],
+  "byScreen": {
+    "01-login": {
+      "1.3.5": {
+        "applies": "Sí",
+        "justification": "Esta pantalla solicita credenciales del propio usuario. Los campos declaran los propósitos username y current-password. La aplicabilidad se conserva sin declarar conformidad del criterio completo.",
+        "observation": "Entradas revisadas: Correo y contraseña del usuario. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/auth/LoginPage.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 01-login, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 01-login, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 01-login, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "02-patient-home": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 02-patient-home, estado normal, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 02-patient-home, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 02-patient-home, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 02-patient-home, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "03-patient-treatment": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 03-patient-treatment, estado normal, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 03-patient-treatment, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 03-patient-treatment, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 03-patient-treatment, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "04-patient-measurement": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Esta pantalla o estado recoge o revisa mediciones domésticas y su tipo. Presión, pulso y peso no son propósitos enumerados en la taxonomía de entradas personales de WCAG2.1. Las opciones comunes de lectura tampoco recogen esos propósitos.",
+        "observation": "Entradas revisadas: Tipo de lectura, presión sistólica/diastólica, pulso opcional y peso. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/MeasurementForm.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 04-patient-measurement, estado empty-form, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 04-patient-measurement, estado empty-form, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 04-patient-measurement, estado empty-form, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "05-measurement-error": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Esta pantalla o estado recoge o revisa mediciones domésticas y su tipo. Presión, pulso y peso no son propósitos enumerados en la taxonomía de entradas personales de WCAG2.1. Las opciones comunes de lectura tampoco recogen esos propósitos.",
+        "observation": "Entradas revisadas: Tipo de lectura, presión sistólica/diastólica, pulso opcional y peso. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/MeasurementForm.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 05-measurement-error, estado invalid-input, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 05-measurement-error, estado invalid-input, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 05-measurement-error, estado invalid-input, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "06-measurement-review": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Esta pantalla o estado recoge o revisa mediciones domésticas y su tipo. Presión, pulso y peso no son propósitos enumerados en la taxonomía de entradas personales de WCAG2.1. Las opciones comunes de lectura tampoco recogen esos propósitos.",
+        "observation": "Entradas revisadas: Tipo de lectura, presión sistólica/diastólica, pulso opcional y peso. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/MeasurementForm.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 06-measurement-review, estado review, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 06-measurement-review, estado review, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 06-measurement-review, estado review, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "07-measurement-saved": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Esta pantalla o estado recoge o revisa mediciones domésticas y su tipo. Presión, pulso y peso no son propósitos enumerados en la taxonomía de entradas personales de WCAG2.1. Las opciones comunes de lectura tampoco recogen esos propósitos.",
+        "observation": "Entradas revisadas: Tipo de lectura, presión sistólica/diastólica, pulso opcional y peso. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/MeasurementForm.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 07-measurement-saved, estado confirmation, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 07-measurement-saved, estado confirmation, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 07-measurement-saved, estado confirmation, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "08-patient-appointments": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 08-patient-appointments, estado normal, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 08-patient-appointments, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 08-patient-appointments, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 08-patient-appointments, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "09-patient-health": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "La vista consulta mediciones existentes y puede seleccionar un periodo. No recoge los propósitos personales enumerados del usuario; sus datos sanitarios mostrados no son campos de entrada de esa taxonomía.",
+        "observation": "Entradas revisadas: Periodo de mediciones y datos de salud ya registrados. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/features/vitals/VitalsPage.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 09-patient-health, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 09-patient-health, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 09-patient-health, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "10-patient-caregiver": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Esta vista genera un código temporal como salida y administra vínculos ya existentes. No solicita nombre, dirección, credenciales u otro propósito personal enumerado del usuario.",
+        "observation": "Entradas revisadas: Generar un PIN y revisar cuidadores existentes. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PairingPanel.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 10-patient-caregiver, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 10-patient-caregiver, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 10-patient-caregiver, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "12-dose-recorded": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 12-dose-recorded, estado confirmation, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 12-dose-recorded, estado confirmation, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 12-dose-recorded, estado confirmation, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 12-dose-recorded, estado confirmation, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "13-sos-review": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 13-sos-review, estado review, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 13-sos-review, estado review, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 13-sos-review, estado review, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 13-sos-review, estado review, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "14-sos-recorded": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 14-sos-recorded, estado confirmation, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 14-sos-recorded, estado confirmation, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 14-sos-recorded, estado confirmation, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 14-sos-recorded, estado confirmation, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "15-patient-320": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 15-patient-320, estado reflow-320-css-px, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 15-patient-320, estado reflow-320-css-px, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 15-patient-320, estado reflow-320-css-px, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 15-patient-320, estado reflow-320-css-px, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "16-patient-text-200": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 16-patient-text-200, estado root-font-200-percent-stress, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 16-patient-text-200, estado root-font-200-percent-stress, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 16-patient-text-200, estado root-font-200-percent-stress, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 16-patient-text-200, estado root-font-200-percent-stress, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "17-caregiver-dashboard": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 17-caregiver-dashboard, estado normal, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 17-caregiver-dashboard, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 17-caregiver-dashboard, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 17-caregiver-dashboard, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "18-caregiver-medications": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "El formulario de existencias solicita operación, cantidad y motivo, y la cabecera selecciona un paciente existente. No son campos de información personal enumerada acerca del usuario que opera la vista. El motivo no solicita identidad ni datos de contacto.",
+        "observation": "Entradas revisadas: Operación, cantidad y motivo de existencias; selección de un paciente existente. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/medications/SupplyForm.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 18-caregiver-medications, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 18-caregiver-medications, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 18-caregiver-medications, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "19-caregiver-appointments": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 19-caregiver-appointments, estado normal, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 19-caregiver-appointments, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 19-caregiver-appointments, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 19-caregiver-appointments, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "20-caregiver-settings": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "Los controles configuran lectura, contraste, voz y minutos de aviso. No recogen los propósitos de información personal del usuario enumerados por WCAG2.1.",
+        "observation": "Entradas revisadas: Preferencias visuales y de voz, minutos de aviso. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/settings/SettingsPage.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 20-caregiver-settings, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 20-caregiver-settings, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 20-caregiver-settings, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "21-caregiver-vitals": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "La vista consulta mediciones existentes y puede seleccionar un periodo. No recoge los propósitos personales enumerados del usuario; sus datos sanitarios mostrados no son campos de entrada de esa taxonomía.",
+        "observation": "Entradas revisadas: Periodo de mediciones y datos de salud ya registrados. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/features/vitals/VitalsPage.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 21-caregiver-vitals, estado normal, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 21-caregiver-vitals, estado normal, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 21-caregiver-vitals, estado normal, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "22-patient-high-contrast": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 22-patient-high-contrast, estado high-contrast-preference, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 22-patient-high-contrast, estado high-contrast-preference, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 22-patient-high-contrast, estado high-contrast-preference, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 22-patient-high-contrast, estado high-contrast-preference, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "23-caregiver-empty": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "En 23-caregiver-empty, estado no-linked-patients, se consultan datos existentes o se activan acciones del seguimiento. Los controles comunes ajustan lectura y pueden seleccionar un paciente existente. No se recogen campos con propósitos personales enumerados acerca del usuario.",
+        "observation": "Entradas revisadas: Acciones y datos de seguimiento, más preferencias comunes de lectura. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 23-caregiver-empty, estado no-linked-patients, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 23-caregiver-empty, estado no-linked-patients, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 23-caregiver-empty, estado no-linked-patients, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    },
+    "24-caregiver-320": {
+      "1.3.5": {
+        "applies": "No",
+        "justification": "El formulario de existencias solicita operación, cantidad y motivo, y la cabecera selecciona un paciente existente. No son campos de información personal enumerada acerca del usuario que opera la vista. El motivo no solicita identidad ni datos de contacto.",
+        "observation": "Entradas revisadas: Operación, cantidad y motivo de existencias; selección de un paciente existente. El criterio exige un propósito incluido en la sección Input Purposes y relativo al propio usuario.",
+        "sources": [
+          "frontend/src/features/medications/SupplyForm.tsx",
+          "frontend/src/components/layout/Navbar.tsx"
+        ],
+        "searchId": "input-purposes"
+      },
+      "1.4.13": {
+        "applies": "No",
+        "justification": "En 24-caregiver-320, estado reflow-320-css-px, no se encontró contenido adicional propio que aparezca exclusivamente al recibir hover o foco. El zoom de imagen al pasar el puntero transforma contenido ya presente; las gráficas muestran datos en tabla/lista permanente y no incluyen Tooltip.",
+        "observation": "Inspección de componentes compartidos y archivos fuente del estado. Instrucciones aria-describedby permanecen visibles. Dialog y details se abren mediante activación, no solamente al recibir foco. Cambios de color/sombra no añaden información.",
+        "sources": [
+          "frontend/src/components/ui/MedicationImage.tsx",
+          "frontend/src/features/vitals/TrendPlot.tsx",
+          "frontend/src/features/vitals/MeasurementCharts.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/app/theme.ts"
+        ],
+        "searchId": "hover-focus-content"
+      },
+      "2.1.4": {
+        "applies": "No",
+        "justification": "En 24-caregiver-320, estado reflow-320-css-px, no se implementan atajos de una sola tecla imprimible. Tab, Enter, Espacio como activación de un control y Escape son operación convencional de controles nativos, no atajos globales por caracteres.",
+        "observation": "La búsqueda en frontend/src solo encontró StorageEvent.key, que identifica una clave de almacenamiento y no una tecla. No hay manejadores propios de keydown/keyup/keypress ni biblioteca de hotkeys en los componentes revisados.",
+        "sources": [
+          "frontend/src/services/demo/repository.ts",
+          "frontend/src/features/patient-app/PatientAppContent.tsx",
+          "frontend/src/features/patient-app/PatientHelp.tsx",
+          "frontend/src/components/layout/ReadingOptions.tsx"
+        ],
+        "searchId": "keyboard-handlers"
+      },
+      "2.5.4": {
+        "applies": "No",
+        "justification": "En 24-caregiver-320, estado reflow-320-css-px, ninguna función se activa agitando, inclinando o moviendo el dispositivo. Las adaptaciones de orientación y anchura redistribuyen el diseño y no son actuación mediante movimiento.",
+        "observation": "Sin coincidencias para eventos o API de movimiento, giroscopio, acelerómetro u orientación sensorial en frontend/src. Las operaciones se activan con controles de interfaz.",
+        "sources": [
+          "frontend/src/styles/index.css",
+          "frontend/src/features/patient-app/PatientAppContent.tsx"
+        ],
+        "searchId": "motion-actuation"
+      }
+    }
+  }
+}

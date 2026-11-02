@@ -25,6 +25,7 @@ public class ClinicalSyncController {
     }
 
     @PostMapping("/{patientId}")
+    @org.springframework.security.access.prepost.PreAuthorize("hasAnyAuthority('ROLE_CLINIC_ADMIN', 'ROLE_SUPER_ADMIN')")
     @Operation(summary = "Sincronizar datos clínicos del paciente", description = "Consulta al proveedor clínico y actualiza prescripciones, citas y ficha")
     public ResponseEntity<Map<String, String>> syncPatient(
             @AuthenticationPrincipal User actor,

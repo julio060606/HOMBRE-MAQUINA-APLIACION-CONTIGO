@@ -1,0 +1,14 @@
+# Preserve generated documents, archives and images without line-ending conversion.
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+
+# Audit patches are immutable snapshots, not source files to normalize.
+output/**/*.patch -text

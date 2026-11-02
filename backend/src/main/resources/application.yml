@@ -37,10 +37,22 @@ contigo:
     expiration-ms: 86400000 # 24 horas
     refresh-expiration-ms: 604800000 # 7 días
   clinical-provider:
-    mode: ${CLINICAL_PROVIDER_MODE:simulated} # simulated | external
+    mode: ${CLINICAL_PROVIDER_MODE:simulated} # simulated | external | database
     external-endpoint: ${CLINICAL_API_ENDPOINT:}
     api-key: ${CLINICAL_API_KEY:}
     timeout-ms: 5000
+    database:
+      url: ${CLINIC_DB_URL:jdbc:postgresql://localhost:5432/san_pablo_clinic}
+      username: ${CLINIC_DB_USERNAME:contigo_clinic_reader}
+      password: ${CLINIC_DB_PASSWORD:}
+      driver-class-name: ${CLINIC_DB_DRIVER:org.postgresql.Driver}
+      connection-timeout-ms: ${CLINIC_DB_CONNECTION_TIMEOUT_MS:5000}
+      organization-id: ${CLINIC_ORGANIZATION_ID:clinic_demo}
+    sync:
+      enabled: ${CLINIC_SYNC_ENABLED:true}
+      on-startup: ${CLINIC_SYNC_ON_STARTUP:true}
+      interval-ms: ${CLINIC_SYNC_INTERVAL_MS:60000}
+      initial-delay-ms: ${CLINIC_SYNC_INITIAL_DELAY_MS:15000}
 
 springdoc:
   api-docs:

@@ -18,6 +18,7 @@ export interface Medication {
   durationDays?: number; startDate: string; endDate?: string;
   instructions?: string; isActive: boolean;
   source: 'CLINIC'; syncedAt: string; unitsPerDose?: number; stockUnit?: string; effectiveFrom?: string;
+  diagnosis?: string; doctor?: string;
 }
 export interface Appointment {
   id: string; patientId: string; organizationId: string; externalId: string;

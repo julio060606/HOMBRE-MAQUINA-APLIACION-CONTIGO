@@ -69,7 +69,7 @@ describe('httpService (Strict API Mode without Silent Mocks)', () => {
 
     const service = createHttpService();
     await expect(service.patients()).rejects.toThrow(ApiError);
-    await expect(service.patients()).rejects.toThrow(/No se pudo conectar al servidor backend/);
+    await expect(service.patients()).rejects.toThrow(/No se pudo conectar al servidor de CONTIGO/);
   });
 
   it('routes standard intake responses to dose responses endpoint', async () => {

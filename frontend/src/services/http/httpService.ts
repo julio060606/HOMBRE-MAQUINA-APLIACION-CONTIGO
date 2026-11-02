@@ -1,31 +1,15 @@
-import { ENV } from '../../config/env';
-import { ContigoService, PatientView, ResponseInput, PressureInput, SupplyInput } from '../contracts';
+import { ClinicalSyncState, ContigoService, PatientView, ResponseInput, PressureInput, SupplyInput } from '../contracts';
 import { AlertEvent, BloodPressureLog, ClinicalSettings, Patient, PillIntake, WeightLog } from '../../types';
-import { getAuthToken } from './tokenStorage';
-
-export class ApiError extends Error {
-  constructor(public status: number, message: string, public details?: Record<string, string>) {
-    super(message);
-    this.name = 'ApiError';
-  }
-}
+import { fetchAuthenticated, responseError } from './apiTransport';
+import { emitApiChange } from './changeEvents';
+export { ApiError } from './apiTransport';
 
 async function fetchApi<T>(path: string, options: RequestInit = {}): Promise<T> {
-  const token = getAuthToken();
   const headers = new Headers(options.headers || {});
   headers.set('Content-Type', 'application/json');
-  if (token) {
-    headers.set('Authorization', `Bearer ${token}`);
-  }
-
-  const url = `${ENV.API_BASE_URL}${path}`;
-  let res: Response;
-  try {
-    res = await fetch(url, { ...options, headers });
-  } catch {
-    throw new ApiError(0, `No se pudo conectar al servidor backend en ${url}. Compruebe que el servicio esté en ejecución.`);
-  }
-
+  const res = await fetchAuthenticated(path, { ...options, headers });
+  if (!res.ok) throw await responseError(res);
+  if (options.method && options.method !== 'GET') emitApiChange(path.startsWith('/links/') || path.startsWith('/pairing/') ? 'links' : 'data');
   if (res.status === 204) {
     return undefined as unknown as T;
   }
@@ -37,12 +21,6 @@ async function fetchApi<T>(path: string, options: RequestInit = {}): Promise<T> 
     data = null;
   }
 
-  if (!res.ok) {
-    const errorData = data as { message?: string; details?: Record<string, string> } | null;
-    const msg = errorData?.message || `Error del servidor HTTP ${res.status}`;
-    throw new ApiError(res.status, msg, errorData?.details);
-  }
-
   return data as T;
 }
 
@@ -50,7 +28,13 @@ export function createHttpService(): ContigoService {
   return {
     patients: () => fetchApi<Patient[]>('/patients'),
 
-    view: (patientId: string) => fetchApi<PatientView>(`/patients/${patientId}/dashboard`),
+    view: async (patientId: string) => {
+      const [view, clinicalSync] = await Promise.all([
+        fetchApi<PatientView>(`/patients/${patientId}/dashboard`),
+        fetchApi<ClinicalSyncState>(`/patients/${patientId}/clinical-sync`).catch(() => ({ status: 'UNKNOWN' as const })),
+      ]);
+      return { ...view, clinicalSync };
+    },
 
     respond: (input: ResponseInput) => {
       if (input.correction) {

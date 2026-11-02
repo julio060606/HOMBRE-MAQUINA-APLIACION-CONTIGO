@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-02T18:00:35.310Z",
+    "baseUrl": "http://127.0.0.1:3002",
+    "variant": "baseline",
+    "method": "Automated Chrome DOM inspection, keyboard and explicit fault injection on synthetic demonstration data",
+    "limitations": [
+      "No participant or screen-reader measurements.",
+      "Root-font stress is not native browser zoom."
+    ]
+  },
+  "checks": [
+    {
+      "id": "input-purpose",
+      "method": "DOM inspection",
+      "fields": [
+        {
+          "id": "email-input",
+          "type": "email",
+          "autocomplete": ""
+        },
+        {
+          "id": "password-input",
+          "type": "password",
+          "autocomplete": ""
+        }
+      ],
+      "screenshot": "output/apf3/evidence/baseline/25-input-purpose.png"
+    },
+    {
+      "id": "primary-keyboard-focus",
+      "method": "Actual keyboard Shift+Tab then Tab to the primary dose control",
+      "focus": {
+        "text": "Ya la tomé",
+        "outline": "rgb(19, 111, 83) solid 3px",
+        "outlineOffset": "3px",
+        "background": "rgb(27, 107, 85)",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(2, 44, 34, 0.2) 0px 4px 6px -1px, rgba(2, 44, 34, 0.2) 0px 2px 4px -2px"
+      },
+      "screenshot": "output/apf3/evidence/baseline/34-primary-keyboard-focus.png"
+    },
+    {
+      "id": "reflow-navigation",
+      "method": "320 CSS px viewport; inspect internal container, not just document",
+      "navigation": {
+        "clientWidth": 268,
+        "scrollWidth": 322,
+        "rect": {
+          "x": 26,
+          "right": 294
+        },
+        "children": [
+          {
+            "text": "Inicio",
+            "x": 30,
+            "right": 67.125,
+            "width": 37.125,
+            "height": 47.75,
+            "clipped": false
+          },
+          {
+            "text": "Tratamiento",
+            "x": 67.125,
+            "right": 137.0625,
+            "width": 69.9375,
+            "height": 47.75,
+            "clipped": false
+          },
+          {
+            "text": "Medición",
+            "x": 137.0625,
+            "right": 192.859375,
+            "width": 55.796875,
+            "height": 47.75,
+            "clipped": false
+          },
+          {
+            "text": "Citas",
+            "x": 192.859375,
+            "right": 227.203125,
+            "width": 34.34375,
+            "height": 47.75,
+            "clipped": false
+          },
+          {
+            "text": "Mi salud",
+            "x": 227.203125,
+            "right": 278.796875,
+            "width": 51.59375,
+            "height": 47.75,
+            "clipped": false
+          },
+          {
+            "text": "Mi cuidador",
+            "x": 278.796875,
+            "right": 348.328125,
+            "width": 69.53125,
+            "height": 47.75,
+            "clipped": true
+          }
+        ]
+      },
+      "screenshot": "output/apf3/evidence/baseline/26-nav320-detail.png"
+    },
+    {
+      "id": "root-font-scaling",
+      "method": "200% root-font CSS stress; nativeBrowserZoom=false",
+      "normal": [
+        {
+          "text": "Inicio",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Tratamiento",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Medición",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Citas",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Mi salud",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Mi cuidador",
+          "fontSize": "11px"
+        }
+      ],
+      "enlarged": [
+        {
+          "text": "Inicio",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Tratamiento",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Medición",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Citas",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Mi salud",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Mi cuidador",
+          "fontSize": "11px"
+        }
+      ],
+      "screenshot": "output/apf3/evidence/baseline/27-font200-detail.png"
+    },
+    {
+      "id": "tab-focus",
+      "method": "Click Medición, inspect actual active element",
+      "active": {
+        "tag": "BUTTON",
+        "text": "Medición",
+        "tabIndex": 0
+      },
+      "sosCount": 0,
+      "screenshot": "output/apf3/evidence/baseline/28-navigation-focus.png"
+    },
+    {
+      "id": "input-boundaries",
+      "method": "Computed CSS foreground/background; compare boundary with adjacent white surface",
+      "inputs": [
+        {
+          "label": "Presión sistólica (mmHg)",
+          "border": "rgb(203, 213, 225)",
+          "background": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Presión diastólica (mmHg)",
+          "border": "rgb(203, 213, 225)",
+          "background": "rgb(255, 255, 255)"
+        },
+        {
+          "label": "Pulso (bpm, opcional)",
+          "border": "rgb(203, 213, 225)",
+          "background": "rgb(255, 255, 255)"
+        }
+      ],
+      "screenshot": "output/apf3/evidence/baseline/29-input-boundaries.png"
+    },
+    {
+      "id": "route-titles",
+      "method": "document.title after three routes",
+      "routes": [
+        {
+          "route": "/patient-app",
+          "title": "CONTIGO · Portal Web de Teleasistencia para Adultos Mayores"
+        },
+        {
+          "route": "/dashboard",
+          "title": "CONTIGO · Portal Web de Teleasistencia para Adultos Mayores"
+        },
+        {
+          "route": "/appointments",
+          "title": "CONTIGO · Portal Web de Teleasistencia para Adultos Mayores"
+        }
+      ]
+    },
+    {
+      "id": "revoke-review",
+      "method": "Click remove access on synthetic caregiver; inspect actual DOM",
+      "dialogCount": 0,
+      "text": "Contigo · App Paciente\nCerrar sesión\n08:05\n4G\n100%\nMODO FÁCIL ASISTIDO\nHola, Dacio\nVincular a mi cuidador\n\nGenera un código y compártelo con tu familiar para que pueda consultar tu seguimiento en esta demostración.\n\nGenerando…\nCuidadores vinculados\n\nCuidador de demostración · Hijo / Hija\n\nRetirar acceso de Cuidador de demostración\nVer mi dashboard completo\nInicio\nTratamiento\nMedición\nCitas\nMi salud\nMi cuidador",
+      "screenshot": "output/apf3/evidence/baseline/30-revoke-review.png"
+    },
+    {
+      "id": "patient-storage-error",
+      "method": "Fault injection: indexedDB undefined before app load",
+      "alerts": [
+        "El navegador no permite usar el almacenamiento de la demostración.Reintentar"
+      ],
+      "screenshot": "output/apf3/evidence/baseline/31-storage-error.png"
+    },
+    {
+      "id": "dashboard-loading",
+      "method": "Fault injection: delayed lazy dashboard module request",
+      "screenshot": "output/apf3/evidence/baseline/32-dashboard-loading.png"
+    },
+    {
+      "id": "patient-treatment-empty",
+      "method": "Explicit synthetic fixture: medications=[],intakes=[]; reload actual app",
+      "text": "Contigo · App Paciente\nCerrar sesión\n08:05\n4G\n100%\nMODO FÁCIL ASISTIDO\nHola, Dacio\nMi tratamiento de hoy\nNo tienes dosis programadas hoy.\nVer mi dashboard completo\nInicio\nTratamiento\nMedición\nCitas\nMi salud\nMi cuidador",
+      "screenshot": "output/apf3/evidence/baseline/33-patient-empty.png"
+    }
+  ]
+}

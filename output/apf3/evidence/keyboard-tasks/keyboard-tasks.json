@@ -1,0 +1,638 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-02T20:24:35.568Z",
+    "browser": "156.0.8078.74",
+    "method": "Recorridos técnicos mediante Tab, Mayús+Tab, Enter, Espacio y escritura por teclado en Chrome aislado.",
+    "limitations": [
+      "No es una sesión con participantes.",
+      "No ejecuta NVDA ni sustituye el recorrido con lector.",
+      "Los conteos de teclas no son tiempos ni errores de usabilidad."
+    ],
+    "data": "Demostración sintética en contexto nuevo por rol."
+  },
+  "tasks": [
+    {
+      "task": "T1",
+      "result": "Registro realizado con teclado",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Ya la tomé: Losartán, 08:00",
+        "testId": "dose-taken",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      },
+      "confirmation": "Losartán, 08:00: registraste que la tomaste.\n\nSi te equivocaste, abre Tratamiento y elige Corregir en esa dosis.\n\nRevisar mi respuestaEntendido",
+      "focus": {
+        "tag": "DIV",
+        "text": "Losartán, 08:00: registraste que la tomaste.Si te equivocaste, abre Tratamiento y elige Corregir en esa dosis.Revisar mi respuestaEntendido",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "screenshot": "output/apf3/evidence/keyboard-tasks/01-toma-confirmada.png"
+    },
+    {
+      "task": "T2",
+      "result": "Cancelación y registro ejecutados con teclado",
+      "before": {
+        "alerts": 0,
+        "pressures": 7
+      },
+      "canceled": {
+        "alerts": 0,
+        "pressures": 7
+      },
+      "after": {
+        "alerts": 1,
+        "pressures": 7
+      },
+      "initialDialogFocus": {
+        "tag": "BUTTON",
+        "text": "Cancelar y volver",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "confirmationFocus": {
+        "tag": "P",
+        "text": "Petición de prueba registrada. No se contactó a servicios de emergencia.",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "screenshot": "output/apf3/evidence/keyboard-tasks/02-sos-confirmado.png"
+    },
+    {
+      "task": "T4",
+      "result": "Error, corrección, revisión y guardado ejecutados con teclado",
+      "errorFocus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-diastolic",
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "reviewFocus": {
+        "tag": "H4",
+        "text": "Paso 2 de 2: revisa tu lectura",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "savedFocus": {
+        "tag": "P",
+        "text": "Medición guardada. Tu cuidador ya puede consultarla. Puedes registrar otra lectura abajo.",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "measurementsBefore": {
+        "alerts": 1,
+        "pressures": 7
+      },
+      "duringReview": {
+        "alerts": 1,
+        "pressures": 7
+      },
+      "measurementsAfter": {
+        "alerts": 1,
+        "pressures": 8
+      },
+      "screenshots": [
+        "output/apf3/evidence/keyboard-tasks/03-error-medicion.png",
+        "output/apf3/evidence/keyboard-tasks/04-medicion-guardada.png"
+      ]
+    },
+    {
+      "task": "T3",
+      "result": "Consulta de tratamiento, existencias y citas alcanzada con teclado",
+      "medicationFocus": {
+        "tag": "H1",
+        "text": "Tratamiento y existencias",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "appointmentFocus": {
+        "tag": "H1",
+        "text": "Citas médicas",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      },
+      "treatment": "Tratamiento y existencias\n\nRecetas de origen clínico. La cantidad disponible es una estimación basada en dispensación, conteos y tomas declaradas.\n\nLosartán\nVigente en clínica\n\n50 mg · 08:00 / 20:00\n\nTomar con agua en ayunas.\n\nFoto de referencia\n\nVigencia: 19 oct. 2026 — 17 ene. 2027.\n\nFuente: clínica simulada · actualización 2 nov. 2026, 15:24.\n\nCantidad disponible\n\n30 tabletas\n\nCobertura estimada: 15 días según la pauta fija.\n\nRegistrar reposición o conteo físico\nVitamina D3\nVigente en clínica\n\n2000 UI · 14:00\n\nTomar con el almuerzo.\n\nFoto de referencia\n\nVigencia: 19 oct. 2026 — 17 ene. 2027.\n\nFuente: clínica simulada · actualización 2 nov. 2026, 15:24.\n\nCantidad disponible\n\n3 tabletas\n\nCobertura estimada: 3 días según la pauta fija.\n\nPocas unidades: revise la reposición.\n\nRegistrar reposición o conteo físico",
+      "appointments": "Citas médicas\n\nOrganiza el acompañamiento de Dacio Ramos con las citas registradas por la clínica.\n\nMostrar \nPróximas\nPasadas\nCanceladas\nTodas\nGeriatría\nProgramada\n\n4 nov. 2026, 10:30 · hora de Lima\n\nProfesional de demostración\n\nConsultorio de prueba · sede de demostración\n\nConsultar las indicaciones proporcionadas por la clínica.\n\nOrigen: clínica de demostración. Contigo consulta esta cita; no la reprograma.",
+      "screenshots": [
+        "output/apf3/evidence/keyboard-tasks/05-tratamiento-cuidador.png",
+        "output/apf3/evidence/keyboard-tasks/06-citas-cuidador.png"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Escuchar",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ya la tomé: Losartán, 08:00",
+        "testId": "dose-taken",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Shift+Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Escuchar",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Shift+Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ajustes",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Shift+Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "SOS de prueba",
+        "testId": "patient-sos",
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Registrar petición de prueba",
+        "testId": "patient-sos-confirm",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Entendido, volver",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ajustes",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Escuchar",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Revisar mi respuesta",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Entendido",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 23, 42) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ya la tomé: Vitamina D3, 14:00",
+        "testId": "dose-taken",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "No la tomé: Vitamina D3, 14:00",
+        "testId": "dose-not-taken",
+        "href": null,
+        "outline": "rgb(159, 18, 57) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ingresar lectura de presión o peso",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Ver citas",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Ver mi dashboard completo",
+        "testId": null,
+        "href": "/dashboard",
+        "outline": "rgb(15, 23, 42) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Accesibilidad y limitaciones conocidas",
+        "testId": null,
+        "href": "/accesibilidad",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Inicio",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(18, 78, 62) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Tratamiento",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(51, 65, 85) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Medición",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(51, 65, 85) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "SELECT",
+        "text": "Presión y pulsoPeso en casa",
+        "testId": "measurement-type",
+        "href": null,
+        "outline": "rgb(2, 6, 23) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-systolic",
+        "href": null,
+        "outline": "rgb(2, 6, 23) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-pulse",
+        "href": null,
+        "outline": "rgb(2, 6, 23) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Revisar mi lectura",
+        "testId": "btn-save-vitals",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Shift+Tab",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-systolic",
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-diastolic",
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "testId": "input-pulse",
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Revisar mi lectura",
+        "testId": "btn-save-vitals",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Volver y corregir",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Confirmar y guardar mi lectura",
+        "testId": "btn-confirm-vitals",
+        "href": null,
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Ver citas",
+        "testId": null,
+        "href": "/appointments",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Ver tratamiento",
+        "testId": null,
+        "href": "/medications",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "SUMMARY",
+        "text": "Registrar reposición o conteo físico",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(14, 84, 63) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "SUMMARY",
+        "text": "Registrar reposición o conteo físico",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(14, 84, 63) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BODY",
+        "text": "Saltar al contenido principalOpciones de lectura Alto contraste en este dispositivoTamaño del texto 100 %125 %150 %200 %Restablecer lecturaTambién puedes ampliar con el zoom de tu ",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(17, 24, 39) none 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Saltar al contenido principal",
+        "testId": null,
+        "href": "#main-content",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "SUMMARY",
+        "text": "Opciones de lectura",
+        "testId": null,
+        "href": null,
+        "outline": "rgb(23, 43, 59) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Accesibilidad y ayuda",
+        "testId": null,
+        "href": "/accessibility",
+        "outline": "rgb(23, 43, 59) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "CONTIGO",
+        "testId": null,
+        "href": "/dashboard",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "SELECT",
+        "text": "Dacio RamosRosa Martínez",
+        "testId": "select-patient-active",
+        "href": null,
+        "outline": "rgb(2, 6, 23) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Vincular paciente",
+        "testId": "link-patient",
+        "href": null,
+        "outline": "rgb(15, 23, 42) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Cerrar sesión",
+        "testId": "btn-logout",
+        "href": null,
+        "outline": "rgb(15, 23, 42) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Resumen",
+        "testId": null,
+        "href": "/dashboard",
+        "outline": "rgb(51, 65, 85) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Tratamiento y existencias",
+        "testId": null,
+        "href": "/medications",
+        "outline": "rgb(255, 255, 255) solid 3px",
+        "outlineOffset": "0px"
+      }
+    },
+    {
+      "key": "Tab",
+      "focus": {
+        "tag": "A",
+        "text": "Citas médicas",
+        "testId": null,
+        "href": "/appointments",
+        "outline": "rgb(15, 76, 58) solid 3px",
+        "outlineOffset": "3px"
+      }
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-02T22:51:34.084Z",
+  "checks": [
+    "Latest pressure matches the central database",
+    "Treatment initially shows active schedule without cancelled duplicates",
+    "Pending filter respects real dose states",
+    "Cancelled prescription history remains available",
+    "Measurement period can switch to 30 days",
+    "Patient switch displays Rosa and the correct empty measurement state",
+    "Link-patient dialog opens and cancels without modifying data",
+    "Mobile navigation opens",
+    "Escape closes navigation and returns focus",
+    "Mobile navigation closes after selecting a page",
+    "200% text reflows at 1440px",
+    "200% text reflows at 1024px",
+    "200% text reflows at 390px",
+    "200% text reflows at 320px",
+    "Logout returns to login",
+    "No JavaScript failures or clinical data mutations"
+  ],
+  "reflow": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "fontSize": "32px",
+      "offenders": []
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1024,
+      "fontSize": "32px",
+      "offenders": []
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "fontSize": "32px",
+      "offenders": []
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "fontSize": "32px",
+      "offenders": []
+    }
+  ],
+  "violations": [],
+  "errors": [],
+  "mutations": [],
+  "status": "PASS"
+}
