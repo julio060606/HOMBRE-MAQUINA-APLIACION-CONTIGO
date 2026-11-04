@@ -15,6 +15,16 @@ flowchart LR
     API -->|Eventos SSE tras guardar| CU
 ```
 
+## Herramientas de acceso y comunicación
+
+El acceso público tiene una navegación compartida entre landing y login, enlaces al portal clínico y retorno al inicio. El login concentra el formulario en una sola acción; las cuentas de prueba están en un desplegable. Los enlaces por perfil preparan el acceso correspondiente. Una sesión abierta permite continuar, y el historial conserva la posición del landing. Las comprobaciones están en [acceso y navegación pública](output/public-navigation-2026-11-03/README.md).
+
+En la app del paciente, «Opciones de lectura», «Comunicarme», el SOS y la salida están dentro de la pantalla móvil. En el dashboard las ayudas están integradas en su cabecera. «Comunicarme» ofrece frases rápidas, mensaje grande, respuesta escrita de una persona cercana y voz opcional; la conversación se borra al cerrar o cambiar de página. Las preferencias permiten modo sin sonido, vibración opcional, controles más grandes, menos animaciones, alto contraste y texto ampliado.
+
+La vista paciente prioriza medicamento, dosis, hora, instrucciones y respuesta; los detalles clínicos se despliegan cuando se necesitan. El dashboard reúne tomas del día, última medición y cita próxima; muestra los avisos críticos completos y separa los pendientes adicionales. Su menú indica la sección actual, permite volver al inicio y conserva el paciente al navegar. La revisión más reciente está en [navegación y presentación del dashboard](output/dashboard-ux-2026-11-03/README.md); los antecedentes se conservan en [integración inclusiva de la app](output/inclusive-app-2026-11-03/README.md).
+
+En modo API, «SOS · Pedir ayuda» registra la solicitud con el primer toque y la muestra en el dashboard de las cuentas autorizadas. Una persona acepta atender y puede conversar por texto o audio WebRTC con el paciente. El micrófono requiere una acción explícita en ambos extremos. La clínica es ficticia; no se contactan servicios de emergencia. Consulta [cómo probar el SOS en vivo](SOS_EN_VIVO.md). En modo offline se conserva el aviso local de prueba, sin llamadas ni conversación remota. Los registros anteriores de comunicación accesible se conservan como antecedentes de su versión.
+
 ## Caso de Dacio Ramos
 
 - Paciente central: `pat_001`; identidad clínica externa: `demo-pat_001`.

@@ -1,0 +1,1046 @@
+{
+  "title": "Resumen del día · CONTIGO",
+  "lang": "es",
+  "url": "http://127.0.0.1:3001/dashboard",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "scrollWidth": 1280
+  },
+  "activeElement": {
+    "tag": "H1",
+    "text": "Resumen del día",
+    "id": "",
+    "testid": null
+  },
+  "headings": [
+    {
+      "tag": "H2",
+      "text": "Solicitudes SOS",
+      "id": ":rh:-inbox",
+      "testid": null
+    },
+    {
+      "tag": "H1",
+      "text": "Resumen del día",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Dacio Ramos",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Avisos prioritarios",
+      "id": ":rl:-priority",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "SOS · Solicitud de comunicación",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "SOS de prueba del paciente",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tomas de hoy",
+      "id": ":rl:-treatment",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Última medición",
+      "id": ":rl:-measurement",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Próxima cita",
+      "id": ":rl:-appointment",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Medicamentos de hoy",
+      "id": ":rl:-doses",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Para revisar",
+      "id": ":rl:-review",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Vitamina D3",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Presión registrada",
+      "id": ":rn:-heading",
+      "testid": null
+    }
+  ],
+  "controls": [
+    {
+      "tag": "SELECT",
+      "text": "Dacio RamosRosa Martínez",
+      "id": "",
+      "testid": "select-patient-active",
+      "name": null,
+      "type": null,
+      "labels": [
+        "Paciente en seguimientoDacio RamosRosa Martínez"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 380,
+      "height": 48
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Mi cuenta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 48
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vincular paciente",
+      "id": "",
+      "testid": "link-patient",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64.375
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cerrar sesión",
+      "id": "",
+      "testid": "btn-logout",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64
+    },
+    {
+      "tag": "A",
+      "text": "Saltar al contenido principal",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 225.34375,
+      "height": 52
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Opciones de lectura",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": ":rd:-active",
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 184.015625,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Comunicarme",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 143.484375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 187.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGOCuidado que conecta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 53.875
+    },
+    {
+      "tag": "A",
+      "text": "Resumen",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": "page",
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Medicamentos",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Citas médicas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Ficha clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Informes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Preferencias",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Inicio de CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Sobre esta demostración",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 191,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Mi panel",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 52.34375,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Actualizar",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 124.78125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver ficha clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 160.6875,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Datos sincronizados",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 146.640625,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver tratamiento",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver citas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Por confirmar3",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "true",
+      "current": null,
+      "width": 145.28125,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Todas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "false",
+      "current": null,
+      "width": 64.671875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Tratamiento completo",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 175.171875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Revisar existencias",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 156.15625,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Mediciones y evoluciónÚltima presión: 127 / 83 mmHg",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 972,
+      "height": 86.390625
+    },
+    {
+      "tag": "BUTTON",
+      "text": "7 días",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "true",
+      "current": null,
+      "width": 63.1875,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "30 días",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "false",
+      "current": null,
+      "width": 72.796875,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Ver lecturas recientes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 898,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 130.21875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Preparar un informeReúne los registros para la próxima consulta.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 974,
+      "height": 88.390625
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "/images/dacio_avatar.jpg",
+      "width": 58,
+      "height": 58,
+      "loaded": true
+    }
+  ],
+  "statuses": [
+    {
+      "tag": "P",
+      "text": "Sin solicitudes abiertas",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": "polite"
+    },
+    {
+      "tag": "P",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": null,
+      "live": "polite"
+    }
+  ],
+  "duplicateIds": [],
+  "missingReferences": [],
+  "axe": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "help": "Elements must only use permitted ARIA attributes",
+        "nodes": [
+          {
+            "target": [
+              "._overviewGrid_uwkmq_32"
+            ],
+            "html": "<div class=\"_overviewGrid_uwkmq_32\" aria-label=\"Lo esencial del seguimiento\">",
+            "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+            "any": [],
+            "all": [],
+            "none": [
+              {
+                "id": "aria-prohibited-attr",
+                "data": {
+                  "role": null,
+                  "nodeName": "div",
+                  "messageKey": "noRoleSingular",
+                  "prohibited": [
+                    "aria-label"
+                  ]
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "target": [
+              "._attentionCount_uwkmq_81"
+            ],
+            "html": "<span class=\"_attentionCount_uwkmq_81\" aria-label=\"1 avisos adicionales\">1</span>",
+            "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a span with no valid role attribute.",
+            "any": [],
+            "all": [],
+            "none": [
+              {
+                "id": "aria-prohibited-attr",
+                "data": {
+                  "role": null,
+                  "nodeName": "span",
+                  "messageKey": "noRoleSingular",
+                  "prohibited": [
+                    "aria-label"
+                  ]
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "aria-label attribute is not well supported on a span with no valid role attribute."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "._patientLabel_uwkmq_20"
+            ],
+            "html": "<span class=\"_patientLabel_uwkmq_20\">Paciente seleccionado</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._patientName_uwkmq_21 > h2"
+            ],
+            "html": "<h2>Dacio Ramos</h2>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "15.0pt (20px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._patientIdentity_uwkmq_17 > div > p"
+            ],
+            "html": "<p>78 años</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._syncBadge_uwkmq_28"
+            ],
+            "html": "<summary class=\"_syncBadge_uwkmq_28 \">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "avoid-inline-spacing",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "html-has-lang",
+      "html-lang-valid",
+      "image-alt",
+      "link-in-text-block",
+      "link-name",
+      "list",
+      "listitem",
+      "meta-viewport",
+      "nested-interactive",
+      "select-name",
+      "summary-name"
+    ],
+    "inapplicable": [
+      "area-alt",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "autocomplete-valid",
+      "blink",
+      "definition-list",
+      "dlitem",
+      "frame-focusable-content",
+      "frame-title-unique",
+      "frame-title",
+      "html-xml-lang-mismatch",
+      "input-button-name",
+      "input-image-alt",
+      "label",
+      "marquee",
+      "meta-refresh",
+      "object-alt",
+      "role-img-alt",
+      "scrollable-region-focusable",
+      "server-side-image-map",
+      "svg-img-alt",
+      "td-headers-attr",
+      "th-has-data-cells",
+      "valid-lang",
+      "video-caption",
+      "no-autoplay-audio"
+    ]
+  }
+}

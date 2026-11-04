@@ -13,9 +13,10 @@ export const pressureInput = z.object({
 });
 export const weightInput = z.object({ weightKg: z.number().finite().positive().max(1000), recordedAt });
 export const movementInput = z.object({
-  kind: z.enum(['RESTOCK', 'ADJUSTMENT']), quantity: z.number().finite().nonnegative().max(100000),
-  reason: z.string().trim().min(3, 'Indique el motivo del conteo o reposición.').max(300),
-}).refine(v => v.kind !== 'RESTOCK' || v.quantity > 0, { message: 'La reposición debe agregar una cantidad mayor que cero.' });
+  kind: z.enum(['RESTOCK', 'ADJUSTMENT']), quantity: z.number({ invalid_type_error: 'Escribe una cantidad entre 0 y 100000.' })
+    .finite('Escribe una cantidad entre 0 y 100000.').nonnegative('La cantidad debe ser cero o mayor.').max(100000, 'La cantidad máxima es 100000.'),
+  reason: z.string().trim().min(3, 'Escribe un motivo de al menos 3 caracteres.').max(300, 'El motivo debe tener como máximo 300 caracteres.'),
+}).refine(v => v.kind !== 'RESTOCK' || v.quantity > 0, { message: 'La reposición debe agregar una cantidad mayor que cero.', path: ['quantity'] });
 export const measurementFormInput = z.object({
   type: z.enum(['pressure','weight']), systolic: z.string(), diastolic: z.string(), pulse: z.string(), weight: z.string(),
 }).superRefine((value, ctx) => {

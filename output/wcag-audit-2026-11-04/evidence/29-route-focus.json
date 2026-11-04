@@ -1,0 +1,1096 @@
+{
+  "title": "Gráficas y mediciones · CONTIGO",
+  "lang": "es",
+  "url": "http://127.0.0.1:3001/vitals",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "scrollWidth": 1280
+  },
+  "activeElement": {
+    "tag": "H1",
+    "text": "Gráficas y mediciones",
+    "id": "",
+    "testid": null
+  },
+  "headings": [
+    {
+      "tag": "H2",
+      "text": "Solicitudes SOS",
+      "id": ":rj:-inbox",
+      "testid": null
+    },
+    {
+      "tag": "H1",
+      "text": "Gráficas y mediciones",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Monitoreo Domiciliario de Signos Vitales",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tendencia de presión arterial",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tendencia del pulso",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Peso registrado en casa",
+      "id": "",
+      "testid": null
+    }
+  ],
+  "controls": [
+    {
+      "tag": "SELECT",
+      "text": "Dacio RamosRosa Martínez",
+      "id": "",
+      "testid": "select-patient-active",
+      "name": null,
+      "type": null,
+      "labels": [
+        "Paciente en seguimientoDacio RamosRosa Martínez"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 380,
+      "height": 48
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Mi cuenta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 48
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vincular paciente",
+      "id": "",
+      "testid": "link-patient",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64.375
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cerrar sesión",
+      "id": "",
+      "testid": "btn-logout",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64
+    },
+    {
+      "tag": "A",
+      "text": "Saltar al contenido principal",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 225.34375,
+      "height": 52
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Opciones de lectura",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": ":rf:-active",
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 184.015625,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Comunicarme",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 143.484375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 187.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGOCuidado que conecta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 53.875
+    },
+    {
+      "tag": "A",
+      "text": "Resumen",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Medicamentos",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": "page",
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Citas médicas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Ficha clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Informes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Preferencias",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Inicio de CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Sobre esta demostración",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 191,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Mi panel",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 52.34375,
+      "height": 44
+    },
+    {
+      "tag": "SELECT",
+      "text": "Últimos 7 díasÚltimos 30 díasÚltimos 90 días",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [
+        "Periodo Últimos 7 díasÚltimos 30 díasÚltimos 90 días"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 320,
+      "height": 47
+    }
+  ],
+  "images": [
+    {
+      "alt": "Control de presión arterial y pulso",
+      "src": "/images/blood_pressure.jpg",
+      "width": 94,
+      "height": 78,
+      "loaded": true
+    }
+  ],
+  "statuses": [
+    {
+      "tag": "P",
+      "text": "Sin solicitudes abiertas",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": "polite"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": null,
+      "live": "polite"
+    }
+  ],
+  "duplicateIds": [],
+  "missingReferences": [],
+  "axe": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-xAxis.xAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[font-size=\"11\"][y=\"200\"][text-anchor=\"middle\"] > tspan[dy=\"0.71em\"]"
+            ],
+            "html": "<tspan x=\"60\" dy=\"0.71em\">2 nov. 2026</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "tspan[x=\"290.4945352234606\"][dy=\"0.71em\"]"
+            ],
+            "html": "<tspan x=\"290.4945352234606\" dy=\"0.71em\">2 nov. 2026</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "tspan[x=\"520.9890704469213\"][dy=\"0.71em\"]"
+            ],
+            "html": "<tspan x=\"520.9890704469213\" dy=\"0.71em\">2 nov. 2026</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "tspan[x=\"881.84375\"][dy=\"0.71em\"]"
+            ],
+            "html": "<tspan x=\"881.84375\" dy=\"0.71em\">2 nov. 2026</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">75</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">90</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">105</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">120</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">135</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text"
+            ],
+            "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(159, 18, 57);\">Sistólica</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".legend-item-1 > .recharts-legend-item-text"
+            ],
+            "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(30, 64, 175);\">Diastólica</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "tspan[x=\"486\"][dy=\"0.71em\"]"
+            ],
+            "html": "<tspan x=\"486\" dy=\"0.71em\">2 nov. 2026</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">78</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">79</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">80</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">81</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+            ],
+            "html": "<tspan x=\"52\" dy=\"0.355em\">82</tspan>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text"
+            ],
+            "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(30, 64, 175);\">Peso (kg)</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<svg class=\"recharts-surface\" width=\"924\" height=\"256\" viewBox=\"0 0 924 256\" style=\"width: 100%; height: 100%;\">",
+                    "target": [
+                      ".panel:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"924\"][height=\"256\"][viewBox=\"0 0 924 256\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "avoid-inline-spacing",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "html-has-lang",
+      "html-lang-valid",
+      "image-alt",
+      "link-name",
+      "list",
+      "listitem",
+      "meta-viewport",
+      "nested-interactive",
+      "role-img-alt",
+      "select-name",
+      "summary-name",
+      "td-headers-attr",
+      "th-has-data-cells"
+    ],
+    "inapplicable": [
+      "area-alt",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "autocomplete-valid",
+      "blink",
+      "definition-list",
+      "dlitem",
+      "frame-focusable-content",
+      "frame-title-unique",
+      "frame-title",
+      "html-xml-lang-mismatch",
+      "input-button-name",
+      "input-image-alt",
+      "label",
+      "link-in-text-block",
+      "marquee",
+      "meta-refresh",
+      "object-alt",
+      "scrollable-region-focusable",
+      "server-side-image-map",
+      "svg-img-alt",
+      "valid-lang",
+      "video-caption",
+      "no-autoplay-audio"
+    ]
+  }
+}

@@ -61,7 +61,7 @@ def table(rows,widths=None,header=True):
     cmds=[('VALIGN',(0,0),(-1,-1),'MIDDLE'),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),7),('GRID',(0,0),(-1,-1),0.4,colors.HexColor('#D9D9D9'))]
     if header:
         cmds += [('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E2E8F0'))]
-    t.setStyle(TableStyle(cmds)); return t
+    t.setStyle(TableStyle(cmds)); t.spaceBefore=4; t.spaceAfter=9; return t
 def page(story,heading,items):
     if story: story.append(PageBreak())
     story.append(title(heading)); story.extend(items)
@@ -120,6 +120,9 @@ def paired_shots(category):
     return [Table([[p('Antes v2.0','Caption'),p('Después v3.0','Caption')],images],colWidths=[240,241]),p('Capturas técnicas locales con datos sintéticos. '+pair[0].get('id','')+'; ver rutas originales y configuración en evidence. Las miniaturas no sustituyen las capturas completas.','Caption')]
 
 def report():
+    if DATA.get('revision')=='current-2026-11-03':
+        from current_delivery_pdf import report_current
+        return report_current(globals())
     st=[]; base=audit_summary(DATA.get('baseline'));after=audit_summary(DATA.get('after'))
     page(st,'Accesibilidad de CONTIGO',[
         Spacer(1,24),p('Auditoría WCAG 2.1 AA y rediseño inclusivo','Title'),
@@ -250,7 +253,7 @@ def forms():
         p('Verificar enlace Figma en incógnito, matriz con26 criterios núcleo documentados, nueve ajustes con evidencia, solución de prioridades altas, consentimientos anonimizados, métricas completas y declaración deIA. Revisar límites de15 páginas de cuerpo y12 diapositivas.'),
         h('Preguntas de defensa'),
         p('¿Qué tarea impide la barrera y para quién? ¿Por qué asignaron esa severidad? ¿Qué evidencia prueba el criterio? ¿Qué cambió con el ajuste? ¿Qué queda pendiente? ¿Qué datos proceden de personas y cuáles son comprobaciones técnicas o simulaciones?')])
-    return write_pdf('APF3_Protocolo_y_fichas_CONTIGO.pdf',st)
+    return write_pdf('APF3_CONTIGO_Instrumentos.pdf' if DATA.get('revision')=='current-2026-11-03' else 'APF3_Protocolo_y_fichas_CONTIGO.pdf',st)
 
 if __name__=='__main__':
     files=[report(),forms()]

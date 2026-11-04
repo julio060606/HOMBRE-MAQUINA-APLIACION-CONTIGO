@@ -1,0 +1,580 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-04T00:30:26.661Z",
+  "base": "http://127.0.0.1:3001",
+  "mode": "API central/PostgreSQL y dos contextos Chrome separados; micrófonos sintéticos de Chrome, sin dispositivos reales.",
+  "limitations": [
+    "Verificación técnica headless, sin participantes ni lector de pantalla.",
+    "El audio usa dispositivos sintéticos y conexión local; no acredita micrófonos físicos, operadores de una clínica real ni conexión TURN en redes diferentes.",
+    "Solo se crean solicitudes SOS sintéticas identificadas por este informe. No se modifican tratamientos, mediciones ni citas. Los avisos permanecen como historial académico."
+  ],
+  "checks": [
+    {
+      "name": "Primer click crea alerta y solicitud WAITING visible en otra sesión del dashboard",
+      "passed": true,
+      "latencyMs": 73,
+      "dashboardSelectedPatient": "pat_002",
+      "requestedPatient": "pat_001",
+      "screenshots": [
+        "01-solicitud-espera.png",
+        "02-alerta-dashboard.png"
+      ]
+    },
+    {
+      "name": "Una persona acepta explícitamente; texto real viaja en ambas direcciones sin micrófono",
+      "passed": true,
+      "screenshot": "03-conversacion-texto.png"
+    },
+    {
+      "name": "Fallo de red al enviar conserva el texto y el reintento entrega un único mensaje",
+      "passed": true
+    },
+    {
+      "name": "Permiso de micrófono denegado conserva la alternativa escrita y no abre pistas",
+      "passed": true,
+      "screenshot": "04-permiso-denegado.png"
+    },
+    {
+      "name": "WebRTC conectado con paquetes de audio entrantes en ambos extremos",
+      "passed": true,
+      "patient": {
+        "peers": [
+          {
+            "connectionState": "connected",
+            "iceConnectionState": "connected",
+            "signalingState": "stable",
+            "stats": [
+              {
+                "type": "inbound-rtp",
+                "kind": "audio",
+                "packetsReceived": 25,
+                "bytesReceived": 1261
+              },
+              {
+                "type": "outbound-rtp",
+                "kind": "audio",
+                "packetsSent": 25,
+                "bytesSent": 1261
+              },
+              {
+                "type": "transport",
+                "packetsReceived": 44,
+                "packetsSent": 37,
+                "bytesReceived": 10316,
+                "bytesSent": 4389,
+                "dtlsState": "connected"
+              }
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "live"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "responder": {
+        "peers": [
+          {
+            "connectionState": "connected",
+            "iceConnectionState": "connected",
+            "signalingState": "stable",
+            "stats": [
+              {
+                "type": "inbound-rtp",
+                "kind": "audio",
+                "packetsReceived": 8,
+                "bytesReceived": 321
+              },
+              {
+                "type": "outbound-rtp",
+                "kind": "audio",
+                "packetsSent": 8,
+                "bytesSent": 321
+              },
+              {
+                "type": "transport",
+                "packetsReceived": 15,
+                "packetsSent": 21,
+                "bytesReceived": 2593,
+                "bytesSent": 8478,
+                "dtlsState": "connected"
+              }
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "live"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "screenshots": [
+        "04-audio-paciente.png",
+        "05-audio-dashboard.png"
+      ]
+    },
+    {
+      "name": "Revisión automática de accesibilidad del diálogo de atención",
+      "passed": true,
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "nodes": [
+              {
+                "target": [
+                  "#\\:rt\\:-text"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Silenciar, apagar audio, protección de micrófono remoto y reconexión conservan el chat",
+      "passed": true,
+      "muted": {
+        "peers": [
+          {
+            "connectionState": "connected",
+            "iceConnectionState": "connected",
+            "signalingState": "stable",
+            "stats": [
+              {
+                "type": "inbound-rtp",
+                "kind": "audio",
+                "packetsReceived": 43,
+                "bytesReceived": 2205
+              },
+              {
+                "type": "outbound-rtp",
+                "kind": "audio",
+                "packetsSent": 43,
+                "bytesSent": 2201
+              },
+              {
+                "type": "transport",
+                "packetsReceived": 68,
+                "packetsSent": 61,
+                "bytesReceived": 12192,
+                "bytesSent": 6261,
+                "dtlsState": "connected"
+              }
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": false,
+            "readyState": "live"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "localStopped": {
+        "peers": [
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "remoteStopped": {
+        "peers": [
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "reconnected": [
+        {
+          "peers": [
+            {
+              "connectionState": "closed",
+              "iceConnectionState": "closed",
+              "signalingState": "closed",
+              "stats": []
+            },
+            {
+              "connectionState": "connected",
+              "iceConnectionState": "connected",
+              "signalingState": "stable",
+              "stats": [
+                {
+                  "type": "inbound-rtp",
+                  "kind": "audio",
+                  "packetsReceived": 12,
+                  "bytesReceived": 484
+                },
+                {
+                  "type": "outbound-rtp",
+                  "kind": "audio",
+                  "packetsSent": 11,
+                  "bytesSent": 431
+                },
+                {
+                  "type": "transport",
+                  "packetsReceived": 27,
+                  "packetsSent": 18,
+                  "bytesReceived": 8875,
+                  "bytesSent": 2801,
+                  "dtlsState": "connected"
+                }
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "kind": "audio",
+              "enabled": true,
+              "readyState": "ended"
+            },
+            {
+              "kind": "audio",
+              "enabled": true,
+              "readyState": "live"
+            }
+          ],
+          "microphoneCalls": 2
+        },
+        {
+          "peers": [
+            {
+              "connectionState": "closed",
+              "iceConnectionState": "closed",
+              "signalingState": "closed",
+              "stats": []
+            },
+            {
+              "connectionState": "closed",
+              "iceConnectionState": "closed",
+              "signalingState": "closed",
+              "stats": []
+            },
+            {
+              "connectionState": "connected",
+              "iceConnectionState": "connected",
+              "signalingState": "stable",
+              "stats": [
+                {
+                  "type": "inbound-rtp",
+                  "kind": "audio",
+                  "packetsReceived": 11,
+                  "bytesReceived": 431
+                },
+                {
+                  "type": "outbound-rtp",
+                  "kind": "audio",
+                  "packetsSent": 12,
+                  "bytesSent": 484
+                },
+                {
+                  "type": "transport",
+                  "packetsReceived": 18,
+                  "packetsSent": 27,
+                  "bytesReceived": 2801,
+                  "bytesSent": 8875,
+                  "dtlsState": "connected"
+                }
+              ]
+            }
+          ],
+          "tracks": [
+            {
+              "kind": "audio",
+              "enabled": true,
+              "readyState": "ended"
+            },
+            {
+              "kind": "audio",
+              "enabled": true,
+              "readyState": "live"
+            }
+          ],
+          "microphoneCalls": 2
+        }
+      ]
+    },
+    {
+      "name": "Diálogo móvil320px con texto200%, sin desbordamiento y con foco contenido",
+      "passed": true,
+      "bounds": {
+        "rect": {
+          "left": 6,
+          "right": 314,
+          "top": 6,
+          "bottom": 894
+        },
+        "surface": {
+          "left": 0,
+          "right": 320,
+          "top": 0,
+          "bottom": 900
+        },
+        "outside": false,
+        "wide": []
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "screenshot": "06-movil-320-texto-200.png"
+    },
+    {
+      "name": "Finalizar detiene los micrófonos de ambos participantes",
+      "passed": true,
+      "patient": {
+        "peers": [
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          },
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          },
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          }
+        ],
+        "microphoneCalls": 2
+      },
+      "responder": {
+        "peers": [
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          },
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          },
+          {
+            "connectionState": "closed",
+            "iceConnectionState": "closed",
+            "signalingState": "closed",
+            "stats": []
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          },
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "ended"
+          }
+        ],
+        "microphoneCalls": 2
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "fabe07ff-2234-4a20-a723-f9dcdcfe65a8",
+      "alertId": "1d8dfd28-ae3b-4cb1-a6e4-ddf51bc6ccdc",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:30:28.771983400Z"
+    }
+  ],
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientHelp.tsx": "658c383f7cc614fe31e85c006e0a2f1b220793b28e17e9ab8ec19d1ba8209e4a",
+    "frontend/src/features/patient-app/PatientHelp.module.css": "a949a697d5e3b4817538b5b353ee03ff7bd805eb65e25c34f5e1f691d62c306a",
+    "frontend/src/features/support/LiveSupportConversation.tsx": "4d8f81dd026992c13532124125c385bdd044ab1c171897bca201f9f74dc5fb5b",
+    "frontend/src/features/support/LiveSupportConversation.module.css": "fbe2915e6a43c609f060bf8f536ce33c5f274e40a620d6f49ebbdc4c8e11ada9",
+    "frontend/src/features/support/SupportAudioConnection.ts": "91fefb4f0ff8e32232272c52c9bdc549b462e9268de37b574f95cb61f0bf7847",
+    "frontend/src/features/support/supportApi.ts": "22c7a5e4eae8b565d04af231d20f2956cfc686a18da4aab338979b0b6f9248a6",
+    "frontend/src/features/support/SupportInbox.tsx": "fea089ad08123956e170b3bfa2d2e5d3ddb356d130f602b9db3e5511e48a4069",
+    "frontend/src/features/support/SupportInbox.module.css": "d55c1446b54228aa0e00f4fec46f1525b5f8f2e63f00d7b174744e07a03989a7",
+    "frontend/src/components/layout/MainLayout.tsx": "525c64b5c4f77811a10c9776ec51dded0f12ed69e3da7640616c8830334618c0",
+    "backend/src/main/java/com/sanpablo/contigo/controller/SupportSessionController.java": "72ebc7f828afc61abd9e19a5cfc872297107c628c26b43beae23a7f1c07b25d0",
+    "backend/src/main/java/com/sanpablo/contigo/service/SupportSessionService.java": "a2c1c07b091c1ceaf45495d18ad38a3a8f1bb81cb2b1fd0b5a0eb539519967a3",
+    "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SupportDtos.java": "db3d08ce9258dd0dbd5236bbd358ef86f2a7f61f27c0a6fb21ac23329557cae0"
+  },
+  "requests": [
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/accept"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/end"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/fabe07ff-2234-4a20-a723-f9dcdcfe65a8/end"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "health": {
+    "app": "CONTIGO",
+    "storage": "postgresql",
+    "status": "UP"
+  },
+  "browser": "156.0.8078.80",
+  "dashboardSelectedPatientAtStart": "pat_002",
+  "sourceHashesAtEnd": {
+    "frontend/src/features/patient-app/PatientHelp.tsx": "658c383f7cc614fe31e85c006e0a2f1b220793b28e17e9ab8ec19d1ba8209e4a",
+    "frontend/src/features/patient-app/PatientHelp.module.css": "a949a697d5e3b4817538b5b353ee03ff7bd805eb65e25c34f5e1f691d62c306a",
+    "frontend/src/features/support/LiveSupportConversation.tsx": "4d8f81dd026992c13532124125c385bdd044ab1c171897bca201f9f74dc5fb5b",
+    "frontend/src/features/support/LiveSupportConversation.module.css": "fbe2915e6a43c609f060bf8f536ce33c5f274e40a620d6f49ebbdc4c8e11ada9",
+    "frontend/src/features/support/SupportAudioConnection.ts": "91fefb4f0ff8e32232272c52c9bdc549b462e9268de37b574f95cb61f0bf7847",
+    "frontend/src/features/support/supportApi.ts": "22c7a5e4eae8b565d04af231d20f2956cfc686a18da4aab338979b0b6f9248a6",
+    "frontend/src/features/support/SupportInbox.tsx": "fea089ad08123956e170b3bfa2d2e5d3ddb356d130f602b9db3e5511e48a4069",
+    "frontend/src/features/support/SupportInbox.module.css": "d55c1446b54228aa0e00f4fec46f1525b5f8f2e63f00d7b174744e07a03989a7",
+    "frontend/src/components/layout/MainLayout.tsx": "525c64b5c4f77811a10c9776ec51dded0f12ed69e3da7640616c8830334618c0",
+    "backend/src/main/java/com/sanpablo/contigo/controller/SupportSessionController.java": "72ebc7f828afc61abd9e19a5cfc872297107c628c26b43beae23a7f1c07b25d0",
+    "backend/src/main/java/com/sanpablo/contigo/service/SupportSessionService.java": "a2c1c07b091c1ceaf45495d18ad38a3a8f1bb81cb2b1fd0b5a0eb539519967a3",
+    "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SupportDtos.java": "db3d08ce9258dd0dbd5236bbd358ef86f2a7f61f27c0a6fb21ac23329557cae0"
+  },
+  "changedSourcesDuringRun": [],
+  "cleanup": [
+    {
+      "sessionId": "fabe07ff-2234-4a20-a723-f9dcdcfe65a8",
+      "status": 200
+    }
+  ]
+}

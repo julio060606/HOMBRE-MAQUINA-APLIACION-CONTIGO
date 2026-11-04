@@ -1,0 +1,199 @@
+{
+  "date": "2026-11-04T09:00:50.629Z",
+  "checks": [
+    {
+      "name": "H02 etiqueta visible contenida en el nombre accesible",
+      "passed": true
+    },
+    {
+      "name": "H01 aviso disponible con más de 20 segundos para ampliar",
+      "passed": true
+    },
+    {
+      "name": "H01 reintento conserva operación y borrador",
+      "passed": true
+    },
+    {
+      "name": "H01 permite diez ampliaciones consecutivas",
+      "passed": true
+    },
+    {
+      "name": "H01 caducidad mantiene borrador seleccionable y foco",
+      "passed": true
+    },
+    {
+      "name": "H03 retorno de foco tras animación y siguiente Tab en 1280 px",
+      "passed": true
+    },
+    {
+      "name": "H03 retorno de foco tras animación y siguiente Tab en 320 px",
+      "passed": true
+    },
+    {
+      "name": "H04 error exclusivo de Motivo marca y enfoca Motivo",
+      "passed": true
+    },
+    {
+      "name": "H04 corregir Cantidad conserva el error pendiente de Motivo",
+      "passed": true
+    },
+    {
+      "name": "H04 datos válidos llegan a revisión sin escritura clínica",
+      "passed": true
+    },
+    {
+      "name": "H05 pausa bloquea refresco de 30 s y eventos remotos, con SOS activo",
+      "passed": true,
+      "ordinaryRequestsDuringPause": 0
+    },
+    {
+      "name": "H01 cuidador amplía conversación mientras las actualizaciones ordinarias están pausadas",
+      "passed": true
+    },
+    {
+      "name": "H05 actualización manual funciona durante la pausa",
+      "passed": true
+    },
+    {
+      "name": "H05 reanuda con datos nuevos y foco conservado",
+      "passed": true
+    },
+    {
+      "name": "H05 retirada de permisos limpia la vista incluso durante la pausa",
+      "passed": true
+    }
+  ],
+  "screens": [
+    {
+      "id": "01-sos-warning",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-limit"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02-sos-extended",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-draft-hint"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03-sos-expired-draft",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:rp\\:-description"
+            ],
+            [
+              "._empty_ba9s4_21"
+            ],
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-limit"
+            ],
+            [
+              "#\\:r11\\:-draft-hint"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04-supply-field-error",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "id": "05-paused-with-urgent-sos",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "targets": [
+            [
+              "._overviewGrid_uwkmq_32"
+            ],
+            [
+              "._attentionCount_uwkmq_81"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "._patientLabel_uwkmq_20"
+            ],
+            [
+              "._patientName_uwkmq_21 > h2"
+            ],
+            [
+              "._patientIdentity_uwkmq_17 > div > p"
+            ],
+            [
+              "._syncBadge_uwkmq_28"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06-revoked-while-paused",
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "blockedWrites": [],
+  "sourceHashes": {
+    "frontend/src/hooks/usePatientView.ts": "fbb08528b01e5bdb7fc548149d7be58e7350656d4895f8ca8c26893e0da72fad",
+    "frontend/src/context/PatientContext.tsx": "667a2120dfe39b3be9eae5fe6870ceb9b0eed35e256947f10a98c647064224bc",
+    "frontend/src/services/accessibilityPreferences.ts": "97445706a5bba86ea30dfb200880b42bee95c8f6cd8cce19f5ee435cc8874f32",
+    "frontend/src/services/apiClient.ts": "df6f3441278b4bc709ae74e03f7ccef9a545ae564b7467ad723f12eaf2a60036",
+    "frontend/src/services/demo/repository.ts": "f295ef2479854ae2ead45908a8d0728a9280235f963585d6a5e854602c27f9fb",
+    "frontend/src/components/layout/ReadingOptions.tsx": "c2691a6f0a6a5c2589fb0c0b7ee2796a89232978721d336747de6e00cde310b3",
+    "frontend/src/components/layout/ReadingOptions.module.css": "fce2674cedd8f480176c5ae09595884923179209ccd72692f49ef2ba43eedd1f",
+    "frontend/src/components/layout/Navbar.tsx": "b281f21a0d22480d1ccd257e1811fd28a425b3a566c4ccc55a1c30a1cf6e218e",
+    "frontend/src/features/patient-app/PatientAppContent.tsx": "76b005cd795baf242d09cdd35e40a985b94b825be3666db14d22ec94ce7605a9",
+    "frontend/src/features/medications/SupplyForm.tsx": "00bf0ae1938326282a135e46ef0fc010bf15f246e02f5a62a342064818431998",
+    "frontend/src/domain/validation.ts": "a690a26bd7fb38f5e4690da33b3b8fd3b129258fd26adc01e8150edffa31dfb1",
+    "frontend/src/features/support/LiveSupportConversation.tsx": "028be47e3d89e3a8285b2a965372e202a1a458fd7d983d67749e0f82a451dc63",
+    "frontend/src/features/support/LiveSupportConversation.module.css": "9d47d87f8a4470b30ccdabf3a9bae79e2d3855b2fb8134ed35ae328ae7c50fd6",
+    "frontend/src/features/support/supportApi.ts": "9e0c8c343f0b22ea7e0934355943c7bef9b6811cf0cceb286ccdfffb1181270b",
+    "backend/src/main/java/com/sanpablo/contigo/controller/SupportSessionController.java": "5ee90266b58f8a0c8835833be1b6a6a4d4f2cf55fb58ab91bd66a5f3f4a10334",
+    "backend/src/main/java/com/sanpablo/contigo/service/SupportSessionService.java": "f276ff94d079ad0ab08847dd680592dd0f6d21d7db8a07ba76c0de8f6a62250d",
+    "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SupportDtos.java": "c5cf41c5b34211efeeadfca9e52c3af08588ce33660ce9d45dcb0a07032ae14b"
+  },
+  "limitations": [
+    "Autenticación API real con cuentas sintéticas. Estados de SOS y cambios de GET controlados mediante transporte interceptado.",
+    "Las extensiones REST, permisos, idempotencia y concurrencia se prueban separadamente con Spring y H2.",
+    "Esta comprobación no equivale a validación humana ni prueba de lector de pantalla."
+  ],
+  "complete": true,
+  "finishedAt": "2026-11-04T09:01:39.329Z"
+}

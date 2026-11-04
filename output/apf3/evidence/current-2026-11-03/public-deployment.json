@@ -1,0 +1,11 @@
+﻿{
+    "timestamp":  "2026-11-03T20:44:23.9957673Z",
+    "frontendUrl":  "https://hombre-maquina-apliacion-contigo.vercel.app",
+    "apiBaseUrl":  "https://hombre-maquina-apliacion-contigo.vercel.app/api/v1",
+    "method":  "Consulta HTTP del acceso y salud JSON de API. Sin credenciales ni inicio de sesiÃ³n pÃºblico.",
+    "complete":  false,
+    "frontendHttpStatus":  200,
+    "healthHttpStatus":  200,
+    "healthContentType":  "text/html; charset=utf-8",
+    "reason":  "La direcciÃ³n de salud no devuelve la API CONTIGO disponible con PostgreSQL. Que el portal abra no acredita que el acceso funcione."
+}

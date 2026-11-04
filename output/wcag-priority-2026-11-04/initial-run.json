@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-04T08:58:40.004Z",
+  "checks": [
+    {
+      "name": "H02 etiqueta visible contenida en el nombre accesible",
+      "passed": true
+    },
+    {
+      "name": "H01 aviso disponible con más de 20 segundos para ampliar",
+      "passed": true
+    },
+    {
+      "name": "H01 reintento conserva operación y borrador",
+      "passed": true
+    },
+    {
+      "name": "H01 permite diez ampliaciones consecutivas",
+      "passed": true
+    },
+    {
+      "name": "H01 caducidad mantiene borrador seleccionable y foco",
+      "passed": true
+    },
+    {
+      "name": "H03 retorno de foco tras animación y siguiente Tab en 1280 px",
+      "passed": true
+    },
+    {
+      "name": "H03 retorno de foco tras animación y siguiente Tab en 320 px",
+      "passed": true
+    },
+    {
+      "name": "H04 error exclusivo de Motivo marca y enfoca Motivo",
+      "passed": true
+    },
+    {
+      "name": "H04 corregir Cantidad conserva el error pendiente de Motivo",
+      "passed": true
+    },
+    {
+      "name": "H04 datos válidos llegan a revisión sin escritura clínica",
+      "passed": true
+    },
+    {
+      "name": "H05 pausa bloquea refresco de 30 s y eventos remotos, con SOS activo",
+      "passed": true,
+      "ordinaryRequestsDuringPause": 0
+    },
+    {
+      "name": "H01 cuidador amplía conversación mientras las actualizaciones ordinarias están pausadas",
+      "passed": true
+    },
+    {
+      "name": "H05 actualización manual funciona durante la pausa",
+      "passed": true
+    }
+  ],
+  "screens": [
+    {
+      "id": "01-sos-warning",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-limit"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02-sos-extended",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-draft-hint"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03-sos-expired-draft",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#\\:rp\\:-description"
+            ],
+            [
+              "._hint_ba9s4_21[role=\"status\"]"
+            ],
+            [
+              "._empty_ba9s4_21"
+            ],
+            [
+              "#\\:r11\\:-text"
+            ],
+            [
+              "#\\:r11\\:-draft-hint"
+            ],
+            [
+              "._footer_1szzx_18 > p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04-supply-field-error",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "id": "05-paused-with-urgent-sos",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "targets": [
+            [
+              "._overviewGrid_uwkmq_32"
+            ],
+            [
+              "._attentionCount_uwkmq_81"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "._patientLabel_uwkmq_20"
+            ],
+            [
+              "._patientName_uwkmq_21 > h2"
+            ],
+            [
+              "._patientIdentity_uwkmq_17 > div > p"
+            ],
+            [
+              "._syncBadge_uwkmq_28"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "blockedWrites": [],
+  "sourceHashes": {},
+  "limitations": [
+    "Autenticación API real con cuentas sintéticas. Estados de SOS y cambios de GET controlados mediante transporte interceptado.",
+    "Las extensiones REST, permisos, idempotencia y concurrencia se prueban separadamente con Spring y H2.",
+    "Esta comprobación no equivale a validación humana ni prueba de lector de pantalla."
+  ],
+  "error": {
+    "message": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('73 años', { exact: true }) to be visible\u001b[22m\n",
+    "stack": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('73 años', { exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\vegac\\Documents\\Hombre Maquina\\tools\\apf3\\wcag-priority-2026-11-04\\run.mjs:105:97"
+  },
+  "complete": false,
+  "finishedAt": "2026-11-04T08:59:58.081Z"
+}

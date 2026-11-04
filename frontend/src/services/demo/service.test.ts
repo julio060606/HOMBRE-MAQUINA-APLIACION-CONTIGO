@@ -145,6 +145,25 @@ describe('mediciones, vinculación e historial', () => {
     await patient.sos(patientId, 'sos'); await patient.sos(patientId, 'sos');
     expect((await caregiver.view(patientId)).alerts.filter(a => a.type === 'PANIC_BUTTON')).toHaveLength(1);
   });
+  it('conserva el mensaje escrito del SOS para el cuidador y rechaza reutilizar la operación con otro texto', async () => {
+    const first = await patient.sos(patientId, 'written-sos', '  Prefiero comunicarme por escrito  ');
+    expect(await patient.sos(patientId, 'written-sos', 'Prefiero comunicarme por escrito')).toEqual(first);
+    const alerts = (await caregiver.view(patientId)).alerts.filter(a => a.type === 'PANIC_BUTTON');
+    expect(alerts).toHaveLength(1);
+    expect(alerts[0].description).toContain('Mensaje del paciente: Prefiero comunicarme por escrito');
+    expect(alerts[0].description).toContain('No contacta servicios de emergencia');
+    await expect(patient.sos(patientId, 'written-sos', 'Otro mensaje')).rejects.toMatchObject({ code: 'CONFLICT' });
+    expect((await caregiver.view(patientId)).alerts.filter(a => a.type === 'PANIC_BUTTON')).toHaveLength(1);
+  });
+  it('no registra SOS con texto demasiado largo ni para un paciente ajeno', async () => {
+    await expect(patient.sos(patientId, 'oversized-sos', 'a'.repeat(241))).rejects.toThrow('240 caracteres');
+    await expect(patient.sos('pat_002', 'foreign-sos', 'Necesito ayuda')).rejects.toMatchObject({ code: 'FORBIDDEN' });
+    await expect(caregiver.sos(patientId, 'caregiver-sos', 'Necesito ayuda')).rejects.toMatchObject({ code: 'FORBIDDEN' });
+    expect((await caregiver.view(patientId)).alerts.filter(a => a.type === 'PANIC_BUTTON')).toHaveLength(0);
+    expect((await rosa.view('pat_002')).alerts.filter(a => a.type === 'PANIC_BUTTON')).toHaveLength(0);
+    const valid = await patient.sos(patientId, 'boundary-sos', 'a'.repeat(240));
+    expect(valid.description).toContain('a'.repeat(240));
+  });
   it('el paciente revoca un vínculo y retira el acceso a consultas y escritura', async () => {
     expect(await patient.caregivers(patientId)).toHaveLength(1);
     await expect(caregiver.revokeLink(patientId, 'caregiver_demo')).rejects.toMatchObject({ code: 'FORBIDDEN' });

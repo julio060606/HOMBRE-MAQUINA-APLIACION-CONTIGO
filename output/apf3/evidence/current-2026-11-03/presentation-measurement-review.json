@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T20:53:14.690Z",
+  "origin": "http://127.0.0.1:3001",
+  "mode": "API/PostgreSQL local, datos sintéticos",
+  "method": "Captura nativa Playwright del locator .measurement-form, revisión 120/80 sin guardar.",
+  "screenshot": "presentation-measurement-review.png",
+  "sha256": "774146bee5aad964c4ce35f52d87c0a2616144612efff8b21fce71cce9296158",
+  "blockedWrites": 0,
+  "limitations": [
+    "Figura de documentación; no es otra pantalla auditada ni una sesión con participantes."
+  ]
+}

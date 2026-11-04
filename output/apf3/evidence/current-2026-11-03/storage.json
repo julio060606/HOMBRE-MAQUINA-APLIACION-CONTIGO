@@ -1,0 +1,30 @@
+﻿{
+    "timestamp":  "2026-11-03T20:40:21.4846404Z",
+    "method":  "Conexiones PostgreSQL en transacciones READ ONLY, con ROLLBACK. Sin consulta de datos personales ni exportaciÃ³n de credenciales.",
+    "complete":  true,
+    "databases":  [
+                      {
+                          "database":  "san_pablo_clinic",
+                          "scope":  "Esquemas no internos visibles para el usuario del proyecto",
+                          "schemas":  [
+                                          "clinic"
+                                      ],
+                          "baseTables":  32,
+                          "views":  4,
+                          "readOnly":  "on"
+                      },
+                      {
+                          "database":  "contigo_db",
+                          "scope":  "Esquemas no internos visibles para el usuario del proyecto",
+                          "schemas":  [
+                                          "auth",
+                                          "clinical",
+                                          "reports_audit",
+                                          "telemetry"
+                                      ],
+                          "baseTables":  22,
+                          "views":  0,
+                          "readOnly":  "on"
+                      }
+                  ]
+}

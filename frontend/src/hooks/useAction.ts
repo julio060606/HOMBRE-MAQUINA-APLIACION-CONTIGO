@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { ZodError } from 'zod';
+import { requestVibration } from '../services/accessibleFeedback';
 export function errorMessage(error: unknown): string {
   if (error instanceof ZodError) return error.issues.find(i => i.code === 'custom')?.message || 'Revise los campos: ingrese números válidos, la unidad y un motivo cuando corresponda.';
   return error instanceof Error ? error.message : 'No se pudo completar la operación.';
@@ -11,8 +12,8 @@ export function useAction() {
     if (lock.current) return false;
     lock.current = true; setBusy(true); setError('');
     if (operation.current?.fingerprint !== fingerprint) operation.current = { fingerprint, id: crypto.randomUUID() };
-    try { await execute(operation.current!.id); operation.current = undefined; return true; }
-    catch (e) { setError(errorMessage(e)); return false; }
+    try { await execute(operation.current!.id); operation.current = undefined; requestVibration(); return true; }
+    catch (e) { setError(errorMessage(e)); requestVibration('error'); return false; }
     finally { lock.current = false; setBusy(false); }
   }
   return { run, busy, error };

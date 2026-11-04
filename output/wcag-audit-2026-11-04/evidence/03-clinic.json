@@ -1,0 +1,1315 @@
+{
+  "title": "Tu salud merece una atención cercana. · CONTIGO",
+  "lang": "es",
+  "url": "http://127.0.0.1:3001/clinic",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "scrollWidth": 1280
+  },
+  "activeElement": {
+    "tag": "H1",
+    "text": "Tu salud merece una atención cercana.",
+    "id": "clinic-title",
+    "testid": null
+  },
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Tu salud merece una atención cercana.",
+      "id": "clinic-title",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Encuentra el cuidado que estás buscando.",
+      "id": "specialties-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Medicina general",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Cardiología",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Pediatría",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Ginecología",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Geriatría",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Dermatología",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tu atención, de principio a fin.",
+      "id": "services-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Consulta externa",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Laboratorio clínico",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Diagnóstico por imágenes",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Chequeos preventivos",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Cercanía en cada paso.",
+      "id": "approach-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Trato cercano y respetuoso",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Información clara",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Acompañamiento familiar",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Llega con tus preguntas.Y con todo lo que necesitas.",
+      "id": "patients-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Coordina tu atención",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Prepara tus documentos",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Conversa con tu médico",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Respuestas paratu próxima visita.",
+      "id": "support-title",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tu cuidado continúacon CONTIGO.",
+      "id": "contigo-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Un paso a la vez.",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Una visión compartida.",
+      "id": "",
+      "testid": null
+    }
+  ],
+  "controls": [
+    {
+      "tag": "A",
+      "text": "Saltar al contenido principal",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 225.34375,
+      "height": 52
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Opciones de lectura",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": ":r3:-active",
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 193.78125,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Comunicarme",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 157.25,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 187.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Clínica San Pablo, inicio",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 160.15625,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Especialidades",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 101.859375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Servicios",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 63.078125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Pacientes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 66.390625,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Orientación",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 78.875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 66.078125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Conocer CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 175.234375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Iniciar sesión",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 154.109375,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Ver especialidades",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 211.484375,
+      "height": 54.875
+    },
+    {
+      "tag": "A",
+      "text": "Planificar mi visita",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 205.703125,
+      "height": 54.875
+    },
+    {
+      "tag": "A",
+      "text": "01EspecialidadesEncuentra tu área de atención.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 303.5,
+      "height": 150.375
+    },
+    {
+      "tag": "A",
+      "text": "02Servicios y exámenesConoce los servicios médicos.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 303.5,
+      "height": 150.375
+    },
+    {
+      "tag": "A",
+      "text": "03Antes de tu visitaPrepara tu próxima consulta.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 303.5,
+      "height": 150.375
+    },
+    {
+      "tag": "A",
+      "text": "04CONTIGOSeguimiento desde casa.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 303.5,
+      "height": 150.375
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "id": "clinic-specialty-search",
+      "testid": null,
+      "name": null,
+      "type": "search",
+      "labels": [
+        "Buscar una especialidad"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 514.625,
+      "height": 44.78125
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Medicina general",
+      "id": "clinic-specialty-0",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cardiología",
+      "id": "clinic-specialty-1",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pediatría",
+      "id": "clinic-specialty-2",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Ginecología",
+      "id": "clinic-specialty-3",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Geriatría",
+      "id": "clinic-specialty-4",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Dermatología",
+      "id": "clinic-specialty-5",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": "false",
+      "pressed": null,
+      "current": null,
+      "width": 598,
+      "height": 88.96875
+    },
+    {
+      "tag": "A",
+      "text": "Ver especialidades",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 239.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Preparar mi visita",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 239.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Consultar sobre exámenes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 239.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Orientación al paciente",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 239.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver guía de preparación",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 203.84375,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "¿Qué información debo confirmar al coordinar una cita?",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 676.8125,
+      "height": 74.390625
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "¿Qué necesito para un examen de laboratorio o imágenes?",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 676.8125,
+      "height": 74.390625
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "¿Puedo acudir con un acompañante?",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 676.8125,
+      "height": 74.390625
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "¿Cómo continúo el seguimiento después de la consulta?",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 676.8125,
+      "height": 74.390625
+    },
+    {
+      "tag": "A",
+      "text": "Conocer CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 209.578125,
+      "height": 54.875
+    },
+    {
+      "tag": "A",
+      "text": "Ingresar a mi cuenta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 177.15625,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "ClínicaSan Pablo",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 160.15625,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Especialidades",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Servicios médicos",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Antes de tu visita",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Atención al paciente",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Plataforma CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.328125,
+      "height": 44
+    }
+  ],
+  "images": [
+    {
+      "alt": "Médico revisando información durante una consulta.",
+      "src": "/images/doctor_report.jpg",
+      "width": 768,
+      "height": 576,
+      "loaded": true
+    }
+  ],
+  "statuses": [
+    {
+      "tag": "P",
+      "text": "06áreas de atención",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": "polite"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": null,
+      "live": "polite"
+    }
+  ],
+  "duplicateIds": [],
+  "missingReferences": [],
+  "axe": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "help": "Elements must only use permitted ARIA attributes",
+        "nodes": [
+          {
+            "target": [
+              "._roleCards_1vyd3_143"
+            ],
+            "html": "<div class=\"_roleCards_1vyd3_143\" aria-label=\"Dos experiencias conectadas\">",
+            "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+            "any": [],
+            "all": [],
+            "none": [
+              {
+                "id": "aria-prohibited-attr",
+                "data": {
+                  "role": null,
+                  "nodeName": "div",
+                  "messageKey": "noRoleSingular",
+                  "prohibited": [
+                    "aria-label"
+                  ]
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "._heroCopy_1vyd3_32 > ._eyebrow_1vyd3_33"
+            ],
+            "html": "<p class=\"_eyebrow_1vyd3_33\"><span class=\"_orangeLine_1vyd3_34\"></span> Clínica San Pablo</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "bold",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "#clinic-title"
+            ],
+            "html": "<h1 id=\"clinic-title\" tabindex=\"-1\">Tu salud merece <span>una atención cercana.</span></h1>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "38.9pt (51.84px)",
+                  "fontWeight": "bold",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "#clinic-title > span"
+            ],
+            "html": "<span>una atención cercana.</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "38.9pt (51.84px)",
+                  "fontWeight": "bold",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._heroDescription_1vyd3_37"
+            ],
+            "html": "<p class=\"_heroDescription_1vyd3_37\">Consulta médica, especialidades y servicios de diagnóstico para cuidar de ti y de tu familia en cada etapa de la vida.</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "12.8pt (17px)",
+                  "fontWeight": "normal",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._primaryButton_1vyd3_24[href$=\"clinic#especialidades\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"_primaryButton_1vyd3_24\" href=\"/clinic#especialidades\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._secondaryButton_1vyd3_39"
+            ],
+            "html": "<a class=\"_secondaryButton_1vyd3_39\" href=\"/clinic#pacientes\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._heroSignature_1vyd3_43"
+            ],
+            "html": "<p class=\"_heroSignature_1vyd3_43\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "pseudoContent",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_hero_1vyd3_27\" aria-labelledby=\"clinic-title\">",
+                    "target": [
+                      "._hero_1vyd3_27"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a pseudo element"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "avoid-inline-spacing",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "html-has-lang",
+      "html-lang-valid",
+      "image-alt",
+      "label",
+      "link-in-text-block",
+      "link-name",
+      "list",
+      "listitem",
+      "meta-viewport",
+      "nested-interactive",
+      "summary-name"
+    ],
+    "inapplicable": [
+      "area-alt",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "autocomplete-valid",
+      "blink",
+      "definition-list",
+      "dlitem",
+      "frame-focusable-content",
+      "frame-title-unique",
+      "frame-title",
+      "html-xml-lang-mismatch",
+      "input-button-name",
+      "input-image-alt",
+      "marquee",
+      "meta-refresh",
+      "object-alt",
+      "role-img-alt",
+      "scrollable-region-focusable",
+      "select-name",
+      "server-side-image-map",
+      "svg-img-alt",
+      "td-headers-attr",
+      "th-has-data-cells",
+      "valid-lang",
+      "video-caption",
+      "no-autoplay-audio"
+    ]
+  }
+}

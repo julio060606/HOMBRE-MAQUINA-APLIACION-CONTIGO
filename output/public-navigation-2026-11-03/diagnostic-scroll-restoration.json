@@ -1,0 +1,31 @@
+{
+  "complete": false,
+  "timestamp": "2026-11-04T01:15:08.554Z",
+  "mode": "API central, contextos Chrome independientes; solo autenticación y lecturas, sin escrituras clínicas.",
+  "checks": [
+    {
+      "name": "Landing → login → inicio con título/foco correctos y una acción principal",
+      "passed": true
+    }
+  ],
+  "layouts": [],
+  "errors": [
+    {
+      "message": "Atrás no restaura la posición 1615 → 64.",
+      "stack": "Error: Atrás no restaura la posición 1615 → 64.\n    at assert (file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-public-navigation.mjs:16:55)\n    at file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-public-navigation.mjs:46:3"
+    }
+  ],
+  "unexpectedWrites": [],
+  "sourceHashes": {
+    "frontend/src/App.tsx": "1615eaef8eccfe7e812e12b96ccd6bf7e46092374001467fcb19a799e1717f25",
+    "frontend/src/components/layout/RouteAccessibility.tsx": "f176400dbfc37472324414e92ed9e5c5e2597cde9da6465d82aa15d69e2bcaae",
+    "frontend/src/components/layout/PublicHeader.tsx": "600d3178feb4cde43c52718ddac1fd526c7b52ee2ee4dd8e581b968ace06b31f",
+    "frontend/src/components/layout/PublicHeader.module.css": "723937c7852abb20bf07858978cfc7bc7d7e1c1144d4f10c8eb403babcf67101",
+    "frontend/src/features/auth/LoginPage.tsx": "fc7422c0c2f4e3febb0eacaff6320c6e78971be392e94ae71792029509ee2bf3",
+    "frontend/src/features/auth/LoginPage.module.css": "b578f0b0b5ce4cc70605dbf882b3a0a57b2036ece39b825b11932c3b9515af12",
+    "frontend/src/features/landing/ContigoLandingPage.tsx": "551ce11fb5a0326f933cc7113645ca58ca420f3a3963f7ea1f4a1f2e42bdf089",
+    "frontend/src/features/landing/ContigoLandingPage.css": "b416d033132341747a784f71ad79a0eb1486f5ee4fcabf16f0279a134994977b",
+    "frontend/src/features/landing/ClinicPortalPage.tsx": "48e50349b264caf1e9caf7dc765c856af92cd5d75677d489d722f7e840e4e9ee",
+    "frontend/src/features/landing/ClinicPortalPage.module.css": "34a9c969c6edf7aa3c72b955751998282ca0a42178b3baba0b7d43956a934f36"
+  }
+}

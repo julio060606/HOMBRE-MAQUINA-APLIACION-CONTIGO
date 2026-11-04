@@ -1,16 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Activity, ArrowDown, ArrowRight, Check, ChevronRight, Clock3, HeartHandshake, Menu, Monitor, Pill, Smartphone, UsersRound, Volume2, X } from 'lucide-react';
+import { Activity, ArrowDown, ArrowRight, Check, ChevronRight, Clock3, HeartHandshake, Monitor, Pill, Smartphone, UsersRound, Volume2 } from 'lucide-react';
+import { PublicHeader } from '../../components/layout/PublicHeader';
+import { useAuth } from '../../context/AuthContext';
 import './ContigoLandingPage.css';
 
-const navigation = [
-  { href: '#beneficios', label: 'Beneficios' },
-  { href: '#para-quien', label: 'Para quién es' },
-  { href: '#como-funciona', label: 'Cómo funciona' },
-];
-
 function ContigoBrand() {
-  return <Link to="/clinic" className="ct-brand" aria-label="CONTIGO, volver al portal de la clínica">
+  return <Link to="/landing" className="ct-brand" aria-label="CONTIGO, ir al inicio">
     <span className="ct-brand-mark"><HeartHandshake size={25} strokeWidth={1.8} aria-hidden="true" /></span>
     <span><strong>CONTIGO</strong><span className="ct-brand-description">Cuidarnos, cada día</span></span>
   </Link>;
@@ -38,52 +33,21 @@ function PatientPreview() {
 }
 
 export function ContigoLandingPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuButton = useRef<HTMLButtonElement>(null);
-  const menuRegion = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') { setMenuOpen(false); menuButton.current?.focus(); }
-    };
-    const closeOutside = (event: PointerEvent) => {
-      if (!menuRegion.current?.contains(event.target as Node) && !menuButton.current?.contains(event.target as Node)) setMenuOpen(false);
-    };
-    document.addEventListener('keydown', closeOnEscape);
-    document.addEventListener('pointerdown', closeOutside);
-    return () => { document.removeEventListener('keydown', closeOnEscape); document.removeEventListener('pointerdown', closeOutside); };
-  }, [menuOpen]);
-
-  const closeMenu = () => setMenuOpen(false);
+  const { user } = useAuth();
+  const access = user ? user.role === 'ROLE_PATIENT' ? '/patient-app' : '/dashboard' : '/login';
+  const accessLabel = user ? user.role === 'ROLE_PATIENT' ? 'Volver a mi aplicación' : 'Volver a mi panel' : 'Iniciar sesión';
 
   return <div className="contigo-landing">
-    <header className="ct-header">
-      <div className="ct-container ct-header-inner">
-        <ContigoBrand />
-        <nav aria-label="Navegación de CONTIGO" className="ct-desktop-nav">{navigation.map(item => <a href={item.href} key={item.href}>{item.label}</a>)}</nav>
-        <div className="ct-header-actions">
-          <Link className="ct-button ct-button-primary ct-header-access" to="/login" data-testid="btn-landing-login-web">Ingresar<ArrowRight size={18} aria-hidden="true" /></Link>
-          <button ref={menuButton} type="button" className="ct-menu-button" aria-controls="contigo-mobile-navigation" aria-expanded={menuOpen} aria-label={menuOpen ? 'Cerrar menú de CONTIGO' : 'Abrir menú de CONTIGO'} onClick={() => setMenuOpen(open => !open)}>{menuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}</button>
-        </div>
-      </div>
-      <div ref={menuRegion} id="contigo-mobile-navigation" className="ct-mobile-menu" hidden={!menuOpen}>
-        <nav className="ct-container" aria-label="Navegación móvil de CONTIGO">
-          {navigation.map(item => <a href={item.href} key={item.href} onClick={closeMenu}>{item.label}<ChevronRight size={18} aria-hidden="true" /></a>)}
-          <Link to="/clinic" onClick={closeMenu}>Portal de la clínica<ArrowRight size={18} aria-hidden="true" /></Link>
-          <Link to="/login" onClick={closeMenu} className="ct-button ct-button-primary">Entrar a CONTIGO</Link>
-        </nav>
-      </div>
-    </header>
+    <PublicHeader />
 
-    <main>
+    <main data-page-path="/landing">
       <section id="hero" className="ct-hero" aria-labelledby="contigo-hero-title">
         <div className="ct-container ct-hero-grid">
           <div className="ct-hero-copy">
             <p className="ct-eyebrow"><span aria-hidden="true" />Para cuidar en familia</p>
             <h1 id="contigo-hero-title">El cuidado diario,<br /><span>más cerca de ti.</span></h1>
             <p className="ct-hero-description">Una app sencilla para que las personas adultas mayores registren sus tomas y mediciones, y sus cuidadores puedan acompañar el seguimiento.</p>
-            <div className="ct-hero-actions"><Link to="/login" className="ct-button ct-button-primary" data-testid="btn-hero-access-web">Probar CONTIGO<ArrowRight size={20} aria-hidden="true" /></Link><a href="#como-funciona" className="ct-button ct-button-outline">Cómo funciona<ArrowDown size={19} aria-hidden="true" /></a></div>
+            <div className="ct-hero-actions"><Link to={access} className="ct-button ct-button-primary" data-testid="btn-hero-access-web">{accessLabel}<ArrowRight size={20} aria-hidden="true" /></Link><Link to="#como-funciona" className="ct-button ct-button-outline">Cómo funciona<ArrowDown size={19} aria-hidden="true" /></Link></div>
             <div className="ct-hero-details"><span><Pill size={20} aria-hidden="true" />Medicamentos claros</span><span><Activity size={20} aria-hidden="true" />Mediciones en casa</span></div>
             <p className="ct-hero-footnote">Dos espacios conectados por el cuidado: paciente y cuidador.</p>
           </div>
@@ -108,15 +72,14 @@ export function ContigoLandingPage() {
         <div className="ct-container ct-role-grid">
           <div className="ct-family-photo"><img src="/images/caregiver_senior.jpg" width="1200" height="896" loading="lazy" alt="Una persona adulta mayor y una familiar comparten un momento en casa" /><div className="ct-photo-caption"><HeartHandshake size={25} aria-hidden="true" /><span>El cuidado empieza<br /><strong>con estar presentes.</strong></span></div></div>
           <div className="ct-role-content"><p className="ct-eyebrow">Cada persona, su espacio</p><h2 id="contigo-roles-title">Pensada para quien recibe cuidado. Y para quien lo brinda.</h2>
-            <article className="ct-role-item"><span className="ct-feature-icon"><Smartphone size={25} aria-hidden="true" /></span><div><h3>Para la persona adulta mayor</h3><p>Dos tareas cotidianas, a mano en su teléfono: registrar las tomas de medicamentos y sus mediciones.</p><ul><li><Check size={18} aria-hidden="true" />Medicamentos con dos respuestas claras.</li><li><Check size={18} aria-hidden="true" />Mediciones con revisión antes de guardar.</li></ul></div></article>
-            <article className="ct-role-item"><span className="ct-feature-icon ct-icon-navy"><Monitor size={25} aria-hidden="true" /></span><div><h3>Para el cuidador</h3><p>Una vista de seguimiento para consultar lo registrado y preparar el acompañamiento.</p><ul><li><Check size={18} aria-hidden="true" />Tratamiento, existencias y próximas citas.</li><li><Check size={18} aria-hidden="true" />Gráficas y reportes de los registros disponibles.</li></ul></div></article>
-            <Link to="/login" className="ct-text-link">Conocer ambos espacios<ArrowRight size={19} aria-hidden="true" /></Link>
+            <article className="ct-role-item"><span className="ct-feature-icon"><Smartphone size={25} aria-hidden="true" /></span><div><h3>Para la persona adulta mayor</h3><p>Dos tareas cotidianas, a mano en su teléfono: registrar las tomas de medicamentos y sus mediciones.</p><ul><li><Check size={18} aria-hidden="true" />Medicamentos con dos respuestas claras.</li><li><Check size={18} aria-hidden="true" />Mediciones con revisión antes de guardar.</li></ul>{!user && <Link to="/login?cuenta=patient_dacio" className="ct-text-link">Entrar como paciente<ArrowRight size={18} aria-hidden="true" /></Link>}</div></article>
+            <article className="ct-role-item"><span className="ct-feature-icon ct-icon-navy"><Monitor size={25} aria-hidden="true" /></span><div><h3>Para el cuidador</h3><p>Una vista de seguimiento para consultar lo registrado y preparar el acompañamiento.</p><ul><li><Check size={18} aria-hidden="true" />Tratamiento, existencias y próximas citas.</li><li><Check size={18} aria-hidden="true" />Gráficas y reportes de los registros disponibles.</li></ul>{!user && <Link to="/login?cuenta=caregiver_demo" className="ct-text-link">Entrar como cuidador<ArrowRight size={18} aria-hidden="true" /></Link>}</div></article>
           </div>
         </div>
       </section>
 
       <section id="como-funciona" className="ct-section ct-how" aria-labelledby="contigo-how-title">
-        <div className="ct-container"><div className="ct-section-heading"><div><p className="ct-eyebrow">Así funciona CONTIGO</p><h2 id="contigo-how-title">Empezar, paso a paso.</h2></div><Link className="ct-text-link" to="/login">Abrir la demostración<ArrowRight size={19} aria-hidden="true" /></Link></div>
+        <div className="ct-container"><div className="ct-section-heading"><div><p className="ct-eyebrow">Así funciona CONTIGO</p><h2 id="contigo-how-title">Empezar, paso a paso.</h2></div><Link className="ct-text-link" to={access}>{accessLabel}<ArrowRight size={19} aria-hidden="true" /></Link></div>
           <ol className="ct-steps">
             <li><span className="ct-step-number">01</span><h3>Entra a tu espacio</h3><p>Elige una cuenta de paciente o cuidador para conocer la aplicación con los datos de demostración.</p></li>
             <li><span className="ct-step-number">02</span><h3>Encuentra lo importante</h3><p>El paciente consulta su próxima dosis. El cuidador revisa el resumen de la persona seleccionada.</p></li>
@@ -126,9 +89,9 @@ export function ContigoLandingPage() {
         </div>
       </section>
 
-      <section className="ct-final-section" aria-labelledby="contigo-final-title"><div className="ct-container"><div className="ct-final-cta"><div><p>Un espacio para cuidar en familia</p><h2 id="contigo-final-title">Conoce CONTIGO.<br />Empieza con una demostración.</h2></div><Link to="/login" className="ct-button ct-button-white">Entrar a la demostración<ArrowRight size={20} aria-hidden="true" /></Link></div></div></section>
+      <section className="ct-final-section" aria-labelledby="contigo-final-title"><div className="ct-container"><div className="ct-final-cta"><div><p>Un espacio para cuidar en familia</p><h2 id="contigo-final-title">Conoce CONTIGO.<br />Empieza con una demostración.</h2></div><Link to={access} className="ct-button ct-button-white">{accessLabel}<ArrowRight size={20} aria-hidden="true" /></Link></div></div></section>
     </main>
 
-    <footer className="ct-footer"><div className="ct-container"><div className="ct-footer-top"><ContigoBrand /><nav aria-label="Enlaces al pie de CONTIGO"><a href="#hero">Inicio</a><a href="#como-funciona">Cómo funciona</a><Link to="/clinic">Portal de la clínica</Link><Link to="/accessibility">Accesibilidad</Link></nav></div><div className="ct-footer-bottom"><p>CONTIGO · Proyecto académico de seguimiento para paciente y cuidador.</p><p>La clínica ficticia del proyecto comparte recetas y citas con CONTIGO. Los datos son sintéticos y la pauta médica procede de la clínica.</p></div></div></footer>
+    <footer className="ct-footer"><div className="ct-container"><div className="ct-footer-top"><ContigoBrand /><nav aria-label="Enlaces al pie de CONTIGO"><Link to="#hero">Inicio</Link><Link to="#como-funciona">Cómo funciona</Link><Link to="/clinic">Portal de la clínica</Link><Link to="/accessibility">Accesibilidad</Link></nav></div><div className="ct-footer-bottom"><p>CONTIGO · Proyecto académico de seguimiento para paciente y cuidador.</p><p>La clínica ficticia del proyecto comparte recetas y citas con CONTIGO. Los datos son sintéticos y la pauta médica procede de la clínica.</p></div></div></footer>
   </div>;
 }

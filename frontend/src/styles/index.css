@@ -60,7 +60,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 html { scroll-padding-top: 1rem; }
 body { overflow-wrap: anywhere; }
 button, input, select, textarea, summary { font: inherit; }
-button, select, summary, input:not([type='checkbox']):not([type='radio']) { min-height: 2.75rem; }
+button, select, summary, input:not([type='checkbox']):not([type='radio']) { min-height: 44px; }
 button { touch-action: manipulation; }
 button, a, input, select, textarea, summary { scroll-margin-block: 1rem; }
 textarea:focus-visible, [tabindex]:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
@@ -72,30 +72,16 @@ button:disabled { cursor: not-allowed; }
 input[type='checkbox'], input[type='radio'] { accent-color: #0f4c3a; flex-shrink: 0; }
 .input { border-color: #64748b; }
 .text-slate-400, .text-slate-500 { color: #475569; }
-.reading-options { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: start; padding: .5rem 1rem; background: #fff; color: #172b3b; border-bottom: 1px solid #64748b; }
-.reading-options > a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: underline; font-weight: 600; }
-.reading-options details { flex: 1; min-width: min(100%, 12rem); }
-.reading-options summary { display: list-item; cursor: pointer; padding: .625rem .25rem; font-weight: 600; }
-.reading-options-fields { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding: 1rem 0; }
-.reading-options-fields label { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; min-height: 2.75rem; }
-.reading-options-fields select { border: 1px solid #64748b; border-radius: .5rem; padding: .25rem .5rem; background: #fff; }
-.reading-options-fields p { flex-basis: 100%; }
-.public-reading-options { padding: .125rem max(1rem, calc((100% - 75rem) / 2)); gap: .25rem 1rem; background: #eff4f1; border-color: #dce6df; font-size: .8125rem; }
-.public-reading-options summary { box-sizing: border-box; min-height: 2.75rem; padding: .625rem .25rem; line-height: 1.5; }
-.public-reading-options > a { font-size: inherit; }
-.public-reading-options details { min-width: min(100%, 8rem); }
-.public-reading-options .reading-options-fields { font-size: 1rem; }
-.clinic-reading-options { color: #48205d; background: #f6f2f8; border-color: #e4dce9; }
-.clinic-reading-options :is(input[type='checkbox'], select) { accent-color: #51216d; }
-.caregiver-reading-options { padding: .125rem 1.5rem; font-size: .8125rem; background: #f5f8f7; border-color: #dfe7eb; color: #3c5662; }
-.caregiver-reading-options summary { box-sizing: border-box; min-height: 2.75rem; padding: .625rem .25rem; line-height: 1.5; }
-.caregiver-reading-options > a { font-size: inherit; }
-.caregiver-reading-options details { min-width: min(100%, 8rem); }
-.caregiver-reading-options .reading-options-fields { font-size: 1rem; }
+.site-large-targets :is(button, summary, select, input:not([type='checkbox']):not([type='radio']), .btn-primary, .btn-secondary, nav a) { min-height: 56px; padding-block: 12px; }
+.site-large-targets label { min-height: 56px; }
+.site-large-targets input:is([type='checkbox'], [type='radio']) { width: 24px; height: 24px; }
+.site-reduced-motion *, .site-reduced-motion *::before, .site-reduced-motion *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 .skip-link { position: absolute; left: 1rem; top: -12rem; z-index: 100; padding: .75rem; background: #fff; color: #0f4c3a; border: 2px solid #0f4c3a; border-radius: .5rem; }
 .skip-link:focus { top: .5rem; }
 .patient-app { height: auto; min-height: min(48rem, 80dvh); }
 .patient-app > .patient-body { max-height: 70dvh; }
+.patient-app > .patient-body { padding: 16px; }
+.patient-app > .patient-body > :not([hidden]) ~ :not([hidden]) { margin-top: 20px; margin-bottom: 0; }
 .patient-tools, .patient-accessibility { overflow-wrap: anywhere; }
 .patient-navigation button { min-height: 3.5rem; }
 .patient-navigation span { white-space: normal; overflow: visible; text-overflow: clip; font-size: 1em; overflow-wrap: normal; word-break: normal; }
@@ -137,12 +123,16 @@ input[type='checkbox'], input[type='radio'] { accent-color: #0f4c3a; flex-shrink
 :is(.site-high-contrast, .patient-app.high-contrast) :is(button, a, input, select, textarea, summary):focus-visible { outline: 3px solid #003d7a !important; box-shadow: 0 0 0 3px #fff !important; }
 :is(.site-high-contrast, .patient-app.high-contrast) :disabled { border-style: dashed !important; color: #444 !important; }
 @media (max-width: 40rem) {
-  .patient-body { padding: .75rem; }
+  .patient-body { padding: 12px; }
   .patient-navigation { gap: .25rem; }
-  .reading-options { padding-inline: .75rem; }
-  .reading-options > a { font-size: .875rem; }
 }
 @media (forced-colors: active) {
   button, input, select, textarea, summary { border: 2px solid ButtonText; }
   :focus-visible { outline: 3px solid Highlight !important; box-shadow: none !important; }
 }
+
+/* Native modal semantics are retained; the preview is visually framed by its app screen. */
+dialog[data-dialog-in-app] { display: block !important; overflow-y: auto !important; overflow-x: hidden; overscroll-behavior: contain; border-radius: 16px; }
+dialog[data-dialog-in-app]::backdrop { clip-path: inset(var(--app-overlay-top) var(--app-overlay-right) var(--app-overlay-bottom) var(--app-overlay-left) round 12px); backdrop-filter: none; }
+dialog[data-dialog-in-app] [data-dialog-shell] { display: block !important; max-height: none !important; }
+dialog[data-dialog-in-app] [data-dialog-scroll-body] { overflow: visible !important; scrollbar-gutter: auto; }

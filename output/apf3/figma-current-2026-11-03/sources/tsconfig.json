@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "target": "ES2019", "lib": ["ES2020"], "module": "none", "strict": true, "skipLibCheck": true, "types": [], "outDir": "compiled" },
+  "files": ["plugin-api.reference.d.ts", "globals.d.ts", "plugin.ts"]
+}

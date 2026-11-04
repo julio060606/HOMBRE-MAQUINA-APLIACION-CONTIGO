@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED_BEFORE_NATIVE_READER_GESTURES",
+  "date": "2026-11-03T20:41:02.7242674Z",
+  "origin": "http://127.0.0.1:3001",
+  "mode": "Current API app; read-only treatment navigation and authentication only",
+  "nativeReader": "NVDA2026.3 started with isolated profile; no native reading gestures sent",
+  "block": "Computer Use could not determine current browser URL with enough confidence to enforce policy and stopped this turn",
+  "taskT3": "Full medication/stock/appointment reading with NVDA remains unverified",
+  "keyboardEvidence": "../keyboard-current.json is separate isolated demo mode on port3013",
+  "cleanup": "Issued official NVDA --quit and closed only owned isolated Chrome via script stdin",
+  "userProfileModified": false
+}

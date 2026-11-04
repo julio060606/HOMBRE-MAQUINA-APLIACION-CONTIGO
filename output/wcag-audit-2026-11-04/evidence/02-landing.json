@@ -1,0 +1,721 @@
+{
+  "title": "El cuidado diario,más cerca de ti. · CONTIGO",
+  "lang": "es",
+  "url": "http://127.0.0.1:3001/landing",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "scrollWidth": 1280
+  },
+  "activeElement": {
+    "tag": "H1",
+    "text": "El cuidado diario,más cerca de ti.",
+    "id": "contigo-hero-title",
+    "testid": null
+  },
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "El cuidado diario,más cerca de ti.",
+      "id": "contigo-hero-title",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Un poco de orden.Más espacio para acompañar.",
+      "id": "contigo-benefits-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Entender el tratamiento",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Registrar las mediciones",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Acompañar el seguimiento",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Pensada para quien recibe cuidado. Y para quien lo brinda.",
+      "id": "contigo-roles-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Para la persona adulta mayor",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Para el cuidador",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Empezar, paso a paso.",
+      "id": "contigo-how-title",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Entra a tu espacio",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Encuentra lo importante",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Acompaña el día a día",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Una lectura a tu manera.",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Conoce CONTIGO.Empieza con una demostración.",
+      "id": "contigo-final-title",
+      "testid": null
+    }
+  ],
+  "controls": [
+    {
+      "tag": "A",
+      "text": "Saltar al contenido principal",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 225.34375,
+      "height": 52
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Opciones de lectura",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": ":r3:-active",
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 193.78125,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Comunicarme",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 157.25,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 187.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGO, ir al inicio",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 146.0625,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Inicio",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": "page",
+      "width": 65.71875,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Cómo funciona",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 137.53125,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 76.3125,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Iniciar sesión",
+      "id": "",
+      "testid": "btn-landing-login-web",
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 149.21875,
+      "height": 48
+    },
+    {
+      "tag": "A",
+      "text": "Iniciar sesión",
+      "id": "",
+      "testid": "btn-hero-access-web",
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 180.4375,
+      "height": 54.390625
+    },
+    {
+      "tag": "A",
+      "text": "Cómo funciona",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 198.53125,
+      "height": 54.390625
+    },
+    {
+      "tag": "A",
+      "text": "Entrar como paciente",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 195.265625,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Entrar como cuidador",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 196.75,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Iniciar sesión",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 133.09375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 200.375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Iniciar sesión",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 180.4375,
+      "height": 54.390625
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGO, ir al inicio",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 208.484375,
+      "height": 53.734375
+    },
+    {
+      "tag": "A",
+      "text": "Inicio",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 40.234375,
+      "height": 47.171875
+    },
+    {
+      "tag": "A",
+      "text": "Cómo funciona",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 115.28125,
+      "height": 47.171875
+    },
+    {
+      "tag": "A",
+      "text": "Portal de la clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 138.15625,
+      "height": 47.171875
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 100.96875,
+      "height": 47.171875
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "/images/losartan_pill.jpg",
+      "width": 128,
+      "height": 80,
+      "loaded": true
+    },
+    {
+      "alt": "Una persona adulta mayor y una familiar comparten un momento en casa",
+      "src": "/images/caregiver_senior.jpg",
+      "width": 518,
+      "height": 608,
+      "loaded": true
+    }
+  ],
+  "statuses": [
+    {
+      "tag": "DIV",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": null,
+      "live": "polite"
+    }
+  ],
+  "duplicateIds": [],
+  "missingReferences": [],
+  "axe": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".ct-phone-greeting > span"
+            ],
+            "html": "<span>Qué gusto verte</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".ct-phone-greeting > strong"
+            ],
+            "html": "<strong>Hola, Dacio</strong>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "18.6pt (24.8px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".ct-photo-caption > span"
+            ],
+            "html": "<span>El cuidado empieza<br><strong>con estar presentes.</strong></span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"ct-photo-caption\">",
+                    "target": [
+                      ".ct-photo-caption"
+                    ]
+                  },
+                  {
+                    "html": "<img src=\"/images/caregiver_senior.jpg\" width=\"1200\" height=\"896\" loading=\"lazy\" alt=\"Una persona adulta mayor y una familiar comparten un momento en casa\">",
+                    "target": [
+                      "img[src$=\"caregiver_senior.jpg\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".ct-photo-caption > span > strong"
+            ],
+            "html": "<strong>con estar presentes.</strong>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "bold",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"ct-photo-caption\">",
+                    "target": [
+                      ".ct-photo-caption"
+                    ]
+                  },
+                  {
+                    "html": "<img src=\"/images/caregiver_senior.jpg\" width=\"1200\" height=\"896\" loading=\"lazy\" alt=\"Una persona adulta mayor y una familiar comparten un momento en casa\">",
+                    "target": [
+                      "img[src$=\"caregiver_senior.jpg\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "avoid-inline-spacing",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "html-has-lang",
+      "html-lang-valid",
+      "image-alt",
+      "link-in-text-block",
+      "link-name",
+      "list",
+      "listitem",
+      "meta-viewport",
+      "nested-interactive"
+    ],
+    "inapplicable": [
+      "area-alt",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-deprecated-role",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-required-attr",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-roles",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "autocomplete-valid",
+      "blink",
+      "definition-list",
+      "dlitem",
+      "form-field-multiple-labels",
+      "frame-focusable-content",
+      "frame-title-unique",
+      "frame-title",
+      "html-xml-lang-mismatch",
+      "input-button-name",
+      "input-image-alt",
+      "label",
+      "marquee",
+      "meta-refresh",
+      "object-alt",
+      "role-img-alt",
+      "scrollable-region-focusable",
+      "select-name",
+      "server-side-image-map",
+      "summary-name",
+      "svg-img-alt",
+      "td-headers-attr",
+      "th-has-data-cells",
+      "valid-lang",
+      "video-caption",
+      "no-autoplay-audio"
+    ]
+  }
+}

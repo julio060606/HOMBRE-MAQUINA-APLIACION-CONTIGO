@@ -208,13 +208,25 @@ public class TelemetryService {
 
     @Transactional
     public AlertEventDto triggerSos(User actor, String patientId, String operationId) {
+        return triggerSos(actor, patientId, operationId, null);
+    }
+
+    @Transactional
+    public AlertEventDto triggerSos(User actor, String patientId, String operationId, String message) {
         Patient patient = authorizationService.authorizePatientWrite(actor, patientId);
+        String writtenMessage = message == null ? "" : message.strip();
+        if (writtenMessage.length() > 240 || writtenMessage.codePoints().anyMatch(c -> Character.isISOControl(c) && c != '\n' && c != '\r' && c != '\t')) {
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "El mensaje admite hasta 240 caracteres y no permite caracteres de control");
+        }
 
         String operationKey = actor.getId() + ":sos:" + operationId;
-        String fingerprint = patientId + ":SOS";
+        String fingerprint = patientId + ":SOS" + (writtenMessage.isEmpty() ? "" : ":" + writtenMessage);
 
         Optional<IdempotencyRecord> existingOp = idempotencyRepository.findByOperationKey(operationKey);
         if (existingOp.isPresent()) {
+            if (!existingOp.get().getFingerprint().equals(fingerprint)) {
+                throw new ResponseStatusException(HttpStatus.CONFLICT, "Esta petición ya se registró con otros datos; no se modificó el mensaje original");
+            }
             return alertRepository.findById(existingOp.get().getResourceId())
                     .map(AlertEventDto::new)
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Registro de alerta no encontrado"));
@@ -225,8 +237,9 @@ public class TelemetryService {
                 patientId,
                 patient.getFullName(),
                 "PANIC_BUTTON",
-                "Petición de auxilio de paciente",
-                "Alerta generada por el paciente desde su aplicación. Requiere verificación de bienestar.",
+                "SOS de prueba del paciente",
+                "Petición de prueba registrada desde Contigo. No se contactó a servicios de emergencia ni se confirma recepción por otra persona."
+                        + (writtenMessage.isEmpty() ? "" : " Mensaje del paciente: " + writtenMessage),
                 Instant.now(),
                 "CRITICAL"
         );
@@ -237,7 +250,7 @@ public class TelemetryService {
                 patientId,
                 actor.getId(),
                 "HELP_REQUESTED",
-                "Alerta SOS generada por el paciente"
+                "Petición SOS de prueba registrada por el paciente"
         );
         auditRepository.save(audit);
 

@@ -1,0 +1,126 @@
+{
+  "Revision": "communication-2026-11-03",
+  "Complete": true,
+  "Timestamp": "2026-11-03T21:14:53.9866233Z",
+  "Frontend": {
+    "TestFiles": 13,
+    "Tests": 76,
+    "Failures": 0,
+    "Lint": "passed",
+    "Build": "passed",
+    "BuildWarning": "ReportsPage fragment >500kB, existing warning"
+  },
+  "BackendSuites": [
+    {
+      "Suite": "SosTextCommunicationIntegrationTest",
+      "Tests": 8,
+      "Failures": 0,
+      "Errors": 0,
+      "Skipped": 0
+    },
+    {
+      "Suite": "TelemetryAndReportIntegrationTest",
+      "Tests": 4,
+      "Failures": 0,
+      "Errors": 0,
+      "Skipped": 0
+    },
+    {
+      "Suite": "ReviewRegressionProbeTest",
+      "Tests": 9,
+      "Failures": 0,
+      "Errors": 0,
+      "Skipped": 0
+    }
+  ],
+  "ActiveApi": {
+    "storage": "postgresql",
+    "status": "UP",
+    "app": "CONTIGO"
+  },
+  "NewContract": "OpenAPI SosInputRequest.message maxLength240 verified after recompilation/restart",
+  "Sources": [
+    {
+      "File": "frontend/src/components/layout/ReadingOptions.tsx",
+      "SHA256": "7cf650c632f7f644c5ccf693128ddaca2178db9f068d4267ff3b2bb41299b724"
+    },
+    {
+      "File": "frontend/src/features/accessibility/CommunicationBoard.tsx",
+      "SHA256": "8d368efe375f88d698a793e928f971b7183001569031a89e12c944ca1cac68e3"
+    },
+    {
+      "File": "frontend/src/features/accessibility/CommunicationBoard.module.css",
+      "SHA256": "2b4c451cca659088922e3523ad98b380edd8b8b89c82cd2797eae47a4d3076c2"
+    },
+    {
+      "File": "frontend/src/features/accessibility/AccessibilityPage.tsx",
+      "SHA256": "e7e6657145cbdd596ebd714a5efef6c82e0323cf419658a9f4c19706e0d775a1"
+    },
+    {
+      "File": "frontend/src/features/patient-app/PatientHelp.tsx",
+      "SHA256": "5e609d7aae0cc71f2cef29cd4a4e01b543c33c734499394b8f4b88bedf50bf8c"
+    },
+    {
+      "File": "frontend/src/features/patient-app/PatientAppContent.tsx",
+      "SHA256": "e9b4cce797d4ea12ef001c3bcfb30934e2b996220ffce2d5493107f83c1dade2"
+    },
+    {
+      "File": "frontend/src/services/accessibilityPreferences.ts",
+      "SHA256": "35542e99eba464ba827eb60461ced8923e0e1c90585bb407f3d50aed033583eb"
+    },
+    {
+      "File": "frontend/src/services/accessibleFeedback.ts",
+      "SHA256": "80e1fc41dfbb828b339ae61dee6a9808a4ccf23a16e72e69fc5a56f5579163b7"
+    },
+    {
+      "File": "frontend/src/services/speechService.ts",
+      "SHA256": "1ca9dc2622af1bcd74e2200205cd2394244043fad0e29f73f5a586ff26f8732d"
+    },
+    {
+      "File": "frontend/src/services/sosMessage.ts",
+      "SHA256": "689f58d8eaf8a603ddd52479915afb18b54eeeadce5f5fd10555ce557fb369db"
+    },
+    {
+      "File": "frontend/src/services/http/httpService.ts",
+      "SHA256": "f3844fa41e2e35d550271cbad879622098beac70063b7d0cb6c716c0958776f3"
+    },
+    {
+      "File": "frontend/src/services/demo/service.ts",
+      "SHA256": "643f82b6f6d009a6a95b40fcbbce7dfabb8fb4e2a22a2f9d3e154ce27ce2ba75"
+    },
+    {
+      "File": "frontend/src/hooks/useAction.ts",
+      "SHA256": "0b0d0891c99e7ea5377164e636cd064a81afff2473cb85212ab6243ed6791a9a"
+    },
+    {
+      "File": "frontend/src/hooks/useReadingPreferences.ts",
+      "SHA256": "cc3f71462a345b2ac54c5bb0f9bf8d791bb06c7d5aa7b3ddda8c68764f035bbc"
+    },
+    {
+      "File": "frontend/src/context/ToastContext.tsx",
+      "SHA256": "043573a5c335343aa5aaa267eb41fa03f185a6513cfae6ab39d3a6162f049f5a"
+    },
+    {
+      "File": "frontend/src/styles/index.css",
+      "SHA256": "e4e679c7da0c22b00741cc848aa245d7f7677242e0d8afba2c250eb790343c86"
+    },
+    {
+      "File": "backend/src/main/java/com/sanpablo/contigo/controller/AlertController.java",
+      "SHA256": "edb751eaae2c7754c0dd752ce0d562f4f13f53bc6096e91e8bcc1cf3d3677441"
+    },
+    {
+      "File": "backend/src/main/java/com/sanpablo/contigo/service/TelemetryService.java",
+      "SHA256": "73cee140c2f07c6121e796eb17af8834f12ff62d99aa5011a887d12d3de9ab78"
+    },
+    {
+      "File": "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SosInputRequest.java",
+      "SHA256": "e953130f85823e4a1a169197886939720456a8f6824f600ff972303c532be0c4"
+    }
+  ],
+  "Limitations": [
+    "No new domain records written in local PostgreSQL for QA.",
+    "Browser SOS writes only to private demo IndexedDB; backend persistence tested separately using H2.",
+    "No participant sessions, real reader or physical vibration verified.",
+    "Previous APF3 package remains a record of the earlier source revision."
+  ]
+}

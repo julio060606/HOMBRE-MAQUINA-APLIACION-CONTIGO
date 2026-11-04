@@ -1,0 +1,249 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T21:52:21.947Z",
+  "origin": "http://127.0.0.1:3001",
+  "checks": [
+    {
+      "name": "Ayudas dentro del encabezado del dashboard",
+      "passed": true
+    },
+    {
+      "name": "Menú cerrado fuera del recorrido, Enter abre, foco entra, Escape cierra y retorna",
+      "passed": true
+    },
+    {
+      "name": "Avisos y mediciones accesibles bajo demanda; filtro Todas disponible",
+      "passed": true
+    },
+    {
+      "name": "Doce combinaciones sin desborde horizontal ni violations axe",
+      "passed": true
+    }
+  ],
+  "screens": [
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": false,
+      "layout": {
+        "viewport": 320,
+        "document": 320
+      },
+      "screenshot": "dashboard-320-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": true,
+      "layout": {
+        "viewport": 320,
+        "document": 320
+      },
+      "screenshot": "dashboard-320-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": false,
+      "layout": {
+        "viewport": 320,
+        "document": 320
+      },
+      "screenshot": "dashboard-320-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": true,
+      "layout": {
+        "viewport": 320,
+        "document": 320
+      },
+      "screenshot": "dashboard-320-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 390,
+      "scale": "100",
+      "contrast": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390
+      },
+      "screenshot": "dashboard-390-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 390,
+      "scale": "100",
+      "contrast": true,
+      "layout": {
+        "viewport": 390,
+        "document": 390
+      },
+      "screenshot": "dashboard-390-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 390,
+      "scale": "200",
+      "contrast": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390
+      },
+      "screenshot": "dashboard-390-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 390,
+      "scale": "200",
+      "contrast": true,
+      "layout": {
+        "viewport": 390,
+        "document": 390
+      },
+      "screenshot": "dashboard-390-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 1440,
+      "scale": "100",
+      "contrast": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "screenshot": "dashboard-1440-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 1440,
+      "scale": "100",
+      "contrast": true,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "screenshot": "dashboard-1440-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 1440,
+      "scale": "200",
+      "contrast": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "screenshot": "dashboard-1440-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    },
+    {
+      "width": 1440,
+      "scale": "200",
+      "contrast": true,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "screenshot": "dashboard-1440-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      },
+      "menuKeyboard": true,
+      "detailsAvailable": true
+    }
+  ],
+  "blockedWrites": 0,
+  "scope": "Dashboard API local, cuentas sintéticas y contextos privados. Solo autenticación y lecturas; escala del producto no es zoom nativo. Sin sesiones con participantes ni lector real.",
+  "source": [
+    {
+      "file": "frontend/src/components/layout/MainLayout.tsx",
+      "sha256": "8dd961b4b3a374ec1a7a45876f66c5575a663b921d39761f0075688ce387c47f"
+    },
+    {
+      "file": "frontend/src/components/layout/Navbar.tsx",
+      "sha256": "417f54c57e21cdfd4babe4f264605d3bd626e6beaa7e3edcffc8dac135dc1775"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "sha256": "d7d6d8943929f8149daaa829122d8ea7606d5a69ee8a46a64aae67a05d94f207"
+    },
+    {
+      "file": "frontend/src/components/layout/CaregiverLayout.module.css",
+      "sha256": "e8ad6896ea05ed9048586c3ce36dee007f4cac7d606360ea4a3105f52c7213ac"
+    },
+    {
+      "file": "frontend/src/features/dashboard/PatientSummary.tsx",
+      "sha256": "693dff038c5627fae82c0b6e6878c8fbddf348b7fabebe3e37364cab66709113"
+    },
+    {
+      "file": "frontend/src/features/dashboard/DashboardPage.tsx",
+      "sha256": "a1a3fac3ee6e89ebf315a0612aa2215075e591694a8f03716cc5e437c8ce6f0b"
+    },
+    {
+      "file": "frontend/src/features/dashboard/Dashboard.module.css",
+      "sha256": "36371eb80f533fe8e12a840ac5ca0f24d2225c7cbb0273bad88ebd63c04ff19f"
+    }
+  ]
+}

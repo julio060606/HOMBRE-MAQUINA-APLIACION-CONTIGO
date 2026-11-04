@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-03T20:42:35.653Z",
+  "status": "Pruebas técnicas completadas",
+  "scope": "MeasurementForm.module.css y formulario actual; no auditoría global de la aplicación",
+  "method": "Inspección de estilos calculados y contraste sRGB WCAG, teclado y ajuste de texto real del control (canvas/área útil) con valores sintéticos. Escala de lectura de la aplicación 100/200%; no zoom nativo del navegador.",
+  "sourceHashes": {
+    "frontend/src/features/patient-app/MeasurementForm.module.css": "75b0272046e596375290bb0049a8137f5b5353d48ce80ab1cfe6e3bb46cff08a",
+    "frontend/src/features/patient-app/MeasurementForm.tsx": "22aafe7473969a7bec2491aca05c87e5f3d1a46403d61db1e37cfcbd772e55ff"
+  },
+  "afterReportSha256": "178763742e5ddec410c08326a446fef9b9ed86faf49727c2870d685c32b73864",
+  "contrasts": [
+    {
+      "name": "inputBoundary",
+      "beforeBorder": "rgb(139, 158, 149)",
+      "afterBorder": "rgb(116, 136, 126)",
+      "beforeRatio": 2.7158,
+      "afterRatio": 3.6219,
+      "outsideRatio": 3.7732
+    },
+    {
+      "name": "typeUnselected",
+      "beforeBorder": "rgb(135, 154, 146)",
+      "afterBorder": "rgb(116, 136, 126)",
+      "beforeRatio": 2.9714,
+      "afterRatio": 3.7732,
+      "outsideRatio": 3.7732
+    },
+    {
+      "name": "typeSelected",
+      "beforeBorder": "rgb(19, 111, 83)",
+      "afterBorder": "rgb(19, 111, 83)",
+      "beforeRatio": 5.5999,
+      "afterRatio": 5.5999,
+      "outsideRatio": 6.1289
+    },
+    {
+      "name": "optionalPulse",
+      "beforeBorder": "rgb(220, 230, 226)",
+      "afterBorder": "rgb(116, 136, 126)",
+      "beforeRatio": 1.2758,
+      "afterRatio": 3.7732,
+      "outsideRatio": 3.7732
+    }
+  ],
+  "focus": {
+    "standard": {
+      "outline": "rgb(15, 76, 58)",
+      "width": "3px",
+      "style": "solid",
+      "offset": "3px",
+      "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+      "parentBorder": "rgb(19, 111, 83)",
+      "parentBackground": "rgb(255, 255, 255)",
+      "contrast": 9.9282
+    },
+    "highContrast": {
+      "outline": "rgb(0, 61, 122)",
+      "width": "3px",
+      "style": "solid",
+      "offset": "3px",
+      "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+      "parentBorder": "rgb(51, 51, 51)",
+      "parentBackground": "rgb(255, 255, 255)",
+      "contrast": 10.7774
+    }
+  },
+  "error": {
+    "ariaInvalid": "true",
+    "border": "rgb(159, 18, 57)",
+    "background": "rgb(255, 255, 255)",
+    "outside": "rgba(0, 0, 0, 0)",
+    "contrast": 8.0159
+  },
+  "cases": 12,
+  "inputChecks": 48,
+  "allDigitsVisible": true,
+  "readingsPreserved": true,
+  "documentOverflow": false,
+  "backendWrites": [
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login"
+    }
+  ],
+  "noMeasurementWrites": true,
+  "errors": [],
+  "limits": [
+    "Prueba técnica sin participantes.",
+    "No ejecuta Stark ni lector de pantalla.",
+    "No acredita conformidad global WCAG."
+  ],
+  "diagnostic": "inspect.json conserva un ensayo diagnóstico previo al ajuste de espaciado; el resultado final es after.json."
+}

@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T21:55:52.222Z",
+  "revision": "inclusive-app-2026-11-03",
+  "frontend": {
+    "tests": 78,
+    "testFiles": 14,
+    "lint": "passed",
+    "build": "passed",
+    "warning": "Existing ReportsPage chunk size warning"
+  },
+  "reports": [
+    {
+      "file": "dialog-frame/audit.json",
+      "sha256": "3def3cc9477dc7d3b197e828989efd39744ad276119e9b84ccc433469c1fda6a",
+      "sourceHashesVerified": 12,
+      "states": 96
+    },
+    {
+      "file": "caregiver/audit.json",
+      "sha256": "dff919787ec47ba8633dd6777be07797f865cf6e802974f634b007181aaab43d",
+      "sourceHashesVerified": 7,
+      "states": 12
+    },
+    {
+      "file": "patient-flow/patient-flow.json",
+      "sha256": "6cee85829565f6e0c1d418178dee895ff09f0a2e1540642533db433d6a2c5b1e",
+      "sourceHashesVerified": 11,
+      "states": 2
+    },
+    {
+      "file": "patient-dose/dose-card-qa.json",
+      "sha256": "2be15299a6e688bd123977ecba6b006969acd2d84ca46826bdaee2a23cb2ce3d",
+      "sourceHashesVerified": 2,
+      "states": 12
+    }
+  ],
+  "api": {
+    "storage": "postgresql",
+    "status": "UP",
+    "app": "CONTIGO"
+  },
+  "limitations": [
+    "No participant sessions or native screen reader verification.",
+    "Axe incomplete observations retained; no full conformance claim.",
+    "Read-only API QA separated from private IndexedDB flow writes."
+  ]
+}

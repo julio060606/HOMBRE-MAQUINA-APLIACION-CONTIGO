@@ -1,0 +1,96 @@
+{
+  "complete": false,
+  "timestamp": "2026-11-04T00:28:14.424Z",
+  "base": "http://127.0.0.1:3001",
+  "mode": "API central/PostgreSQL y dos contextos Chrome separados; micrófonos sintéticos de Chrome, sin dispositivos reales.",
+  "limitations": [
+    "Verificación técnica headless, sin participantes ni lector de pantalla.",
+    "El audio usa dispositivos sintéticos y conexión local; no acredita micrófonos físicos, operadores de una clínica real ni conexión TURN en redes diferentes.",
+    "Solo se crean solicitudes SOS sintéticas identificadas por este informe. No se modifican tratamientos, mediciones ni citas. Los avisos permanecen como historial académico."
+  ],
+  "checks": [
+    {
+      "name": "Primer click crea alerta y solicitud WAITING visible en otra sesión del dashboard",
+      "passed": true,
+      "latencyMs": 165,
+      "dashboardSelectedPatient": "pat_002",
+      "requestedPatient": "pat_001",
+      "screenshots": [
+        "01-solicitud-espera.png",
+        "02-alerta-dashboard.png"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": "f50f4238-7f6b-43c5-a824-49bc0b3fcae7",
+      "alertId": "862491bc-b888-46c6-872a-06048e4bb34e",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:28:18.377182100Z"
+    }
+  ],
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientHelp.tsx": "5916be9229a693d1dd30489c02ba6f028e772bbacaccb3964c9979b72381fafa",
+    "frontend/src/features/patient-app/PatientHelp.module.css": "a949a697d5e3b4817538b5b353ee03ff7bd805eb65e25c34f5e1f691d62c306a",
+    "frontend/src/features/support/LiveSupportConversation.tsx": "64251ea138d3a7cfc996129c7800bc1cd5568f98d63bae795d8a4a682c43b2f2",
+    "frontend/src/features/support/LiveSupportConversation.module.css": "f35e4c4680b76f24d4ca9515c38d4a8737cd456ab0222271b1d80c74ed40ce49",
+    "frontend/src/features/support/SupportAudioConnection.ts": "5c1af6f4de90071b47c819e651630c27f36eff15cea9309183c4c59747b96544",
+    "frontend/src/features/support/supportApi.ts": "22c7a5e4eae8b565d04af231d20f2956cfc686a18da4aab338979b0b6f9248a6",
+    "frontend/src/features/support/SupportInbox.tsx": "9d65c2df47c32fc1d192862c9abacce697460db07517cf9e75a0d81599d79746",
+    "frontend/src/features/support/SupportInbox.module.css": "d55c1446b54228aa0e00f4fec46f1525b5f8f2e63f00d7b174744e07a03989a7",
+    "frontend/src/components/layout/MainLayout.tsx": "525c64b5c4f77811a10c9776ec51dded0f12ed69e3da7640616c8830334618c0",
+    "backend/src/main/java/com/sanpablo/contigo/controller/SupportSessionController.java": "72ebc7f828afc61abd9e19a5cfc872297107c628c26b43beae23a7f1c07b25d0",
+    "backend/src/main/java/com/sanpablo/contigo/service/SupportSessionService.java": "a2c1c07b091c1ceaf45495d18ad38a3a8f1bb81cb2b1fd0b5a0eb539519967a3",
+    "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SupportDtos.java": "db3d08ce9258dd0dbd5236bbd358ef86f2a7f61f27c0a6fb21ac23329557cae0"
+  },
+  "requests": [
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/f50f4238-7f6b-43c5-a824-49bc0b3fcae7/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/f50f4238-7f6b-43c5-a824-49bc0b3fcae7/end"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    }
+  ],
+  "errors": [
+    {
+      "message": "El mensaje escrito durante la espera no se guarda.",
+      "stack": "Error: El mensaje escrito durante la espera no se guarda.\n    at assert (file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-live-sos.mjs:19:64)\n    at file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-live-sos.mjs:172:3"
+    }
+  ],
+  "consoleErrors": [],
+  "health": {
+    "app": "CONTIGO",
+    "storage": "postgresql",
+    "status": "UP"
+  },
+  "browser": "156.0.8078.80",
+  "dashboardSelectedPatientAtStart": "pat_002",
+  "cleanup": [
+    {
+      "sessionId": "f50f4238-7f6b-43c5-a824-49bc0b3fcae7",
+      "status": 200
+    }
+  ]
+}

@@ -1,315 +1,189 @@
-{
-  "metadata": {
-    "date": "2026-11-02T20:31:50.931Z",
-    "status": "Inspecci\u00f3n t\u00e9cnica; no conformidad integral",
-    "baselineCommit": "4656d72365080d18b267f69d565e4d77a7ae3d56"
+[
+  {
+    "id": "H01",
+    "category": "Sensorial",
+    "criteria": [
+      "1.4.3",
+      "1.4.11"
+    ],
+    "title": "Límites de campos con contraste insuficiente",
+    "S": 3,
+    "A": 3,
+    "before": "Colores y límites de la revisión previa no acreditan el diseño actual.",
+    "adjustment": "Colores explícitos; límites de los campos y selector revisados frente al fondo efectivo.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/evidence/current-2026-11-03/contrast/before-390-100-standard-digits.png",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/contrast/after-390-100-standard-digits.png",
+    "profiles": [
+      "Sensorial"
+    ]
   },
-  "findings": [
-    {
-      "id": "H01",
-      "category": "Sensorial",
-      "criteria": [
-        "1.4.3"
-      ],
-      "title": "Contraste insuficiente en texto de apoyo y marco del tel\u00e9fono",
-      "S": 2,
-      "A": 3,
-      "before": "axe 4.11 mide 2.56:1 para Tensi\u00f3metro o balanza y 3.59:1 para 4G; ambos textos peque\u00f1os requieren 4.5:1.",
-      "adjustment": "Texto slate600/700 y emerald800; modo de alto contraste con colores expl\u00edcitos.",
-      "beforeEvidence": "output/apf3/evidence/baseline/02-patient-home.png",
-      "afterEvidence": "output/apf3/evidence/after/02-patient-home.png",
-      "verification": "Resultados axe por nodo en audit.json; revisi\u00f3n visual.",
-      "status": "Resuelto en las capturas automatizadas",
-      "profiles": [
-        "Baja visi\u00f3n",
-        "Adultos mayores"
-      ],
-      "priority": 6,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H02",
-      "category": "Sensorial",
-      "criteria": [
-        "1.4.11"
-      ],
-      "title": "Bordes de campos con contraste reducido",
-      "S": 2,
-      "A": 3,
-      "before": "Campos de medici\u00f3n con borde #cbd5e1 sobre #fff, ratio 1.48:1 calculado a partir de CSS medido.",
-      "adjustment": "Borde #64748b sobre #fff, ratio 4.76:1; objetivo 3:1 para l\u00edmites necesarios.",
-      "beforeEvidence": "output/apf3/evidence/baseline/29-input-boundaries.png",
-      "afterEvidence": "output/apf3/evidence/after/29-input-boundaries.png",
-      "verification": "Computed CSS en supplemental.json y c\u00e1lculo sRGB; no mide bordes de todos los componentes.",
-      "status": "Resuelto para campos inspeccionados",
-      "profiles": [
-        "Baja visi\u00f3n"
-      ],
-      "priority": 6,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H03",
-      "category": "Sensorial",
-      "criteria": [
-        "1.4.10"
-      ],
-      "title": "Navegaci\u00f3n del paciente recortada a 320 px CSS",
-      "S": 3,
-      "A": 3,
-      "before": "Contenedor de 268 px y contenido de 322 px; Mi cuidador sale por el borde derecho.",
-      "adjustment": "Cuadr\u00edcula adaptable sin truncamiento y texto que puede envolver.",
-      "beforeEvidence": "output/apf3/evidence/baseline/26-nav320-detail.png",
-      "afterEvidence": "output/apf3/evidence/after/26-nav320-detail.png",
-      "verification": "Medici\u00f3n DOM de navegaci\u00f3n a 320 px CSS y capturas. Recorrido adicional con zoom nativo real al 200 % verificado por chrome.tabs.getZoom en evidence/native-zoom/verified-native-api-final/native-zoom.json. No acredita reflow integral.",
-      "status": "Recorte de navegaci\u00f3n y tareas probadas con zoom nativo resueltos t\u00e9cnicamente; reflow integral pendiente",
-      "profiles": [
-        "Baja visi\u00f3n",
-        "Movilidad reducida",
-        "Uso m\u00f3vil"
-      ],
-      "priority": 9,
-      "priorityLabel": "Alta",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H04",
-      "category": "Sensorial",
-      "criteria": [
-        "1.4.4"
-      ],
-      "title": "Tipograf\u00eda local que no sigue el escalado de texto ra\u00edz",
-      "S": 3,
-      "A": 3,
-      "before": "Etiquetas de navegaci\u00f3n de 11 px que permanecen en 11 px al aplicar estr\u00e9s de ra\u00edz al 200 %; tama\u00f1os locales fijos.",
-      "adjustment": "Unidades relativas y opci\u00f3n de texto ampliado; comprobar sin p\u00e9rdida de funcionalidad.",
-      "beforeEvidence": "output/apf3/evidence/baseline/27-font200-detail.png",
-      "afterEvidence": "output/apf3/evidence/after/27-font200-detail.png",
-      "verification": "Escalado CSS de 16 a 32 px y zoom nativo real 1 a 2 a 1 verificado mediante chrome.tabs.getZoom, DPR1 a 2 y fuente ra\u00edz constante en16px; T1 a T4 ejecutadas al 200 %. Ver evidence/native-zoom/verified-native-api-final/native-zoom.json.",
-      "status": "Escalado y zoom nativo verificados en el recorrido t\u00e9cnico; criterio completo y validaci\u00f3n con personas pendientes",
-      "profiles": [
-        "Baja visi\u00f3n",
-        "Adultos mayores"
-      ],
-      "priority": 9,
-      "priorityLabel": "Alta",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H05",
-      "category": "Motora",
-      "criteria": [
-        "2.4.7"
-      ],
-      "title": "Conservar y uniformar el foco visible existente",
-      "S": 1,
-      "A": 3,
-      "before": "La comprobaci\u00f3n dedicada confirma contorno verde #136f53 de 3 px con separaci\u00f3n de 3 px; ya existe foco visible. Una lectura anterior sin esperar render fue descartada.",
-      "adjustment": "Se conserva el foco visible y se uniforma con #0f4c3a de 3 px, separaci\u00f3n de 3 px y anillo blanco; variante de colores forzados.",
-      "beforeEvidence": "output/apf3/evidence/baseline/34-primary-keyboard-focus.png",
-      "afterEvidence": "output/apf3/evidence/after/34-primary-keyboard-focus.png",
-      "verification": "Tab real, espera de render, CSS calculado y captura inspeccionada. No se atribuye un incumplimiento al APF2.",
-      "status": "Conservaci\u00f3n y mejora verificadas en control primario; criterio completo pendiente",
-      "profiles": [
-        "Usuarios de teclado",
-        "Movilidad reducida",
-        "Baja visi\u00f3n"
-      ],
-      "priority": 3,
-      "priorityLabel": "Baja",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H06",
-      "category": "Motora",
-      "criteria": [
-        "2.4.1"
-      ],
-      "title": "Falta un mecanismo expl\u00edcito para saltar navegaci\u00f3n repetida",
-      "S": 2,
-      "A": 3,
-      "before": "El recorrido Tab inicial del dashboard pasa por controles y navegaci\u00f3n antes del contenido; no hay enlace de salto expl\u00edcito.",
-      "adjustment": "Enlace Ir al contenido principal visible al foco, destino main y salto local del paciente.",
-      "beforeEvidence": "output/apf3/evidence/baseline/audit.json#17-caregiver-dashboard-keyboard",
-      "afterEvidence": "output/apf3/evidence/after/audit.json#17-caregiver-dashboard-keyboard",
-      "verification": "Secuencia Tab real automatizada y DOM. Otros mecanismos del lector no se han validado.",
-      "status": "Resuelto por mecanismo de salto; recorrido con lector pendiente",
-      "profiles": [
-        "Usuarios de teclado",
-        "Usuarios de lector de pantalla"
-      ],
-      "priority": 6,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H07",
-      "category": "Motora",
-      "criteria": [
-        "2.5.5"
-      ],
-      "title": "Objetivos peque\u00f1os para contrase\u00f1a y accesos secundarios",
-      "S": 2,
-      "A": 2,
-      "before": "Ver contrase\u00f1a de 18 x 18 px; Cerrar sesi\u00f3n y Ver citas de 16 px de alto.",
-      "adjustment": "Objetivos principales de 64 px y controles de al menos 44 px cuando corresponde; verificar enlaces secundarios.",
-      "beforeEvidence": "output/apf3/evidence/baseline/01-login.png",
-      "afterEvidence": "output/apf3/evidence/after/01-login.png",
-      "verification": "Rect\u00e1ngulos DOM en audit.json; 2.5.5 es AAA y se registra como buena pr\u00e1ctica, no requisito AA.",
-      "status": "Objetivos inspeccionados ampliados; revisi\u00f3n de todos los enlaces pendiente",
-      "profiles": [
-        "Movilidad reducida",
-        "Temblor",
-        "Uso t\u00e1ctil"
-      ],
-      "priority": 4,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H08",
-      "category": "Cognitiva",
-      "criteria": [
-        "1.3.5"
-      ],
-      "title": "Prop\u00f3sito de credenciales sin token autocomplete",
-      "S": 2,
-      "A": 1,
-      "before": "Los campos de correo y contrase\u00f1a no declaran autocomplete.",
-      "adjustment": "Tokens username y current-password para autocompletado compatible.",
-      "beforeEvidence": "output/apf3/evidence/baseline/25-input-purpose.png",
-      "afterEvidence": "output/apf3/evidence/after/25-input-purpose.png",
-      "verification": "Atributos medidos en supplemental.json; compatibilidad con gestor concreto no ensayada.",
-      "status": "Resuelto en DOM",
-      "profiles": [
-        "Dificultades cognitivas",
-        "Movilidad reducida"
-      ],
-      "priority": 2,
-      "priorityLabel": "Baja",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H09",
-      "category": "Cognitiva",
-      "criteria": [
-        "2.4.2"
-      ],
-      "title": "Mismo t\u00edtulo de documento en rutas distintas",
-      "S": 2,
-      "A": 3,
-      "before": "Paciente, dashboard y citas usan el mismo t\u00edtulo gen\u00e9rico CONTIGO.",
-      "adjustment": "T\u00edtulo de la vista y marca al navegar para distinguir pesta\u00f1as e historial.",
-      "beforeEvidence": "output/apf3/evidence/baseline/supplemental.json#route-titles",
-      "afterEvidence": "output/apf3/evidence/after/supplemental.json#route-titles",
-      "verification": "document.title tras navegaci\u00f3n real de tres rutas.",
-      "status": "Resuelto en rutas verificadas",
-      "profiles": [
-        "Usuarios de lector de pantalla",
-        "Dificultades de orientaci\u00f3n"
-      ],
-      "priority": 6,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H10",
-      "category": "Cognitiva",
-      "criteria": [
-        "3.3.4"
-      ],
-      "title": "Guardado de medici\u00f3n sin revisi\u00f3n previa",
-      "S": 3,
-      "A": 2,
-      "before": "Una lectura v\u00e1lida se guarda directamente al activar Guardar mi lectura; no hay revisi\u00f3n ni edici\u00f3n posterior en ese formulario.",
-      "adjustment": "Paso Revisar mi lectura con resumen, Volver a editar y Confirmar y guardar; se mantienen valores al volver.",
-      "beforeEvidence": "output/apf3/evidence/baseline/07-measurement-saved.png",
-      "afterEvidence": "output/apf3/evidence/after/06-measurement-review.png",
-      "verification": "Flujo ejecutado de error, correcci\u00f3n, revisi\u00f3n y guardado; no son m\u00e9tricas de usuario.",
-      "status": "Resuelto t\u00e9cnicamente en flujo probado",
-      "profiles": [
-        "Dificultades cognitivas",
-        "Adultos mayores",
-        "Movilidad reducida"
-      ],
-      "priority": 6,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H11",
-      "category": "Motora",
-      "criteria": [
-        "2.4.3"
-      ],
-      "title": "El foco permanece en navegaci\u00f3n al cambiar contenido",
-      "S": 2,
-      "A": 2,
-      "before": "Tras Medici\u00f3n, activeElement es BUTTON Medici\u00f3n; el nuevo formulario est\u00e1 antes de ese control en DOM.",
-      "adjustment": "Al cambiar vista, foco program\u00e1tico en su encabezado; confirmaciones reciben foco.",
-      "beforeEvidence": "output/apf3/evidence/baseline/28-navigation-focus.png",
-      "afterEvidence": "output/apf3/evidence/after/28-navigation-focus.png",
-      "verification": "activeElement pasa de BUTTON a H2 Medici\u00f3n. Es mejora de orientaci\u00f3n; no toda permanencia del foco incumple por s\u00ed sola.",
-      "status": "Mejora verificada t\u00e9cnicamente",
-      "profiles": [
-        "Usuarios de teclado",
-        "Usuarios de lector de pantalla"
-      ],
-      "priority": 4,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    },
-    {
-      "id": "H12",
-      "category": "Cognitiva",
-      "criteria": [
-        "3.2.3",
-        "3.3.4",
-        "4.1.3"
-      ],
-      "title": "Ayuda SOS solo en Inicio y registro inmediato",
-      "S": 2,
-      "A": 2,
-      "before": "En Medici\u00f3n no existe bot\u00f3n SOS; en Inicio un clic registra la petici\u00f3n.",
-      "adjustment": "SOS de prueba en cabecera com\u00fan, explicaci\u00f3n del alcance, Cancelar y Registrar, confirmaci\u00f3n escrita sin promesa de entrega.",
-      "beforeEvidence": "output/apf3/evidence/baseline/28-navigation-focus.png",
-      "afterEvidence": "output/apf3/evidence/after/13-sos-review.png",
-      "verification": "Conteo de SOS en Medici\u00f3n de 0 a 1; di\u00e1logo y confirmaci\u00f3n capturados. Acceso global es mejora de dise\u00f1o, no obligaci\u00f3n independiente de AA.",
-      "status": "Mejora implementada; comprensi\u00f3n con participantes pendiente",
-      "profiles": [
-        "Dificultades cognitivas",
-        "Uso sin audio",
-        "Movilidad reducida"
-      ],
-      "priority": 4,
-      "priorityLabel": "Media",
-      "severityBasis": "Estimaci\u00f3n t\u00e9cnica del auditor; no resultado observado en participante.",
-      "sourceType": "Evidencia t\u00e9cnica automatizada y revisi\u00f3n de interfaz",
-      "wcagConformanceClaim": false
-    }
-  ]
-}
+  {
+    "id": "H02",
+    "category": "Sensorial",
+    "criteria": [
+      "1.4.4",
+      "1.4.10",
+      "1.4.12"
+    ],
+    "title": "Reajuste y escala del formulario vigente por comprobar",
+    "S": 3,
+    "A": 3,
+    "before": "La nueva vista única y el formulario requieren revalidar ampliación y espaciado.",
+    "adjustment": "Escala global de texto, reajuste de una columna y controles sin pérdida de contenido.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/contrast/after-320-200-standard-weight.png",
+    "profiles": [
+      "Visual",
+      "Motor",
+      "Cognitivo"
+    ]
+  },
+  {
+    "id": "H03",
+    "category": "Sensorial",
+    "criteria": [
+      "1.1.1",
+      "1.4.1",
+      "4.1.3"
+    ],
+    "title": "Estados requieren información textual y semántica",
+    "S": 2,
+    "A": 2,
+    "before": "La representación por color o audio no basta como información de estado.",
+    "adjustment": "Mantener instrucciones, unidades, errores y confirmación mediante texto y semántica; gráficas acompañadas de valores.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/api-audit/04-measurement-error.png",
+    "profiles": [
+      "Sensorial"
+    ]
+  },
+  {
+    "id": "H04",
+    "category": "Motora",
+    "criteria": [
+      "2.1.1",
+      "2.4.1",
+      "2.4.3",
+      "2.4.7"
+    ],
+    "title": "Recorrido de teclado anterior desactualizado",
+    "S": 3,
+    "A": 3,
+    "before": "Los recorridos técnicos anteriores usaban pestañas retiradas.",
+    "adjustment": "Saltar al contenido, foco visible y revisión por teclado del recorrido actual.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/flows/01-t1-response-cancel.png",
+    "profiles": [
+      "Motora"
+    ]
+  },
+  {
+    "id": "H05",
+    "category": "Motora",
+    "criteria": [
+      "2.5.3"
+    ],
+    "title": "Nombre y área de controles secundarios por verificar",
+    "S": 2,
+    "A": 2,
+    "before": "Controles secundarios necesitan nombre y área verificables.",
+    "adjustment": "Conservar etiquetas visibles en nombre accesible y objetivos amplios; 44px es buena práctica AAA, no criterio AA.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/api-audit/01-patient-home.png",
+    "profiles": [
+      "Motora"
+    ]
+  },
+  {
+    "id": "H06",
+    "category": "Motora",
+    "criteria": [
+      "2.1.1",
+      "2.4.3",
+      "3.2.3"
+    ],
+    "title": "Acciones repartidas en pestañas retiradas",
+    "S": 2,
+    "A": 2,
+    "before": "La aplicación tenía navegación inferior y vistas ajenas a la acción inmediata.",
+    "adjustment": "Una vista paciente con medicamentos y mediciones; SOS superior y tomas registradas sin cambiar pestañas.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/api-audit/01-patient-home.png",
+    "profiles": [
+      "Motora"
+    ]
+  },
+  {
+    "id": "H07",
+    "category": "Cognitiva",
+    "criteria": [
+      "3.3.1",
+      "3.3.2",
+      "3.3.3"
+    ],
+    "title": "Terminología y recuperación de datos difíciles",
+    "S": 3,
+    "A": 3,
+    "before": "Terminología sistólica y diastólica puede dificultar la entrada.",
+    "adjustment": "Número de arriba y Número de abajo con mmHg; ayudas, validación y recuperación conservando valores.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/flows/03-t4-invalid.png",
+    "profiles": [
+      "Cognitiva"
+    ]
+  },
+  {
+    "id": "H08",
+    "category": "Cognitiva",
+    "criteria": [
+      "3.3.4",
+      "4.1.3"
+    ],
+    "title": "Riesgo de consolidar datos sin revisión",
+    "S": 3,
+    "A": 3,
+    "before": "Registrar datos sin revisarlos puede consolidar un error.",
+    "adjustment": "Ingreso, revisión y confirmación; volver a corregir sin perder valores; presión/pulso/peso.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/flows/04-t4-review.png",
+    "profiles": [
+      "Cognitiva"
+    ]
+  },
+  {
+    "id": "H09",
+    "category": "Cognitiva",
+    "criteria": [
+      "3.3.4",
+      "4.1.3"
+    ],
+    "title": "Alcance del SOS de demostración puede confundirse",
+    "S": 2,
+    "A": 2,
+    "before": "La solicitud SOS de prueba requiere alcance comprensible.",
+    "adjustment": "Revisión y cancelación antes del registro; resultado no afirma contacto a emergencias ni recepción efectiva.",
+    "verification": "Consultar evidencia del corte current-2026-11-03; completar revisión manual y sesiones.",
+    "status": "Implementación local; comprobación técnica limitada al registro enlazado. Cierre integral pendiente.",
+    "beforeEvidence": "output/apf3/history/2026-11-03-pre-current-refresh/ENTREGA.md (antecedente histórico; no comparación experimental)",
+    "afterEvidence": "output/apf3/evidence/current-2026-11-03/flows/02-t2-sos-scope.png",
+    "profiles": [
+      "Cognitiva"
+    ]
+  }
+]

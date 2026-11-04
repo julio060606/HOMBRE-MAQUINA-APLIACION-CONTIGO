@@ -1,4 +1,4 @@
-.shell { --shell-ink: #172e3b; --shell-green: #12654f; --shell-border: #dfe7eb; display: grid; grid-template-columns: 250px minmax(0, 1fr); grid-template-rows: auto 1fr; min-height: calc(100dvh - 44px); background: #f4f7f8; color: var(--shell-ink); }
+.shell { --shell-ink: #172e3b; --shell-green: #12654f; --shell-border: #dfe7eb; display: grid; grid-template-columns: 250px minmax(0, 1fr); grid-template-rows: auto 1fr; min-height: 100dvh; background: #f4f7f8; color: var(--shell-ink); }
 .sidebar { grid-column: 1; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: 2rem; padding: 1.65rem 1.1rem 1.3rem; background: #fff; border-right: 1px solid var(--shell-border); min-width: 0; }
 .brand { display: flex; align-items: center; gap: .7rem; padding: 0 .35rem .5rem; color: var(--shell-green); text-decoration: none; }
 .brandMark { display: grid; place-items: center; width: 43px; height: 43px; flex-shrink: 0; background: #e6f2ec; border-radius: 13px; }
@@ -77,3 +77,73 @@
   .navigation { grid-template-columns: minmax(0, 1fr); }
   .topbar, .sidebar, .main { padding-left: .875rem; padding-right: .875rem; }
 }
+/* A compact, familiar header; personal account actions stay secondary. */
+.shell, .shell * { box-sizing: border-box; }
+.headerContent { justify-content: space-between; align-items: start; gap: 1rem; }
+.patientPicker { flex: 1 1 16rem; max-width: 26rem; }
+.patientPicker > span:first-child { font-size: .8125rem; color: #405765; }
+.selectWrap select { min-height: 3rem; font-size: 1rem; border-color: #74887e; }
+.menuButton, .accountMenu summary, .logoutButton { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .625rem .875rem; border: 1px solid #74887e; border-radius: .75rem; background: #fff; color: #304858; font: inherit; font-size: .875rem; font-weight: 650; line-height: 1.5; cursor: pointer; }
+.menuButton svg, .accountMenu summary svg, .logoutButton svg { flex-shrink: 0; }
+.accountMenu { min-width: 0; max-width: 100%; }
+.accountMenu summary { list-style: none; }
+.accountMenu summary::-webkit-details-marker { display: none; }
+.accountOptions { display: grid; gap: .75rem; padding: 1rem 0 .25rem; max-width: 20rem; }
+.accountIdentity { display: grid; gap: .25rem; color: #304858; overflow-wrap: anywhere; }
+.accountIdentity strong { font-size: .875rem; }
+.accountIdentity span { font-size: .8125rem; }
+.logoutButton, .accountOptions .linkButton { width: 100%; justify-content: flex-start; min-height: 3rem; }
+.accessTools { margin-top: 1rem; padding-top: .75rem; border-top: 1px solid #dfe7eb; min-width: 0; }
+.navLink { min-height: 3rem; font-size: .9375rem; color: #405765; }
+.groupTitle { font-size: .75rem; letter-spacing: .06em; }
+.projectNote { display: block; }
+.projectNote summary { display: flex; align-items: center; gap: .5rem; min-height: 2.75rem; font-size: .8125rem; font-weight: 650; cursor: pointer; }
+.projectNote summary svg { flex-shrink: 0; }
+.projectNote p { font-size: .8125rem; }
+@media (max-width: 599px) {
+  .accountMenu { width: 100%; }
+  .accountMenu summary { width: 100%; justify-content: space-between; }
+  .accountOptions { max-width: none; }
+}
+/* At enlarged reading sizes, use the same spacious menu as on a phone. */
+:global(.site-expanded-text) .shell { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr; }
+:global(.site-expanded-text) .topbar { grid-column: 1; grid-row: 1; padding: .875rem; }
+:global(.site-expanded-text) .mobileBar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+:global(.site-expanded-text) .mobileBrand { display: flex; align-items: center; gap: .5rem; color: #12654f; text-decoration: none; font-weight: 800; }
+:global(.site-expanded-text) .sidebar { display: none; grid-column: 1; grid-row: 2; padding: .875rem; border-right: 0; border-bottom: 1px solid var(--shell-border); }
+:global(.site-expanded-text) .sidebar[data-open='true'] { display: flex; }
+:global(.site-expanded-text) .sidebar .brand { display: none; }
+:global(.site-expanded-text) .navigation { grid-template-columns: minmax(0, 1fr); }
+:global(.site-expanded-text) .main { grid-column: 1; grid-row: 3; padding: 1rem .875rem; }
+/* Preserve the chosen text size; recover width instead of shrinking the words. */
+:global(.site-expanded-text) .topbar { padding: 14px; }
+:global(.site-expanded-text) .main { padding: 20px 10px; }
+:global(.site-expanded-text) .selectWrap select { padding: 12px 40px 12px 12px; }
+/* A stable navigation rail and a compact account/patient header. */
+.shell { background:#f3f7f5; }
+.sidebar { position:sticky; top:0; height:100dvh; max-height:100dvh; overflow-y:auto; align-self:start; gap:24px; padding:24px 16px; }
+.navigation { gap:24px; }
+.navLink { min-height:48px; padding:12px; gap:12px; border:1px solid transparent; font-size:.9375rem; }
+.navLink.active { border-color:#b6d3c1; background:#edf6f0; color:#145b40; }
+.sidebarFooter { margin-top:auto; display:grid; gap:14px; }
+.homeLink { display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:44px; padding:10px 12px; color:#3f6551; font-size:.875rem; font-weight:650; text-decoration:none; line-height:1.5; border:1px solid #cadcd0; border-radius:10px; }
+.projectNote { margin:0; padding:8px 12px; border-color:#dbe7df; }
+.projectNote summary { min-height:44px; font-size:.75rem; }
+.topbar { padding:20px 28px 12px; }
+.accessTools { margin-top:12px; padding-top:8px; }
+.patientPicker { max-width:380px; gap:6px; }
+.selectWrap select { min-height:48px; padding:10px 40px 10px 12px; border-radius:12px; background:#f8fbf9; }
+.patientPicker > span:first-child { font-size:.8125rem; font-weight:600; }
+.accountMenu summary { min-height:48px; padding:10px 12px; font-size:.875rem; }
+.main { padding:24px 28px 36px; }
+.breadcrumb { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:0 0 16px; font-size:.8125rem; line-height:1.5; color:#506b5b; }
+.breadcrumb a { display:inline-flex; align-items:center; min-height:44px; color:#3b6350; text-decoration:none; }
+.breadcrumb span { color:#173f2b; font-weight:650; }
+.breadcrumb svg { flex-shrink:0; }
+.mobileBrand small { display:block; font-size:.75rem; color:#527461; font-family:Inter,system-ui,sans-serif; line-height:1.5; font-weight:550; letter-spacing:normal; }
+@media(max-width:1023px) { .sidebar { position:static; height:auto; max-height:none; overflow:visible; padding:16px; } .topbar { padding:16px; } .main { padding:20px 16px 28px; } .mobileBar { gap:12px; flex-wrap:wrap; } .navigation { gap:20px; } .sidebarFooter { margin-top:0; } }
+@media(max-width:599px) { .headerContent { gap:12px; } .accountMenu { width:auto; } .accountOptions { width:100%; } .patientPicker { flex-basis:100%; max-width:none; } .breadcrumb { margin-bottom:12px; } }
+:global(.site-expanded-text) .sidebar { position:static; height:auto; max-height:none; overflow:visible; padding:16px; }
+:global(.site-expanded-text) .sidebarFooter { margin-top:0; }
+:global(.site-expanded-text) .main { padding:20px 10px; }
+:global(.site-expanded-text) .navLink,:global(.site-expanded-text) .homeLink { padding:10px 12px; gap:12px; }

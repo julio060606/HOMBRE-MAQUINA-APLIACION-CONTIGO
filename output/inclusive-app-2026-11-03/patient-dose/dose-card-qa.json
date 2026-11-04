@@ -1,0 +1,351 @@
+{
+  "complete": true,
+  "method": "Headless Chrome privado, API/PostgreSQL local solo lecturas y sesiones sintéticas propias. Tarjeta de dosis actual; no confirma tomas ni cambios clínicos.",
+  "layouts": [
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": false,
+      "geometry": {
+        "client": 294,
+        "scroll": 294,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 262
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 262
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-320-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": true,
+      "geometry": {
+        "client": 294,
+        "scroll": 294,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 262
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 262
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-320-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": false,
+      "geometry": {
+        "client": 270,
+        "scroll": 270,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 137,
+            "width": 238
+          },
+          {
+            "name": "No la tomé",
+            "height": 137,
+            "width": 238
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-320-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": true,
+      "geometry": {
+        "client": 270,
+        "scroll": 270,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 137,
+            "width": 238
+          },
+          {
+            "name": "No la tomé",
+            "height": 137,
+            "width": 238
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-320-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 390,
+      "scale": "100",
+      "contrast": false,
+      "geometry": {
+        "client": 364,
+        "scroll": 364,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 332
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 332
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-390-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 390,
+      "scale": "100",
+      "contrast": true,
+      "geometry": {
+        "client": 364,
+        "scroll": 364,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 332
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 332
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-390-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 390,
+      "scale": "200",
+      "contrast": false,
+      "geometry": {
+        "client": 340,
+        "scroll": 340,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 128,
+            "width": 308
+          },
+          {
+            "name": "No la tomé",
+            "height": 128,
+            "width": 308
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-390-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 390,
+      "scale": "200",
+      "contrast": true,
+      "geometry": {
+        "client": 340,
+        "scroll": 340,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 128,
+            "width": 308
+          },
+          {
+            "name": "No la tomé",
+            "height": 128,
+            "width": 308
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-390-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 430,
+      "scale": "100",
+      "contrast": false,
+      "geometry": {
+        "client": 404,
+        "scroll": 404,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 372
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 372
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-430-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 430,
+      "scale": "100",
+      "contrast": true,
+      "geometry": {
+        "client": 404,
+        "scroll": 404,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 64,
+            "width": 372
+          },
+          {
+            "name": "No la tomé",
+            "height": 64,
+            "width": 372
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-430-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 430,
+      "scale": "200",
+      "contrast": false,
+      "geometry": {
+        "client": 380,
+        "scroll": 380,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 128,
+            "width": 348
+          },
+          {
+            "name": "No la tomé",
+            "height": 128,
+            "width": 348
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-430-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 430,
+      "scale": "200",
+      "contrast": true,
+      "geometry": {
+        "client": 380,
+        "scroll": 380,
+        "buttons": [
+          {
+            "name": "Ya la tomé",
+            "height": 128,
+            "width": 348
+          },
+          {
+            "name": "No la tomé",
+            "height": 128,
+            "width": 348
+          }
+        ],
+        "heading": "Losartán"
+      },
+      "screenshot": "dose-430-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ],
+  "blockedDomainWrites": 0,
+  "checks": [
+    "Instrucciones y respuestas visibles antes de abrir metadatos clínicos.",
+    "Tab recorre Ya la tomé, No la tomé y Ver detalles; Enter abre/cierra detalle.",
+    "Botones>=64px, sin desborde horizontal en12 combinaciones."
+  ],
+  "limitations": [
+    "No sustituye participantes ni lectura con tecnología de apoyo.",
+    "Escala del producto no es zoom nativo del navegador."
+  ],
+  "source": [
+    {
+      "file": "frontend/src/features/patient-app/DoseCard.tsx",
+      "sha256": "51ac7a8b1f99c1a5b13bdc0b9d25149f63b854579cdd93cf01003ab765431f66"
+    },
+    {
+      "file": "frontend/src/features/patient-app/DoseCard.module.css",
+      "sha256": "b34cd970e63f1b8ef694fe9642b39dc9c34386b81c1775ac06b5a3f86dcf1f27"
+    }
+  ],
+  "finalizedAt": "2026-11-03T21:45:44.023Z"
+}

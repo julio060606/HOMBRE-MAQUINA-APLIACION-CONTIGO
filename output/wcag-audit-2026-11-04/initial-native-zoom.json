@@ -1,0 +1,199 @@
+{
+  "startedAt": "2026-11-04T07:58:14.095Z",
+  "method": "chrome.tabs.setZoom/getZoom, perfil Chromium temporal, ventana 1280×960, viewport:null. Sin CSS zoom ni emulación de DPR.",
+  "measurements": [
+    {
+      "id": "zoom-login-100",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/login",
+        "zoomFactor": 1,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:15.114Z"
+      },
+      "metrics": {
+        "url": "/login",
+        "title": "Iniciar sesión · CONTIGO",
+        "innerWidth": 1262,
+        "innerHeight": 864,
+        "devicePixelRatio": 1,
+        "fontSize": "16px",
+        "width": 1262,
+        "cssZoom": "1",
+        "h1": "Iniciar sesión",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-login-100.png"
+    },
+    {
+      "id": "zoom-login-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/login",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:15.393Z"
+      },
+      "metrics": {
+        "url": "/login",
+        "title": "Iniciar sesión · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Iniciar sesión",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-login-200.png"
+    },
+    {
+      "id": "zoom-landing-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/landing",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:15.825Z"
+      },
+      "metrics": {
+        "url": "/landing",
+        "title": "El cuidado diario,más cerca de ti. · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "El cuidado diario,más cerca de ti.",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-landing-200.png"
+    },
+    {
+      "id": "zoom-clinic-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/clinic",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:16.287Z"
+      },
+      "metrics": {
+        "url": "/clinic",
+        "title": "Tu salud merece una atención cercana. · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Tu salud merece una atención cercana.",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-clinic-200.png"
+    },
+    {
+      "id": "zoom-patient-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:16.858Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-patient-200.png"
+    },
+    {
+      "id": "zoom-measurement-review-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:17.155Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-measurement-review-200.png"
+    },
+    {
+      "id": "zoom-reading-dialog-200",
+      "native": {
+        "tabId": 338614306,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:58:17.436Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-reading-dialog-200.png"
+    }
+  ],
+  "blockedWrites": [],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Salir', exact: true })\u001b[22m\n",
+  "complete": false,
+  "finishedAt": "2026-11-04T07:58:47.504Z"
+}

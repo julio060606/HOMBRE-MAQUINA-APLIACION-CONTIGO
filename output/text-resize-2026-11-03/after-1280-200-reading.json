@@ -1,0 +1,23 @@
+{
+  "heading": {
+    "text": "Opciones de lectura",
+    "width": 364,
+    "height": 114.375,
+    "fontSize": "44px"
+  },
+  "dialog": {
+    "width": 396,
+    "height": 874
+  },
+  "source": [
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.tsx",
+      "sha256": "8a15e352c1c40bb2eee54d2153f2f7fd1ed2da2b52e84c7a8724d8b0e0b2a2cc"
+    },
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.module.css",
+      "sha256": "c4fd3d7c1b6dbd1055bf6ba0b6916b3affa2bd1263d17caadfa5d10946d0fd76"
+    }
+  ],
+  "capturedAt": "2026-11-03T23:49:46.073Z"
+}

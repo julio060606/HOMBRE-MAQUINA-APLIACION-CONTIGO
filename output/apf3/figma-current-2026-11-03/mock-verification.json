@@ -1,0 +1,60 @@
+{
+  "status": "MOCK STRUCTURAL VERIFICATION ONLY; NOT REAL FIGMA",
+  "testedAt": "2026-11-03T20:54:41.915Z",
+  "pages": [
+    "00 Leyenda y resumen",
+    "01 Antes (v2.0)",
+    "02 Después (v3.0 objetivo AA)",
+    "03 Kit accesible",
+    "04 Anotaciones de accesibilidad",
+    "05 Variante alto contraste y texto ampliado"
+  ],
+  "nativeScreens": 85,
+  "scopeIds": [
+    "patient-home",
+    "patient-recorded",
+    "patient-not-taken",
+    "patient-correction-taken",
+    "patient-correction-not-taken",
+    "measurement-input",
+    "measurement-error",
+    "measurement-review",
+    "measurement-saved",
+    "weight-input",
+    "weight-review",
+    "sos-review",
+    "sos-result",
+    "caregiver-summary",
+    "caregiver-treatment",
+    "caregiver-appointments",
+    "reading-options"
+  ],
+  "componentSets": [
+    {
+      "name": "CONTIGO actual/Botón",
+      "states": 12
+    },
+    {
+      "name": "CONTIGO actual/Campo texto numérico",
+      "states": 12
+    }
+  ],
+  "clickableNodes": 513,
+  "embeddedRealCaptures": 20,
+  "currentApiCaptures": 15,
+  "checks": [
+    "Existing pages preserved",
+    "Current single-view contains medication,measurement and appointments",
+    "Retired patient navigation absent",
+    "Reaction destinations exist on same page",
+    "Correction cancellation preserves prior no-taken state",
+    "Review has correct heading and edit control",
+    "Current token #74887E present",
+    "Embedded assets have PNG signatures"
+  ],
+  "limitations": [
+    "No actual Figma execution,layout rendering,Stark or publication",
+    "No participant validation or NVDA evidence generated"
+  ],
+  "message": "Preparadas 6 páginas y 85 pantallas nativas. Revisar Figma y ejecutar Stark; no se afirma validación."
+}

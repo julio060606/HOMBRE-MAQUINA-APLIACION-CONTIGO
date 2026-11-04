@@ -8,7 +8,8 @@ const out=path.join(root,'output/apf3');
 const qa=path.join(out,'qa');
 await fs.mkdir(qa,{recursive:true});
 const data=JSON.parse(await fs.readFile(path.join(out,'deliverables-data.json'),'utf8'));
-const applicabilityReview=JSON.parse(await fs.readFile(path.join(out,'evidence/applicability-review.json'),'utf8').catch(()=>'{}'));
+const current=data.revision==='current-2026-11-03';
+const applicabilityReview=current?{}:JSON.parse(await fs.readFile(path.join(out,'evidence/applicability-review.json'),'utf8').catch(()=>'{}'));
 const font='Arial';
 const color={ink:'#0F172A',green:'#14532D',muted:'#475569',light:'#F1F5F9',line:'#CBD5E1',input:'#FFFBEB'};
 function human(v){
@@ -50,15 +51,15 @@ async function workbook(){
   }
   const rs=sheets.Resumen;style(rs,30,6);rs.getRange('A1').values=[['CONTIGO APF3 seguimiento de evidencia']];
   rs.getRange('A3').values=[['Fecha '+data.date+'. No se declara conformidad AA completa.']];
-  grid(rs,['Evidencia','Versión2.0','Versión3.0','Interpretación'],[
-    ['Pantallas o estados técnicos',base.screens,after.screens,'Cada estado registrado conserva captura y JSON.'],
-    ['Incidencias de reglas axe',base.rules,after.rules,'Una regla puede repetirse en varias pantallas. No son criterios WCAG únicos.'],
-    ['Nodos señalados por axe',base.nodes,after.nodes,'No representan usuarios ni tareas fallidas.'],
+  grid(rs,current?['Evidencia','Histórico fuera del corte','Actual','Interpretación']:['Evidencia','Versión2.0','Versión3.0','Interpretación'],[
+    ['Pantallas o estados técnicos',current?null:base.screens,after.screens,'Cada estado registrado conserva captura y JSON.'],
+    ['Incidencias de reglas axe',current?null:base.rules,after.rules,'Una regla puede repetirse en varias pantallas. No son criterios WCAG únicos.'],
+    ['Nodos señalados por axe',current?null:base.nodes,after.nodes,'No representan usuarios ni tareas fallidas.'],
     ['Participantes con sesión aportada',null,null,'No ejecutado. Faltan sesiones y consentimientos.'],
     ['Figma y Stark',null,null,'Pendiente archivo nativo y recorrido con capturas.'],
-    ['Lector de pantalla',null,null,'NVDA 2026.3 real: T1,T2,T4 y navegación/encabezados de T3. Foco técnico programado. Lectura completa de T3 pendiente.'],
-    ['Zoom nativo del navegador',null,null,'Verificado por chrome.tabs.getZoom de1 a2 a1. T1 aT4 al200%. Perfil aislado de Chromium con viewport de escritorio.'],
-    ['Contraste indeterminado',null,null,'3reglas axe pendientes. Recorrido independiente:43nodos,31límites conservadores suficientes y12inconclusos.'],
+    ['Lector de pantalla',null,null,current?data.status.screenReader:'NVDA 2026.3 real: T1,T2,T4 y navegación/encabezados de T3. Foco técnico programado. Lectura completa de T3 pendiente.'],
+    ['Zoom nativo del navegador',null,null,current?data.status.zoom:'Verificado por chrome.tabs.getZoom de1 a2 a1. T1 aT4 al200%. Perfil aislado de Chromium con viewport de escritorio.'],
+    ['Contraste indeterminado',null,null,current?'Consultar current-2026-11-03/contrast/after.json. No reutilizar el conteo histórico de43 nodos.':'3reglas axe pendientes. Recorrido independiente:43nodos,31límites conservadores suficientes y12inconclusos.'],
   ],5,[34,18,18,80]);
   rs.getRange('A5:D13').format.autofitRows();
   rs.getRange('A16').values=[['Matriz: 50criterios A/AA,26núcleo. Sin evidencia completa el estado permanece parcial o pendiente.']];
@@ -78,7 +79,7 @@ async function workbook(){
     '1.3.5':'Verificar tokens autocomplete para los datos personales que correspondan.',
     '1.4.1':'Revisar estados sin color y sin audio. Conservar texto e iconos equivalentes.',
     '1.4.3':'Verificar todas las parejas texto fondo y todos los estados, incluido alto contraste.',
-    '1.4.4':'Zoom nativo al200% verificado por API en T1 aT4. Revisar todos los estados y funcionalidades del alcance, además de la ventana técnica probada.',
+    '1.4.4':current?'Escala de lectura 100/200% probada en el formulario vigente. Completar zoom nativo del navegador y todos los estados actuales.':'Zoom nativo al200% verificado por API en T1 aT4. Revisar todos los estados y funcionalidades del alcance, además de la ventana técnica probada.',
     '1.4.5':'Confirmar que no se emplea imagen de texto cuando puede usarse texto real.',
     '1.4.10':'Revisar el interior de cada contenedor además del ancho del documento.',
     '1.4.11':'Medir límites de campos, estados, iconos y foco contra superficies adyacentes.',
@@ -148,8 +149,9 @@ async function workbook(){
       if(c.id==='1.4.3'&&data.technical?.contrast){const nodes=data.technical.contrast.nodes.filter(n=>n.screen===screen.id);if(nodes.length)evidence+=` Contraste independiente de ${nodes.length} nodo(s):${nodes.filter(n=>n.contrast.result==='Conservative bounding-box contrast passes').length} límite(s) conservador(es) suficiente(s),${nodes.filter(n=>n.contrast.result!=='Conservative bounding-box contrast passes').length} inconcluso(s). Ver evidence/contrast-review/results.json; no equivale a conformidad global.`;}
       if(applicability){evidence=applicability.observation+' Fuentes: '+applicability.sources.join('; ')+'. Consultas rg y decisión específica: evidence/applicability-review.json # '+screen.id+' / '+c.id;}
       const s=applies==='No'?null:(finding?.S??(av.length?(c.id==='1.4.3'?3:2):null)),a=applies==='No'?null:(finding?.A??(av.length?3:null));
+      if(current){evidence+=' Corte actual: '+screen.sourceEvidence+'. '+data.status.keyboard;}
       matrix.push([`M${String(matrix.length+1).padStart(4,'0')}`,c.principle,c.id,c.name,c.level,c.core?'Sí':'No',screen.id,screen.state??'',applies,why,
-        applicability?'Inspección directa de fuentes y búsquedas rg registradas':review?'axe + inspección directa del patrón fuente; recorrido con TA pendiente':'Automático y revisión manual pendiente',bv.length?'No cumple en comprobación automática':'Sin fallo automático detectado',result,
+        applicability?'Inspección directa de fuentes y búsquedas rg registradas':review?'axe + inspección directa del patrón fuente; recorrido con TA pendiente':'Automático y revisión manual pendiente',current?'Fuera del corte actual; no se reetiqueta evidencia histórica':bv.length?'No cumple en comprobación automática':'Sin fallo automático detectado',result,
         evidence,s,a,null,null,finding?.afterEvidence??post?.screenshot??before?.screenshot??'',applies==='No'?'No requiere ajuste de este criterio en el estado revisado. Revalidar ante cambios.':finding?finding.id+' '+finding.status:post?'Implementación disponible. Completar prueba manual.':'Pendiente de evidencia v3.0',
         applies==='No'?'No aplica en este estado':finding?.profiles?.join(', ')??({'Perceptible':'Visual y auditivo según contenido. Impacto inferido del criterio, no participante observado.','Operable':'Motor, teclado y visual según contenido. Impacto inferido del criterio.','Comprensible':'Cognitivo, aprendizaje y lector según contenido. Impacto inferido del criterio.','Robusto':'Uso de tecnologías de apoyo. Impacto inferido del criterio.'}[c.principle])]);
     }
@@ -166,11 +168,11 @@ async function workbook(){
   const hs=sheets.Hallazgos;style(hs,rawFindings.length+7,13);hs.getRange('A1').values=[['Hallazgos técnicos y prioridad']];
   grid(hs,['ID','Categoría','Criterio','Barrera','S','A','SxA','Prioridad','Antes','Ajuste','Estado','Evidencia antes','Evidencia después'],rawFindings.map(f=>[f.id,f.category,f.criteria.join(', '),f.title,f.S,f.A,null,null,f.before,f.adjustment,f.status,f.beforeEvidence,f.afterEvidence]),5,[11,18,20,58,8,8,10,13,72,72,56,72,72]);
   hs.getRange(`G6:H${rawFindings.length+5}`).formulas=rawFindings.map((_,i)=>{const r=i+6;return[`=E${r}*F${r}`,`=IF(G${r}>=8,"Alta",IF(G${r}>=4,"Media","Baja"))`]});
-  hs.getRange(`A6:M${rawFindings.length+5}`).format.rowHeight=90;
+  hs.getRange(`A6:M${rawFindings.length+5}`).format.autofitRows();
 
   const ts=sheets.Trazabilidad;style(ts,25,10);ts.getRange('A1').values=[['Ajustes inclusivos y nueva verificación']];
   grid(ts,['ID','Categoría','CriterioWCAG','Antes','Cambio','Nueva comprobación','Estado','Archivo','Evidencia antes','Evidencia después'],data.adjustments.map(x=>[x.id,x.category,x.criteria,x.before,x.change,x.verify,x.status??'Implementado o propuesto según código. Cierre de evidencia pendiente.',x.file,x.beforeEvidence??'',x.afterEvidence??'']),5,[12,18,28,50,65,65,50,65,72,72]);
-  ts.getRange('A6:J20').format.rowHeight=100;
+  ts.getRange('A6:J20').format.autofitRows();
 
   const ss=sheets.Sesiones;style(ss,48,18);ss.getRange('A1').values=[['Registro de sesiones por tarea y versión']];
   ss.getRange('A3').values=[['Solo ingresar datos de sesiones consentidas.1significa autónomo;0significa con ayuda fallo o abandono. No incluir diagnósticos ni identidad.']];
@@ -236,15 +238,16 @@ async function workbook(){
   const rightPreview=await wb.render({sheetName:'Matriz WCAG',range:'N5:U8',scale:1.3,format:'png'});await fs.writeFile(path.join(qa,'xlsx-Matriz-evidencia.png'),new Uint8Array(await rightPreview.arrayBuffer()));
   const applicabilityPreview=await wb.render({sheetName:'Matriz WCAG',range:'G15:N25',scale:1.3,format:'png'});await fs.writeFile(path.join(qa,'xlsx-Matriz-aplicabilidad.png'),new Uint8Array(await applicabilityPreview.arrayBuffer()));
   const applicabilityChecks=matrix.filter(r=>['1.3.5','1.4.13','2.1.4','2.5.4'].includes(r[2]));
-  if(applicabilityChecks.length!==92||applicabilityChecks.filter(r=>r[8]==='Sí').length!==1||applicabilityChecks.filter(r=>r[8]==='No').length!==91)throw Error('Unexpected applicability decision totals.');
+  if(!current&&(applicabilityChecks.length!==92||applicabilityChecks.filter(r=>r[8]==='Sí').length!==1||applicabilityChecks.filter(r=>r[8]==='No').length!==91))throw Error('Unexpected applicability decision totals.');
   if(applicabilityChecks.some(r=>r[8]==='No'&&r[12]!=='No aplica'))throw Error('Non-applicable row must not claim compliance or a failure.');
-  await fs.writeFile(path.join(qa,'applicability-validation.json'),JSON.stringify({rows:92,applies:1,notApplicable:91,source:'evidence/applicability-review.json',noNonApplicablePassClaims:true},null,2));
-  await (await SpreadsheetFile.exportXlsx(wb)).save(path.join(out,'APF3_Matriz_y_validacion_CONTIGO.xlsx'));
+  await fs.writeFile(path.join(qa,'applicability-validation.json'),JSON.stringify({rows:applicabilityChecks.length,applies:applicabilityChecks.filter(r=>r[8]==='Sí').length,notApplicable:applicabilityChecks.filter(r=>r[8]==='No').length,source:current?'Revisión de alcance actual; criterios adicionales pendientes':'evidence/applicability-review.json',noNonApplicablePassClaims:true},null,2));
+  await (await SpreadsheetFile.exportXlsx(wb)).save(path.join(out,current?'APF3_CONTIGO_Matriz.xlsx':'APF3_Matriz_y_validacion_CONTIGO.xlsx'));
   await fs.writeFile(path.join(qa,'workbook-summary.json'),JSON.stringify({rows:matrix.length,criteria:50,core:26,sheets:names},null,2));
   console.log(JSON.stringify({xlsx:'saved',matrixRows:matrix.length,sheets:names.length}));
 }
 
 async function presentation(){
+  if(current){const {buildCurrentPresentation}=await import('./current_delivery_office.mjs');return buildCurrentPresentation({Presentation,PresentationFile,data,root,out,qa,font,color});}
   const pres=Presentation.create({slideSize:{width:1280,height:720}});
   function text(slide,value,left,top,width,height,size=28,bold=false,colorValue=color.ink){
     const s=slide.shapes.add({geometry:'textbox',position:{left,top,width,height},fill:'none',line:{fill:'none',width:0}});

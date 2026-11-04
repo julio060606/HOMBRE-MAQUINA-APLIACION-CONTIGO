@@ -1,0 +1,211 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T21:50:59.788Z",
+  "origin": "http://127.0.0.1:3014",
+  "mode": "Vite temporal3014, VITE_USE_MOCKS=true solo en proceso; contextos Chrome privados con IndexedDB sintético.",
+  "limitations": [
+    "No escribe en PostgreSQL: todas las solicitudes API están bloqueadas.",
+    "Prueba técnica con teclado; no lector nativo ni sesiones con participantes.",
+    "La escala del producto no equivale al zoom nativo."
+  ],
+  "cases": [
+    {
+      "width": 390,
+      "scale": "100",
+      "checks": [
+        {
+          "task": "T1",
+          "passed": true,
+          "result": "Una toma sintética y una corrección explícita con motivo; cancelar conserva registro y devuelve foco.",
+          "initialTaken": 0,
+          "changedDoseId": "med_001:1:2026-11-03:08:00",
+          "corrected": {
+            "id": "med_001:1:2026-11-03:08:00",
+            "status": "NOT_TAKEN",
+            "version": 3,
+            "reason": "Marqué tomada por error de prueba."
+          }
+        },
+        {
+          "task": "T4",
+          "passed": true,
+          "result": "Error visible y asociado al campo; corregir, revisar y volver conservan datos; un guardado explícito120/80 sin pulso y foco visible dentro de la app.",
+          "initialPressures": 7,
+          "finalPressures": 8,
+          "focused": {
+            "tag": "P",
+            "testid": null,
+            "name": "Medición guardada. Tu cuidador ya puede consultarla."
+          }
+        }
+      ],
+      "screenshots": [
+        "390-100-01-inicio.png",
+        "390-100-02-toma-confirmada.png",
+        "390-100-03-correccion-confirmada.png",
+        "390-100-04-medicion-error.png",
+        "390-100-05-medicion-revision.png",
+        "390-100-06-medicion-guardada.png"
+      ],
+      "steps": [
+        {
+          "name": "T1 declarar toma por teclado",
+          "geometry": {
+            "inside": true,
+            "unobscured": true,
+            "control": {
+              "x": 29,
+              "y": 563.03125,
+              "width": 332,
+              "height": 64,
+              "top": 563.03125,
+              "right": 361,
+              "bottom": 627.03125,
+              "left": 29
+            },
+            "screen": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 1000,
+              "top": 0,
+              "right": 390,
+              "bottom": 1000,
+              "left": 0
+            }
+          },
+          "focused": {
+            "tag": "DIV",
+            "testid": null,
+            "name": "Losartán, 08:00: registraste que la tomaste.Si te equivocaste, puedes corregir la respuesta en «Tomas registradas hoy».Revisar mi respuestaEntendido"
+          }
+        }
+      ],
+      "complete": true
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "checks": [
+        {
+          "task": "T1",
+          "passed": true,
+          "result": "Una toma sintética y una corrección explícita con motivo; cancelar conserva registro y devuelve foco.",
+          "initialTaken": 0,
+          "changedDoseId": "med_001:1:2026-11-03:08:00",
+          "corrected": {
+            "id": "med_001:1:2026-11-03:08:00",
+            "status": "NOT_TAKEN",
+            "version": 3,
+            "reason": "Marqué tomada por error de prueba."
+          }
+        },
+        {
+          "task": "T4",
+          "passed": true,
+          "result": "Error visible y asociado al campo; corregir, revisar y volver conservan datos; un guardado explícito120/80 sin pulso y foco visible dentro de la app.",
+          "initialPressures": 7,
+          "finalPressures": 8,
+          "focused": {
+            "tag": "P",
+            "testid": null,
+            "name": "Medición guardada. Tu cuidador ya puede consultarla."
+          }
+        }
+      ],
+      "screenshots": [
+        "320-200-01-inicio.png",
+        "320-200-02-toma-confirmada.png",
+        "320-200-03-correccion-confirmada.png",
+        "320-200-04-medicion-error.png",
+        "320-200-05-medicion-revision.png",
+        "320-200-06-medicion-guardada.png"
+      ],
+      "steps": [
+        {
+          "name": "T1 declarar toma por teclado",
+          "geometry": {
+            "inside": true,
+            "unobscured": true,
+            "control": {
+              "x": 41,
+              "y": 431.453125,
+              "width": 238,
+              "height": 137,
+              "top": 431.453125,
+              "right": 279,
+              "bottom": 568.453125,
+              "left": 41
+            },
+            "screen": {
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 1000,
+              "top": 0,
+              "right": 320,
+              "bottom": 1000,
+              "left": 0
+            }
+          },
+          "focused": {
+            "tag": "DIV",
+            "testid": null,
+            "name": "Losartán, 08:00: registraste que la tomaste.Si te equivocaste, puedes corregir la respuesta en «Tomas registradas hoy».Revisar mi respuestaEntendido"
+          }
+        }
+      ],
+      "complete": true
+    }
+  ],
+  "apiRequests": [],
+  "errors": [],
+  "source": [
+    {
+      "file": "frontend/src/features/patient-app/PatientAppPage.tsx",
+      "sha256": "4a26f495d8972023be47b2ff3d9c64a8db70e1feefeca13f70ab8c6de9aa0d05"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientAppContent.tsx",
+      "sha256": "e377bbe589c6cdc9a1da546cf38673a721dae843b9b56021b1f1a4d83f72ecf8"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientShell.module.css",
+      "sha256": "058236bfad4031171339edd874247cebf9dd5efade8538a03ffa8a7f41f34501"
+    },
+    {
+      "file": "frontend/src/features/patient-app/DoseCard.tsx",
+      "sha256": "51ac7a8b1f99c1a5b13bdc0b9d25149f63b854579cdd93cf01003ab765431f66"
+    },
+    {
+      "file": "frontend/src/features/patient-app/DoseCard.module.css",
+      "sha256": "b34cd970e63f1b8ef694fe9642b39dc9c34386b81c1775ac06b5a3f86dcf1f27"
+    },
+    {
+      "file": "frontend/src/features/patient-app/MeasurementForm.tsx",
+      "sha256": "22aafe7473969a7bec2491aca05c87e5f3d1a46403d61db1e37cfcbd772e55ff"
+    },
+    {
+      "file": "frontend/src/features/patient-app/MeasurementForm.module.css",
+      "sha256": "75b0272046e596375290bb0049a8137f5b5353d48ce80ab1cfe6e3bb46cff08a"
+    },
+    {
+      "file": "frontend/src/components/simulator/PhoneDeviceFrame.tsx",
+      "sha256": "42bc53be1ee69f31b8f4f1b600d00f935b2a79b8385cc3388b6bfe7c410530f5"
+    },
+    {
+      "file": "frontend/src/components/simulator/PhoneDeviceFrame.module.css",
+      "sha256": "43a7e208a0515b38add430173c06483f14ffff1d6fb0aacba82f3220bea7c28f"
+    },
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.tsx",
+      "sha256": "8a15e352c1c40bb2eee54d2153f2f7fd1ed2da2b52e84c7a8724d8b0e0b2a2cc"
+    },
+    {
+      "file": "frontend/src/styles/index.css",
+      "sha256": "be4b2349f65607767cf404a53554cc823f50446f0f2cccbf888d8e46cfe0efdf"
+    }
+  ],
+  "browser": "156.0.8078.80",
+  "finalizedAt": "2026-11-03T21:51:04.426Z"
+}

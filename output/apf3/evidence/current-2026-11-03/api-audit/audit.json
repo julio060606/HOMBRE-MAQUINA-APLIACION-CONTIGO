@@ -1,0 +1,2102 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-03T20:49:47.584Z",
+    "baseUrl": "http://127.0.0.1:3001",
+    "mode": "API central y PostgreSQL, VITE_USE_MOCKS=false",
+    "axeVersion": "4.11.0",
+    "method": "Capturas y axe sobre páginas y estados actuales. Acceso sintético por rol en navegadores aislados. No confirma mediciones, tomas, SOS ni movimientos de existencias.",
+    "limitations": [
+      "No sustituye revisión manual, Stark, lector de pantalla ni sesiones con participantes.",
+      "Los estados de confirmación no guardados se evalúan en el laboratorio offline por separado.",
+      "Cero violations detectadas no acredita conformidad WCAG completa."
+    ],
+    "browserVersion": "156.0.8078.80"
+  },
+  "source": [
+    {
+      "file": "frontend/src/features/patient-app/MeasurementForm.tsx",
+      "sha256": "22aafe7473969a7bec2491aca05c87e5f3d1a46403d61db1e37cfcbd772e55ff"
+    },
+    {
+      "file": "frontend/src/features/patient-app/MeasurementForm.module.css",
+      "sha256": "75b0272046e596375290bb0049a8137f5b5353d48ce80ab1cfe6e3bb46cff08a"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientAppContent.tsx",
+      "sha256": "49cb12c7eebb5e579b4d63c2421a1c5059c2098bb49118b0c6a8ea0607322ecf"
+    },
+    {
+      "file": "frontend/src/features/accessibility/AccessibilityPage.tsx",
+      "sha256": "62b19a829266f1b47e15f4948086f480d607f57537efdbe0bb7412c466b77c9a"
+    },
+    {
+      "file": "frontend/src/features/dashboard/PatientSummary.tsx",
+      "sha256": "e3f300f0650aef36839afd7a747892822eada82f6e15d4792e8df2881e2b6ed6"
+    },
+    {
+      "file": "frontend/src/styles/index.css",
+      "sha256": "8ba99aefe02c093e6695505a64c30456baaa7c57e6daccd6bf31774457750539"
+    }
+  ],
+  "screens": [
+    {
+      "id": "01-patient-home",
+      "title": "Paciente, vista única con medicamentos y mediciones",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "01-patient-home.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "02-sos-review",
+      "title": "SOS de demostración, revisión sin registro",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "02-sos-review.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "color-contrast",
+          "duplicate-id-aria",
+          "meta-viewport",
+          "nested-interactive"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-deprecated-role",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-attr",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-roles",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "blink",
+          "bypass",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "form-field-multiple-labels",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-has-lang",
+          "html-lang-valid",
+          "html-xml-lang-mismatch",
+          "image-alt",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "link-name",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "select-name",
+          "server-side-image-map",
+          "summary-name",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "03-measurement-input",
+      "title": "Medición de presión, formulario vacío",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "03-measurement-input.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "04-measurement-error",
+      "title": "Medición, errores de entrada",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "04-measurement-error.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "05-measurement-review",
+      "title": "Presión, revisión antes de guardar",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "05-measurement-review.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "form-field-multiple-labels",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "06-weight-input",
+      "title": "Peso, ingreso con coma decimal",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "06-weight-input.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "07-weight-review",
+      "title": "Peso, revisión sin guardar",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "screenshot": "07-weight-review.png",
+      "layout": {
+        "width": 390,
+        "height": 1100,
+        "documentWidth": 390
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "form-field-multiple-labels",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "08-caregiver-summary",
+      "title": "Resumen del cuidador",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "08-caregiver-summary.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-progressbar-name",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-in-text-block",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "role-img-alt",
+          "select-name",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "09-treatment-supplies",
+      "title": "Tratamiento y existencias",
+      "url": "http://127.0.0.1:3001/medications",
+      "screenshot": "09-treatment-supplies.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "meta-viewport",
+          "nested-interactive",
+          "select-name",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "10-appointments",
+      "title": "Citas del cuidador",
+      "url": "http://127.0.0.1:3001/appointments",
+      "screenshot": "10-appointments.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "meta-viewport",
+          "nested-interactive",
+          "select-name",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "definition-list",
+          "dlitem",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "11-vitals",
+      "title": "Gráficas y mediciones",
+      "url": "http://127.0.0.1:3001/vitals",
+      "screenshot": "11-vitals.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "8.3pt (11px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"60\" dy=\"0.71em\">2 nov. 2026</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-xAxis.xAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[font-size=\"11\"][y=\"200\"][text-anchor=\"middle\"] > tspan[dy=\"0.71em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "8.3pt (11px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"331.6156260145006\" dy=\"0.71em\">2 nov. 2026</tspan>",
+                "target": [
+                  "tspan[x=\"331.6156260145006\"][dy=\"0.71em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "8.3pt (11px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"603.2312520290012\" dy=\"0.71em\">2 nov. 2026</tspan>",
+                "target": [
+                  "tspan[x=\"603.2312520290012\"][dy=\"0.71em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "8.3pt (11px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"1033.84375\" dy=\"0.71em\">2 nov. 2026</tspan>",
+                "target": [
+                  "tspan[x=\"1033.84375\"][dy=\"0.71em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">75</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">90</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">105</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">120</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">135</tspan>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(159, 18, 57);\">Sistólica</span>",
+                "target": [
+                  "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(30, 64, 175);\">Diastólica</span>",
+                "target": [
+                  ".legend-item-1 > .recharts-legend-item-text"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "8.3pt (11px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"562\" dy=\"0.71em\">2 nov. 2026</tspan>",
+                "target": [
+                  "tspan[x=\"562\"][dy=\"0.71em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">78</tspan>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">79</tspan>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">80</tspan>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">81</tspan>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<tspan x=\"52\" dy=\"0.355em\">82</tspan>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "11.3pt (15px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<svg class=\"recharts-surface\" width=\"1076\" height=\"256\" viewBox=\"0 0 1076 256\" style=\"width: 100%; height: 100%;\">",
+                        "target": [
+                          "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"]"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"recharts-legend-item-text\" style=\"color: rgb(30, 64, 175);\">Peso (kg)</span>",
+                "target": [
+                  "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              }
+            ]
+          }
+        ],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "role-img-alt",
+          "select-name",
+          "summary-name",
+          "td-headers-attr",
+          "th-has-data-cells"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "definition-list",
+          "dlitem",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "12-profile",
+      "title": "Ficha clínica",
+      "url": "http://127.0.0.1:3001/clinical-profile",
+      "screenshot": "12-profile.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "definition-list",
+          "dlitem",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "link-name",
+          "meta-viewport",
+          "nested-interactive",
+          "select-name",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "link-in-text-block",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "13-preferences",
+      "title": "Preferencias por paciente",
+      "url": "http://127.0.0.1:3001/settings",
+      "screenshot": "13-preferences.png",
+      "layout": {
+        "width": 1440,
+        "height": 1100,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-body",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-name",
+          "meta-viewport",
+          "nested-interactive",
+          "select-name",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "definition-list",
+          "dlitem",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "link-in-text-block",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "14-login",
+      "title": "Acceso",
+      "url": "http://127.0.0.1:3001/login",
+      "screenshot": "14-login.png",
+      "layout": {
+        "width": 1440,
+        "height": 1000,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "bold",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<a class=\"inline-flex items-center gap-2.5 text-white font-heading text-2xl font-bold tracking-tight\" href=\"/landing\" data-discover=\"true\">",
+                "target": [
+                  ".tracking-tight"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<span class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-200 border border-emerald-400/30\">",
+                        "target": [
+                          ".bg-emerald-500\\/20"
+                        ]
+                      },
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-200 border border-emerald-400/30\">",
+                "target": [
+                  ".bg-emerald-500\\/20"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "bold",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<h2 class=\"text-2xl font-heading font-bold text-white leading-snug\">Acompañamiento y cuidado domiciliario</h2>",
+                "target": [
+                  "h2"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p class=\"text-emerald-100/90 text-sm leading-relaxed\">Supervisión del tratamiento médico indicado por la clínica, tomas oportunas y mediciones en casa.</p>",
+                "target": [
+                  ".text-emerald-100\\/90"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span>Dosis y horarios determinados por la clínica</span>",
+                "target": [
+                  ".pt-6 > .gap-2.items-center.flex:nth-child(1) > span"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span>Tomas declaradas y mediciones ingresadas por el paciente</span>",
+                "target": [
+                  ".gap-2.items-center.flex:nth-child(2) > span"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "imgNode",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<img src=\"/images/caregiver_senior.jpg\" alt=\"Acompañamiento clínico San Pablo\" class=\"w-full h-full object-cover\">",
+                        "target": [
+                          ".h-full"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because element contains an image node"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span>Acompañamiento familiar y reportes de adherencia</span>",
+                "target": [
+                  ".gap-2.items-center.flex:nth-child(3) > span"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+              }
+            ]
+          }
+        ],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-hidden-body",
+          "aria-prohibited-attr",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "autocomplete-valid",
+          "avoid-inline-spacing",
+          "button-name",
+          "bypass",
+          "color-contrast",
+          "document-title",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "html-has-lang",
+          "html-lang-valid",
+          "image-alt",
+          "label",
+          "link-in-text-block",
+          "link-name",
+          "meta-viewport",
+          "nested-interactive",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-deprecated-role",
+          "aria-hidden-focus",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-attr",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-roles",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "blink",
+          "definition-list",
+          "dlitem",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "input-button-name",
+          "input-image-alt",
+          "list",
+          "listitem",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    },
+    {
+      "id": "15-accessibility",
+      "title": "Declaración de accesibilidad",
+      "url": "http://127.0.0.1:3001/accessibility",
+      "screenshot": "15-accessibility.png",
+      "layout": {
+        "width": 1440,
+        "height": 1000,
+        "documentWidth": 1440
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-hidden-body",
+          "aria-prohibited-attr",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "avoid-inline-spacing",
+          "bypass",
+          "color-contrast",
+          "document-title",
+          "html-has-lang",
+          "html-lang-valid",
+          "link-in-text-block",
+          "link-name",
+          "list",
+          "listitem",
+          "meta-viewport",
+          "nested-interactive",
+          "summary-name"
+        ],
+        "inapplicable": [
+          "area-alt",
+          "aria-braille-equivalent",
+          "aria-command-name",
+          "aria-deprecated-role",
+          "aria-hidden-focus",
+          "aria-input-field-name",
+          "aria-meter-name",
+          "aria-progressbar-name",
+          "aria-required-attr",
+          "aria-required-children",
+          "aria-required-parent",
+          "aria-roles",
+          "aria-toggle-field-name",
+          "aria-tooltip-name",
+          "autocomplete-valid",
+          "blink",
+          "button-name",
+          "definition-list",
+          "dlitem",
+          "duplicate-id-aria",
+          "form-field-multiple-labels",
+          "frame-focusable-content",
+          "frame-title-unique",
+          "frame-title",
+          "html-xml-lang-mismatch",
+          "image-alt",
+          "input-button-name",
+          "input-image-alt",
+          "label",
+          "marquee",
+          "meta-refresh",
+          "object-alt",
+          "role-img-alt",
+          "scrollable-region-focusable",
+          "select-name",
+          "server-side-image-map",
+          "svg-img-alt",
+          "td-headers-attr",
+          "th-has-data-cells",
+          "valid-lang",
+          "video-caption",
+          "no-autoplay-audio"
+        ]
+      }
+    }
+  ],
+  "complete": true,
+  "patient_dacioBlockedWrites": 0,
+  "caregiver_demoBlockedWrites": 0,
+  "summary": {
+    "screens": 15,
+    "violationRules": 0,
+    "violationNodes": 0,
+    "incompleteNodes": 25
+  }
+}

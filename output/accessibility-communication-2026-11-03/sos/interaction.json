@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T21:13:17.758Z",
+  "origin": "http://127.0.0.1:3014",
+  "mode": "Demostración aislada, VITE_USE_MOCKS=true; base IndexedDB privada de un contexto Chrome nuevo.",
+  "limitations": [
+    "Prueba técnica headless; no lector de pantalla ni participantes.",
+    "Persistencia central API/PostgreSQL no evaluada: todas las solicitudes API se bloquean.",
+    "Se inyecta un error controlado de repositorio en el primer SOS para verificar recuperación."
+  ],
+  "checks": [
+    {
+      "name": "Frase rápida, cancelación y reapertura por teclado",
+      "passed": true,
+      "screenshot": "01-frase-escrita.png"
+    },
+    {
+      "name": "Error recuperable conserva el texto y no guarda un aviso parcial",
+      "passed": true,
+      "screenshot": "02-error-conserva-texto.png"
+    },
+    {
+      "name": "Reintento explícito guarda una única petición sintética y confirma texto exacto",
+      "passed": true,
+      "screenshot": "03-mensaje-registrado.png"
+    },
+    {
+      "name": "Cuidador consulta el mensaje registrado en su panel",
+      "passed": true,
+      "screenshot": "04-cuidador-mensaje.png"
+    }
+  ],
+  "apiRequests": [],
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientHelp.tsx": "5e609d7aae0cc71f2cef29cd4a4e01b543c33c734499394b8f4b88bedf50bf8c",
+    "frontend/src/services/contracts.ts": "1028b45ae1e941ced766dc8116ec26db160d443f83ea3071f163069712cd29d5",
+    "frontend/src/services/sosMessage.ts": "689f58d8eaf8a603ddd52479915afb18b54eeeadce5f5fd10555ce557fb369db",
+    "frontend/src/services/http/httpService.ts": "f3844fa41e2e35d550271cbad879622098beac70063b7d0cb6c716c0958776f3",
+    "frontend/src/services/demo/service.ts": "643f82b6f6d009a6a95b40fcbbce7dfabb8fb4e2a22a2f9d3e154ce27ce2ba75"
+  },
+  "errors": [],
+  "browser": "156.0.8078.80"
+}

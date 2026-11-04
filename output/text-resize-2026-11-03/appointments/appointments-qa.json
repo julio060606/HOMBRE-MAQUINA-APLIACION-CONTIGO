@@ -1,0 +1,631 @@
+{
+  "complete": true,
+  "method": "AppointmentList en la app paciente central API/PostgreSQL, contextos privados y solo lecturas de dominio.",
+  "layouts": [
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": false,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "18px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": true,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "18px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "125",
+      "contrast": false,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "22.5px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-125-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "125",
+      "contrast": true,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "22.5px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-125-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "150",
+      "contrast": false,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "27px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-150-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "150",
+      "contrast": true,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "27px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-150-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": false,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "36px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": true,
+      "data": {
+        "client": 286,
+        "scroll": 286,
+        "surfaceWidth": 320,
+        "viewport": 320,
+        "document": 320,
+        "heading": "Geriatría",
+        "headingFont": "36px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-320-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "100",
+      "contrast": false,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "18px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-100-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "100",
+      "contrast": true,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "18px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "17px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-100-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "125",
+      "contrast": false,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "22.5px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-125-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "125",
+      "contrast": true,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "22.5px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "21.25px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-125-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "150",
+      "contrast": false,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "27px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-150-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "150",
+      "contrast": true,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "27px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "25.5px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-150-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "200",
+      "contrast": false,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "36px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-200-standard.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 1280,
+      "scale": "200",
+      "contrast": true,
+      "data": {
+        "client": 376,
+        "scroll": 376,
+        "surfaceWidth": 410,
+        "viewport": 1280,
+        "document": 1280,
+        "heading": "Geriatría",
+        "headingFont": "36px",
+        "words": "normal",
+        "padding": "16px",
+        "dates": [
+          {
+            "text": "9 nov. 2026",
+            "dateTime": "2026-11-09",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          },
+          {
+            "text": "10:30",
+            "dateTime": "2026-11-09T15:30:00Z",
+            "fontSize": "34px",
+            "whiteSpace": "normal",
+            "overflow": "clip"
+          }
+        ],
+        "meta": "Geriatría\nProgramada\nFecha\n9 nov. 2026\nHora\n10:30\nhora de Lima\n\nMédico:\nLucía Valdés (médico ficticio)\n\nLugar:\nSede Central de demostración · Consultorio académico 01\n\nPara tu cita\n\nCita ficticia. Llevar la lista de registros de demostración de CONTIGO.\n\nSobre esta cita"
+      },
+      "screenshot": "appointment-1280-200-high.png",
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ],
+  "blockedDomainWrites": 0,
+  "source": [
+    {
+      "file": "frontend/src/features/appointments/AppointmentList.tsx",
+      "sha256": "f84a06c30ee247dce4ace00b19f281a39bd25aa0332bbcf40a57e25fd6c3e403"
+    },
+    {
+      "file": "frontend/src/features/appointments/AppointmentList.module.css",
+      "sha256": "61d075b1298e143bb0ac3bc80cc6973cd27030e6509e716b647a80d8121904e7"
+    }
+  ],
+  "limitations": [
+    "Escala del producto, no zoom nativo.",
+    "Prueba técnica sin participantes ni lector de pantalla."
+  ],
+  "keyboard": "Enter abre/cierra Sobre esta cita sin modificar datos.",
+  "finalizedAt": "2026-11-03T23:45:19.819Z"
+}

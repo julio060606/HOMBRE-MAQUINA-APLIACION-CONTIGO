@@ -1,0 +1,225 @@
+{
+  "heading": {
+    "text": "Opciones de lectura",
+    "width": 60,
+    "height": 514.6875,
+    "font": "800 44px / 57.2px Inter, sans-serif",
+    "fontSize": "44px",
+    "chars": [
+      {
+        "char": "O",
+        "x": 614,
+        "y": 345.125,
+        "width": 32.8125,
+        "height": 54
+      },
+      {
+        "char": "p",
+        "x": 646.796875,
+        "y": 345.125,
+        "width": 26.65625,
+        "height": 54
+      },
+      {
+        "char": "c",
+        "x": 614,
+        "y": 402.3125,
+        "width": 24.796875,
+        "height": 54
+      },
+      {
+        "char": "i",
+        "x": 638.78125,
+        "y": 402.3125,
+        "width": 10.84375,
+        "height": 54
+      },
+      {
+        "char": "o",
+        "x": 614,
+        "y": 459.5,
+        "width": 25.890625,
+        "height": 54
+      },
+      {
+        "char": "n",
+        "x": 639.875,
+        "y": 459.5,
+        "width": 26.3125,
+        "height": 54
+      },
+      {
+        "char": "e",
+        "x": 614,
+        "y": 516.6875,
+        "width": 25.125,
+        "height": 54
+      },
+      {
+        "char": "s",
+        "x": 639.109375,
+        "y": 516.6875,
+        "width": 23.546875,
+        "height": 54
+      },
+      {
+        "char": "d",
+        "x": 614,
+        "y": 573.875,
+        "width": 26.640625,
+        "height": 54
+      },
+      {
+        "char": "e",
+        "x": 640.625,
+        "y": 573.875,
+        "width": 25.125,
+        "height": 54
+      },
+      {
+        "char": "l",
+        "x": 614,
+        "y": 631.0625,
+        "width": 10.828125,
+        "height": 54
+      },
+      {
+        "char": "e",
+        "x": 624.8125,
+        "y": 631.0625,
+        "width": 25.125,
+        "height": 54
+      },
+      {
+        "char": "c",
+        "x": 614,
+        "y": 688.25,
+        "width": 24.796875,
+        "height": 54
+      },
+      {
+        "char": "t",
+        "x": 638.78125,
+        "y": 688.25,
+        "width": 15.03125,
+        "height": 54
+      },
+      {
+        "char": "u",
+        "x": 614,
+        "y": 745.4375,
+        "width": 26.296875,
+        "height": 54
+      },
+      {
+        "char": "r",
+        "x": 640.28125,
+        "y": 745.4375,
+        "width": 16.84375,
+        "height": 54
+      },
+      {
+        "char": "a",
+        "x": 614,
+        "y": 802.625,
+        "width": 24.453125,
+        "height": 54
+      }
+    ]
+  },
+  "dialog": {
+    "width": 396,
+    "height": 874,
+    "scrollWidth": 396,
+    "scrollHeight": 5302
+  },
+  "buttons": [
+    {
+      "text": "",
+      "ariaLabel": "Cerrar opciones de lectura",
+      "width": 88,
+      "height": 88,
+      "font": "32px",
+      "padding": "16px"
+    },
+    {
+      "text": "100 %",
+      "ariaLabel": "Texto al 100 %",
+      "width": 300,
+      "height": 96,
+      "font": "28px",
+      "padding": "20px 8px"
+    },
+    {
+      "text": "125 %",
+      "ariaLabel": "Texto al 125 %",
+      "width": 300,
+      "height": 96,
+      "font": "28px",
+      "padding": "20px 8px"
+    },
+    {
+      "text": "150 %",
+      "ariaLabel": "Texto al 150 %",
+      "width": 300,
+      "height": 96,
+      "font": "28px",
+      "padding": "20px 8px"
+    },
+    {
+      "text": "200 %",
+      "ariaLabel": "Texto al 200 %",
+      "width": 300,
+      "height": 96,
+      "font": "28px",
+      "padding": "20px 8px"
+    },
+    {
+      "text": "Probar vibración",
+      "ariaLabel": null,
+      "width": 235.90625,
+      "height": 88,
+      "font": "24px",
+      "padding": "12px 20px"
+    },
+    {
+      "text": "Restablecer ayudas",
+      "ariaLabel": null,
+      "width": 300,
+      "height": 153,
+      "font": "26px",
+      "padding": "20px 32px"
+    },
+    {
+      "text": "Listo",
+      "ariaLabel": null,
+      "width": 256,
+      "height": 88,
+      "font": "26px",
+      "padding": "20px 32px"
+    }
+  ],
+  "source": [
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.tsx",
+      "sha256": "8a15e352c1c40bb2eee54d2153f2f7fd1ed2da2b52e84c7a8724d8b0e0b2a2cc"
+    },
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.module.css",
+      "sha256": "33c966f03c1fdca6c3053ea8f98767ed3b52c4357596b4ec25e07b3b05479f2b"
+    },
+    {
+      "file": "frontend/src/features/accessibility/CommunicationBoard.tsx",
+      "sha256": "b80a661be14d4d2fe13063b7770aa13b3af6c950b4c9542fa90de0229477ea9e"
+    },
+    {
+      "file": "frontend/src/features/accessibility/CommunicationBoard.module.css",
+      "sha256": "7e8d90278c5e67fcd1cbb647e91ada7f59d4202a156049efd044896f8024b93b"
+    },
+    {
+      "file": "frontend/src/styles/index.css",
+      "sha256": "be4b2349f65607767cf404a53554cc823f50446f0f2cccbf888d8e46cfe0efdf"
+    }
+  ],
+  "capturedAt": "2026-11-03T23:40:45.681Z"
+}

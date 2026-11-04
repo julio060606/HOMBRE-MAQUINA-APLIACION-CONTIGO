@@ -111,6 +111,9 @@ def load_json(p):
         return None
 
 def generate():
+    if (OUT/'current-config.json').exists():
+        from current_delivery_data import generate_current
+        return generate_current(CRITERIA, SOURCES, TASKS)
     baseline=load_json(OUT/'evidence/baseline/audit.json')
     after=load_json(OUT/'evidence/after/audit.json')
     findings=load_json(OUT/'findings.json') or load_json(OUT/'evidence/findings.json') or load_json(OUT/'evidence/verified-findings.json') or []

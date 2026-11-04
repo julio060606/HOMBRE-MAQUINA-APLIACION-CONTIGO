@@ -1,0 +1,68 @@
+- main:
+  - navigation "Ubicación actual":
+    - link "Mi panel":
+      - /url: /dashboard
+    - text: Mediciones
+  - region "Solicitudes SOS":
+    - heading "Solicitudes SOS" [level=2]
+    - status: Sin solicitudes abiertas
+  - heading "Gráficas y mediciones" [level=1]
+  - paragraph: Registros fechados y con procedencia. La última lectura se selecciona por fecha, sin valores de respaldo ficticios.
+  - img "Control de presión arterial y pulso"
+  - heading "Monitoreo Domiciliario de Signos Vitales" [level=3]
+  - paragraph: Presión arterial sistólica, diastólica y pulso registrados en casa. Las lecturas domésticas se mantienen separadas del peso y signos oficiales de la clínica.
+  - text: Periodo
+  - combobox "Periodo":
+    - option "Últimos 7 días"
+    - option "Últimos 30 días" [selected]
+    - option "Últimos 90 días"
+  - heading "Tendencia de presión arterial" [level=2]
+  - paragraph: Sistólica y diastólica en mmHg · últimos 30 días
+  - img "Presión en mmHg; valores exactos en la tabla siguiente":
+    - img: 2 nov. 2026 2 nov. 2026 2 nov. 2026 2 nov. 2026 75 90 105 120 135
+    - list:
+      - listitem:
+        - img
+        - text: Sistólica
+      - listitem:
+        - img
+        - text: Diastólica
+  - table "Lecturas de presión y pulso":
+    - caption: Lecturas de presión y pulso
+    - rowgroup:
+      - row "Fecha y hora Presión mmHg Pulso bpm Origen":
+        - columnheader "Fecha y hora"
+        - columnheader "Presión mmHg"
+        - columnheader "Pulso bpm"
+        - columnheader "Origen"
+    - rowgroup:
+      - row "2 nov. 2026, 17:27 127/83 No registrado Casa · paciente":
+        - cell "2 nov. 2026, 17:27"
+        - cell "127/83"
+        - cell "No registrado"
+        - cell "Casa · paciente"
+      - row "2 nov. 2026, 17:24 127/83 No registrado Casa · paciente":
+        - cell "2 nov. 2026, 17:24"
+        - cell "127/83"
+        - cell "No registrado"
+        - cell "Casa · paciente"
+      - row "2 nov. 2026, 17:23 127/83 No registrado Casa · paciente":
+        - cell "2 nov. 2026, 17:23"
+        - cell "127/83"
+        - cell "No registrado"
+        - cell "Casa · paciente"
+  - heading "Tendencia del pulso" [level=2]
+  - paragraph: Latidos por minuto (bpm); valores exactos en la tabla de presión.
+  - paragraph: Sin registros de pulso en el período.
+  - heading "Peso registrado en casa" [level=2]
+  - img "Peso doméstico en kg; valores exactos debajo":
+    - img: 2 nov. 2026 78 79 80 81 82
+    - list:
+      - listitem:
+        - img
+        - text: Peso (kg)
+  - list:
+    - listitem:
+      - text: 2 nov. 2026, 17:38 ·
+      - strong: 80 kg
+      - text: · Casa

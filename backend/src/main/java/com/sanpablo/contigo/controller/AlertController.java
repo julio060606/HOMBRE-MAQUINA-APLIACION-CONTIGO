@@ -2,15 +2,16 @@ package com.sanpablo.contigo.controller;
 
 import com.sanpablo.contigo.domain.auth.User;
 import com.sanpablo.contigo.dto.telemetry.AlertEventDto;
+import com.sanpablo.contigo.dto.telemetry.SosInputRequest;
 import com.sanpablo.contigo.service.TelemetryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/patients/{patientId}/alerts")
@@ -32,13 +33,13 @@ public class AlertController {
     }
 
     @PostMapping("/sos")
-    @Operation(summary = "Petición de auxilio SOS", description = "Permite al paciente emitir una alerta crítica con estado de notificación")
+    @Operation(summary = "Registrar SOS de prueba", description = "Registra una petición con mensaje escrito opcional de hasta 240 caracteres. No contacta emergencias ni acredita recepción por otra persona.")
     public ResponseEntity<AlertEventDto> triggerSos(
             @AuthenticationPrincipal User actor,
             @PathVariable("patientId") String patientId,
-            @RequestBody(required = false) Map<String, String> body) {
-        String operationId = body != null && body.containsKey("operationId") ? body.get("operationId") : java.util.UUID.randomUUID().toString();
-        return ResponseEntity.ok(telemetryService.triggerSos(actor, patientId, operationId));
+            @Valid @RequestBody(required = false) SosInputRequest body) {
+        String operationId = body != null && body.getOperationId() != null ? body.getOperationId() : java.util.UUID.randomUUID().toString();
+        return ResponseEntity.ok(telemetryService.triggerSos(actor, patientId, operationId, body == null ? null : body.getMessage()));
     }
 
     @PostMapping("/{alertId}/acknowledgements")

@@ -8,6 +8,7 @@ import { demoRepository, DemoRepository } from './repository';
 import { authorize, ServiceError } from './permissions';
 import { applyResponse } from './intakes';
 import { DEMO_USERS } from './state';
+import { normalizeSosMessage } from '../sosMessage';
 
 const preferencesSchema = z.object({
   notifyMissedDoseMinutes: z.number().int().min(5).max(180), voiceVolumeLevel: z.number().min(0).max(100),
@@ -102,17 +103,19 @@ export function createDemoService(actor: User, repository: DemoRepository = demo
       if (index < 0) throw new ServiceError('No hay preferencias para este paciente.', 'NOT_FOUND');
       state.settings[index] = { patientId, ...parsed };
     }, true),
-    sos: (patientId, operationId) => transaction(state => {
+    sos: (patientId, operationId, message) => transaction(state => {
       const patient = authorize(state, actor, patientId, 'patient');
+      const normalized = normalizeSosMessage(message);
       const key = `${actor.id}:sos:${operationId}`;
+      const fingerprint = normalized ? JSON.stringify({ patientId, message: normalized }) : patientId;
       if (state.operations[key]) {
-        if (state.operations[key].fingerprint !== patientId) throw new ServiceError('Operación repetida con otros datos.', 'CONFLICT');
+        if (state.operations[key].fingerprint !== fingerprint) throw new ServiceError('Operación repetida con otros datos.', 'CONFLICT');
         return state.alerts.find(a => a.id === state.operations[key].resourceId)!;
       }
       const alert = { id: crypto.randomUUID(), patientId, patientName: patient.fullName, type: 'PANIC_BUTTON' as const,
-        title: 'Petición de ayuda de demostración', description: 'Registrada en el panel de prueba. No contacta servicios de emergencia ni envía ubicación.',
+        title: 'Petición de ayuda de demostración', description: `Registrada en el panel de prueba. No contacta servicios de emergencia ni envía ubicación.${normalized ? ` Mensaje del paciente: ${normalized}` : ''}`,
         timestamp: new Date().toISOString(), severity: 'CRITICAL' as const, isResolved: false };
-      state.alerts.push(alert); state.operations[key] = { fingerprint: patientId, resourceId: alert.id };
+      state.alerts.push(alert); state.operations[key] = { fingerprint, resourceId: alert.id };
       state.audit.push({ id: crypto.randomUUID(), patientId, actorId: actor.id, kind: 'DEMO_HELP_REQUESTED',
         recordedAt: alert.timestamp, detail: 'Solicitud local de ayuda de demostración' });
       return alert;

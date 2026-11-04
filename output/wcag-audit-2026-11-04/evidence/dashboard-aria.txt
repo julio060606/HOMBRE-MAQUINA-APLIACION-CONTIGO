@@ -1,0 +1,92 @@
+- main:
+  - navigation "Ubicación actual":
+    - link "Mi panel":
+      - /url: /dashboard
+    - text: Resumen
+  - region "Solicitudes SOS":
+    - heading "Solicitudes SOS" [level=2]
+    - status: Sin solicitudes abiertas
+  - paragraph: Seguimiento diario
+  - heading "Resumen del día" [level=1]
+  - paragraph: Lo importante para acompañar a Dacio.
+  - text: 4 de noviembre
+  - button "Actualizar"
+  - status
+  - region "Paciente en seguimiento":
+    - text: Paciente seleccionado
+    - heading "Dacio Ramos" [level=2]
+    - text: Papá
+    - paragraph: 78 años
+    - link "Ver ficha clínica":
+      - /url: /clinical-profile
+    - group: Datos sincronizados
+  - region "Avisos prioritarios":
+    - heading "Avisos prioritarios" [level=2]
+    - paragraph: 2 avisos necesitan revisión
+    - article:
+      - heading "SOS · Solicitud de comunicación" [level=3]
+      - paragraph: El paciente solicita hablar o escribir con el equipo de apoyo en CONTIGO. No se contactó a servicios de emergencia.
+      - time: 3 nov. 2026, 20:01
+    - article:
+      - heading "SOS de prueba del paciente" [level=3]
+      - paragraph: Petición de prueba registrada desde Contigo. No se contactó a servicios de emergencia ni se confirma recepción por otra persona.
+      - time: 3 nov. 2026, 19:17
+  - region "Tomas de hoy":
+    - heading "Tomas de hoy" [level=2]
+    - strong: 0 de 3
+    - paragraph: Declaradas como tomadas
+    - text: "Sin responder hoy: 3"
+    - link "Ver tratamiento":
+      - /url: /medications
+  - region "Última medición":
+    - heading "Última medición" [level=2]
+    - strong: 80 kg
+    - paragraph: Peso registrado
+    - time: 2 nov. 2026, 17:38
+    - link "Ver mediciones":
+      - /url: /vitals
+  - region "Próxima cita":
+    - heading "Próxima cita" [level=2]
+    - strong: 9 nov.
+    - paragraph: Geriatría
+    - time: 10:30
+    - link "Ver citas":
+      - /url: /appointments
+  - region "Medicamentos de hoy":
+    - heading "Medicamentos de hoy" [level=2]
+    - paragraph: Respuestas registradas por el paciente.
+    - group "Filtrar dosis":
+      - button "Por confirmar 3" [pressed]
+      - button "Todas"
+    - list:
+      - listitem:
+        - time: 08:00
+        - strong: Losartán
+        - text: 50 mg Pendiente
+      - listitem:
+        - time: 14:00
+        - strong: Vitamina D3
+        - text: 2000 UI Pendiente
+      - listitem:
+        - time: 20:00
+        - strong: Losartán
+        - text: 50 mg Pendiente
+    - text: El cuidador consulta; el paciente registra.
+    - link "Tratamiento completo":
+      - /url: /medications
+  - region "Para revisar":
+    - heading "Para revisar" [level=2]
+    - paragraph: 1 pendiente de seguimiento
+    - text: "1"
+    - article:
+      - heading "Vitamina D3" [level=3]
+      - paragraph: "1 tabletas disponibles · estimación: 1 días."
+      - link "Revisar existencias":
+        - /url: /medications
+  - group:
+    - strong: Mediciones y evolución
+    - text: "Última presión: 127 / 83 mmHg"
+  - link "Preparar un informe Reúne los registros para la próxima consulta.":
+    - /url: /reports
+    - strong: Preparar un informe
+    - paragraph: Reúne los registros para la próxima consulta.

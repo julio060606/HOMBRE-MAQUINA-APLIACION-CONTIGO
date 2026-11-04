@@ -1,0 +1,937 @@
+{
+  "startedAt": "2026-11-04T07:59:00.543Z",
+  "method": "chrome.tabs.setZoom/getZoom, perfil Chromium temporal, ventana 1280×960, viewport:null. Sin CSS zoom ni emulación de DPR.",
+  "measurements": [
+    {
+      "id": "zoom-login-100",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/login",
+        "zoomFactor": 1,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:01.447Z"
+      },
+      "metrics": {
+        "url": "/login",
+        "title": "Iniciar sesión · CONTIGO",
+        "innerWidth": 1262,
+        "innerHeight": 864,
+        "devicePixelRatio": 1,
+        "fontSize": "16px",
+        "width": 1262,
+        "cssZoom": "1",
+        "h1": "Iniciar sesión",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-login-100.png"
+    },
+    {
+      "id": "zoom-login-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/login",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:01.726Z"
+      },
+      "metrics": {
+        "url": "/login",
+        "title": "Iniciar sesión · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Iniciar sesión",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-login-200.png"
+    },
+    {
+      "id": "zoom-landing-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/landing",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:02.243Z"
+      },
+      "metrics": {
+        "url": "/landing",
+        "title": "El cuidado diario,más cerca de ti. · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "El cuidado diario,más cerca de ti.",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-landing-200.png"
+    },
+    {
+      "id": "zoom-clinic-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/clinic",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:02.743Z"
+      },
+      "metrics": {
+        "url": "/clinic",
+        "title": "Tu salud merece una atención cercana. · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Tu salud merece una atención cercana.",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-clinic-200.png"
+    },
+    {
+      "id": "zoom-patient-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:03.325Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-patient-200.png"
+    },
+    {
+      "id": "zoom-measurement-review-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:03.615Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-measurement-review-200.png"
+    },
+    {
+      "id": "zoom-reading-dialog-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/patient-app",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:03.895Z"
+      },
+      "metrics": {
+        "url": "/patient-app",
+        "title": "Hola, Dacio · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Hola, Dacio",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-reading-dialog-200.png"
+    },
+    {
+      "id": "zoom-dashboard-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/dashboard",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:05.131Z"
+      },
+      "metrics": {
+        "url": "/dashboard",
+        "title": "Resumen del día · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Resumen del día",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-dashboard-200.png"
+    },
+    {
+      "id": "zoom-medications-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/medications",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:05.998Z"
+      },
+      "metrics": {
+        "url": "/medications",
+        "title": "Tratamiento y existencias · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Tratamiento y existencias",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-medications-200.png"
+    },
+    {
+      "id": "zoom-appointments-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/appointments",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:06.847Z"
+      },
+      "metrics": {
+        "url": "/appointments",
+        "title": "Citas médicas · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Citas médicas",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-appointments-200.png"
+    },
+    {
+      "id": "zoom-vitals-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/vitals",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:07.721Z"
+      },
+      "metrics": {
+        "url": "/vitals",
+        "title": "Gráficas y mediciones · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Gráficas y mediciones",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-vitals-200.png"
+    },
+    {
+      "id": "zoom-clinical-profile-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/clinical-profile",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:08.579Z"
+      },
+      "metrics": {
+        "url": "/clinical-profile",
+        "title": "Ficha clínica · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Ficha clínica",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-clinical-profile-200.png"
+    },
+    {
+      "id": "zoom-settings-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/settings",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:09.464Z"
+      },
+      "metrics": {
+        "url": "/settings",
+        "title": "Preferencias · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Preferencias",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-settings-200.png"
+    },
+    {
+      "id": "zoom-reports-200",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/reports",
+        "zoomFactor": 2,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:10.499Z"
+      },
+      "metrics": {
+        "url": "/reports",
+        "title": "Reporte de seguimiento · CONTIGO",
+        "innerWidth": 631,
+        "innerHeight": 432,
+        "devicePixelRatio": 2,
+        "fontSize": "16px",
+        "width": 631,
+        "cssZoom": "1",
+        "h1": "Reporte de seguimiento",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-reports-200.png"
+    },
+    {
+      "id": "zoom-restored-100",
+      "native": {
+        "tabId": 1498854102,
+        "url": "http://127.0.0.1:3001/reports",
+        "zoomFactor": 1,
+        "zoomSettings": {
+          "defaultZoomFactor": 1,
+          "mode": "automatic",
+          "scope": "per-tab"
+        },
+        "timestamp": "2026-11-04T07:59:10.747Z"
+      },
+      "metrics": {
+        "url": "/reports",
+        "title": "Reporte de seguimiento · CONTIGO",
+        "innerWidth": 1262,
+        "innerHeight": 864,
+        "devicePixelRatio": 1,
+        "fontSize": "16px",
+        "width": 1262,
+        "cssZoom": "1",
+        "h1": "Reporte de seguimiento",
+        "clippedControls": []
+      },
+      "screenshot": "zoom-restored-100.png"
+    }
+  ],
+  "blockedWrites": [],
+  "error": null,
+  "zoomEvents": [
+    {
+      "timestamp": "2026-11-04T07:59:00.958Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.136Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.237Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.238Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.514Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.792Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:01.958Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.035Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.036Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.295Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.412Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.532Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.533Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.806Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:02.918Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.106Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.116Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.117Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.405Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.686Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.967Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.969Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:03.999Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:04.316Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:04.349Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:04.924Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:04.924Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:05.199Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:05.327Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:05.787Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:05.788Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.064Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.173Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.634Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.635Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.898Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:06.999Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:07.517Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:07.518Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:07.801Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:07.911Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:08.374Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:08.375Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:08.666Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:08.774Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:09.253Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:09.253Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:09.523Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:09.652Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:10.282Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:10.282Z",
+      "newZoomFactor": 2,
+      "oldZoomFactor": 1,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    },
+    {
+      "timestamp": "2026-11-04T07:59:10.543Z",
+      "newZoomFactor": 1,
+      "oldZoomFactor": 2,
+      "tabId": 1498854102,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-tab"
+      }
+    }
+  ],
+  "complete": true,
+  "finishedAt": "2026-11-04T07:59:10.806Z"
+}

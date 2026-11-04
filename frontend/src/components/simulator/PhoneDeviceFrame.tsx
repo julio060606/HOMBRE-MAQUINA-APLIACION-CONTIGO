@@ -1,22 +1,25 @@
 import { ReactNode } from 'react';
 import { Wifi } from 'lucide-react';
+import styles from './PhoneDeviceFrame.module.css';
 
 export function PhoneDeviceFrame({
   children,
   width = 390,
   time = '08:05',
+  fitViewport = false,
 }: {
   children: ReactNode;
   width?: number;
   time?: string;
+  fitViewport?: boolean;
 }) {
   return (
     <div
-      className="mx-auto rounded-[46px] border-[10px] border-[#18202b] bg-[#18202b] shadow-2xl overflow-hidden relative transition-all duration-300"
+      className={`${styles.frame} ${fitViewport ? styles.fitted : ''} mx-auto rounded-[46px] border-[10px] border-[#18202b] bg-[#18202b] shadow-2xl overflow-hidden relative transition-all duration-300`}
       style={{ maxWidth: width, width: '100%' }}
     >
       {/* Top Phone Bezel & Status Bar (Image 2) */}
-      <div aria-hidden="true" className="bg-[#f8faf9] flex items-center justify-between select-none relative z-20" style={{ padding: '8px 20px 4px', gap: 4, fontSize: 12 }}>
+      <div aria-hidden="true" className={`${styles.decoration} bg-[#f8faf9] flex items-center justify-between select-none relative z-20`} style={{ padding: '8px 20px 4px', gap: 4, fontSize: 12 }}>
         {/* Time */}
         <span className="text-slate-900 font-bold tracking-tight" style={{ fontSize: 'inherit', whiteSpace: 'nowrap' }}>{time}</span>
 
@@ -39,12 +42,12 @@ export function PhoneDeviceFrame({
       </div>
 
       {/* Screen Body */}
-      <div className="bg-[#f8faf9] overflow-hidden">
+      <div data-app-surface className={`${styles.screen} ${fitViewport ? styles.viewportScreen : ''} bg-[#f8faf9] overflow-hidden`}>
         {children}
       </div>
 
       {/* Bottom Home Indicator Bar */}
-      <div className="w-full py-2 flex justify-center bg-[#f8faf9]">
+      <div aria-hidden="true" className={`${styles.decoration} w-full py-2 flex justify-center bg-[#f8faf9]`}>
         <div className="w-28 sm:w-32 h-1 bg-slate-400/80 rounded-full" />
       </div>
     </div>

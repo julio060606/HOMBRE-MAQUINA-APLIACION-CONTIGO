@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "beforeHeading": {
+    "width": 60,
+    "height": 514.6875,
+    "fontSize": "44px"
+  },
+  "afterHeading": {
+    "width": 364,
+    "height": 114.375,
+    "fontSize": "44px",
+    "brokenWords": []
+  },
+  "doseButtonsAfter": [
+    {
+      "text": "Ya la tomé",
+      "height": 76,
+      "minHeight": "64px",
+      "fontSize": "32px",
+      "forcedOversize": false
+    },
+    {
+      "text": "No la tomé",
+      "height": 76,
+      "minHeight": "64px",
+      "fontSize": "32px",
+      "forcedOversize": false
+    }
+  ],
+  "numeric": {
+    "weight": {
+      "value": "1000.0",
+      "available": 228,
+      "textWidth": 208.2712158203125,
+      "fontSize": "64px",
+      "fits": true,
+      "screenshot": "320-200-weight-1000.png",
+      "synthetic": true,
+      "submitted": false
+    },
+    "pulse": {
+      "value": "500",
+      "available": 194,
+      "textWidth": 122.285,
+      "fontSize": "64px",
+      "fits": true,
+      "screenshot": "320-200-pulse-500.png",
+      "synthetic": true,
+      "submitted": false
+    },
+    "note": "Valores extremos sintéticos para comprobar ancho. No se revisaron ni guardaron mediciones."
+  },
+  "summary": {
+    "cases": 16,
+    "completedCases": 16,
+    "states": 80,
+    "blockedDomainWrites": 0
+  }
+}

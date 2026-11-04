@@ -1,0 +1,57 @@
+.card { padding: 20px; border: 1px solid #dce6e2; border-radius: 1.5rem; background: #fff; box-shadow: 0 4px 18px #123b2e06; color: #172b3b; }
+.header { display: flex; align-items: center; gap: .75rem; }
+.header > div { min-width: 0; }
+.headerIcon { width: 46px; height: 46px; flex-shrink: 0; display: grid; place-items: center; border-radius: 14px; background: #edf6f1; color: #0f6046; }
+.title { font-size: 1.125rem; line-height: 1.4; font-weight: 800; letter-spacing: -.025em; margin: 0; }
+.subtitle { color: #506472; font-size: .8125rem; line-height: 1.6; margin: .25rem 0 0; }
+.steps { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0; padding: .875rem 0; border-top: 1px solid #e9efec; border-bottom: 1px solid #e9efec; list-style: none; }
+.steps li { display: flex; align-items: center; gap: .375rem; flex: 1 1 6rem; min-width: 0; color: #536574; font-size: .75rem; line-height: 1.5; }
+.steps li > span { display: grid; place-items: center; width: 1.375rem; height: 1.375rem; flex-shrink: 0; border: 1px solid #74887e; border-radius: 50%; font-weight: 700; }
+.steps li[aria-current='step'] { color: #0f6046; font-weight: 700; }
+.steps li[aria-current='step'] > span { border-color: #136f53; color: #fff; background: #136f53; }
+.form, .review { display: grid; gap: 1rem; }
+.typeFieldset { margin: 0; padding: 0; min-width: 0; border: 0; }
+.typeOptions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr)); gap: .5rem; }
+.typeOption { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .375rem; padding: .75rem .5rem; min-height: 3.5rem; border: 1px solid #74887e; border-radius: .875rem; background: #fff; color: #405463; font-weight: 700; font-size: .875rem; }
+.typeOption > svg:last-child:not(:first-child) { position: absolute; right: .3rem; top: .3rem; width: .875rem; height: .875rem; }
+.typeOption[aria-pressed='true'] { background: #edf7f2; border: 2px solid #136f53; padding: calc(.75rem - 1px) calc(.5rem - 1px); color: #0e543f; }
+.instruction { margin: 0; font-size: .875rem; line-height: 1.65; color: #506472; }
+.pressureFields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr)); gap: .75rem; }
+.field { min-width: 0; }
+.fieldLabel { display: flex; flex-wrap: wrap; gap: .125rem .375rem; align-items: baseline; font-size: .875rem; font-weight: 700; line-height: 1.6; color: #304858; margin-bottom: .5rem; }
+.fieldLabel > span { color: #536978; font-size: .75rem; letter-spacing: .03em; }
+.pressureFields .fieldLabel { min-height: 3.25em; align-content: start; }
+/* Los límites de controles superan 3:1 contra sus superficies sin oscurecer la tarjeta. */
+.inputBox { position: relative; border: 1px solid #74887e; border-radius: .875rem; background: #f8fbf9; }
+.inputBox:focus-within { border-color: #136f53; background: #fff; }
+.numberInput { display: block; width: 100%; min-width: 0; min-height: 5rem; padding: .75rem .375rem 1.625rem; border: 0; border-radius: .875rem; background: transparent; color: #122e28; text-align: center; font: inherit; font-size: 2rem; line-height: 1.2; font-weight: 750; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.numberInput::placeholder { color: #6c7f75; opacity: 1; }
+.unit { pointer-events: none; position: absolute; bottom: .5rem; left: .25rem; right: .25rem; text-align: center; color: #536978; font-size: .75rem; line-height: 1.4; }
+.inputInvalid { border: 2px solid #9f1239; }
+.inputInvalid:focus-within { border-color: #9f1239; }
+.fieldError { margin: .5rem 0 0; font-size: .8125rem; color: #9f1239; line-height: 1.65; }
+.pulse { padding: 0; border: 1px solid #74887e; border-radius: .875rem; }
+.pulse summary { display: flex; align-items: center; gap: .625rem; min-height: 3.25rem; padding: .75rem; cursor: pointer; font-size: .875rem; color: #304858; font-weight: 600; list-style: none; }
+.pulse summary::-webkit-details-marker { display: none; }
+.pulse summary > span { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: .375rem; }
+.pulse summary small { font-weight: 400; font-size: .75rem; color: #536978; }
+.pulseChevron { flex-shrink: 0; transition: transform .15s; }
+.pulse[open] .pulseChevron { transform: rotate(180deg); }
+.pulseContent { padding: 0 .875rem .875rem; }
+.fullButton { min-height: 56px; padding: 12px 14px; width: 100%; font-size: .9375rem; border-radius: .875rem; gap: 8px; }
+.footerHint { text-align: center; margin: -.375rem 0 0; font-size: .75rem; line-height: 1.65; color: #536978; }
+.reviewTitle { font-size: 1rem; font-weight: 750; line-height: 1.5; margin: 0; }
+.reading { border: 1px solid #a6c6b7; background: #f3f9f5; padding: 1.25rem .75rem; border-radius: 1rem; text-align: center; display: grid; gap: .5rem; }
+.success { text-align: center; display: grid; gap: 1rem; margin-top: 1.5rem; }
+@container (max-width: 18rem) {
+  .card { padding: 16px; }
+  .header { gap: .5rem; }
+  .headerIcon { width: 40px; height: 40px; }
+  .pressureFields { gap: .5rem; }
+  .fieldLabel { font-size: .8125rem; }
+  .pressureFields .fieldLabel { min-height: 5em; }
+  .steps { gap: .375rem; }
+}
+/* When fields stack, their labels no longer need to reserve matching row heights. */
+@container (max-width: 14rem) { .pressureFields .fieldLabel { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .pulseChevron { transition: none; } }

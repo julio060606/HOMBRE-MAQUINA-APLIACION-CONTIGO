@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-11-03T20:38:21.277Z",
+  "baseUrl": "http://127.0.0.1:3001",
+  "mode": "API central y PostgreSQL; sin mocks",
+  "method": "Salud de API, autenticación sintética por rol, lecturas autorizadas y aislamiento de pacientes.",
+  "limitations": [
+    "No modifica tomas, mediciones, recetas, inventario ni citas.",
+    "No acredita una sesión de usabilidad ni el despliegue público.",
+    "Inicia y cierra únicamente sus propias sesiones de prueba."
+  ],
+  "checks": [
+    {
+      "role": "ROLE_PATIENT",
+      "loginHttpStatus": 200,
+      "allowedPatientCount": 1,
+      "dashboardHttpStatus": 200,
+      "medications": 2,
+      "supplies": 2,
+      "appointments": 2,
+      "homePressures": 3,
+      "clinicalPressures": 0,
+      "clinicalSync": {
+        "httpStatus": 200,
+        "status": "SYNCED"
+      },
+      "otherPatientAccessHttpStatus": 403
+    },
+    {
+      "role": "ROLE_CAREGIVER",
+      "loginHttpStatus": 200,
+      "allowedPatientCount": 2,
+      "dashboardHttpStatus": 200,
+      "medications": 2,
+      "supplies": 2,
+      "appointments": 2,
+      "homePressures": 3,
+      "clinicalPressures": 0,
+      "clinicalSync": {
+        "httpStatus": 200,
+        "status": "SYNCED"
+      }
+    }
+  ],
+  "source": [
+    {
+      "file": "frontend/src/config/env.ts",
+      "sha256": "8ad047b8e00e72447a18b94c4f79d1069a5be6944a5cf77fa102f4c0fc911518"
+    },
+    {
+      "file": "frontend/src/services/http/httpService.ts",
+      "sha256": "c2b60d1858266d484eebd97aeb180babbd2f200393c37daeee95b65b2f1cf79e"
+    },
+    {
+      "file": "backend/src/main/java/com/sanpablo/contigo/controller/HealthController.java",
+      "sha256": "f99e02c787726d2c3fb9085e88454ec8f7fa977cff53c73e092549298f744130"
+    }
+  ],
+  "complete": true,
+  "health": {
+    "httpStatus": 200,
+    "status": "UP",
+    "app": "CONTIGO",
+    "storage": "postgresql"
+  }
+}

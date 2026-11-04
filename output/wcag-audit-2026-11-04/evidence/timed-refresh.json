@@ -1,0 +1,27 @@
+{
+  "fixture": "GET dashboard cambia únicamente edad ilustrativa, sin escritura central",
+  "requests": [
+    {
+      "at": "2026-11-04T08:03:08.420Z",
+      "age": 72
+    },
+    {
+      "at": "2026-11-04T08:03:08.606Z",
+      "age": 72
+    },
+    {
+      "at": "2026-11-04T08:03:16.203Z",
+      "age": 73
+    }
+  ],
+  "before": "Mi panel\nResumen\nSolicitudes SOS\n\nSin solicitudes abiertas\n\nSEGUIMIENTO DIARIO\n\nResumen del día\n\nLo importante para acompañar a Dacio.\n\n4 de noviembre\nActualizar\n\nPaciente seleccionado\nDacio Ramos\nPapá\n\n72 años\n\nVer ficha clínica\nDatos sincronizados\nAvisos prioritarios\n\n2 avisos necesitan revisión\n\nSOS · Solicitud de comunicación\n\nEl paciente solicita hablar o escribir con el equipo de apoyo en CONTIGO. No se contactó a servicios de emergencia.\n\n3 nov. 2026, 20:01\nSOS de prueba del paciente\n\nPetición de prueba registrada desde Contigo. No se contactó a servicios de emergencia ni se confirma recepción por otra persona.\n\n3 nov. 2026, 19:17\nTomas de hoy\n0 de 3\n\nDeclaradas como tomadas\n\nSin responder hoy: 3\nVer tratamiento\nÚltima medición\n80 kg\n\nPeso registrado\n\n2 nov. 2026, 17:38\nVer mediciones\nPróxima cita\n9 nov.\n\nGeriatría\n\n10:30\nVer citas\nMedicamentos de hoy\n\nRespuestas registradas por el paciente.\n\nPor confirmar\n3\nTodas\n08:00\nLosartán\n50 mg\nPendiente\n14:00\nVitamina D3\n2000 UI\nPendiente\n20:00\nLosartán\n50 mg\nPendiente\nEl cuidador consulta; el paciente registra.\nTratamiento completo\nPara revisar\n\n1 pendiente de seguimiento\n\n1\nVitamina D3\n\n1 tabletas disponibles · estimación: 1 días.\n\nRevisar existencias\nMediciones y evolución\nÚltima presión: 127 / 83 mmHg\nPreparar un informe\n\nReúne los registros para la próxima consulta.",
+  "after": "Mi panel\nResumen\nSolicitudes SOS\n\nSin solicitudes abiertas\n\nSEGUIMIENTO DIARIO\n\nResumen del día\n\nLo importante para acompañar a Dacio.\n\n4 de noviembre\nActualizar\n\nPaciente seleccionado\nDacio Ramos\nPapá\n\n73 años\n\nVer ficha clínica\nDatos sincronizados\nAvisos prioritarios\n\n2 avisos necesitan revisión\n\nSOS · Solicitud de comunicación\n\nEl paciente solicita hablar o escribir con el equipo de apoyo en CONTIGO. No se contactó a servicios de emergencia.\n\n3 nov. 2026, 20:01\nSOS de prueba del paciente\n\nPetición de prueba registrada desde Contigo. No se contactó a servicios de emergencia ni se confirma recepción por otra persona.\n\n3 nov. 2026, 19:17\nTomas de hoy\n0 de 3\n\nDeclaradas como tomadas\n\nSin responder hoy: 3\nVer tratamiento\nÚltima medición\n80 kg\n\nPeso registrado\n\n2 nov. 2026, 17:38\nVer mediciones\nPróxima cita\n9 nov.\n\nGeriatría\n\n10:30\nVer citas\nMedicamentos de hoy\n\nRespuestas registradas por el paciente.\n\nPor confirmar\n3\nTodas\n08:00\nLosartán\n50 mg\nPendiente\n14:00\nVitamina D3\n2000 UI\nPendiente\n20:00\nLosartán\n50 mg\nPendiente\nEl cuidador consulta; el paciente registra.\nTratamiento completo\nPara revisar\n\n1 pendiente de seguimiento\n\n1\nVitamina D3\n\n1 tabletas disponibles · estimación: 1 días.\n\nRevisar existencias\nMediciones y evolución\nÚltima presión: 127 / 83 mmHg\nPreparar un informe\n\nReúne los registros para la próxima consulta.",
+  "controls": [
+    "Opciones de lectura",
+    "Comunicarme",
+    "Actualizar",
+    "Por confirmar3",
+    "Todas"
+  ],
+  "changedWithoutUserAction": true
+}

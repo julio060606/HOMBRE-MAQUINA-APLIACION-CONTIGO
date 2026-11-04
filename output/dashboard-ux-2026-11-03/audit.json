@@ -1,0 +1,300 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-04T01:55:45.270Z",
+  "sourceHashes": {
+    "frontend/src/components/layout/MainLayout.tsx": "59c671d382bed8ae5a57a230919d4a86320d630a5e27980aa32b11aaeb23a1ed",
+    "frontend/src/components/layout/Navbar.tsx": "8110597e5b802d1119105afa95dffb95689db537978f3294f39e0f4e7eb21a9d",
+    "frontend/src/components/layout/Sidebar.tsx": "6b2400648d7ee134dcfa0ca70848eb79467709888ae170572b896340562c9fb5",
+    "frontend/src/components/layout/caregiverNavigation.ts": "a09e08bebe5d28f2ead248e60437a69fcc9caf5bfc98297a2869f77a8f9bf25a",
+    "frontend/src/components/layout/CaregiverLayout.module.css": "33d6bd27d406eade3844da1324067eccf419716ce026f934e8cc68f318b1a940",
+    "frontend/src/features/dashboard/DashboardPage.tsx": "904a37ce68b9552b68e86349b69a525908a578c01fafc500643a185e207ddf28",
+    "frontend/src/features/dashboard/PatientSummary.tsx": "3cf1e6729df41346b53a90c943eaf8a9b29e49e45484938b789d4812cb2be940",
+    "frontend/src/features/dashboard/Dashboard.module.css": "04ab15d3919b94e81dd39693372df1609bd23be6f2ed18bdd1b85d167e8414af",
+    "frontend/src/features/support/SupportInbox.tsx": "b0e29553aad9b7afe91d99e6009ea461065190382031783bf0a3685a77911c65",
+    "frontend/src/features/support/SupportInbox.module.css": "f9f368013b2314b68cdee21483021d3125c73586c5ee6f68ca76a0f611e11859"
+  },
+  "mode": "Lecturas y autenticación API/PostgreSQL, contexto Chrome privado. Escenarios límite con respuestas GET modificadas solo en el navegador de prueba; no cambian bases ni datos del usuario.",
+  "checks": [
+    {
+      "name": "Tres datos esenciales únicos y actualización manual real",
+      "passed": true,
+      "screenshot": "dashboard-desktop.png"
+    },
+    {
+      "name": "Cambio de paciente actualiza identidad y reinicia filtros sin mezclar registros",
+      "passed": true
+    },
+    {
+      "name": "Menú lateral y ubicación actual conectan Mediciones y Resumen conservando paciente",
+      "passed": true
+    },
+    {
+      "name": "Retorno al landing y al panel con sesión conservada",
+      "passed": true
+    },
+    {
+      "name": "Doce vistas móvil/escritorio, contraste y texto200%, menú por teclado y gráfica desplegada",
+      "passed": true
+    },
+    {
+      "name": "Escenario GET sintético: cuatro críticos visibles, recuento adicional exacto y peso reciente",
+      "passed": true,
+      "screenshot": "dashboard-synthetic-priorities.png"
+    },
+    {
+      "name": "Solicitud SOS WAITING GET sintética mantiene botón de atención visible en320/200",
+      "passed": true,
+      "screenshot": "dashboard-active-sos-320-200.png"
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "scale": 100,
+      "contrast": false,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-320-100-standard.png"
+    },
+    {
+      "width": 320,
+      "scale": 100,
+      "contrast": true,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-320-100-high.png"
+    },
+    {
+      "width": 320,
+      "scale": 200,
+      "contrast": false,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-320-200-standard.png"
+    },
+    {
+      "width": 320,
+      "scale": 200,
+      "contrast": true,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-320-200-high.png"
+    },
+    {
+      "width": 390,
+      "scale": 100,
+      "contrast": false,
+      "client": 390,
+      "scroll": 390,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-390-100-standard.png"
+    },
+    {
+      "width": 390,
+      "scale": 100,
+      "contrast": true,
+      "client": 390,
+      "scroll": 390,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-390-100-high.png"
+    },
+    {
+      "width": 390,
+      "scale": 200,
+      "contrast": false,
+      "client": 390,
+      "scroll": 390,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-390-200-standard.png"
+    },
+    {
+      "width": 390,
+      "scale": 200,
+      "contrast": true,
+      "client": 390,
+      "scroll": 390,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-390-200-high.png"
+    },
+    {
+      "width": 1440,
+      "scale": 100,
+      "contrast": false,
+      "client": 1440,
+      "scroll": 1440,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-1440-100-standard.png"
+    },
+    {
+      "width": 1440,
+      "scale": 100,
+      "contrast": true,
+      "client": 1440,
+      "scroll": 1440,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-1440-100-high.png"
+    },
+    {
+      "width": 1440,
+      "scale": 200,
+      "contrast": false,
+      "client": 1440,
+      "scroll": 1440,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "dashboard-1440-200-standard.png"
+    },
+    {
+      "width": 1440,
+      "scale": 200,
+      "contrast": true,
+      "client": 1440,
+      "scroll": 1440,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-1440-200-high.png"
+    },
+    {
+      "width": 320,
+      "scale": 200,
+      "contrast": true,
+      "fixture": true,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "dashboard-synthetic-320-200.png"
+    }
+  ],
+  "blockedWrites": [],
+  "errors": [],
+  "sourceHashesAfter": {
+    "frontend/src/components/layout/MainLayout.tsx": "59c671d382bed8ae5a57a230919d4a86320d630a5e27980aa32b11aaeb23a1ed",
+    "frontend/src/components/layout/Navbar.tsx": "8110597e5b802d1119105afa95dffb95689db537978f3294f39e0f4e7eb21a9d",
+    "frontend/src/components/layout/Sidebar.tsx": "6b2400648d7ee134dcfa0ca70848eb79467709888ae170572b896340562c9fb5",
+    "frontend/src/components/layout/caregiverNavigation.ts": "a09e08bebe5d28f2ead248e60437a69fcc9caf5bfc98297a2869f77a8f9bf25a",
+    "frontend/src/components/layout/CaregiverLayout.module.css": "33d6bd27d406eade3844da1324067eccf419716ce026f934e8cc68f318b1a940",
+    "frontend/src/features/dashboard/DashboardPage.tsx": "904a37ce68b9552b68e86349b69a525908a578c01fafc500643a185e207ddf28",
+    "frontend/src/features/dashboard/PatientSummary.tsx": "3cf1e6729df41346b53a90c943eaf8a9b29e49e45484938b789d4812cb2be940",
+    "frontend/src/features/dashboard/Dashboard.module.css": "04ab15d3919b94e81dd39693372df1609bd23be6f2ed18bdd1b85d167e8414af",
+    "frontend/src/features/support/SupportInbox.tsx": "b0e29553aad9b7afe91d99e6009ea461065190382031783bf0a3685a77911c65",
+    "frontend/src/features/support/SupportInbox.module.css": "f9f368013b2314b68cdee21483021d3125c73586c5ee6f68ca76a0f611e11859"
+  },
+  "changedSources": []
+}

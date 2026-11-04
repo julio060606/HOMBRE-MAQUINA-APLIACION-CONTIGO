@@ -1,19 +1,7 @@
-# Declaración de uso de inteligencia artificial
+# Declaración de uso de inteligencia artificial en APF3
 
-El equipo utilizó Codex con varios subagentes para apoyar la revisión de requisitos, la programación de mejoras de accesibilidad, la ejecución de comprobaciones técnicas y la preparación de los borradores del informe, la presentación, la matriz y los instrumentos de validación.
+Codex y varios subagentes apoyaron implementación, inspección, ejecución de pruebas técnicas, documentación y generación de artefactos. La revisión actual usa el repositorio Hombre Maquina y un corte específico de evidencia; el paquete previo de Descargas no se mezcla con esta entrega.
 
-La evidencia técnica procede de ejecuciones del navegador y de herramientas sobre la versión base y los archivos modificados. Los registros originales, capturas, versiones de herramientas y límites de cada comprobación se conservan en los anexos. La síntesis y la priorización requieren revisión por los integrantes.
+Los registros de herramientas corresponden a operaciones efectivamente ejecutadas y delimitan origen central API/PostgreSQL frente a demostración aislada. No se generaron personas, consentimientos, testimonios ni métricas humanas de éxito, tiempo, SEQ o SUS. Las fichas permanecen sin resultados hasta realizar sesiones consentidas. No se declara lectura con NVDA cuando el proveedor detuvo el intento antes de los gestos.
 
-No se generaron participantes, consentimientos, testimonios ni resultados de usabilidad. Las cifras simuladas del APF2 permanecen identificadas como simulaciones y no se presentan como una línea base empírica. Se ejecutaron recorridos técnicos con teclado y zoom nativo verificado por API. NVDA real registró T1, T2 y T4, y únicamente navegación y encabezados de T3. El foco programático y la ausencia de participantes limitan esas pruebas. Faltan la lectura completa de valores de T3 con NVDA, las sesiones con personas, Stark y la publicación verificada del prototipo Figma.
-
-Instrucción del usuario para esta fase: «quiero que hagas todo lo que pide y utiliza varios subagentes para hacerlo».
-
-La asistencia fue extensa e incluyó redacción. Antes de entregar, los integrantes deben contrastar los resultados, revisar y desarrollar el contenido con su propio trabajo, completar las evidencias pendientes y aplicar la política de IA de la consigna. Esta declaración no atribuye a los integrantes actividades que todavía no se han documentado.
-
-Integrante y aporte comprobable: __________________________
-
-Integrante y aporte comprobable: __________________________
-
-Integrante y aporte comprobable: __________________________
-
-Fecha de revisión por el equipo: __________________________
+El equipo debe revisar los artefactos, reproducir los resultados, documentar su contribución y cumplir la política de IA del curso. Esta declaración no calcula un porcentaje de autoría ni elimina los requisitos de revisión académica. No se atribuye representación institucional de la clínica.

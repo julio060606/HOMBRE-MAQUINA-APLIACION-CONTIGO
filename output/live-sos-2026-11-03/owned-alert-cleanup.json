@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-04T00:32:45.212Z",
+  "base": "http://127.0.0.1:3001",
+  "purpose": "Reconocer exclusivamente los avisos sintéticos de las tres ejecuciones acreditadas de verify-live-sos. Conserva el historial y no borra datos.",
+  "sources": [
+    {
+      "filename": "audit.json",
+      "sha256": "6ef396f12bc88c8aff8d9489d45a2714226520aabe209b42bd19e02411c6ec98"
+    },
+    {
+      "filename": "diagnostic-script-send-race.json",
+      "sha256": "396610285f5a8aa8160701847b0f1b53300ca72d654f48a2947cbd2148054c32"
+    },
+    {
+      "filename": "diagnostic-mobile-overflow.json",
+      "sha256": "c5da251a9642022fc917844f98f5c060579d6bf94cfc42e2fc574d1fbb0ded6e"
+    }
+  ],
+  "allowlist": [
+    {
+      "id": "fabe07ff-2234-4a20-a723-f9dcdcfe65a8",
+      "alertId": "1d8dfd28-ae3b-4cb1-a6e4-ddf51bc6ccdc",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:30:28.771983400Z",
+      "source": "audit.json"
+    },
+    {
+      "id": "f50f4238-7f6b-43c5-a824-49bc0b3fcae7",
+      "alertId": "862491bc-b888-46c6-872a-06048e4bb34e",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:28:18.377182100Z",
+      "source": "diagnostic-script-send-race.json"
+    },
+    {
+      "id": "62a4a90d-a7b5-4e96-b23f-5e9e19b838e3",
+      "alertId": "9203bc79-2648-4559-9f09-94c243958e44",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:28:38.045214800Z",
+      "source": "diagnostic-mobile-overflow.json"
+    }
+  ],
+  "actions": [
+    {
+      "sessionId": "fabe07ff-2234-4a20-a723-f9dcdcfe65a8",
+      "patientId": "pat_001",
+      "alertId": "1d8dfd28-ae3b-4cb1-a6e4-ddf51bc6ccdc",
+      "source": "audit.json",
+      "previouslyResolved": false,
+      "httpStatus": 200,
+      "notificationStatus": "ACKNOWLEDGED",
+      "isResolved": true,
+      "acknowledgedAt": "2026-11-04T00:32:45.319680100Z"
+    },
+    {
+      "sessionId": "f50f4238-7f6b-43c5-a824-49bc0b3fcae7",
+      "patientId": "pat_001",
+      "alertId": "862491bc-b888-46c6-872a-06048e4bb34e",
+      "source": "diagnostic-script-send-race.json",
+      "previouslyResolved": false,
+      "httpStatus": 200,
+      "notificationStatus": "ACKNOWLEDGED",
+      "isResolved": true,
+      "acknowledgedAt": "2026-11-04T00:32:45.347703400Z"
+    },
+    {
+      "sessionId": "62a4a90d-a7b5-4e96-b23f-5e9e19b838e3",
+      "patientId": "pat_001",
+      "alertId": "9203bc79-2648-4559-9f09-94c243958e44",
+      "source": "diagnostic-mobile-overflow.json",
+      "previouslyResolved": false,
+      "httpStatus": 200,
+      "notificationStatus": "ACKNOWLEDGED",
+      "isResolved": true,
+      "acknowledgedAt": "2026-11-04T00:32:45.369566200Z"
+    }
+  ],
+  "errors": []
+}

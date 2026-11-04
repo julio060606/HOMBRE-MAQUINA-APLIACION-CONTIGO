@@ -1,0 +1,444 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-04T01:12:36.799Z",
+  "mode": "API central, contextos Chrome independientes; solo autenticación y lecturas, sin escrituras clínicas.",
+  "checks": [
+    {
+      "name": "Landing → login → inicio con título/foco correctos y una acción principal",
+      "passed": true
+    },
+    {
+      "name": "Acceso de paciente preselecciona cuenta y Atrás recupera la posición",
+      "passed": true,
+      "position": {
+        "before": 1615,
+        "restored": 1615
+      }
+    },
+    {
+      "name": "Enlaces a secciones entre páginas y al repetir ancla mantienen el foco en destino",
+      "passed": true
+    },
+    {
+      "name": "Menú móvil: teclado, Escape, retorno de foco y cierre al navegar",
+      "passed": true
+    },
+    {
+      "name": "24 combinaciones de pantalla y letra +2 de alto contraste y controles grandes",
+      "passed": true
+    },
+    {
+      "name": "Cambio de cuenta, mostrar clave, error con foco y reintento real único hacia paciente",
+      "passed": true
+    },
+    {
+      "name": "Sesión existente ofrece continuar; cambio explícito de cuenta y acceso a dashboard",
+      "passed": true
+    }
+  ],
+  "layouts": [
+    {
+      "route": "/login",
+      "width": 320,
+      "scale": 100,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-320-100.png"
+    },
+    {
+      "route": "/landing",
+      "width": 320,
+      "scale": 100,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "screenshot": "landing-320-100.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 320,
+      "scale": 100,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ],
+      "screenshot": "clinic-320-100.png"
+    },
+    {
+      "route": "/login",
+      "width": 320,
+      "scale": 125,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-320-125.png"
+    },
+    {
+      "route": "/landing",
+      "width": 320,
+      "scale": 125,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "landing-320-125.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 320,
+      "scale": 125,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ],
+      "screenshot": "clinic-320-125.png"
+    },
+    {
+      "route": "/login",
+      "width": 320,
+      "scale": 150,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-320-150.png"
+    },
+    {
+      "route": "/landing",
+      "width": 320,
+      "scale": 150,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "screenshot": "landing-320-150.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 320,
+      "scale": 150,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ],
+      "screenshot": "clinic-320-150.png"
+    },
+    {
+      "route": "/login",
+      "width": 320,
+      "scale": 200,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-320-200.png"
+    },
+    {
+      "route": "/landing",
+      "width": 320,
+      "scale": 200,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 8
+        }
+      ],
+      "screenshot": "landing-320-200.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 320,
+      "scale": 200,
+      "client": 320,
+      "scroll": 320,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ],
+      "screenshot": "clinic-320-200.png"
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "scale": 100,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-1280-100.png"
+    },
+    {
+      "route": "/landing",
+      "width": 1280,
+      "scale": 100,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "landing-1280-100.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 1280,
+      "scale": 100,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "screenshot": "clinic-1280-100.png"
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "scale": 125,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-1280-125.png"
+    },
+    {
+      "route": "/landing",
+      "width": 1280,
+      "scale": 125,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "landing-1280-125.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 1280,
+      "scale": 125,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "screenshot": "clinic-1280-125.png"
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "scale": 150,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-1280-150.png"
+    },
+    {
+      "route": "/landing",
+      "width": 1280,
+      "scale": 150,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "landing-1280-150.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 1280,
+      "scale": 150,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "screenshot": "clinic-1280-150.png"
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "scale": 200,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [],
+      "screenshot": "login-1280-200.png"
+    },
+    {
+      "route": "/landing",
+      "width": 1280,
+      "scale": 200,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "screenshot": "landing-1280-200.png"
+    },
+    {
+      "route": "/clinic",
+      "width": 1280,
+      "scale": 200,
+      "client": 1280,
+      "scroll": 1280,
+      "overflows": [],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "screenshot": "clinic-1280-200.png"
+    },
+    {
+      "route": "/login",
+      "width": 320,
+      "scale": 200,
+      "contrast": true,
+      "largeTargets": true,
+      "screenshot": "login-320-200-high.png"
+    },
+    {
+      "route": "/landing",
+      "width": 320,
+      "scale": 200,
+      "contrast": true,
+      "largeTargets": true,
+      "screenshot": "landing-320-200-high.png"
+    }
+  ],
+  "errors": [],
+  "unexpectedWrites": [],
+  "sourceHashes": {
+    "frontend/src/App.tsx": "1615eaef8eccfe7e812e12b96ccd6bf7e46092374001467fcb19a799e1717f25",
+    "frontend/src/components/layout/RouteAccessibility.tsx": "f176400dbfc37472324414e92ed9e5c5e2597cde9da6465d82aa15d69e2bcaae",
+    "frontend/src/components/layout/PublicHeader.tsx": "600d3178feb4cde43c52718ddac1fd526c7b52ee2ee4dd8e581b968ace06b31f",
+    "frontend/src/components/layout/PublicHeader.module.css": "723937c7852abb20bf07858978cfc7bc7d7e1c1144d4f10c8eb403babcf67101",
+    "frontend/src/features/auth/LoginPage.tsx": "0cdfc93fc1620333a5ef44e24637e09fb18a52795d8a5efd6f81a2103fb28029",
+    "frontend/src/features/auth/LoginPage.module.css": "463fdc664c4c5b4b565d6d038053df5cba7a8e2aab33ca8d4ca46616f8c6bd36",
+    "frontend/src/features/landing/ContigoLandingPage.tsx": "551ce11fb5a0326f933cc7113645ca58ca420f3a3963f7ea1f4a1f2e42bdf089",
+    "frontend/src/features/landing/ContigoLandingPage.css": "b416d033132341747a784f71ad79a0eb1486f5ee4fcabf16f0279a134994977b",
+    "frontend/src/features/landing/ClinicPortalPage.tsx": "48e50349b264caf1e9caf7dc765c856af92cd5d75677d489d722f7e840e4e9ee",
+    "frontend/src/features/landing/ClinicPortalPage.module.css": "34a9c969c6edf7aa3c72b955751998282ca0a42178b3baba0b7d43956a934f36"
+  },
+  "sourceHashesAfter": {
+    "frontend/src/App.tsx": "1615eaef8eccfe7e812e12b96ccd6bf7e46092374001467fcb19a799e1717f25",
+    "frontend/src/components/layout/RouteAccessibility.tsx": "f176400dbfc37472324414e92ed9e5c5e2597cde9da6465d82aa15d69e2bcaae",
+    "frontend/src/components/layout/PublicHeader.tsx": "600d3178feb4cde43c52718ddac1fd526c7b52ee2ee4dd8e581b968ace06b31f",
+    "frontend/src/components/layout/PublicHeader.module.css": "723937c7852abb20bf07858978cfc7bc7d7e1c1144d4f10c8eb403babcf67101",
+    "frontend/src/features/auth/LoginPage.tsx": "0cdfc93fc1620333a5ef44e24637e09fb18a52795d8a5efd6f81a2103fb28029",
+    "frontend/src/features/auth/LoginPage.module.css": "463fdc664c4c5b4b565d6d038053df5cba7a8e2aab33ca8d4ca46616f8c6bd36",
+    "frontend/src/features/landing/ContigoLandingPage.tsx": "551ce11fb5a0326f933cc7113645ca58ca420f3a3963f7ea1f4a1f2e42bdf089",
+    "frontend/src/features/landing/ContigoLandingPage.css": "b416d033132341747a784f71ad79a0eb1486f5ee4fcabf16f0279a134994977b",
+    "frontend/src/features/landing/ClinicPortalPage.tsx": "48e50349b264caf1e9caf7dc765c856af92cd5d75677d489d722f7e840e4e9ee",
+    "frontend/src/features/landing/ClinicPortalPage.module.css": "34a9c969c6edf7aa3c72b955751998282ca0a42178b3baba0b7d43956a934f36"
+  },
+  "changedSources": []
+}

@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-03T20:40:15.715Z",
+  "browser": "156.0.8078.80",
+  "origin": "http://127.0.0.1:3001",
+  "mode": "Current API app, local Chrome context; no clinical/dose/SOS/measurement write authorized",
+  "requests": [
+    {
+      "utc": "2026-11-03T20:40:16.113Z",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.227Z",
+      "method": "GET",
+      "path": "/api/v1/patients",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.244Z",
+      "method": "GET",
+      "path": "/api/v1/events/stream",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.369Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/dashboard",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.370Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/clinical-sync",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.487Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/dashboard",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:16.488Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/clinical-sync",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:21.697Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/dashboard",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:21.697Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/clinical-sync",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:36.719Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/dashboard",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:36.719Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/clinical-sync",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:51.761Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/dashboard",
+      "allowed": true
+    },
+    {
+      "utc": "2026-11-03T20:40:51.761Z",
+      "method": "GET",
+      "path": "/api/v1/patients/pat_001/clinical-sync",
+      "allowed": true
+    }
+  ],
+  "events": [
+    {
+      "utc": "2026-11-03T20:40:16.520Z",
+      "step": "ready-current-api-treatment",
+      "url": "http://127.0.0.1:3001/medications",
+      "focus": {
+        "tag": "H1",
+        "text": "Tratamiento y existencias"
+      }
+    }
+  ],
+  "finishedAt": "2026-11-03T20:41:00.967Z"
+}

@@ -1,0 +1,3482 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-03T20:52:03.767Z",
+    "sourceAudit": "output/apf3/evidence/current-2026-11-03/api-audit/audit.json",
+    "sourceAuditSha256": "822b30cf76685551a853e16d17bfe7e88d53236c27db0e7895403b2354d66441",
+    "mode": "API central, Chrome headless, navegador aislado, solo lectura de dominio",
+    "method": "Estilos calculados y captura original, sonda temporal solo de tinta con restauración exacta, mínimo conservador de contraste sobre rectángulos de texto. No se alteran resultados axe.",
+    "limits": [
+      "No es Stark ni recorrido con lector o participantes.",
+      "Un mínimo de rectángulo no aprobado es inconcluso, no demuestra incumplimiento en los glifos.",
+      "La transparencia de la sonda solo existe en el navegador de prueba y se restaura antes de continuar."
+    ],
+    "browser": "156.0.8078.80"
+  },
+  "groups": [
+    {
+      "name": "Filtrar dosis",
+      "role": "group",
+      "buttons": [
+        {
+          "text": "Todas",
+          "pressed": "true"
+        },
+        {
+          "text": "Por confirmar3",
+          "pressed": "false"
+        }
+      ]
+    },
+    {
+      "name": "Periodo de mediciones",
+      "role": "group",
+      "buttons": [
+        {
+          "text": "7 días",
+          "pressed": "true"
+        },
+        {
+          "text": "30 días",
+          "pressed": "false"
+        }
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "11-vitals",
+      "url": "http://127.0.0.1:3001/vitals",
+      "expectedNodes": 18
+    },
+    {
+      "id": "14-login",
+      "url": "http://127.0.0.1:3001/login",
+      "expectedNodes": 7
+    }
+  ],
+  "nodes": [
+    {
+      "id": "11-vitals-01",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-xAxis.xAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[font-size=\"11\"][y=\"200\"][text-anchor=\"middle\"] > tspan[dy=\"0.71em\"]",
+      "screen": "11-vitals",
+      "text": "2 nov. 2026",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 336.0859375,
+        "y": 794.4037475585938,
+        "width": 62,
+        "height": 14
+      },
+      "pageX": 336.0859375,
+      "pageY": 794.4037475585938,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 61.828125,
+          "height": 14
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-01-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-01-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-01-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-02",
+      "selector": "tspan[x=\"331.6156260145006\"][dy=\"0.71em\"]",
+      "screen": "11-vitals",
+      "text": "2 nov. 2026",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 607.7015380859375,
+        "y": 794.4037475585938,
+        "width": 62,
+        "height": 14
+      },
+      "pageX": 607.7015380859375,
+      "pageY": 794.4037475585938,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 61.828125,
+          "height": 14
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-02-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-02-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-02-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-03",
+      "selector": "tspan[x=\"603.2312520290012\"][dy=\"0.71em\"]",
+      "screen": "11-vitals",
+      "text": "2 nov. 2026",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 879.3171997070312,
+        "y": 794.4037475585938,
+        "width": 62,
+        "height": 14
+      },
+      "pageX": 879.3171997070312,
+      "pageY": 794.4037475585938,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 61.828125,
+          "height": 14
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-03-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-03-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-03-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-04",
+      "selector": "tspan[x=\"1033.84375\"][dy=\"0.71em\"]",
+      "screen": "11-vitals",
+      "text": "2 nov. 2026",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 1309.9296875,
+        "y": 794.4037475585938,
+        "width": 62,
+        "height": 14
+      },
+      "pageX": 1309.9296875,
+      "pageY": 794.4037475585938,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 61.828125,
+          "height": 14
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-04-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-04-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-04-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-05",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "75",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 341.75,
+        "y": 779.9187622070312,
+        "width": 17.34228515625,
+        "height": 19
+      },
+      "pageX": 341.75,
+      "pageY": 779.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 17.25,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-05-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-05-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-05-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-06",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "90",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 340.234375,
+        "y": 731.9187622070312,
+        "width": 18.765625,
+        "height": 19
+      },
+      "pageX": 340.234375,
+      "pageY": 731.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 18.765625,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-06-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-06-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-06-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-07",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "105",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 334.53125,
+        "y": 683.9187622070312,
+        "width": 24.56396484375,
+        "height": 19
+      },
+      "pageX": 334.53125,
+      "pageY": 683.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 24.46875,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-07-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-07-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-07-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-08",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "120",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 334.28125,
+        "y": 635.9187622070312,
+        "width": 24.71875,
+        "height": 19
+      },
+      "pageX": 334.28125,
+      "pageY": 635.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 24.71875,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-08-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-08-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-08-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-09",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "135",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 334.734375,
+        "y": 599.9187622070312,
+        "width": 24.3662109375,
+        "height": 19
+      },
+      "pageX": 334.734375,
+      "pageY": 599.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 24.265625,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-09-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-09-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-09-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-10",
+      "selector": "section:nth-child(1) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text",
+      "screen": "11-vitals",
+      "text": "Sistólica",
+      "tag": "SPAN",
+      "color": "rgb(159, 18, 57)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 764.84375,
+        "y": 821.59375,
+        "width": 59.34375,
+        "height": 19
+      },
+      "pageX": 764.84375,
+      "pageY": 821.59375,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 59.34375,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "LI",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "UL",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-10-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-10-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-10-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-11",
+      "selector": ".legend-item-1 > .recharts-legend-item-text",
+      "screen": "11-vitals",
+      "text": "Diastólica",
+      "tag": "SPAN",
+      "color": "rgb(30, 64, 175)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 852.1875,
+        "y": 821.59375,
+        "width": 68.96875,
+        "height": 19
+      },
+      "pageX": 852.1875,
+      "pageY": 821.59375,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 68.96875,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "LI",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "UL",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-11-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-11-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-11-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-12",
+      "selector": "tspan[x=\"562\"][dy=\"0.71em\"]",
+      "screen": "11-vitals",
+      "text": "2 nov. 2026",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 838.0859375,
+        "y": 943.4037475585938,
+        "width": 62,
+        "height": 14
+      },
+      "pageX": 838.0859375,
+      "pageY": 1502.4037475585938,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 61.828125,
+          "height": 14
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-12-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-12-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-12-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-13",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(1) > text[y=\"192\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "78",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 341.4375,
+        "y": 928.9187622070312,
+        "width": 17.5625,
+        "height": 19
+      },
+      "pageX": 341.4375,
+      "pageY": 1487.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 17.5625,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-13-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-13-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-13-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-14",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(2) > text[y=\"144\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "79",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 341.34375,
+        "y": 880.9187622070312,
+        "width": 17.65625,
+        "height": 19
+      },
+      "pageX": 341.34375,
+      "pageY": 1439.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 17.65625,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-14-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-14-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-14-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-15",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(3) > text[y=\"96\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "80",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 340.25,
+        "y": 832.9187622070312,
+        "width": 18.75,
+        "height": 19
+      },
+      "pageX": 340.25,
+      "pageY": 1391.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 18.75,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-15-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-15-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-15-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-16",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(4) > text[y=\"48\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "81",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 343.609375,
+        "y": 784.9187622070312,
+        "width": 15.390625,
+        "height": 19
+      },
+      "pageX": 343.609375,
+      "pageY": 1343.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 15.390625,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-16-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-16-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-16-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-17",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > svg[width=\"1076\"][height=\"256\"][viewBox=\"0 0 1076 256\"] > .recharts-yAxis.yAxis.recharts-cartesian-axis > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick.recharts-layer:nth-child(5) > text[y=\"12\"][text-anchor=\"end\"] > tspan[dy=\"0.355em\"]",
+      "screen": "11-vitals",
+      "text": "82",
+      "tag": "tspan",
+      "color": "rgb(23, 46, 59)",
+      "fill": "rgb(102, 102, 102)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 340.5625,
+        "y": 748.9187622070312,
+        "width": 18.4375,
+        "height": 19
+      },
+      "pageX": 340.5625,
+      "pageY": 1307.9187622070312,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 18.4375,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "tspan",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "text",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "g",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "svg",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "fill",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-17-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-17-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-17-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "11-vitals-18",
+      "selector": "section:nth-child(3) > .h-64.min-w-0[role=\"img\"] > .recharts-responsive-container > .recharts-wrapper > .recharts-legend-wrapper > .recharts-default-legend > .legend-item-0.recharts-legend-item > .recharts-legend-item-text",
+      "screen": "11-vitals",
+      "text": "Peso (kg)",
+      "tag": "SPAN",
+      "color": "rgb(30, 64, 175)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 809.28125,
+        "y": 970.59375,
+        "width": 67.421875,
+        "height": 19
+      },
+      "pageX": 809.28125,
+      "pageY": 1529.59375,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 67.421875,
+          "height": 19
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "LI",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "UL",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "SECTION",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(244, 247, 248)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-18-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-18-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/11-vitals-18-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-01",
+      "selector": ".tracking-tight",
+      "screen": "14-login",
+      "text": "CONTIGO",
+      "tag": "A",
+      "color": "rgb(255, 255, 255)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "24px",
+      "fontWeight": "700",
+      "rect": {
+        "x": 241,
+        "y": 302.5,
+        "width": 169.40625,
+        "height": 46
+      },
+      "pageX": 241,
+      "pageY": 302.5,
+      "textLayoutRectangles": [
+        {
+          "x": 56,
+          "y": 8,
+          "width": 113.40625,
+          "height": 30
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "A",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-01-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-01-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-01-restored.png",
+      "inlineStylesRestored": false,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-02",
+      "selector": ".bg-emerald-500\\/20",
+      "screen": "14-login",
+      "text": "Clínica ficticia · Proyecto CONTIGO",
+      "tag": "SPAN",
+      "color": "rgb(167, 243, 208)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "rect": {
+        "x": 241,
+        "y": 387.5,
+        "width": 249.09375,
+        "height": 26
+      },
+      "pageX": 241,
+      "pageY": 387.5,
+      "textLayoutRectangles": [
+        {
+          "x": 33,
+          "y": 5,
+          "width": 203.09375,
+          "height": 15
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(16, 185, 129, 0.2)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-02-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-02-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-02-restored.png",
+      "inlineStylesRestored": false,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-03",
+      "selector": "h2",
+      "screen": "14-login",
+      "text": "Acompañamiento y cuidado domiciliario",
+      "tag": "H2",
+      "color": "rgb(255, 255, 255)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "24px",
+      "fontWeight": "700",
+      "rect": {
+        "x": 241,
+        "y": 422.5,
+        "width": 361.828125,
+        "height": 66
+      },
+      "pageX": 241,
+      "pageY": 422.5,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 1,
+          "width": 329.125,
+          "height": 30
+        },
+        {
+          "x": 0,
+          "y": 34,
+          "width": 137.328125,
+          "height": 30
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "H2",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-03-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-03-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-03-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-04",
+      "selector": ".text-emerald-100\\/90",
+      "screen": "14-login",
+      "text": "Supervisión del tratamiento médico indicado por la clínica, tomas oportunas y mediciones en casa.",
+      "tag": "P",
+      "color": "rgba(209, 250, 229, 0.9)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 241,
+        "y": 496.5,
+        "width": 361.828125,
+        "height": 45.5
+      },
+      "pageX": 241,
+      "pageY": 496.5,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 2,
+          "width": 335.953125,
+          "height": 17
+        },
+        {
+          "x": 0,
+          "y": 24.75,
+          "width": 313.265625,
+          "height": 17
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "P",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-04-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-04-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-04-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-05",
+      "selector": ".pt-6 > .gap-2.items-center.flex:nth-child(1) > span",
+      "screen": "14-login",
+      "text": "Dosis y horarios determinados por la clínica",
+      "tag": "SPAN",
+      "color": "rgba(209, 250, 229, 0.8)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 265,
+        "y": 787.5,
+        "width": 248.109375,
+        "height": 16
+      },
+      "pageX": 265,
+      "pageY": 787.5,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 248.109375,
+          "height": 15
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-05-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-05-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-05-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-06",
+      "selector": ".gap-2.items-center.flex:nth-child(2) > span",
+      "screen": "14-login",
+      "text": "Tomas declaradas y mediciones ingresadas por el paciente",
+      "tag": "SPAN",
+      "color": "rgba(209, 250, 229, 0.8)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 265,
+        "y": 815.5,
+        "width": 335.609375,
+        "height": 16
+      },
+      "pageX": 265,
+      "pageY": 815.5,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 335.609375,
+          "height": 15
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-06-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-06-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-06-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    },
+    {
+      "id": "14-login-07",
+      "selector": ".gap-2.items-center.flex:nth-child(3) > span",
+      "screen": "14-login",
+      "text": "Acompañamiento familiar y reportes de adherencia",
+      "tag": "SPAN",
+      "color": "rgba(209, 250, 229, 0.8)",
+      "fill": "rgb(0, 0, 0)",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "rect": {
+        "x": 265,
+        "y": 843.5,
+        "width": 289.609375,
+        "height": 16
+      },
+      "pageX": 265,
+      "pageY": 843.5,
+      "textLayoutRectangles": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 289.609375,
+          "height": 15
+        }
+      ],
+      "ancestors": [
+        {
+          "tag": "SPAN",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(to right bottom, rgb(9, 58, 44), rgb(14, 84, 63))",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "MAIN",
+          "background": "rgb(248, 250, 252)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "DIV",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "BODY",
+          "background": "rgb(248, 249, 250)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        },
+        {
+          "tag": "HTML",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "blend": "normal"
+        }
+      ],
+      "foregroundProperty": "color",
+      "original": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-07-original.png",
+      "backgroundProbe": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-07-background.png",
+      "restored": "output/apf3/evidence/current-2026-11-03/incomplete-contrast/14-login-07-restored.png",
+      "inlineStylesRestored": true,
+      "restoredBytesEqual": true
+    }
+  ],
+  "blockedWrites": [],
+  "complete": true
+}

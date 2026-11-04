@@ -1,0 +1,250 @@
+{
+  "complete": false,
+  "timestamp": "2026-11-04T00:28:35.756Z",
+  "base": "http://127.0.0.1:3001",
+  "mode": "API central/PostgreSQL y dos contextos Chrome separados; micrófonos sintéticos de Chrome, sin dispositivos reales.",
+  "limitations": [
+    "Verificación técnica headless, sin participantes ni lector de pantalla.",
+    "El audio usa dispositivos sintéticos y conexión local; no acredita micrófonos físicos, operadores de una clínica real ni conexión TURN en redes diferentes.",
+    "Solo se crean solicitudes SOS sintéticas identificadas por este informe. No se modifican tratamientos, mediciones ni citas. Los avisos permanecen como historial académico."
+  ],
+  "checks": [
+    {
+      "name": "Primer click crea alerta y solicitud WAITING visible en otra sesión del dashboard",
+      "passed": true,
+      "latencyMs": 104,
+      "dashboardSelectedPatient": "pat_002",
+      "requestedPatient": "pat_001",
+      "screenshots": [
+        "01-solicitud-espera.png",
+        "02-alerta-dashboard.png"
+      ]
+    },
+    {
+      "name": "Una persona acepta explícitamente; texto real viaja en ambas direcciones sin micrófono",
+      "passed": true,
+      "screenshot": "03-conversacion-texto.png"
+    },
+    {
+      "name": "Fallo de red al enviar conserva el texto y el reintento entrega un único mensaje",
+      "passed": true
+    },
+    {
+      "name": "Permiso de micrófono denegado conserva la alternativa escrita y no abre pistas",
+      "passed": true,
+      "screenshot": "04-permiso-denegado.png"
+    },
+    {
+      "name": "WebRTC conectado con paquetes de audio entrantes en ambos extremos",
+      "passed": true,
+      "patient": {
+        "peers": [
+          {
+            "connectionState": "connected",
+            "iceConnectionState": "connected",
+            "signalingState": "stable",
+            "stats": [
+              {
+                "type": "inbound-rtp",
+                "kind": "audio",
+                "packetsReceived": 25,
+                "bytesReceived": 1247
+              },
+              {
+                "type": "outbound-rtp",
+                "kind": "audio",
+                "packetsSent": 25,
+                "bytesSent": 1244
+              },
+              {
+                "type": "transport",
+                "packetsReceived": 44,
+                "packetsSent": 36,
+                "bytesReceived": 10299,
+                "bytesSent": 4311,
+                "dtlsState": "connected"
+              }
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "live"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "responder": {
+        "peers": [
+          {
+            "connectionState": "connected",
+            "iceConnectionState": "connected",
+            "signalingState": "stable",
+            "stats": [
+              {
+                "type": "inbound-rtp",
+                "kind": "audio",
+                "packetsReceived": 8,
+                "bytesReceived": 327
+              },
+              {
+                "type": "outbound-rtp",
+                "kind": "audio",
+                "packetsSent": 7,
+                "bytesSent": 266
+              },
+              {
+                "type": "transport",
+                "packetsReceived": 14,
+                "packetsSent": 21,
+                "bytesReceived": 2542,
+                "bytesSent": 8455,
+                "dtlsState": "connected"
+              }
+            ]
+          }
+        ],
+        "tracks": [
+          {
+            "kind": "audio",
+            "enabled": true,
+            "readyState": "live"
+          }
+        ],
+        "microphoneCalls": 1
+      },
+      "screenshots": [
+        "04-audio-paciente.png",
+        "05-audio-dashboard.png"
+      ]
+    },
+    {
+      "name": "Revisión automática de accesibilidad del diálogo de atención",
+      "passed": true,
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "nodes": [
+              {
+                "target": [
+                  "#\\:rt\\:-text"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "id": "62a4a90d-a7b5-4e96-b23f-5e9e19b838e3",
+      "alertId": "9203bc79-2648-4559-9f09-94c243958e44",
+      "patientId": "pat_001",
+      "createdAt": "2026-11-04T00:28:38.045214800Z"
+    }
+  ],
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientHelp.tsx": "5916be9229a693d1dd30489c02ba6f028e772bbacaccb3964c9979b72381fafa",
+    "frontend/src/features/patient-app/PatientHelp.module.css": "a949a697d5e3b4817538b5b353ee03ff7bd805eb65e25c34f5e1f691d62c306a",
+    "frontend/src/features/support/LiveSupportConversation.tsx": "64251ea138d3a7cfc996129c7800bc1cd5568f98d63bae795d8a4a682c43b2f2",
+    "frontend/src/features/support/LiveSupportConversation.module.css": "f35e4c4680b76f24d4ca9515c38d4a8737cd456ab0222271b1d80c74ed40ce49",
+    "frontend/src/features/support/SupportAudioConnection.ts": "5c1af6f4de90071b47c819e651630c27f36eff15cea9309183c4c59747b96544",
+    "frontend/src/features/support/supportApi.ts": "22c7a5e4eae8b565d04af231d20f2956cfc686a18da4aab338979b0b6f9248a6",
+    "frontend/src/features/support/SupportInbox.tsx": "9d65c2df47c32fc1d192862c9abacce697460db07517cf9e75a0d81599d79746",
+    "frontend/src/features/support/SupportInbox.module.css": "d55c1446b54228aa0e00f4fec46f1525b5f8f2e63f00d7b174744e07a03989a7",
+    "frontend/src/components/layout/MainLayout.tsx": "525c64b5c4f77811a10c9776ec51dded0f12ed69e3da7640616c8830334618c0",
+    "backend/src/main/java/com/sanpablo/contigo/controller/SupportSessionController.java": "72ebc7f828afc61abd9e19a5cfc872297107c628c26b43beae23a7f1c07b25d0",
+    "backend/src/main/java/com/sanpablo/contigo/service/SupportSessionService.java": "a2c1c07b091c1ceaf45495d18ad38a3a8f1bb81cb2b1fd0b5a0eb539519967a3",
+    "backend/src/main/java/com/sanpablo/contigo/dto/telemetry/SupportDtos.java": "db3d08ce9258dd0dbd5236bbd358ef86f2a7f61f27c0a6fb21ac23329557cae0"
+  },
+  "requests": [
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/accept"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/events"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/patients/pat_001/support-sessions/62a4a90d-a7b5-4e96-b23f-5e9e19b838e3/end"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    },
+    {
+      "method": "POST",
+      "pathname": "/api/v1/auth/logout"
+    }
+  ],
+  "errors": [
+    {
+      "message": "El diálogo se sale del teléfono o tiene desbordamiento horizontal: {\"rect\":{\"left\":6,\"right\":314,\"top\":6,\"bottom\":894},\"surface\":{\"left\":0,\"right\":320,\"top\":0,\"bottom\":900},\"outside\":false,\"wide\":[{\"tag\":\"SECTION\",\"text\":\"Cuidador de demostración te atiendeYa pueden hablar o escribir.Hablar \",\"client\":274,\"scroll\":278}]}",
+      "stack": "Error: El diálogo se sale del teléfono o tiene desbordamiento horizontal: {\"rect\":{\"left\":6,\"right\":314,\"top\":6,\"bottom\":894},\"surface\":{\"left\":0,\"right\":320,\"top\":0,\"bottom\":900},\"outside\":false,\"wide\":[{\"tag\":\"SECTION\",\"text\":\"Cuidador de demostración te atiendeYa pueden hablar o escribir.Hablar \",\"client\":274,\"scroll\":278}]}\n    at assert (file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-live-sos.mjs:19:64)\n    at file:///C:/Users/vegac/Documents/Hombre%20Maquina/tools/apf3/verify-live-sos.mjs:230:3"
+    }
+  ],
+  "consoleErrors": [],
+  "health": {
+    "app": "CONTIGO",
+    "storage": "postgresql",
+    "status": "UP"
+  },
+  "browser": "156.0.8078.80",
+  "dashboardSelectedPatientAtStart": "pat_002",
+  "cleanup": [
+    {
+      "sessionId": "62a4a90d-a7b5-4e96-b23f-5e9e19b838e3",
+      "status": 200
+    }
+  ]
+}

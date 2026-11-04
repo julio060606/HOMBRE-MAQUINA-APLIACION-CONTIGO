@@ -152,4 +152,23 @@ describe('httpService (Strict API Mode without Silent Mocks)', () => {
     expect(body.reason).toBe('Compra en botica');
     expect(body.operationId).toBe('op-stock-1');
   });
+
+  it('registers an optional written SOS message with its operationId', async () => {
+    const mockFetch = vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({ id: 'alert-written' }) });
+    global.fetch = mockFetch;
+    await createHttpService().sos('pat-1', 'op-written', '  Prefiero comunicarme por escrito  ');
+    const [url, init] = mockFetch.mock.calls[0];
+    expect(url).toBe(`${ENV.API_BASE_URL}/patients/pat-1/alerts/sos`);
+    expect(JSON.parse(init.body as string)).toEqual({ operationId: 'op-written', message: 'Prefiero comunicarme por escrito' });
+  });
+
+  it('allows a blank SOS message and rejects oversized text before making a request', async () => {
+    const mockFetch = vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({ id: 'alert-no-text' }) });
+    global.fetch = mockFetch;
+    const service = createHttpService();
+    await service.sos('pat-1', 'op-no-text', '   ');
+    expect(JSON.parse(mockFetch.mock.calls[0][1].body as string)).toEqual({ operationId: 'op-no-text' });
+    await expect(service.sos('pat-1', 'op-too-long', 'a'.repeat(241))).rejects.toThrow('240 caracteres');
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+  });
 });

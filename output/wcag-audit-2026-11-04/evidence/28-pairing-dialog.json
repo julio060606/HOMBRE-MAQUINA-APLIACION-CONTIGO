@@ -1,0 +1,1321 @@
+{
+  "title": "Resumen del día · CONTIGO",
+  "lang": "es",
+  "url": "http://127.0.0.1:3001/dashboard",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "scrollWidth": 1280
+  },
+  "activeElement": {
+    "tag": "INPUT",
+    "text": "",
+    "id": "",
+    "testid": "input-link-pin"
+  },
+  "headings": [
+    {
+      "tag": "H2",
+      "text": "Solicitudes SOS",
+      "id": ":rh:-inbox",
+      "testid": null
+    },
+    {
+      "tag": "H1",
+      "text": "Resumen del día",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Dacio Ramos",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Avisos prioritarios",
+      "id": ":rl:-priority",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "SOS · Solicitud de comunicación",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "SOS de prueba del paciente",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Tomas de hoy",
+      "id": ":rl:-treatment",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Última medición",
+      "id": ":rl:-measurement",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Próxima cita",
+      "id": ":rl:-appointment",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Medicamentos de hoy",
+      "id": ":rl:-doses",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Para revisar",
+      "id": ":rl:-review",
+      "testid": null
+    },
+    {
+      "tag": "H3",
+      "text": "Vitamina D3",
+      "id": "",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Presión registrada",
+      "id": ":rn:-heading",
+      "testid": null
+    },
+    {
+      "tag": "H2",
+      "text": "Vincular a un paciente",
+      "id": "pairing-dialog-title",
+      "testid": null
+    }
+  ],
+  "controls": [
+    {
+      "tag": "SELECT",
+      "text": "Dacio RamosRosa Martínez",
+      "id": "",
+      "testid": "select-patient-active",
+      "name": null,
+      "type": null,
+      "labels": [
+        "Paciente en seguimientoDacio RamosRosa Martínez"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 380,
+      "height": 48
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Mi cuenta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 48
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vincular paciente",
+      "id": "",
+      "testid": "link-patient",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64.375
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cerrar sesión",
+      "id": "",
+      "testid": "btn-logout",
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 144.484375,
+      "height": 64
+    },
+    {
+      "tag": "A",
+      "text": "Saltar al contenido principal",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 225.34375,
+      "height": 52
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Opciones de lectura",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": ":rd:-active",
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 184.015625,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Comunicarme",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 143.484375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Accesibilidad y ayuda",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 187.609375,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "CONTIGOCuidado que conecta",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 53.875
+    },
+    {
+      "tag": "A",
+      "text": "Resumen",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": "page",
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Medicamentos",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Citas médicas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Ficha clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Informes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Preferencias",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 48.5
+    },
+    {
+      "tag": "A",
+      "text": "Inicio de CONTIGO",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 217,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Sobre esta demostración",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 191,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Mi panel",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 52.34375,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Actualizar",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 124.78125,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver ficha clínica",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 160.6875,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Datos sincronizados",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 146.640625,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver tratamiento",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver citas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 272,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Por confirmar3",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "true",
+      "current": null,
+      "width": 145.28125,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Todas",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "false",
+      "current": null,
+      "width": 64.671875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Tratamiento completo",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 175.171875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Revisar existencias",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 156.15625,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Mediciones y evoluciónÚltima presión: 127 / 83 mmHg",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 972,
+      "height": 86.390625
+    },
+    {
+      "tag": "BUTTON",
+      "text": "7 días",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "true",
+      "current": null,
+      "width": 63.1875,
+      "height": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "30 días",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": "false",
+      "current": null,
+      "width": 72.796875,
+      "height": 44
+    },
+    {
+      "tag": "SUMMARY",
+      "text": "Ver lecturas recientes",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 898,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Ver mediciones",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 130.21875,
+      "height": 44
+    },
+    {
+      "tag": "A",
+      "text": "Preparar un informeReúne los registros para la próxima consulta.",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": null,
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 974,
+      "height": 88.390625
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "id": "",
+      "testid": "input-link-pin",
+      "name": null,
+      "type": null,
+      "labels": [
+        "PIN de 6 dígitos"
+      ],
+      "autocomplete": "off",
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 536,
+      "height": 58
+    },
+    {
+      "tag": "SELECT",
+      "text": "Hijo / HijaCónyuge / ParejaNieto / NietaCuidador profesionalHermano(a)",
+      "id": "",
+      "testid": "link-relationship",
+      "name": null,
+      "type": null,
+      "labels": [
+        "ParentescoHijo / HijaCónyuge / ParejaNieto / NietaCuidador profesionalHermano(a)"
+      ],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 536,
+      "height": 47
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cancelar",
+      "id": "",
+      "testid": null,
+      "name": null,
+      "type": "button",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 98.953125,
+      "height": 50
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Vincular paciente",
+      "id": "",
+      "testid": "btn-submit-link-patient",
+      "name": null,
+      "type": "submit",
+      "labels": [],
+      "autocomplete": null,
+      "role": null,
+      "ariaInvalid": null,
+      "ariaDescribedby": null,
+      "expanded": null,
+      "pressed": null,
+      "current": null,
+      "width": 167.0625,
+      "height": 48
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "/images/dacio_avatar.jpg",
+      "width": 58,
+      "height": 58,
+      "loaded": true
+    }
+  ],
+  "statuses": [
+    {
+      "tag": "P",
+      "text": "Sin solicitudes abiertas",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": "polite"
+    },
+    {
+      "tag": "P",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": "status",
+      "live": null
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "id": "",
+      "testid": null,
+      "role": null,
+      "live": "polite"
+    }
+  ],
+  "duplicateIds": [],
+  "missingReferences": [],
+  "axe": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "nodes": [
+          {
+            "target": [
+              "#root"
+            ],
+            "html": "<div id=\"root\" aria-hidden=\"true\">",
+            "failureSummary": "Fix all of the following:\n  Check that focusable elements are not tabbable in the current state",
+            "any": [],
+            "all": [
+              {
+                "id": "focusable-modal-open",
+                "data": null,
+                "relatedNodes": [
+                  {
+                    "html": "<select data-testid=\"select-patient-active\"><option value=\"pat_001\">Dacio Ramos</option><option value=\"pat_002\">Rosa Martínez</option></select>",
+                    "target": [
+                      "select[data-testid=\"select-patient-active\"]"
+                    ]
+                  },
+                  {
+                    "html": "<summary>",
+                    "target": [
+                      "._accountMenu_1nibm_86 > summary"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"skip-link\" href=\"#main-content\">Saltar al contenido principal</a>",
+                    "target": [
+                      ".skip-link"
+                    ]
+                  },
+                  {
+                    "html": "<button type=\"button\" class=\"_trigger_vssv1_3\" aria-haspopup=\"dialog\" aria-describedby=\":rd:-active\">",
+                    "target": [
+                      "._trigger_vssv1_3"
+                    ]
+                  },
+                  {
+                    "html": "<button type=\"button\" class=\"_trigger_7bha8_1\" aria-haspopup=\"dialog\">",
+                    "target": [
+                      "._trigger_7bha8_1"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_helpLink_vssv1_3\" href=\"/accessibility\" data-discover=\"true\">",
+                    "target": [
+                      "._helpLink_vssv1_3"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_brand_1nibm_3\" href=\"/dashboard\" data-discover=\"true\">",
+                    "target": [
+                      "._brand_1nibm_3"
+                    ]
+                  },
+                  {
+                    "html": "<a aria-current=\"page\" class=\"_navLink_1nibm_11 _active_1nibm_15\" href=\"/dashboard\" data-discover=\"true\">",
+                    "target": [
+                      "._active_1nibm_15"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/medications\" data-discover=\"true\">",
+                    "target": [
+                      "._navLink_1nibm_11[href$=\"medications\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/vitals\" data-discover=\"true\">",
+                    "target": [
+                      "._navLink_1nibm_11[href$=\"vitals\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/appointments\" data-discover=\"true\">",
+                    "target": [
+                      "._navLink_1nibm_11[href$=\"appointments\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/clinical-profile\" data-discover=\"true\">",
+                    "target": [
+                      "._navLink_1nibm_11[href$=\"clinical-profile\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/reports\" data-discover=\"true\">",
+                    "target": [
+                      "._navLink_1nibm_11[href$=\"reports\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_navLink_1nibm_11\" href=\"/settings\" data-discover=\"true\">",
+                    "target": [
+                      "a[href$=\"settings\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_homeLink_1nibm_131\" href=\"/landing\" data-discover=\"true\">",
+                    "target": [
+                      "._homeLink_1nibm_131"
+                    ]
+                  },
+                  {
+                    "html": "<summary>",
+                    "target": [
+                      "._projectNote_1nibm_17 > summary"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/dashboard\" data-discover=\"true\">Mi panel</a>",
+                    "target": [
+                      "._breadcrumb_1nibm_141 > a[href$=\"dashboard\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<button type=\"button\">",
+                    "target": [
+                      "._pageActions_uwkmq_10 > button[type=\"button\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/clinical-profile\" data-discover=\"true\">",
+                    "target": [
+                      "._patientActions_uwkmq_25 > a[href$=\"clinical-profile\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<summary class=\"_syncBadge_uwkmq_28 \">",
+                    "target": [
+                      "._syncBadge_uwkmq_28"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/medications\" data-discover=\"true\">",
+                    "target": [
+                      "._overviewBottom_uwkmq_42 > a[href$=\"medications\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/vitals\" data-discover=\"true\">",
+                    "target": [
+                      "._overviewBottom_uwkmq_42 > a[href$=\"vitals\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/appointments\" data-discover=\"true\">",
+                    "target": [
+                      "._overviewBottom_uwkmq_42 > a[href$=\"appointments\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<button type=\"button\" aria-pressed=\"true\">Por confirmar<span>3</span></button>",
+                    "target": [
+                      "div[aria-label=\"Filtrar dosis\"] > button[type=\"button\"]:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<button type=\"button\" aria-pressed=\"false\">Todas</button>",
+                    "target": [
+                      "div[aria-label=\"Filtrar dosis\"] > button[type=\"button\"]:nth-child(2)"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/medications\" data-discover=\"true\">",
+                    "target": [
+                      "._cardFooter_uwkmq_75 > a[href$=\"medications\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/medications\" data-discover=\"true\">",
+                    "target": [
+                      "article > div > a[href$=\"medications\"][data-discover=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<summary>",
+                    "target": [
+                      "._secondaryDetails_uwkmq_98 > summary"
+                    ]
+                  },
+                  {
+                    "html": "<a class=\"_reportCard_uwkmq_107\" href=\"/reports\" data-discover=\"true\">",
+                    "target": [
+                      "._reportCard_uwkmq_107"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Check that focusable elements are not tabbable in the current state"
+              }
+            ],
+            "none": []
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "._patientLabel_uwkmq_20"
+            ],
+            "html": "<span class=\"_patientLabel_uwkmq_20\">Paciente seleccionado</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._patientName_uwkmq_21 > h2"
+            ],
+            "html": "<h2>Dacio Ramos</h2>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "15.0pt (20px)",
+                  "fontWeight": "bold",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "3:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._patientIdentity_uwkmq_17 > div > p"
+            ],
+            "html": "<p>78 años</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              "._syncBadge_uwkmq_28"
+            ],
+            "html": "<summary class=\"_syncBadge_uwkmq_28 \">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgGradient",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section class=\"_patientCard_uwkmq_16\" aria-label=\"Paciente en seguimiento\">",
+                    "target": [
+                      "._patientCard_uwkmq_16"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined due to a background gradient"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".text-slate-600.mb-5"
+            ],
+            "html": "<p class=\"text-slate-600 mb-5\">Introduce un código temporal de vinculación para acceder al registro existente del paciente.</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ],
+            "all": [],
+            "none": []
+          },
+          {
+            "target": [
+              ".text-sm"
+            ],
+            "html": "<p class=\"text-sm text-slate-600 mt-4\">El código caduca a los 10 minutos y se utiliza una sola vez. Los datos pertenecen a la clínica ficticia del proyecto.</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscuring",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ],
+            "all": [],
+            "none": []
+          }
+        ]
+      }
+    ],
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "autocomplete-valid",
+      "avoid-inline-spacing",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "html-has-lang",
+      "html-lang-valid",
+      "label",
+      "link-in-text-block",
+      "meta-viewport",
+      "nested-interactive",
+      "select-name"
+    ],
+    "inapplicable": [
+      "area-alt",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "blink",
+      "definition-list",
+      "dlitem",
+      "frame-focusable-content",
+      "frame-title-unique",
+      "frame-title",
+      "html-xml-lang-mismatch",
+      "image-alt",
+      "input-button-name",
+      "input-image-alt",
+      "link-name",
+      "list",
+      "listitem",
+      "marquee",
+      "meta-refresh",
+      "object-alt",
+      "role-img-alt",
+      "scrollable-region-focusable",
+      "server-side-image-map",
+      "summary-name",
+      "svg-img-alt",
+      "td-headers-attr",
+      "th-has-data-cells",
+      "valid-lang",
+      "video-caption",
+      "no-autoplay-audio"
+    ]
+  }
+}

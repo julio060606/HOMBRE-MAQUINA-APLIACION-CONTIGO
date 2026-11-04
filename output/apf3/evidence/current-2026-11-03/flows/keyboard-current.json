@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-11-03T20:43:58.407Z",
+  "base": "http://127.0.0.1:3013",
+  "method": "Technical keyboard traversal in fresh isolated Chrome contexts with local synthetic demo data",
+  "limitations": [
+    "No recruited participants or usability metrics.",
+    "Headless keyboard verification is not a screen-reader test.",
+    "Synthetic writes, when made, exist only in this new browser context; HTTP API requests are blocked."
+  ],
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientAppContent.tsx": "49cb12c7eebb5e579b4d63c2421a1c5059c2098bb49118b0c6a8ea0607322ecf",
+    "frontend/src/features/patient-app/MeasurementForm.tsx": "22aafe7473969a7bec2491aca05c87e5f3d1a46403d61db1e37cfcbd772e55ff",
+    "frontend/src/features/patient-app/DoseCard.tsx": "e39df20e8e2ea6acbb2ac62ce3b408ce297f51ebb578ce1a51cfc45a55414463",
+    "frontend/src/features/patient-app/PatientHelp.tsx": "cc438322729589d8aafa677150ed10768bc6a66d435f97c4d47a6f9800aab22b",
+    "frontend/src/features/medications/MedicationsPage.tsx": "5c43c7527c84031b833bed03cc1665a74ce498be539b3f64fd432da735aa42d4",
+    "frontend/src/features/appointments/AppointmentsPage.tsx": "c924e4a01a567535ee08ec0053ccd8b09582371fdac58833148d30985e949cb4",
+    "frontend/src/styles/index.css": "8ba99aefe02c093e6695505a64c30456baaa7c57e6daccd6bf31774457750539"
+  },
+  "steps": [
+    {
+      "name": "T1 record isolated synthetic response",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Ya la tomé: Losartán, 08:00",
+        "id": "",
+        "testid": "dose-taken"
+      }
+    },
+    {
+      "name": "T1 open recorded response",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Revisar mi respuesta",
+        "id": "",
+        "testid": null
+      }
+    },
+    {
+      "name": "T1 open correction",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Corregir respuesta de Losartán de las 08:00",
+        "id": "",
+        "testid": null
+      }
+    },
+    {
+      "name": "T1 cancel correction",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Cancelar corrección",
+        "id": "",
+        "testid": null
+      }
+    },
+    {
+      "name": "T2 open SOS",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "SOS de prueba",
+        "id": "",
+        "testid": "patient-sos"
+      }
+    },
+    {
+      "name": "T4 upper value",
+      "input": "80",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "id": ":rj:-systolic",
+        "testid": "input-systolic"
+      }
+    },
+    {
+      "name": "T4 invalid lower value",
+      "input": "120",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "id": ":rj:-diastolic",
+        "testid": "input-diastolic"
+      }
+    },
+    {
+      "name": "T4 request review with invalid values",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Revisar medición",
+        "id": "",
+        "testid": "btn-save-vitals"
+      }
+    },
+    {
+      "name": "T4 correct upper value",
+      "input": "120",
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "id": ":rj:-systolic",
+        "testid": "input-systolic"
+      }
+    },
+    {
+      "name": "T4 review valid values",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Revisar medición",
+        "id": "",
+        "testid": "btn-save-vitals"
+      }
+    },
+    {
+      "name": "T4 return without saving",
+      "key": "Enter",
+      "activated": {
+        "tag": "BUTTON",
+        "text": "Corregir números",
+        "id": "",
+        "testid": null
+      }
+    },
+    {
+      "name": "T3 treatment",
+      "key": "Enter",
+      "activated": {
+        "tag": "A",
+        "text": "Tratamiento y existencias",
+        "id": "",
+        "testid": null
+      }
+    },
+    {
+      "name": "T3 appointments",
+      "key": "Enter",
+      "activated": {
+        "tag": "A",
+        "text": "Citas médicas",
+        "id": "",
+        "testid": null
+      }
+    }
+  ],
+  "checks": [
+    {
+      "task": "T1",
+      "passed": true,
+      "result": "Keyboard response and cancellation of correction; only isolated synthetic data changed.",
+      "initial": {
+        "alerts": 0,
+        "pressures": 7,
+        "taken": 0
+      },
+      "recorded": {
+        "alerts": 0,
+        "pressures": 7,
+        "taken": 1
+      },
+      "screenshot": "01-t1-response-cancel.png"
+    },
+    {
+      "task": "T2",
+      "passed": true,
+      "result": "SOS dialog reached, scope read as DOM evidence and Escape canceled without saving.",
+      "screenshot": "02-t2-sos-scope.png"
+    },
+    {
+      "task": "T4",
+      "passed": true,
+      "result": "Invalid values identified; keyboard correction, review and return preserve values without saving.",
+      "errorFocus": {
+        "tag": "INPUT",
+        "text": "",
+        "id": ":rj:-diastolic",
+        "testid": "input-diastolic"
+      },
+      "reviewFocus": {
+        "tag": "H4",
+        "text": "¿Los valores son correctos?",
+        "id": "",
+        "testid": null
+      },
+      "screenshots": [
+        "03-t4-invalid.png",
+        "04-t4-review.png"
+      ]
+    },
+    {
+      "task": "T3",
+      "passed": true,
+      "result": "Treatment, units and upcoming appointment reached by keyboard. Text is DOM evidence, not screen-reader output.",
+      "treatment": "Tratamiento y existencias\n\nRecetas de origen clínico. La cantidad disponible es una estimación basada en dispensación, conteos y tomas declaradas.\n\nLosartán\nVigente en clínica\n\n50 mg · 08:00 / 20:00\n\nTomar con agua en ayunas.\n\nFoto de referencia\n\nVigencia: 20 oct. 2026 — 18 ene. 2027.\n\nFuente: receta de la clínica ficticia · actualización 3 nov. 2026, 15:44.\n\nDiagnóstico indicado en la receta\nNo informado por la clínica ficticia\nMédico prescriptor\nNo informado por la clínica ficticia\nCantidad disponible\n\n30 tabletas\n\nCobertura estimada: 15 días según la pauta fija.\n\nRegistrar reposición o conteo físico\nVitamina D3\nVigente en clínica\n\n2000 UI · 14:00\n\nTomar con el almuerzo.\n\nFoto de referencia\n\nVigencia: 20 oct. 2026 — 18 ene. 2027.\n\nFuente: receta de la clínica ficticia · actualización 3 nov. 2026, 15:44.\n\nDiagnóstico indicado en la receta\nNo informado por la clínica ficticia\nMédico prescriptor\nNo informado por la clínica ficticia\nCantidad disponible\n\n3 tabletas\n\nCobertura estimada: 3 días según la pauta fija.\n\nPocas unidades: revise la reposición.\n\nRegistrar reposición o conteo físico",
+      "appointments": "Citas médicas\n\nOrganiza el acompañamiento de Dacio Ramos con las citas registradas por la clínica.\n\nMostrar \nPróximas\nPasadas\nCanceladas\nTodas\nGeriatría\nProgramada\n\n5 nov. 2026, 10:30 · hora de Lima\n\nProfesional de demostración\n\nConsultorio de prueba · sede de demostración\n\nConsultar las indicaciones proporcionadas por la clínica.\n\nOrigen: clínica ficticia del proyecto · datos sintéticos. Contigo consulta esta cita; no la reprograma.",
+      "focus": {
+        "tag": "H1",
+        "text": "Citas médicas",
+        "id": "",
+        "testid": null
+      },
+      "screenshots": [
+        "05-t3-treatment.png",
+        "06-t3-appointments.png"
+      ]
+    }
+  ],
+  "errors": [],
+  "externalApiRequests": [],
+  "browser": "156.0.8078.80",
+  "complete": true
+}

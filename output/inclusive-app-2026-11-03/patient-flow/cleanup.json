@@ -1,0 +1,12 @@
+{
+  "StoppedOwnVite": true,
+  "OwnedPid": 31248,
+  "Port": 3014,
+  "PortFree": true,
+  "Timestamp": "2026-11-03T21:51:52.9145511Z",
+  "CentralPortsUntouched": [
+    3001,
+    8081,
+    55432
+  ]
+}

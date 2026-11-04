@@ -1,26 +1,27 @@
-# Archivos de CONTIGO APF3
+# Entrega canónica actual de CONTIGO APF3
 
-La vista móvil se simplificó después de esta entrega según el feedback del grupo. Los PDF, PPTX, XLSX y anexos de esta carpeta conservan la revisión anterior con pestañas; deben actualizarse antes de utilizarlos como evidencia de la interfaz actual. La nueva comprobación de medicamentos y mediciones está en `evidence/mobile-simplified/verification.json`.
+Fecha de corte: 3 de noviembre de 2026. Repositorio: `C:\Users\vegac\Documents\Hombre Maquina`.
 
-Se preparó la aplicación local y un paquete técnico para revisión del grupo. Se documentaron las cuatro tareas con teclado y zoom nativo al 200 %. Con NVDA 2026.3 se registraron T1, T2 y T4, además de la navegación de T3; su lectura completa de valores sigue pendiente. La entrega académica todavía necesita las pruebas con personas y la ejecución real de Figma y Stark. No está lista para presentarse como validación inclusiva completa ni como conformidad AA.
+Este paquete describe una sola revisión: paciente con medicamentos y mediciones en una vista, formulario rediseñado con revisión y API/PostgreSQL local. Los entregables anteriores están en `history/2026-11-03-pre-current-refresh`. El paquete anterior `Downloads/CONTIGO_APF3` corresponde a otra revisión y no alimenta estos resultados.
 
-| Archivo | Contenido |
+| Archivo canónico | Contenido |
 |---|---|
-| APF3_GrupoPorConfirmar_CONTIGO.pdf | Informe técnico con alcance, línea base, resultados reales de herramientas, ajustes, normativa, declaración parcial y plan de cierre. |
-| APF3_GrupoPorConfirmar_CONTIGO.pptx | Presentación de doce diapositivas con evidencia antes y después y notas para la exposición. |
-| APF3_Matriz_y_validacion_CONTIGO.xlsx | Cincuenta criterios A/AA y veintiséis núcleo por pantalla, hallazgos, prioridad, trazabilidad y hojas vacías para sesiones, SEQ y SUS. |
-| APF3_Protocolo_y_fichas_CONTIGO.pdf | Protocolo, consentimiento sin completar, observación, SUS, SEQ, tecnología de apoyo y guion de sustentación. |
-| APF3_GrupoPorConfirmar_Anexos.zip | Matriz, instrumentos, declaraciones y evidencia técnica sin imágenes internas de QA. |
-| figma/CONTIGO_APF3_Figma.zip | Plugin local que genera páginas, componentes, anotaciones y conexiones editables. Falta ejecutarlo e inspeccionarlo en Figma. |
-| APF3_Declaracion_IA.md | Uso de los agentes y herramientas, procedencia y responsabilidad de revisión. |
-| Declaracion_de_accesibilidad.md | Alcance, métodos, limitaciones, plan y canal para reportar barreras. |
+| APF3_CONTIGO_Informe.pdf | Contexto, métodos, evidencia actual, ajustes, validación pendiente, normativa y declaración parcial. |
+| APF3_CONTIGO_Presentacion.pptx | Doce diapositivas con capturas de esta revisión. |
+| APF3_CONTIGO_Matriz.xlsx | Cincuenta criterios y veintiséis núcleo por estado observado; hallazgos, trazabilidad y fichas sin respuestas humanas. |
+| APF3_CONTIGO_Instrumentos.pdf | Protocolo, consentimiento modelo sin firmar, observación, SUS y SEQ. |
+| APF3_CONTIGO_Anexos.zip | Entregables, fuentes y evidencia exclusiva actual, con manifiesto SHA-256. |
 
-La auditoría principal registra veintiún estados de la base y veintitrés de la copia modificada. En la copia modificada no se detectaron incidencias axe en esos veintitrés estados. Hay comprobaciones complementarias de orientación, espaciado, preferencias, contraste, tablas y foco; el detalle y los resultados incompletos que requieren revisión están en los JSON. Estos resultados no son métricas de participantes.
+La evidencia actual está en `evidence/current-2026-11-03`. `api-database.json` y `storage.json` documentan salud, accesos y lecturas de API/PostgreSQL central, sin cambios clínicos. `api-audit/audit.json` conserva axe y capturas de los estados API actuales. `flows/keyboard-current.json` recorre T1–T4 en demostración aislada de puerto 3013: las escrituras de T1 son privadas, T2 cancela y T4 revisa y vuelve sin guardar. No se presentan como escrituras sobre PostgreSQL.
 
-La continuación conserva tres resultados incompletos de axe. La revisión específica de contraste midió 43 nodos: 31 límites conservadores superaron sus umbrales y 12 quedaron inconclusos por las limitaciones de la sonda o de la restauración de imagen. Un resultado inconcluso no se presenta como un incumplimiento ni como una comprobación aprobada. Las imágenes de sonda están identificadas y separadas de las capturas originales.
+`contrast/summary.json`, `before.json` y `after.json` registran contraste y geometría del formulario. Se comprueban 12 combinaciones de ancho 320/390/430, escala de lectura 100/200 % y estándar/alto contraste, con valores sintéticos extremos. La escala del producto no equivale al zoom nativo del navegador. El archivo inspect es diagnóstico y no representa el resultado final.
 
-El frontend pasó sus cuarenta y ocho pruebas, ESLint y compilación de producción. El módulo de reportes conserva un aviso de tamaño y la revisión de dependencias mantiene avisos de seguridad detallados en `dependency-audit.json`. El backend no se modificó ni se volvió a validar en esta tarea.
+La lectura completa de T3 con NVDA actual no fue verificada: el proveedor de control de pantalla detuvo el intento antes de los gestos por no poder comprobar la URL activa. El estado está en `flows/nvda-api-t3/status.json`. Los anuncios históricos de NVDA y el zoom nativo previo mantienen su versión y no se reutilizan como aprobación de la interfaz actual.
 
-Sustituir `PorConfirmar` por el número real de grupo antes de entregar. La aplicación local se puede probar en http://127.0.0.1:3001/login mientras Vite esté en ejecución. No se han subido cambios a GitHub ni actualizado Vercel.
+El usuario ha diferido expresamente el trabajo en Figma para después. Figma nativo publicado y Stark permanecen pendientes hasta existir archivo actual ejecutado, inspeccionado y compartido. El paquete generador Figma actual es preparatorio y no sustituye el enlace. Los resultados técnicos no acreditan conformidad AA completa ni validación inclusiva.
 
-Consultar `../../README_APF3.md` para ejecutar el proyecto y completar los pendientes. La carpeta `qa` y los archivos inspect son intermediarios de verificación y no deben entregarse como evidencias de usuarios.
+Las sesiones de cinco participantes y tres perfiles, los consentimientos y SUS/SEQ permanecen pendientes. No se inventaron personas ni se sustituyeron datos ausentes por cero. Para Excelente C3 se requieren además dos personas con condición real o tecnología de apoyo habitual.
+
+La aplicación central se prueba localmente en `http://127.0.0.1:3001/login` con el lanzador del repositorio. La publicación queda diferida: el equipo todavía no dispone de alojamiento para el backend. Publicar requiere backend alojado y frontend configurado y probado en sesión nueva. La ejecución local no acredita Vercel. Número de grupo y correo no son necesarios para preparar estos archivos.
+
+`qa` contiene revisión interna y queda fuera del ZIP. Los consentimientos originales y datos identificables se conservan en privado. No se modifica `output/revision-cumplimiento`, que documenta la revisión previa.

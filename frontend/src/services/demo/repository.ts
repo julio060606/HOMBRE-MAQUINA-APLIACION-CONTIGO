@@ -1,12 +1,12 @@
 import { DemoState, ensureDay, seedDemo } from './state';
 
 type Change = 'data' | 'links';
-type Listener = (change: Change) => void;
+type Listener = (change: Change, source: 'local' | 'remote') => void;
 const listeners = new Set<Listener>();
 let channel: BroadcastChannel | undefined;
 let connection: Promise<IDBDatabase> | undefined;
 let listening = false;
-function receive(change: Change = 'data') { listeners.forEach(fn => fn(change)); }
+function receive(change: Change = 'data', source: 'local' | 'remote' = 'remote') { listeners.forEach(fn => fn(change, source)); }
 function connectEvents() {
   if (listening || typeof window === 'undefined') return;
   listening = true;
@@ -19,7 +19,7 @@ function connectEvents() {
 export const syncEvents = {
   subscribe(fn: Listener) { connectEvents(); listeners.add(fn); return () => { listeners.delete(fn); }; },
   emit(change: Change = 'data') {
-    connectEvents(); receive(change);
+    connectEvents(); receive(change, 'local');
     if (channel) channel.postMessage(change);
     else if (typeof localStorage !== 'undefined') {
       try { localStorage.setItem('contigo-demo-change', `${change}:${crypto.randomUUID()}`); } catch { /* IndexedDB remains the source. */ }

@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "steps": [
+    "Enter abre",
+    "Espacio selecciona frase",
+    "Enter muestra mensaje",
+    "24Tab y24MayúsTab permanecen en modal",
+    "Esc cierra y retorna foco"
+  ],
+  "finalizedAt": "2026-11-03T21:13:58.988Z"
+}

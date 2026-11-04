@@ -1,0 +1,2573 @@
+{
+  "complete": true,
+  "quick": false,
+  "caregiverOnly": true,
+  "startedAt": "2026-11-03T21:53:47.193Z",
+  "baseUrl": "http://127.0.0.1:3001",
+  "method": "Chrome headless, API local y datos sintéticos; solo autenticación y consultas. Se abren/cancelan diálogos sin confirmar SOS ni registros clínicos.",
+  "limitations": [
+    "La escala de texto del producto no es zoom nativo ni prueba con lector de pantalla.",
+    "La geometría y axe no sustituyen pruebas con personas mayores o tecnologías de apoyo.",
+    "Los incomplete de axe se conservan; cero violations no acredita conformidad completa."
+  ],
+  "source": [
+    {
+      "file": "frontend/src/components/simulator/PhoneDeviceFrame.tsx",
+      "sha256": "42bc53be1ee69f31b8f4f1b600d00f935b2a79b8385cc3388b6bfe7c410530f5"
+    },
+    {
+      "file": "frontend/src/components/simulator/PhoneDeviceFrame.module.css",
+      "sha256": "43a7e208a0515b38add430173c06483f14ffff1d6fb0aacba82f3220bea7c28f"
+    },
+    {
+      "file": "frontend/src/hooks/useAppDialogFrame.ts",
+      "sha256": "977fe7cc7b705e9539e96d453f904788118313840fbfd34f67496d5ae52e4187"
+    },
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.tsx",
+      "sha256": "8a15e352c1c40bb2eee54d2153f2f7fd1ed2da2b52e84c7a8724d8b0e0b2a2cc"
+    },
+    {
+      "file": "frontend/src/components/layout/ReadingOptions.module.css",
+      "sha256": "33c966f03c1fdca6c3053ea8f98767ed3b52c4357596b4ec25e07b3b05479f2b"
+    },
+    {
+      "file": "frontend/src/features/accessibility/CommunicationBoard.tsx",
+      "sha256": "b80a661be14d4d2fe13063b7770aa13b3af6c950b4c9542fa90de0229477ea9e"
+    },
+    {
+      "file": "frontend/src/features/accessibility/CommunicationBoard.module.css",
+      "sha256": "7e8d90278c5e67fcd1cbb647e91ada7f59d4202a156049efd044896f8024b93b"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientAppContent.tsx",
+      "sha256": "e377bbe589c6cdc9a1da546cf38673a721dae843b9b56021b1f1a4d83f72ecf8"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientAppPage.tsx",
+      "sha256": "4a26f495d8972023be47b2ff3d9c64a8db70e1feefeca13f70ab8c6de9aa0d05"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientShell.module.css",
+      "sha256": "058236bfad4031171339edd874247cebf9dd5efade8538a03ffa8a7f41f34501"
+    },
+    {
+      "file": "frontend/src/features/patient-app/PatientHelp.tsx",
+      "sha256": "0b2b967be0976f53e0acd052958fcd2cb4576425102ddc81a4143c4d82de6a05"
+    },
+    {
+      "file": "frontend/src/styles/index.css",
+      "sha256": "be4b2349f65607767cf404a53554cc823f50446f0f2cccbf888d8e46cfe0efdf"
+    }
+  ],
+  "states": [
+    {
+      "id": "caregiver-390-100-standard-reading",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-100-standard-reading.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 8,
+          "right": 382,
+          "bottom": 892,
+          "width": 374,
+          "height": 884
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_jhuwm_30",
+            "clientHeight": 628,
+            "scrollHeight": 1027
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(17, 43, 35, 0.44)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 25,
+          "top": 46.59375,
+          "right": 311,
+          "bottom": 75.1875,
+          "width": 286,
+          "height": 28.59375
+        },
+        "title": "Opciones de lectura"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.8pt (13px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p id=\":rd:-description\">Ajusta la pantalla y los avisos para usarlos con comodidad.</p>",
+                "target": [
+                  "#\\:rd\\:-description"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-largeTargets-hint\">Más espacio para pulsar con comodidad.</span>",
+                "target": [
+                  "#\\:rd\\:-largeTargets-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Reducir animaciones</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-interaction\"] > ._option_jhuwm_43:nth-child(3) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-reducedMotion-hint\">Una interfaz con menos movimiento.</span>",
+                "target": [
+                  "#\\:rd\\:-reducedMotion-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.8pt (13px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<summary>",
+                "target": [
+                  "._quickHelp_jhuwm_17 > summary"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-390-100-standard-communication",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-100-standard-communication.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 36,
+          "right": 382,
+          "bottom": 864,
+          "width": 374,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_fzs7f_13",
+            "clientHeight": 645,
+            "scrollHeight": 817
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 77,
+          "top": 51,
+          "right": 264.15625,
+          "bottom": 78,
+          "width": 187.15625,
+          "height": 27
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p id=\":rf:-description\">Muestra tu mensaje a quien está contigo.</p>",
+                "target": [
+                  "#\\:rf\\:-description"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                        "target": [
+                          "#\\:rf\\:-message"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                "target": [
+                  "#\\:rf\\:-message"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-390-100-standard-communication-message",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-100-standard-communication-message.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 132.109375,
+          "right": 382,
+          "bottom": 767.890625,
+          "width": 374,
+          "height": 635.78125
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 62,
+          "top": 264.109375,
+          "right": 140.09375,
+          "bottom": 285.109375,
+          "width": 78.09375,
+          "height": 21
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p id=\":rf:-description\">Muestra tu mensaje a quien está contigo.</p>",
+                "target": [
+                  "#\\:rf\\:-description"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p class=\"_largeMessage_fzs7f_47\">Prefiero comunicarme por escrito</p>",
+                "target": [
+                  "._largeMessage_fzs7f_47"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.8pt (13px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p id=\":rf:-voice-hint\" class=\"_voiceHint_fzs7f_36\">La voz está desactivada en las opciones de accesibilidad.</p>",
+                "target": [
+                  "#\\:rf\\:-voice-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-390-100-standard-communication-response",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-100-standard-communication-response.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 36,
+          "right": 382,
+          "bottom": 864,
+          "width": 374,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_fzs7f_13",
+            "clientHeight": 585,
+            "scrollHeight": 610
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 23,
+          "top": 393.78125,
+          "right": 367,
+          "bottom": 496.5625,
+          "width": 344,
+          "height": 102.78125
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p id=\":rf:-description\">Muestra tu mensaje a quien está contigo.</p>",
+                "target": [
+                  "#\\:rf\\:-description"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                        "target": [
+                          "#\\:rf\\:-response"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                "target": [
+                  "#\\:rf\\:-response"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-390-200-standard-reading",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-200-standard-reading.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 8,
+          "right": 382,
+          "bottom": 892,
+          "width": 374,
+          "height": 884
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIALOG",
+            "className": "_dialog_jhuwm_20",
+            "clientHeight": 882,
+            "scrollHeight": 3519
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(17, 43, 35, 0.44)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 25,
+          "top": 133,
+          "right": 365,
+          "bottom": 247.375,
+          "width": 340,
+          "height": 114.375
+        },
+        "title": "Opciones de lectura"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "id": "caregiver-390-200-standard-communication",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-200-standard-communication.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 36,
+          "right": 382,
+          "bottom": 864,
+          "width": 374,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIALOG",
+            "className": "_dialog_fzs7f_4",
+            "clientHeight": 826,
+            "scrollHeight": 2167
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 15,
+          "top": 149,
+          "right": 375,
+          "bottom": 203,
+          "width": 360,
+          "height": 54
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "24.0pt (32px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                        "target": [
+                          "#\\:rf\\:-message"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                "target": [
+                  "#\\:rf\\:-message"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-390-200-standard-communication-message",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-200-standard-communication-message.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 36,
+          "right": 382,
+          "bottom": 864,
+          "width": 374,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIALOG",
+            "className": "_dialog_fzs7f_4",
+            "clientHeight": 826,
+            "scrollHeight": 1504
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 70,
+          "top": 245,
+          "right": 226.1875,
+          "bottom": 287,
+          "width": 156.1875,
+          "height": 42
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "id": "caregiver-390-200-standard-communication-response",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-390-200-standard-communication-response.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 8,
+          "top": 36,
+          "right": 382,
+          "bottom": 864,
+          "width": 374,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 390,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 372,
+        "dialogScrollWidth": 372,
+        "documentWidth": 390,
+        "verticalScrollers": [
+          {
+            "tag": "DIALOG",
+            "className": "_dialog_fzs7f_4",
+            "clientHeight": 826,
+            "scrollHeight": 1966
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 23,
+          "top": 411.9375,
+          "right": 367,
+          "bottom": 603.9375,
+          "width": 344,
+          "height": 192
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "24.0pt (32px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                        "target": [
+                          "#\\:rf\\:-response"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                "target": [
+                  "#\\:rf\\:-response"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-100-standard-reading",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-100-standard-reading.png",
+      "contextScreenshot": "caregiver-1280-100-standard-reading-context.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 304,
+          "top": 45,
+          "right": 976,
+          "bottom": 855,
+          "width": 672,
+          "height": 810
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 670,
+        "dialogScrollWidth": 670,
+        "documentWidth": 1280,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_jhuwm_30",
+            "clientHeight": 577,
+            "scrollHeight": 960
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(17, 43, 35, 0.44)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 391,
+          "top": 91.59375,
+          "right": 893,
+          "bottom": 120.1875,
+          "width": 502,
+          "height": 28.59375
+        },
+        "title": "Opciones de lectura"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-largeTargets-hint\">Más espacio para pulsar con comodidad.</span>",
+                "target": [
+                  "#\\:rd\\:-largeTargets-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "10.5pt (14px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Reducir animaciones</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-interaction\"] > ._option_jhuwm_43:nth-child(3) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.0pt (12px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-reducedMotion-hint\">Una interfaz con menos movimiento.</span>",
+                "target": [
+                  "#\\:rd\\:-reducedMotion-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.8pt (13px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<summary>",
+                "target": [
+                  "._quickHelp_jhuwm_17 > summary"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-100-standard-communication",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-100-standard-communication.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 304,
+          "top": 52.703125,
+          "right": 976,
+          "bottom": 847.28125,
+          "width": 672,
+          "height": 794.578125
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 670,
+        "dialogScrollWidth": 670,
+        "documentWidth": 1280,
+        "verticalScrollers": [],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 383,
+          "top": 73.703125,
+          "right": 848.15625,
+          "bottom": 100.703125,
+          "width": 465.15625,
+          "height": 27
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span>No puedo hablar en este momento</span>",
+                "target": [
+                  "._phrase_fzs7f_1:nth-child(3) > span:nth-child(2)"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "9.8pt (13px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rf:-message-length\" class=\"_counter_fzs7f_30\">0 / 240</span>",
+                "target": [
+                  "#\\:rf\\:-message-length"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                        "target": [
+                          "#\\:rf\\:-message"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                "target": [
+                  "#\\:rf\\:-message"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-100-standard-communication-message",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-100-standard-communication-message.png",
+      "contextScreenshot": "caregiver-1280-100-standard-communication-message-context.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 304,
+          "top": 158,
+          "right": 976,
+          "bottom": 741.984375,
+          "width": 672,
+          "height": 583.984375
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 670,
+        "dialogScrollWidth": 670,
+        "documentWidth": 1280,
+        "verticalScrollers": [],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 372,
+          "top": 291,
+          "right": 450.09375,
+          "bottom": 312,
+          "width": 78.09375,
+          "height": 21
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "id": "caregiver-1280-100-standard-communication-response",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-100-standard-communication-response.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 304,
+          "top": 49.5625,
+          "right": 976,
+          "bottom": 850.421875,
+          "width": 672,
+          "height": 800.859375
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 670,
+        "dialogScrollWidth": 670,
+        "documentWidth": 1280,
+        "verticalScrollers": [],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 327,
+          "top": 472.34375,
+          "right": 945,
+          "bottom": 575.125,
+          "width": 618,
+          "height": 102.78125
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "36.0pt (48px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscuring",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<p class=\"_largeMessage_fzs7f_47\">Prefiero comunicarme por escrito</p>",
+                "target": [
+                  "._largeMessage_fzs7f_47"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "4.5:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                        "target": [
+                          "#\\:rf\\:-response"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                "target": [
+                  "#\\:rf\\:-response"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-200-standard-reading",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-200-standard-reading.png",
+      "contextScreenshot": "caregiver-1280-200-standard-reading-context.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 16,
+          "top": 45,
+          "right": 1264,
+          "bottom": 855,
+          "width": 1248,
+          "height": 810
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 1246,
+        "dialogScrollWidth": 1246,
+        "documentWidth": 1280,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_jhuwm_30",
+            "clientHeight": 348,
+            "scrollHeight": 1912
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(17, 43, 35, 0.44)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 189,
+          "top": 137.1875,
+          "right": 1099,
+          "bottom": 194.375,
+          "width": 910,
+          "height": 57.1875
+        },
+        "title": "Opciones de lectura"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Alto contraste en este dispositivo</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-visual\"] > ._option_jhuwm_43 > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-contrast-hint\">Distingue mejor el texto y los controles.</span>",
+                "target": [
+                  "#\\:rd\\:-contrast-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "22.5pt (30px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<h3 id=\":rd:-audio\">",
+                "target": [
+                  "#\\:rd\\:-audio"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Modo sin sonido</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-audio\"] > ._option_jhuwm_43:nth-child(2) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-silent-hint\">Detiene la voz. Los avisos siguen por escrito.</span>",
+                "target": [
+                  "#\\:rd\\:-silent-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Vibración al completar acciones</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-audio\"] > ._option_jhuwm_43:nth-child(3) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-vibration-hint\">Añade una vibración breve a las confirmaciones.</span>",
+                "target": [
+                  "#\\:rd\\:-vibration-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "22.5pt (30px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<h3 id=\":rd:-interaction\">",
+                "target": [
+                  "#\\:rd\\:-interaction"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Controles más grandes</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-interaction\"] > ._option_jhuwm_43:nth-child(2) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-largeTargets-hint\">Más espacio para pulsar con comodidad.</span>",
+                "target": [
+                  "#\\:rd\\:-largeTargets-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "21.0pt (28px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<strong>Reducir animaciones</strong>",
+                "target": [
+                  "section[aria-labelledby=\":rd:-interaction\"] > ._option_jhuwm_43:nth-child(3) > ._optionText_jhuwm_45 > strong"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "18.0pt (24px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<span id=\":rd:-reducedMotion-hint\">Una interfaz con menos movimiento.</span>",
+                "target": [
+                  "#\\:rd\\:-reducedMotion-hint"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              },
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "19.5pt (26px)",
+                      "fontWeight": "bold",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<dialog class=\"_dialog_jhuwm_20\" aria-labelledby=\":rd:-title\" aria-describedby=\":rd:-description\" open=\"\">",
+                        "target": [
+                          "._dialog_jhuwm_20"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<summary>",
+                "target": [
+                  "._quickHelp_jhuwm_17 > summary"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-200-standard-communication",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-200-standard-communication.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 16,
+          "top": 36,
+          "right": 1264,
+          "bottom": 864,
+          "width": 1248,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 1246,
+        "dialogScrollWidth": 1246,
+        "documentWidth": 1280,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_fzs7f_13",
+            "clientHeight": 558,
+            "scrollHeight": 1049
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 95,
+          "top": 57,
+          "right": 1064.3125,
+          "bottom": 111,
+          "width": 969.3125,
+          "height": 54
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "24.0pt (32px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                        "target": [
+                          "#\\:rf\\:-message"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-message\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-message-length\" placeholder=\"Escribe aquí o elige una frase\" style=\"\"></textarea>",
+                "target": [
+                  "#\\:rf\\:-message"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "caregiver-1280-200-standard-communication-message",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-200-standard-communication-message.png",
+      "contextScreenshot": "caregiver-1280-200-standard-communication-message-context.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 16,
+          "top": 40.296875,
+          "right": 1264,
+          "bottom": 859.6875,
+          "width": 1248,
+          "height": 819.390625
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 1246,
+        "dialogScrollWidth": 1246,
+        "documentWidth": 1280,
+        "verticalScrollers": [],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 92,
+          "top": 227.296875,
+          "right": 248.1875,
+          "bottom": 269.296875,
+          "width": 156.1875,
+          "height": 42
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "id": "caregiver-1280-200-standard-communication-response",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "screenshot": "caregiver-1280-200-standard-communication-response.png",
+      "layout": {
+        "phone": false,
+        "inApp": false,
+        "bounds": {
+          "left": 16,
+          "top": 36,
+          "right": 1264,
+          "bottom": 864,
+          "width": 1248,
+          "height": 828
+        },
+        "surface": null,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1280,
+          "bottom": 900
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "visualViewport": {
+          "width": 1280,
+          "height": 900,
+          "offsetTop": 0,
+          "offsetLeft": 0
+        },
+        "dialogClientWidth": 1246,
+        "dialogScrollWidth": 1246,
+        "documentWidth": 1280,
+        "verticalScrollers": [
+          {
+            "tag": "DIV",
+            "className": "_body_fzs7f_13",
+            "clientHeight": 558,
+            "scrollHeight": 970
+          }
+        ],
+        "backdrop": {
+          "clipPath": "none",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "background": "rgba(20, 45, 38, 0.42)"
+        },
+        "focusInside": true,
+        "activeBounds": {
+          "left": 39,
+          "top": 597.984375,
+          "right": 1233,
+          "bottom": 789.984375,
+          "width": 1194,
+          "height": 192
+        },
+        "title": "Comunicarme por escrito"
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "tags": [
+              "cat.color",
+              "wcag2aa",
+              "wcag143",
+              "TTv5",
+              "TT13.c",
+              "EN-301-549",
+              "EN-9.1.4.3",
+              "ACT",
+              "RGAAv4",
+              "RGAA-3.2.1"
+            ],
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "any": [
+                  {
+                    "id": "color-contrast",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "24.0pt (32px)",
+                      "fontWeight": "normal",
+                      "messageKey": "elmPartiallyObscured",
+                      "expectedContrastRatio": "3:1"
+                    },
+                    "relatedNodes": [
+                      {
+                        "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                        "target": [
+                          "#\\:rf\\:-response"
+                        ]
+                      }
+                    ],
+                    "impact": "serious",
+                    "message": "Element's background color could not be determined because it's partially obscured by another element"
+                  }
+                ],
+                "all": [],
+                "none": [],
+                "impact": "serious",
+                "html": "<textarea id=\":rf:-response\" rows=\"3\" maxlength=\"240\" aria-describedby=\":rf:-response-length\" placeholder=\"Escribe la respuesta aquí\">De acuerdo. Voy a escribir los pasos.</textarea>",
+                "target": [
+                  "#\\:rf\\:-response"
+                ],
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "blockedDomainWrites": 0,
+  "sessions": [
+    {
+      "role": "caregiver_demo",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scale": "100",
+      "contrast": false,
+      "blockedDomainWrites": 0
+    },
+    {
+      "role": "caregiver_demo",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scale": "200",
+      "contrast": false,
+      "blockedDomainWrites": 0
+    },
+    {
+      "role": "caregiver_demo",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scale": "100",
+      "contrast": false,
+      "blockedDomainWrites": 0
+    },
+    {
+      "role": "caregiver_demo",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scale": "200",
+      "contrast": false,
+      "blockedDomainWrites": 0
+    }
+  ],
+  "browserVersion": "156.0.8078.80",
+  "summary": {
+    "states": 16,
+    "violationNodes": 0,
+    "incompleteNodes": 38
+  },
+  "finishedAt": "2026-11-03T21:54:00.649Z"
+}

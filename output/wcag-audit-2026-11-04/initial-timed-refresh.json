@@ -1,0 +1,24 @@
+{
+  "fixture": "GET dashboard cambia únicamente edad ilustrativa, sin escritura central",
+  "requests": [
+    {
+      "at": "2026-11-04T08:02:10.600Z",
+      "age": 72
+    },
+    {
+      "at": "2026-11-04T08:02:10.780Z",
+      "age": 73
+    },
+    {
+      "at": "2026-11-04T08:02:16.117Z",
+      "age": 73
+    },
+    {
+      "at": "2026-11-04T08:02:31.135Z",
+      "age": 73
+    }
+  ],
+  "before": null,
+  "after": null,
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('72 años', { exact: true }) to be visible\u001b[22m\n"
+}

@@ -4,12 +4,14 @@
  * para la interacción adaptativa con el adulto mayor (IHM / Accesibilidad).
  */
 
+import { getReadingPreferences } from './accessibilityPreferences';
+
 // Utilidad Web Audio API para emitir tonos sintéticos sin archivos externos
 class SoundEffects {
   private ctx: AudioContext | null = null;
 
   private getContext(): AudioContext | null {
-    if (typeof window === 'undefined') return null;
+    if (typeof window === 'undefined' || getReadingPreferences().silent) return null;
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       if (AudioCtx) {
@@ -21,6 +23,8 @@ class SoundEffects {
     }
     return this.ctx;
   }
+
+  stop() { if (this.ctx) void this.ctx.suspend().catch(() => undefined); }
 
   // Chime agradable de confirmación médica (doble tono armonioso)
   playConfirmationChime() {
@@ -226,6 +230,7 @@ class SpeechService {
       playChimeBefore?: boolean;
     }
   ) {
+    if (getReadingPreferences().silent) return;
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       console.warn('SpeechSynthesis is not supported in this browser.');
       return;
@@ -260,7 +265,7 @@ class SpeechService {
     const delay = options?.playChimeBefore ? 350 : 50;
     this.pendingSpeech = setTimeout(() => {
       this.pendingSpeech = null;
-      window.speechSynthesis.speak(utterance);
+      if (!getReadingPreferences().silent) window.speechSynthesis.speak(utterance);
     }, delay);
   }
 

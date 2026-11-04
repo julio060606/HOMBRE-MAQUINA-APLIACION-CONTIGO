@@ -1,0 +1,259 @@
+{
+  "timestamp": "2026-11-03T20:39:37.184Z",
+  "phase": "inspect",
+  "origin": "http://127.0.0.1:3001",
+  "browser": "156.0.8078.80",
+  "method": "Inspección de estilos calculados y contraste sRGB WCAG, teclado y ajuste de texto real del control (canvas/área útil) con valores sintéticos. Escala de lectura de la aplicación 100/200%; no zoom nativo del navegador.",
+  "limits": [
+    "Prueba técnica sin participantes.",
+    "No ejecuta Stark ni lector de pantalla.",
+    "No acredita conformidad global WCAG."
+  ],
+  "backendWrites": [
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login"
+    }
+  ],
+  "blockedWrites": [],
+  "cases": [
+    {
+      "width": 320,
+      "scale": "200",
+      "contrast": false,
+      "inputs": {
+        "systolic": {
+          "value": "500",
+          "font": "",
+          "fontSize": "64px",
+          "letterSpacing": "-1.92px",
+          "clientWidth": 168,
+          "scrollWidth": 168,
+          "scrollLeft": 0,
+          "available": 144,
+          "textWidth": 120.36500549316406,
+          "fits": true,
+          "rect": {
+            "x": 76,
+            "y": 426.640625,
+            "width": 168,
+            "height": 152.796875
+          }
+        },
+        "diastolic": {
+          "value": "499",
+          "font": "",
+          "fontSize": "64px",
+          "letterSpacing": "-1.92px",
+          "clientWidth": 168,
+          "scrollWidth": 168,
+          "scrollLeft": 0,
+          "available": 144,
+          "textWidth": 120.64625549316406,
+          "fits": true,
+          "rect": {
+            "x": 76,
+            "y": 659.4375,
+            "width": 168,
+            "height": 152.796875
+          }
+        },
+        "pulse": {
+          "value": "500",
+          "font": "",
+          "fontSize": "64px",
+          "letterSpacing": "-1.92px",
+          "clientWidth": 134,
+          "scrollWidth": 142,
+          "scrollLeft": 8,
+          "available": 110,
+          "textWidth": 120.36500549316406,
+          "fits": false,
+          "rect": {
+            "x": 105,
+            "y": 647.765625,
+            "width": 134,
+            "height": 164
+          }
+        },
+        "weight": {
+          "value": "1000.0",
+          "font": "",
+          "fontSize": "64px",
+          "letterSpacing": "-1.92px",
+          "clientWidth": 168,
+          "scrollWidth": 237,
+          "scrollLeft": 68,
+          "available": 144,
+          "textWidth": 206.35122680664062,
+          "fits": false,
+          "rect": {
+            "x": 76,
+            "y": 659.046875,
+            "width": 168,
+            "height": 152.796875
+          }
+        }
+      },
+      "layout": [
+        {
+          "tag": "INPUT",
+          "class": "_numberInput_69if4_27",
+          "width": 168,
+          "padding": "24px 12px 52px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "_inputBox_69if4_25 ",
+          "width": 170,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "_field_69if4_20",
+          "width": 170,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "_pressureFields_69if4_19",
+          "width": 170,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "FORM",
+          "class": "_form_69if4_12",
+          "width": 170,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "SECTION",
+          "class": "measurement-form _card_69if4_1",
+          "width": 236,
+          "padding": "32px",
+          "margin": "32px 0px 0px"
+        },
+        {
+          "tag": "SECTION",
+          "class": "space-y-4",
+          "width": 236,
+          "padding": "0px",
+          "margin": "40px 0px 0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "patient-body p-3.5 sm:p-4 space-y-5",
+          "width": 284,
+          "padding": "24px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "patient-app  ",
+          "width": 284,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "bg-[#f8faf9] overflow-hidden",
+          "width": 284,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "mx-auto rounded-[46px] border-[10px] border-[#18202b] bg-[#18202b] shadow-2xl overflow-hidden relative transition-all duration-300",
+          "width": 304,
+          "padding": "0px",
+          "margin": "0px"
+        },
+        {
+          "tag": "MAIN",
+          "class": "bg-slate-900/10 min-h-screen py-6 px-[8px] sm:px-4",
+          "width": 320,
+          "padding": "48px 8px",
+          "margin": "0px"
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 320,
+          "padding": "0px",
+          "margin": "0px"
+        }
+      ],
+      "focus": {
+        "outline": "rgb(15, 76, 58)",
+        "width": "3px",
+        "style": "solid",
+        "offset": "3px",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "parentBorder": "rgb(19, 111, 83)",
+        "parentBackground": "rgb(255, 255, 255)",
+        "contrast": 9.9282
+      },
+      "colors": [
+        {
+          "name": "inputBoundary",
+          "border": "rgb(116, 136, 126)",
+          "borderWidth": "1px",
+          "background": "rgb(248, 251, 249)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 3.6219,
+          "borderToOutside": 3.7732,
+          "textContrast": 13.9489
+        },
+        {
+          "name": "typeUnselected",
+          "border": "rgb(116, 136, 126)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(64, 84, 99)",
+          "borderToInside": 3.7732,
+          "borderToOutside": 3.7732,
+          "textContrast": 7.8761
+        },
+        {
+          "name": "typeSelected",
+          "border": "rgb(19, 111, 83)",
+          "borderWidth": "2px",
+          "background": "rgb(237, 247, 242)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(14, 84, 63)",
+          "borderToInside": 5.5999,
+          "borderToOutside": 6.1289,
+          "textContrast": 8.1351
+        },
+        {
+          "name": "optionalPulse",
+          "border": "rgb(116, 136, 126)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 3.7732,
+          "borderToOutside": 3.7732,
+          "textContrast": 14.5315
+        }
+      ],
+      "review": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPresión arterial\n\n500 / 499\nmmHg\n\nPulso: no registrado\n\nGuardar medición\nCorregir números",
+      "corrected": true,
+      "weightReview": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPeso\n\n1000.0\nkg\n\nGuardar medición\nCorregir números",
+      "weightCorrected": true,
+      "documentOverflow": false,
+      "allDigitsVisible": false
+    }
+  ],
+  "errors": [],
+  "complete": true,
+  "allDigitsVisible": false,
+  "noMeasurementWrites": true
+}

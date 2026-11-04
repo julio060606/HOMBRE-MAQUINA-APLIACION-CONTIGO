@@ -1,0 +1,436 @@
+{
+  "timestamp": "2026-11-03T20:37:20.339Z",
+  "phase": "before",
+  "origin": "http://127.0.0.1:3001",
+  "browser": "156.0.8078.80",
+  "method": "Inspección de estilos calculados y contraste sRGB WCAG, teclado y ajuste de texto real del control (canvas/área útil) con valores sintéticos. Escala de lectura de la aplicación 100/200%; no zoom nativo del navegador.",
+  "limits": [
+    "Prueba técnica sin participantes.",
+    "No ejecuta Stark ni lector de pantalla.",
+    "No acredita conformidad global WCAG."
+  ],
+  "backendWrites": [
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login"
+    }
+  ],
+  "blockedWrites": [],
+  "cases": [
+    {
+      "width": 320,
+      "scale": "100",
+      "contrast": false,
+      "inputs": {
+        "systolic": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 107,
+          "scrollWidth": 107,
+          "scrollLeft": 0,
+          "available": 95,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 48,
+            "y": 751.40625,
+            "width": 107,
+            "height": 76.390625
+          }
+        },
+        "diastolic": {
+          "value": "499",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 107,
+          "scrollWidth": 107,
+          "scrollLeft": 0,
+          "available": 95,
+          "textWidth": 63.203125,
+          "fits": true,
+          "rect": {
+            "x": 165,
+            "y": 751.40625,
+            "width": 107,
+            "height": 76.390625
+          }
+        },
+        "pulse": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 206,
+          "scrollWidth": 206,
+          "scrollLeft": 0,
+          "available": 194,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 63,
+            "y": 585.59375,
+            "width": 206,
+            "height": 82
+          }
+        },
+        "weight": {
+          "value": "1000.0",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 224,
+          "scrollWidth": 224,
+          "scrollLeft": 0,
+          "available": 212,
+          "textWidth": 108.93560791015625,
+          "fits": true,
+          "rect": {
+            "x": 48,
+            "y": 684.203125,
+            "width": 224,
+            "height": 76.390625
+          }
+        }
+      },
+      "focus": {
+        "outline": "rgb(15, 76, 58)",
+        "width": "3px",
+        "style": "solid",
+        "offset": "3px",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "parentBorder": "rgb(19, 111, 83)",
+        "parentBackground": "rgb(255, 255, 255)",
+        "contrast": 9.9282
+      },
+      "colors": [
+        {
+          "name": "inputBoundary",
+          "border": "rgb(139, 158, 149)",
+          "borderWidth": "1px",
+          "background": "rgb(248, 251, 249)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 2.7158,
+          "borderToOutside": 2.8292,
+          "textContrast": 13.9489
+        },
+        {
+          "name": "typeUnselected",
+          "border": "rgb(135, 154, 146)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(64, 84, 99)",
+          "borderToInside": 2.9714,
+          "borderToOutside": 2.9714,
+          "textContrast": 7.8761
+        },
+        {
+          "name": "typeSelected",
+          "border": "rgb(19, 111, 83)",
+          "borderWidth": "2px",
+          "background": "rgb(237, 247, 242)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(14, 84, 63)",
+          "borderToInside": 5.5999,
+          "borderToOutside": 6.1289,
+          "textContrast": 8.1351
+        },
+        {
+          "name": "optionalPulse",
+          "border": "rgb(220, 230, 226)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 1.2758,
+          "borderToOutside": 1.2758,
+          "textContrast": 14.5315
+        }
+      ],
+      "review": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPresión arterial\n\n500 / 499\nmmHg\n\nPulso: no registrado\n\nGuardar medición\nCorregir números",
+      "corrected": true,
+      "weightReview": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPeso\n\n1000.0\nkg\n\nGuardar medición\nCorregir números",
+      "weightCorrected": true,
+      "documentOverflow": false,
+      "allDigitsVisible": true
+    },
+    {
+      "width": 390,
+      "scale": "100",
+      "contrast": false,
+      "inputs": {
+        "systolic": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 136,
+          "scrollWidth": 136,
+          "scrollLeft": 0,
+          "available": 124,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 52,
+            "y": 751.8125,
+            "width": 136,
+            "height": 76.390625
+          }
+        },
+        "diastolic": {
+          "value": "499",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 136,
+          "scrollWidth": 136,
+          "scrollLeft": 0,
+          "available": 124,
+          "textWidth": 63.203125,
+          "fits": true,
+          "rect": {
+            "x": 202,
+            "y": 751.8125,
+            "width": 136,
+            "height": 76.390625
+          }
+        },
+        "pulse": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 268,
+          "scrollWidth": 268,
+          "scrollLeft": 0,
+          "available": 256,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 67,
+            "y": 566.59375,
+            "width": 268,
+            "height": 82
+          }
+        },
+        "weight": {
+          "value": "1000.0",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 286,
+          "scrollWidth": 286,
+          "scrollLeft": 0,
+          "available": 274,
+          "textWidth": 108.93560791015625,
+          "fits": true,
+          "rect": {
+            "x": 52,
+            "y": 411.703125,
+            "width": 286,
+            "height": 76.390625
+          }
+        }
+      },
+      "focus": {
+        "outline": "rgb(15, 76, 58)",
+        "width": "3px",
+        "style": "solid",
+        "offset": "3px",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "parentBorder": "rgb(19, 111, 83)",
+        "parentBackground": "rgb(255, 255, 255)",
+        "contrast": 9.9282
+      },
+      "colors": [
+        {
+          "name": "inputBoundary",
+          "border": "rgb(139, 158, 149)",
+          "borderWidth": "1px",
+          "background": "rgb(248, 251, 249)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 2.7158,
+          "borderToOutside": 2.8292,
+          "textContrast": 13.9489
+        },
+        {
+          "name": "typeUnselected",
+          "border": "rgb(135, 154, 146)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(64, 84, 99)",
+          "borderToInside": 2.9714,
+          "borderToOutside": 2.9714,
+          "textContrast": 7.8761
+        },
+        {
+          "name": "typeSelected",
+          "border": "rgb(19, 111, 83)",
+          "borderWidth": "2px",
+          "background": "rgb(237, 247, 242)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(14, 84, 63)",
+          "borderToInside": 5.5999,
+          "borderToOutside": 6.1289,
+          "textContrast": 8.1351
+        },
+        {
+          "name": "optionalPulse",
+          "border": "rgb(220, 230, 226)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 1.2758,
+          "borderToOutside": 1.2758,
+          "textContrast": 14.5315
+        }
+      ],
+      "review": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPresión arterial\n\n500 / 499\nmmHg\n\nPulso: no registrado\n\nGuardar medición\nCorregir números",
+      "corrected": true,
+      "weightReview": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPeso\n\n1000.0\nkg\n\nGuardar medición\nCorregir números",
+      "weightCorrected": true,
+      "documentOverflow": false,
+      "allDigitsVisible": true
+    },
+    {
+      "width": 430,
+      "scale": "100",
+      "contrast": false,
+      "inputs": {
+        "systolic": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 149,
+          "scrollWidth": 149,
+          "scrollLeft": 0,
+          "available": 137,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 59,
+            "y": 751.265625,
+            "width": 149,
+            "height": 76.390625
+          }
+        },
+        "diastolic": {
+          "value": "499",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 149,
+          "scrollWidth": 149,
+          "scrollLeft": 0,
+          "available": 137,
+          "textWidth": 63.203125,
+          "fits": true,
+          "rect": {
+            "x": 222,
+            "y": 751.265625,
+            "width": 149,
+            "height": 76.390625
+          }
+        },
+        "pulse": {
+          "value": "500",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 294,
+          "scrollWidth": 294,
+          "scrollLeft": 0,
+          "available": 282,
+          "textWidth": 63.0625,
+          "fits": true,
+          "rect": {
+            "x": 74,
+            "y": 565.046875,
+            "width": 294,
+            "height": 82
+          }
+        },
+        "weight": {
+          "value": "1000.0",
+          "font": "",
+          "fontSize": "32px",
+          "clientWidth": 312,
+          "scrollWidth": 312,
+          "scrollLeft": 0,
+          "available": 300,
+          "textWidth": 108.93560791015625,
+          "fits": true,
+          "rect": {
+            "x": 59,
+            "y": 411.15625,
+            "width": 312,
+            "height": 76.390625
+          }
+        }
+      },
+      "focus": {
+        "outline": "rgb(15, 76, 58)",
+        "width": "3px",
+        "style": "solid",
+        "offset": "3px",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "parentBorder": "rgb(19, 111, 83)",
+        "parentBackground": "rgb(255, 255, 255)",
+        "contrast": 9.9282
+      },
+      "colors": [
+        {
+          "name": "inputBoundary",
+          "border": "rgb(139, 158, 149)",
+          "borderWidth": "1px",
+          "background": "rgb(248, 251, 249)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 2.7158,
+          "borderToOutside": 2.8292,
+          "textContrast": 13.9489
+        },
+        {
+          "name": "typeUnselected",
+          "border": "rgb(135, 154, 146)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(64, 84, 99)",
+          "borderToInside": 2.9714,
+          "borderToOutside": 2.9714,
+          "textContrast": 7.8761
+        },
+        {
+          "name": "typeSelected",
+          "border": "rgb(19, 111, 83)",
+          "borderWidth": "2px",
+          "background": "rgb(237, 247, 242)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(14, 84, 63)",
+          "borderToInside": 5.5999,
+          "borderToOutside": 6.1289,
+          "textContrast": 8.1351
+        },
+        {
+          "name": "optionalPulse",
+          "border": "rgb(220, 230, 226)",
+          "borderWidth": "1px",
+          "background": "rgb(255, 255, 255)",
+          "outside": "rgb(255, 255, 255)",
+          "text": "rgb(23, 43, 59)",
+          "borderToInside": 1.2758,
+          "borderToOutside": 1.2758,
+          "textContrast": 14.5315
+        }
+      ],
+      "review": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPresión arterial\n\n500 / 499\nmmHg\n\nPulso: no registrado\n\nGuardar medición\nCorregir números",
+      "corrected": true,
+      "weightReview": "¿Los valores son correctos?\n\nCompáralos con la pantalla de tu equipo.\n\nPeso\n\n1000.0\nkg\n\nGuardar medición\nCorregir números",
+      "weightCorrected": true,
+      "documentOverflow": false,
+      "allDigitsVisible": true
+    }
+  ],
+  "errors": [],
+  "complete": true,
+  "allDigitsVisible": true,
+  "noMeasurementWrites": true
+}

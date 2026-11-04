@@ -1,0 +1,12 @@
+{
+  "revision": "current-2026-11-03",
+  "complete": true,
+  "workspace": "C:/Users/vegac/Documents/Hombre Maquina",
+  "method": "Comandos ejecutados en frontend sobre los cambios actuales; resultados observados en esta sesión.",
+  "checks": [
+    { "name": "npm.cmd test", "passed": true, "testFiles": 10, "testsPassed": 63, "exitCode": 0 },
+    { "name": "npm.cmd run lint", "passed": true, "exitCode": 0 },
+    { "name": "npm.cmd run build", "passed": true, "exitCode": 0, "warning": "ReportsPage genera un fragmento de aproximadamente 1,25 MB antes de gzip; la compilación finaliza correctamente." }
+  ],
+  "limitations": ["Estas comprobaciones no sustituyen las sesiones con participantes ni la revisión manual WCAG."]
+}

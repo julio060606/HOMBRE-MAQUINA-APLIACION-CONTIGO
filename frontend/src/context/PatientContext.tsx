@@ -4,12 +4,15 @@ import { Patient } from '../types';
 import { serviceFor } from '../services/apiClient';
 import { useAuth } from './AuthContext';
 import { PatientContext } from './PatientState';
+import { useReadingPreferences } from '../hooks/useReadingPreferences';
 export { usePatient } from './PatientState';
 export const PatientProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
+  const { pauseUpdates } = useReadingPreferences();
   const [selection, setSelection] = useState<{ userId: string; patientId: string } | null>(null);
   const query = useQuery({ queryKey: ['patients', user?.id, user?.organizationId], enabled: !!user,
-    queryFn: () => serviceFor(user!).patients(), retry: false });
+    queryFn: () => serviceFor(user!).patients(), retry: false,
+    refetchOnWindowFocus: !pauseUpdates, refetchOnReconnect: !pauseUpdates });
   const patients = user ? query.data ?? [] : [];
   const selectedId = selection && selection.userId === user?.id ? selection.patientId : user?.patientId;
   const activePatient = patients.find(p => p.id === selectedId) ?? patients[0] ?? null;

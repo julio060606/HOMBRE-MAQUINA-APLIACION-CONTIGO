@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "timestamp": "2026-11-03T21:13:57.995Z",
+  "origin": "http://127.0.0.1:3001",
+  "checks": [
+    {
+      "name": "Vibración solo tras consentimiento y solicitud explícita, resultado visible sin prometer respuesta física",
+      "passed": true
+    },
+    {
+      "name": "Preferencias persisten tras recarga y controles tienen al menos56px",
+      "passed": true,
+      "geometry": {
+        "height": 56,
+        "classes": "site-large-targets site-reduced-motion"
+      }
+    },
+    {
+      "name": "Restablecer revierte opciones y clases visuales",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Vibración simulada para verificar consentimiento y solicitud; no confirma respuesta física del dispositivo.",
+    "No es una prueba con participantes ni con lector de pantalla."
+  ],
+  "apiCalls": 0
+}

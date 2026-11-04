@@ -2,6 +2,7 @@ import { ClinicalSyncState, ContigoService, PatientView, ResponseInput, Pressure
 import { AlertEvent, BloodPressureLog, ClinicalSettings, Patient, PillIntake, WeightLog } from '../../types';
 import { fetchAuthenticated, responseError } from './apiTransport';
 import { emitApiChange } from './changeEvents';
+import { normalizeSosMessage } from '../sosMessage';
 export { ApiError } from './apiTransport';
 
 async function fetchApi<T>(path: string, options: RequestInit = {}): Promise<T> {
@@ -94,11 +95,13 @@ export function createHttpService(): ContigoService {
         body: JSON.stringify(value),
       }),
 
-    sos: (patientId: string, operationId: string) =>
-      fetchApi<AlertEvent>(`/patients/${patientId}/alerts/sos`, {
+    sos: async (patientId: string, operationId: string, message?: string) => {
+      const normalized = normalizeSosMessage(message);
+      return fetchApi<AlertEvent>(`/patients/${patientId}/alerts/sos`, {
         method: 'POST',
-        body: JSON.stringify({ operationId }),
-      }),
+        body: JSON.stringify({ operationId, ...(normalized ? { message: normalized } : {}) }),
+      });
+    },
 
     pair: (pin: string, relationship: string) =>
       fetchApi<Patient>('/pairing/claims', {

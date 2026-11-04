@@ -1,0 +1,261 @@
+{
+  "status": "PAQUETE PREPARATORIO LOCAL; NO EJECUTADO NI PUBLICADO EN FIGMA",
+  "generatedAt": "2026-11-03T20:54:41.095Z",
+  "sourceHashes": {
+    "frontend/src/features/patient-app/PatientAppContent.tsx": "49cb12c7eebb5e579b4d63c2421a1c5059c2098bb49118b0c6a8ea0607322ecf",
+    "frontend/src/features/patient-app/MeasurementForm.tsx": "22aafe7473969a7bec2491aca05c87e5f3d1a46403d61db1e37cfcbd772e55ff",
+    "frontend/src/features/patient-app/MeasurementForm.module.css": "75b0272046e596375290bb0049a8137f5b5353d48ce80ab1cfe6e3bb46cff08a",
+    "frontend/src/features/patient-app/PatientHelp.tsx": "cc438322729589d8aafa677150ed10768bc6a66d435f97c4d47a6f9800aab22b",
+    "frontend/src/styles/index.css": "8ba99aefe02c093e6695505a64c30456baaa7c57e6daccd6bf31774457750539"
+  },
+  "captureTimestamp": "2026-11-03T20:49:47.584Z",
+  "currentMode": "API central y PostgreSQL, VITE_USE_MOCKS=false",
+  "figmaConnected": false,
+  "nativeFigmaCreated": false,
+  "starkExecuted": false,
+  "expectedPages": 6,
+  "expectedNativeScreens": 85,
+  "expectedScopeIds": [
+    "patient-home",
+    "patient-recorded",
+    "patient-not-taken",
+    "patient-correction-taken",
+    "patient-correction-not-taken",
+    "measurement-input",
+    "measurement-error",
+    "measurement-review",
+    "measurement-saved",
+    "weight-input",
+    "weight-review",
+    "sos-review",
+    "sos-result",
+    "caregiver-summary",
+    "caregiver-treatment",
+    "caregiver-appointments",
+    "reading-options"
+  ],
+  "pageNames": [
+    "00 Leyenda y resumen",
+    "01 Antes (v2.0)",
+    "02 Después (v3.0 objetivo AA)",
+    "03 Kit accesible",
+    "04 Anotaciones de accesibilidad",
+    "05 Variante alto contraste y texto ampliado"
+  ],
+  "design": "Vista única actual paciente: medicamentos, medición de dos pasos y citas; sin navegación inferior retirada.",
+  "currentControlBorderToken": "#74887E",
+  "currentApiScreens": 15,
+  "historicalBaselineScreens": 5,
+  "captures": [
+    {
+      "id": "01-patient-home",
+      "name": "Captura actual API / 01-patient-home",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/01-patient-home.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "47a81cd3599c10b24025be19a824910c15262167109f90c1c5af785bc4e97298"
+    },
+    {
+      "id": "02-sos-review",
+      "name": "Captura actual API / 02-sos-review",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/02-sos-review.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "6da7040a6be45ac54f330df284340427be0a8fe72aae2c2f01f7bf7973965ebe"
+    },
+    {
+      "id": "03-measurement-input",
+      "name": "Captura actual API / 03-measurement-input",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/03-measurement-input.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "30317cbb6e7cfdad3e5e639af3d91fb943655b412f363cd44054d56f03415d62"
+    },
+    {
+      "id": "04-measurement-error",
+      "name": "Captura actual API / 04-measurement-error",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/04-measurement-error.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "1d78fd7c49959481121276b5e498a088102929d294071882de7951e4b9e75340"
+    },
+    {
+      "id": "05-measurement-review",
+      "name": "Captura actual API / 05-measurement-review",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/05-measurement-review.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "03c30eafcc01c118c8e788d4491128611e88db3c5686e6d14f7f6d2d48e2515c"
+    },
+    {
+      "id": "06-weight-input",
+      "name": "Captura actual API / 06-weight-input",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/06-weight-input.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "5e9067d8c83f9f40bca1bb197a7093523c7b9d099acf4a400d1492321d05f71b"
+    },
+    {
+      "id": "07-weight-review",
+      "name": "Captura actual API / 07-weight-review",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/07-weight-review.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/patient-app",
+      "width": 390,
+      "height": 1181,
+      "sha256": "3d5b5849c9b597b7a0b397b7cc8943f941cc735dc317912f6326198e635bca78"
+    },
+    {
+      "id": "08-caregiver-summary",
+      "name": "Captura actual API / 08-caregiver-summary",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/08-caregiver-summary.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/dashboard",
+      "width": 1440,
+      "height": 1814,
+      "sha256": "7b70cca7b92e667a76d342999babf106b3d7441f6441916f5567ba447a967f23"
+    },
+    {
+      "id": "09-treatment-supplies",
+      "name": "Captura actual API / 09-treatment-supplies",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/09-treatment-supplies.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/medications",
+      "width": 1440,
+      "height": 1163,
+      "sha256": "dce42b8b905191c5c81fd84ef1d5c607585e70ad3db794fb96e6a2153f0806cf"
+    },
+    {
+      "id": "10-appointments",
+      "name": "Captura actual API / 10-appointments",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/10-appointments.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/appointments",
+      "width": 1440,
+      "height": 1105,
+      "sha256": "2228448dcdae6c0328a225ac6b77dedf0c2d4e46de05e0b508c700af5bd43cc7"
+    },
+    {
+      "id": "11-vitals",
+      "name": "Captura actual API / 11-vitals",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/11-vitals.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/vitals",
+      "width": 1440,
+      "height": 1659,
+      "sha256": "350a37f5d877322ef420de78dc70aec186725aac92d96aff8c8e91c3600416e7"
+    },
+    {
+      "id": "12-profile",
+      "name": "Captura actual API / 12-profile",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/12-profile.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/clinical-profile",
+      "width": 1440,
+      "height": 1105,
+      "sha256": "b4697e2f664c24aa2c736d20740d5879ca5cb62a155c85aad6e797439b25f8ac"
+    },
+    {
+      "id": "13-preferences",
+      "name": "Captura actual API / 13-preferences",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/13-preferences.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/settings",
+      "width": 1440,
+      "height": 1105,
+      "sha256": "abfc5dc132f6a363291174868e0cf6b6d47b8a1f458b25e9ceba3bfdaa1b6412"
+    },
+    {
+      "id": "14-login",
+      "name": "Captura actual API / 14-login",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/14-login.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/login",
+      "width": 1440,
+      "height": 1081,
+      "sha256": "4f79abdfbf7f50e77974591a866195fd4b2197a0845a53d4612c88ef55933012"
+    },
+    {
+      "id": "15-accessibility",
+      "name": "Captura actual API / 15-accessibility",
+      "file": "output/apf3/evidence/current-2026-11-03/api-audit/15-accessibility.png",
+      "group": "current",
+      "url": "http://127.0.0.1:3001/accessibility",
+      "width": 1440,
+      "height": 1393,
+      "sha256": "f277700f834b19c1951264e3d6af3e12e8a757691277c5d0be08ac6af7504f64"
+    },
+    {
+      "id": "baseline-home",
+      "name": "Captura histórica v2.0 / baseline-home",
+      "file": "output/apf3/evidence/baseline/02-patient-home.png",
+      "group": "before",
+      "url": "Copia histórica local; consultar manifiesto de línea base",
+      "width": 1280,
+      "height": 960,
+      "sha256": "88b6db300874b9d2850b5aae9a1ee92494ed05bc54b72f746d7f03fcb9071713"
+    },
+    {
+      "id": "baseline-treatment",
+      "name": "Captura histórica v2.0 / baseline-treatment",
+      "file": "output/apf3/evidence/baseline/03-patient-treatment.png",
+      "group": "before",
+      "url": "Copia histórica local; consultar manifiesto de línea base",
+      "width": 1280,
+      "height": 960,
+      "sha256": "af1b88e029935d04e37a4f5ef4fd9810259d756db01162d77e9abfe8999dff56"
+    },
+    {
+      "id": "baseline-measurement",
+      "name": "Captura histórica v2.0 / baseline-measurement",
+      "file": "output/apf3/evidence/baseline/04-patient-measurement.png",
+      "group": "before",
+      "url": "Copia histórica local; consultar manifiesto de línea base",
+      "width": 1280,
+      "height": 960,
+      "sha256": "ebfa0d73636240c181b53246874d590f77270d1f908bc5e8dbb9d97b5e602aa3"
+    },
+    {
+      "id": "baseline-caregiver",
+      "name": "Captura histórica v2.0 / baseline-caregiver",
+      "file": "output/apf3/evidence/baseline/17-caregiver-dashboard.png",
+      "group": "before",
+      "url": "Copia histórica local; consultar manifiesto de línea base",
+      "width": 1280,
+      "height": 1179,
+      "sha256": "0b47721a7e1ab531ebeb7d02e8c6cf109b664f69506fca0b5aecfdcafd913d50"
+    },
+    {
+      "id": "baseline-supplies",
+      "name": "Captura histórica v2.0 / baseline-supplies",
+      "file": "output/apf3/evidence/baseline/18-caregiver-medications.png",
+      "group": "before",
+      "url": "Copia histórica local; consultar manifiesto de línea base",
+      "width": 1280,
+      "height": 960,
+      "sha256": "a196fc7e3472e56974b557e699a00b8625661f1c5598017749215c0897a6264d"
+    }
+  ],
+  "codeSha256": "e3e0d99dc959c0cc76c5048875acb5d2f6f6e615b72f185a4484d8e58b4a07a8",
+  "sourceAttribution": "Código propio del proyecto adaptado; tipos Figma Plugin API proceden de figma/plugin-typings y se preservan como referencia.",
+  "pending": [
+    "Ejecutar plugin en Figma",
+    "Inspeccionar renderizado y conexiones reales",
+    "Medir y documentar Stark",
+    "Compartir con permiso de lectura y comprobar incógnito",
+    "Registrar enlace real",
+    "Validar con participantes y completar lectura T3 NVDA actual"
+  ]
+}
